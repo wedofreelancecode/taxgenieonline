@@ -258,7 +258,7 @@
                         Home Content:<a href="/admin/HomeContentEditor.aspx">Add\Upload</a><a href="#">Edit\Delete</a>
                     </td>
                     <td>
-                       
+                       Tax Update:<a href="/admin/TaxUpdateEditor.aspx">Add\Upload</a><a href="#">Edit\Delete</a>
                     </td>
                 </tr>
             </table>

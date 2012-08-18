@@ -4,7 +4,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using TaxGenie_DAL;
 using TaxGenie_DAL.HomeContentsTableAdapters;
-
+using TaxGenie_DAL.TaxUpdateTableAdapters;
 
 namespace TaxGenieOnline
 {
@@ -18,6 +18,10 @@ namespace TaxGenieOnline
             }
             else
             {
+                TaxUpdateImgTableAdapter tuAdapter = new TaxUpdateImgTableAdapter();
+                dlTaxUpdate.DataSource = tuAdapter.GetFirst(1);
+                dlTaxUpdate.DataBind();
+
                 HomeContentsTableAdapter hContentsadptr = new HomeContentsTableAdapter();
                 HomeContents.HomeContentsDataTable hContents = hContentsadptr.GetContentByType("Department News",2);
                 foreach (HomeContents.HomeContentsRow row in hContents)

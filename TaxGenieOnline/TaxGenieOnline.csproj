@@ -75,6 +75,7 @@
     <Content Include="images\psslogo.png" />
     <Content Include="images\sbrao.gif" />
     <Content Include="images\slogo.png" />
+    <Content Include="images\TaxUpdate\Mark logo_web.png" />
     <Content Include="InterestTaxAct.htm" />
     <Content Include="GiftTaxAct.htm" />
     <Content Include="images\au.jpg" />
@@ -145,8 +146,11 @@
     <Content Include="search.aspx" />
     <Content Include="searchdata.aspx" />
     <Content Include="ShowContents.aspx" />
+    <Content Include="ShowTaxUpdates.aspx" />
     <Content Include="TaxGenieOnline.Publish.xml" />
+    <Content Include="admin\TaxUpdateEditor.aspx" />
     <Content Include="ViewContent.aspx" />
+    <Content Include="ViewTaxUpdate.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -279,6 +283,13 @@
     <Compile Include="shownotifications.aspx.designer.cs">
       <DependentUpon>shownotifications.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ShowTaxUpdates.aspx.cs">
+      <DependentUpon>ShowTaxUpdates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowTaxUpdates.aspx.designer.cs">
+      <DependentUpon>ShowTaxUpdates.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sitemap.aspx.cs">
       <DependentUpon>sitemap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -292,6 +303,13 @@
     </Compile>
     <Compile Include="TaxGenie.master.designer.cs">
       <DependentUpon>TaxGenie.master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\TaxUpdateEditor.aspx.cs">
+      <DependentUpon>TaxUpdateEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\TaxUpdateEditor.aspx.designer.cs">
+      <DependentUpon>TaxUpdateEditor.aspx</DependentUpon>
     </Compile>
     <Compile Include="UnauthorizedAccess.aspx.cs">
       <DependentUpon>UnauthorizedAccess.aspx</DependentUpon>
@@ -349,6 +367,13 @@
     </Compile>
     <Compile Include="ViewContent.aspx.designer.cs">
       <DependentUpon>ViewContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTaxUpdate.aspx.cs">
+      <DependentUpon>ViewTaxUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTaxUpdate.aspx.designer.cs">
+      <DependentUpon>ViewTaxUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

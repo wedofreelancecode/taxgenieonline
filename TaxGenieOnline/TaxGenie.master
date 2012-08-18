@@ -94,9 +94,16 @@
                 <div class="brdhds">
                 </div>
                 <div class="src1">
-                    <img src="images/cartoon.jpg" width="203" height="160" />
+                    <asp:Repeater ID="dlTaxUpdate" runat="server">
+                        <ItemTemplate>
+                            <a class="rss-item" href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'>
+                            <img src='<%# Eval("ImgPath") %>' alt="" width="203" height="148" />
+                            </a>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <%--<img src="images/cartoon.jpg" width="203" height="160" />--%>
                 </div>
-                <span class="more"><a href="#">more...</a></span>
+                <span class="more"><a href="/ShowTaxUpdates.aspx">more...</a></span>
             </div>
             <div class="bxbottom">
             </div>

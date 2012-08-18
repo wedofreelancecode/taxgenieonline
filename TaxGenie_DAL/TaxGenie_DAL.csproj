@@ -151,6 +151,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Tariff.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TaxUpdate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaxUpdate.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserProfile.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -327,6 +332,17 @@
     </None>
     <None Include="Tariff.xss">
       <DependentUpon>Tariff.xsd</DependentUpon>
+    </None>
+    <None Include="TaxUpdate.xsc">
+      <DependentUpon>TaxUpdate.xsd</DependentUpon>
+    </None>
+    <None Include="TaxUpdate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaxUpdate.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TaxUpdate.xss">
+      <DependentUpon>TaxUpdate.xsd</DependentUpon>
     </None>
     <None Include="UserProfile.xsc">
       <DependentUpon>UserProfile.xsd</DependentUpon>
