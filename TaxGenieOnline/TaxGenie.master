@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true"
+    CodeBehind="TaxGenie.master.cs" Inherits="TaxGenieOnline.TaxGenie" %>
+
+<asp:Content ContentPlaceHolderID="cph_login" runat="server">
+    <script type="text/javascript">
+        $(function () {
+            var watermark = 'username';
+            $("input.login[name*='UserName'], input.login[name*='Password']").blur(function () {
+                if ($(this).val().length == 0)
+                    $(this).val(watermark).addClass('watermark');
+            }).focus(function () {
+                if ($(this).val() == watermark)
+                    $(this).val('').removeClass('watermark');
+            }).val(watermark).addClass('watermark');
+        });
+    </script>
+    <asp:LoginView ID="LoginView1" runat="server">
+        <AnonymousTemplate>
+            <asp:Login ID="Login1" runat="server" Width="100%" OnAuthenticate="Login1_Authenticate">
+                <LayoutTemplate>
+                    <table style="width: 100%">
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="UserName" runat="server" CssClass="nll login"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName"
+                                    ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="Password" runat="server" TextMode="Password" CssClass="nll login"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password"
+                                    ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
+                            </td>
+                            <td style="float: left">
+                                <asp:Button ID="LoginButton" runat="server" CssClass="nbs fleft" CommandName="Login"
+                                    ValidationGroup="Login1" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div style="color: Red">
+                                    <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right: 15px;">
+                                <a href="pwdrecovery.aspx" class="fright">Forgot Password?</a>
+                            </td>
+                            <td>
+                                New User?<a href="../memberreg.aspx"> Register Here</a>
+                            </td>
+                        </tr>
+                    </table>
+                </LayoutTemplate>
+            </asp:Login>
+        </AnonymousTemplate>
+        <LoggedInTemplate>
+            <div style="padding: 10px 17px 0 0" align="right">
+                <span style="font-family: Arial; font-size: 12px;">Welcome</span>
+                <asp:Label ID="lblWlcmName" runat="server" Font-Size="12px" Font-Bold="true"></asp:Label><br />
+                <a href="../editprofile.aspx" style="color: Black;">Edit Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="../changepwd.aspx" style="color: Black;">Change Password</a>&nbsp;&nbsp;|&nbsp;&nbsp;<asp:LoginStatus
+                    ID="LoginStatus1" runat="server" ForeColor="Black" LogoutAction="RedirectToLoginPage" />
+            </div>
+        </LoggedInTemplate>
+    </asp:LoginView>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cph_page" runat="server">
+    <div class="cl1 fleft">
+        <asp:ContentPlaceHolder ID="cph_left" runat="server">
+            <div class="bxtop">
+            </div>
+            <div class="clmiddle">
+                <div class="rp">
+                    <img src="images/slogo.png" align="absmiddle" /> What's New</div>
+                <div class="brdhds">
+                </div>
+                <div class="src1">
+                    <p>
+                        In his speech greeting the delegates of the 20th CPI-M party congress which began
+                        in KozhikodeIn his speech greeting the delegates of the 20th CPI-M party congress
+                        which began in KozhikodeIn his speech greeting the delegates of the 20th CPI-M party
+                        congress which began in Kozhikode <span class="more"><a href="#">more...</a></span></p>
+                </div>
+            </div>
+            <div class="bxbottom">
+            </div>
+            <div class="brht1">
+            </div>
+            <div class="bxtop">
+            </div>
+            <div class="clmiddle">
+                <div class="rp">
+                    <img src="images/slogo.png" align="absmiddle" /> Tax Update</div>
+                <div class="brdhds">
+                </div>
+                <div class="src1">
+                    <img src="images/cartoon.jpg" width="203" height="160" />
+                </div>
+                <span class="more"><a href="#">more...</a></span>
+            </div>
+            <div class="bxbottom">
+            </div>
+            <div class="brht1">
+            </div>
+            <div style="height: 80px;">
+                <img src="images/add1.jpg" height="80" width="232" />
+            </div>
+            <div class="brht1">
+            </div>
+            <div class="bxtop">
+            </div>
+            <div class="clmiddle">
+                <div class="rp">
+                    <img src="images/slogo.png" align="absmiddle" /> Guest Column</div>
+                <div class="brdhds">
+                </div>
+                <div class="src1">
+                    <img src="images/sbrao.gif" width="85" height="70" class="txtwrap" />
+                    <asp:Repeater ID="dlLGuest" runat="server">
+                        <ItemTemplate>
+                            <a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                            <%# Eval("Data") %>...</a>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+                <span class="more"><a href="/ShowContents.aspx?CType=Left Guest">more...</a></span>
+            </div>
+            <div class="bxbottom">
+            </div>
+            <div class="brht1">
+            </div>
+        </asp:ContentPlaceHolder>
+    </div>
+    <asp:ContentPlaceHolder ID="cph_main" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="cl3 fright">
+        <asp:ContentPlaceHolder ID="cph_right" runat="server">
+            <div class="bxtop">
+            </div>
+            <div class="clmiddle">
+                <div class="ne">
+                    <img src="images/slogo.png" align="absmiddle" /> Department News</div>
+                <div class="brdhds">
+                </div>
+                <div class="rss-box">
+                    <ul class="rss-items">
+                        <asp:Repeater ID="dlDeptNews" runat="server">
+                            <ItemTemplate>
+                                <li class="rss-item">
+                                    <a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                                    <%# Eval("Title") %></a>&nbsp;<%# Eval("Data") %>...</li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+                <span class="more"><a href="/ShowContents.aspx?CType=Department News">more...</a></span>
+            </div>
+            <div class="bxbottom">
+            </div>
+            <div class="brht1">
+            </div>
+            <div class="bxtop">
+            </div>
+            <div class="clmiddle">
+                <div class="ne">
+                    <img src="images/slogo.png" align="absmiddle" /> Biz News</div>
+                <div class="brdhds">
+                </div>
+                <div class="src1">
+                    <marquee direction="up" scrollamount="3" style="height: 151px"> 
+                    <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.moneycontrol.com%2Frss%2Feconomy.xml&num=5&desc=90>1&targ=y&utf=y"  charset="UTF-8" type="text/javascript"></script>
+                    <noscript>
+                      <a href="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.moneycontrol.com%2Frss%2Feconomy.xml&num=5&desc=90>1&targ=y&utf=y&html=y">View RSS feed</a>
+                    </noscript></marquee><span class="more">
+                    <a href="http://www.moneycontrol.com/rss/economy.xml" target="_blank">more...</a></span>
+                </div>
+            </div>
+            <div class="bxbottom">
+            </div>
+            <div class="brht1">
+            </div>
+            <div style="height: 80px;">
+                <img src="images/add2.jpg" height="80" width="232" />
+            </div>
+            <div class="brht1">
+            </div>
+            <div class="bxtop">
+            </div>
+            <div class="clmiddle">
+                <a href="#">
+                <div class="ne">
+                    <img src="images/slogo.png" align="absmiddle" /> Guest Column</div>
+                <div class="brdhds">
+                </div>
+                <div class="src1">
+                    <img src="images/sbrao.gif" width="85" height="70" class="txtwrap" />
+                    <asp:Repeater ID="dlRGuest" runat="server">
+                        <ItemTemplate>
+                            <a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                            <%# Eval("Data") %>...</a>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+                </a><span class="more"><a href="/ShowContents.aspx?CType=Right Guest">more...</a></span>
+            </div>
+            <div class="bxbottom">
+            </div>
+            <div class="brht1">
+            </div>
+    </asp:ContentPlaceHolder> </div>
+</asp:Content>

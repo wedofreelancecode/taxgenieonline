@@ -1,0 +1,404 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="TaxGenieOnline.Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>TaxGenie</title>
+    <link href="~/stylesheets/ddsmoothmenu.css" rel="Stylesheet" type="text/css" />
+    <link href="~/stylesheets/global.css" rel="Stylesheet" type="text/css" />
+    <link href="~/stylesheets/reset.css" rel="Stylesheet" type="text/css" />
+    <link href="~/stylesheets/stylesheet.css" rel="Stylesheet" type="text/css" />
+    <script src="scripts/ddsmoothmenu.js" type="text/javascript"></script>
+    <script src="scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="scripts/slides.jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        ddsmoothmenu.init({
+            mainmenuid: "smoothmenu1", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v" 
+            shadow: 'false',
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        });
+        $(function () {
+            $("#slides").slides({ play: 3000,
+                pause: 2500,
+                hoverPause: true,
+                slideSpeed: 350,
+                slideEasing: "easeOutQuad",
+                pagination: false
+            });
+            var watermark = 'Search';
+            $('input.srch').blur(function () {
+                if ($(this).val().length == 0)
+                    $(this).val(watermark).addClass('watermark');
+            }).focus(function () {
+                if ($(this).val() == watermark)
+                    $(this).val('').removeClass('watermark');
+            }).val(watermark).addClass('watermark').keypress(function (event) {
+                if (event.which == 13) {
+                    $("a.mg").click();
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div class="tl">
+    </div>
+    <div class="header">
+    <a href="/Home.aspx" target="_self">
+            <div class="logoIcon title">
+                Logo
+            </div>
+        </a>
+        <a href="/Home.aspx" target="_self">
+            <div class="logo title">
+                Logo
+            </div>
+        </a>
+        <div class="hright fright">
+            <a href="/Home.aspx" target="_self">Home</a> | <a href="/about-us.aspx" target="_self">
+                About Us</a> | <a href="/sitemap.aspx">Sitemap</a> | <a href="/Contactus.aspx" target="_self">
+                    Contact Us</a></div>
+        <div class="hrightL frightL">
+            <asp:ContentPlaceHolder ID="cph_login" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="menuhldr mid middimension">
+            <div class="mlft fleft">
+                <div id="smoothmenu1" class="ddsmoothmenu">
+                    <ul>
+                        <li><a href="#">Central Excise</a><span class="small">
+                            <div class="smallpng" align="center">
+                            </div>
+                            <%--<img src="images/small.png"
+                                width="7" height="6" align="middle" />--%></span>
+                            <ul>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Acts">Acts</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Rules">Rules</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Tariff/2012-13">Tariff 2012-13</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=CBEC/Manual">CBEC Manual</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Forms">Forms</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Notifications">Notifications</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Case/Laws">Case Laws</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Section/37B/Order">Section 37B Order</a></li>
+                                <%--   <li><a href="http://www.cbec.gov.in/frq-nms-cx-st-audits.pdf">Frequency norms of audit of Central Excise assessees</a></li>--%>
+                            </ul>
+                        </li>
+                        <li><a href="#">Customs</a><span class="small1">
+                            <div class="smallpng" align="center">
+                            </div>
+                        </span>
+                            <ul>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Acts">Acts</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Rules">Rules</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Regulations">Regulations</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Tariff/2012-13">Tariff 2012-13</a></li>
+                                <li><a href="#">Manuals</a>
+                                    <ul>
+                                        <li><a href="http://www.cbec.gov.in/cs-manual-2012.pdf">Customs Manual-2012</a></li>
+                                        <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf">Customs
+                                            Manual on Self Assessment-2011</a> </li>
+                                    </ul>
+                                </li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Forms">Forms</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Notifications">Notifications</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Case/Laws">Case Laws</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=SEZ">SEZ</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Drawback/Schedule">Drawback Schedule</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Service Tax</a><span class="small2">
+                            <div class="smallpng" align="center">
+                            </div>
+                        </span>
+                            <ul>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Act/1994">Act 1994</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=ST/Rules">ST Rules</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Notifications">Notifications</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Forms/and/Registers">Forms and Registers</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Case/Laws">Case Laws</a></li>
+                                <li><a href="/Serviceprocedures.htm" target="_blank">Service Tax Procedures</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Accounting/Codes/for/new/services">Accounting
+                                    Codes for new services</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Taxation/of/Services/An/Educational/Guide" target="_blank">
+                                    Taxation of Services: An Educational Guide</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Income Tax</a> <span class="small2">
+                            <div class="smallpng" align="center">
+                            </div>
+                        </span>
+                            <ul>
+                                <li><a href="#">Acts</a><span class="subsmall">
+                                    <div class="smallpng" align="right">
+                                    </div>
+                                </span>
+                                    <ul>
+                                        <li><a href="/index.aspx?cat=Income/Tax&subcat=Income/Tax/Act">Income Tax Act</a></li>
+                                        <li><a href="/index.aspx?cat=Income/Tax&subcat=Wealth/Tax/Act">Wealth Tax Act</a></li>
+                                        <li><a href="/index.aspx?cat=Income/Tax&subcat=Gift/Tax/Act">Gift Tax Act</a></li>
+                                        <li><a href="/index.aspx?cat=Income/Tax&subcat=Expenditure/Tax/Act">Expenditure Tax
+                                            Act</a></li>
+                                        <li><a href="/index.aspx?cat=Income/Tax&subcat=Interest/Tax/Act">Interest Tax Act</a></li>
+                                        <li><a href="/index.aspx?cat=Income/Tax&subcat=Finance/Act">Finance Act</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Rules</a> <span class="subsmall">
+                                    <div class="smallpng" align="right">
+                                    </div>
+                                </span>
+                                    <ul>
+                                        <li><a href="/index.aspx?cat=Income/Tax&subcat=Income/Tax/Rules">Income Tax Rules</a></li>
+                                        <li><a href="/index.aspx?cat=Income/Tax&subcat=Other/Direct/Tax/Rules">Other Direct
+                                            Tax Rules</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Circulars">Circulars</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Notifications">Notifications</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">DGFT</a><span class="small3">
+                            <div class="smallpng" align="center">
+                            </div>
+                        </span>
+                            <ul>
+                                <li><a href="/index.aspx?cat=DGFT&subcat=FTP">FTP</a></li>
+                                <li><a href="/index.aspx?cat=DGFT&subcat=FTDR/Notifications">FTDR Notifications</a></li>
+                                <li><a href="/index.aspx?cat=DGFT&subcat=public/notices">Public Notices</a></li>
+                                <li><a href="/index.aspx?cat=DGFT&subcat=Circulars/Instructions">Circulars</a></li>
+                                <li><a href="/index.aspx?cat=DGFT&subcat=SION">SION</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Library</a><span class="small1">
+                            <div class="smallpng" align="center">
+                            </div>
+                        </span>
+                            <ul>
+                                <li><a href="#">Central Excise</a><span class="subsmall">
+                                    <div class="smallpng" align="center">
+                                    </div>
+                                </span>
+                                    <ul>
+                                        <li><a href="/index.aspx?cat=Library&subcat=Rescinded/Rules">Rescinded Rules</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Service Tax</a><span class="subsmall">
+                                    <div class="smallpng" align="center">
+                                    </div>
+                                </span>
+                                    <ul>
+                                        <li><a href="/index.aspx?cat=Library&subcat=ST/Libraries">ST Libraries</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Services</a><span class="small1">
+                            <div class="smallpng" align="center">
+                            </div>
+                        </span>
+                            <ul>
+                                <li><a href="#">Consulting</a></li>
+                                <li><a href="#">Book Keeping</a></li>
+                                <li><a href="#">Filling Returns</a></li>
+                                <li><a href="#">Forms & Registers</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end of menu -->
+            <div class="srchhldr fright">
+                <input type="text" name="txtSearch" id="txtSearch" runat="server" class="srch" />
+                <asp:ImageButton ID="imgSearch" runat="server" CssClass="mg" ImageUrl="~/images/mg.jpg"
+                    OnClick="imgSearch_Click1" />
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+    <div class="middimension" id="TICKER" style="display: none; border: 1px solid #CCCCCC;
+        margin-bottom: 5px; padding: 5px; overflow: hidden; background-color: #DDDDDD;
+        width: 980px" onmouseover="TICKER_PAUSED=true" onmouseout="TICKER_PAUSED=false">
+        <span style='background-color: #FFAA00;'>&nbsp; &nbsp; <font color="#FFFFFF"><b>Scrolling
+            News</b></font>&nbsp; &nbsp; </span>&nbsp; <b>You can add this ticker in your own web
+                pages. You can add this ticker in your own web pages.You can add this ticker in your own web
+                pages. You can add this ticker in your own web pages.You can add this ticker in your own web
+                pages. You can add this ticker in your own web pages.</b>&nbsp; 
+    </div>
+    <script type="text/javascript" src="Scripts/webticker_lib.js" language="javascript"></script>
+    <div class="middimension">
+        <div id="adminpanel" runat="server" visible="false" class="adminbtn">
+            <table width="100%">
+                <tr>
+                    <td>
+                        Content:<a href="/admin/uploadnotifications.aspx">Add\Upload</a><a href="/admin/editnotifications.aspx">Edit\Delete</a>
+                    </td>
+                    <td>
+                        News:<a href="/admin/uploadnews.aspx">Add\Upload</a><a href="/admin/editnews.aspx">Edit\Delete</a>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        Home Content:<a href="/admin/HomeContentEditor.aspx">Add\Upload</a><a href="#">Edit\Delete</a>
+                    </td>
+                    <td>
+                       
+                    </td>
+                </tr>
+            </table>
+            <%--   <ul>
+                    <li><a href="/admin/uploadnotifications.aspx">Upload Documents</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/admin/uploadnews.aspx">Upload News</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/admin/uploadnewsflash.aspx">Upload Newsflash</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Edit Documents</a></li>--%><%--/admin/editandupdatenotifications.aspx --%>
+            <%-- </ul>
+                <ul>
+                    <li><a href="/admin/editnews.aspx">Edit News</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/admin/editflashnews.aspx">Edit Newsflash</a></li>
+                </ul>--%>
+        </div>
+        <div class="cont">
+            <asp:ContentPlaceHolder ID="cph_page" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div class="Floater">
+        <a title="On Facebook" href="http://www.facebook.com/pages/TaxGenieOnline/467377253281534"
+            target="_blank">
+            <img alt="Facebook" src="/images/FaceBook_32x32.png" border="0" />
+        </a><a title="On twitter" href="https://twitter.com/TaxGenieOnline" target="_blank">
+            <img alt="Twitter" src="/images/Twitter_32x32.png" border="0" />
+        </a><a title="On Linkedin" href="http://www.linkedin.com/pub/taxgenieonline-hyderabad/55/a7a/360"
+            target="_blank">
+            <img alt="Linkedin" width="32px" height="32px" src="/images/linkedin.png" border="0" />
+        </a><a title="Blog Feed" href="http://taxgenieonline.blogspot.com/feeds/posts/default"
+            target="_blank">
+            <img alt="Blog Feed" src="/images/Feed_32x32.png" border="0" />
+        </a>
+    </div>
+    </form>
+    <div class="footer fleft" style="background-color: #565656; width: 100%;">
+        <div class="" style="width: 100%" align="center">
+            <div>
+                <div class="copyright fright" style="text-align: right">
+                    <p>
+                        © 2012 Tax Genie Online | Powered by <span>MARK Profession​al Services Pvt. Limited</span></p>
+                </div>
+            </div>
+            <div align="left" class="shrtct">
+                <div style="float: left; width: 150px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                        <li><b>Central Excise</b>
+                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
+                                <li><a href="/index.aspx?cat=Central Excise&subcat=Acts">Acts</a></li>
+                                <li><a href="/index.aspx?cat=Central Excise&subcat=Rules">Rules</a></li>
+                                <li><a href="/index.aspx?cat=Central Excise&subcat=Tariff 2012-13">Tariff 2012-13</a></li>
+                                <li><a href="http://www.cbec.gov.in/cx-manual.pdf" target="_blank">CBEC Manual</a></li>
+                                <li><a href="/index.aspx?cat=Central Excise&subcat=Forms">Forms</a></li>
+                                <li><a href="/index.aspx?cat=Central Excise&subcat=Notifications">Notifications</a></li>
+                                <li><a href="/index.aspx?cat=Central Excise&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
+                                <li><a href="/index.aspx?cat=Central Excise&subcat=Section 37B Order">Section 37B Order</a></li>
+                                <%--   <li><a href="http://www.cbec.gov.in/frq-nms-cx-st-audits.pdf">Frequency norms</a></li>--%>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 150px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                        <li><b>Customs</b>
+                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
+                                <li><a href="/index.aspx?cat=Customs&subcat=Acts">Acts</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Rules">Rules</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Regulations">Regulations</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Tariff 2012-13">Tariff 2012-13</a></li>
+                                <li><a href="http://www.cbec.gov.in/cs-manual-2012.pdf" target="_blank">Manual-2012</a></li>
+                                <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf" target="_blank">Self
+                                    Assessment-2011</a> </li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Forms">Forms</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Notifications">Notifications</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=SEZ">SEZ</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Drawback Schedule">Drawback Schedule</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 150px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                        <li><b>Service Tax</b>
+                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
+                                <li><a href="/index.aspx?cat=Service Tax&subcat=Act 1994">Act 1994</a></li>
+                                <li><a href="/index.aspx?cat=Service Tax&subcat=ST Rules">ST Rules</a></li>
+                                <li><a href="/index.aspx?cat=Service Tax&subcat=Notifications">Notifications</a></li>
+                                <li><a href="/index.aspx?cat=Service Tax&subcat=Forms and Registers">Forms and Registers</a></li>
+                                <li><a href="/index.aspx?cat=Service Tax&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
+                                <li><a href="#">Case Laws</a></li>
+                                <li><a href="/Serviceprocedures.htm" target="_blank">Service Tax Procedures</a></li>
+                                <li><a href="/index.aspx?cat=Service Tax&subcat=Accounting Codes for new services">Accounting
+                                    Codes</a></li>
+                                <li><a href="http://www.servicetax.gov.in/st-edu-guide.pdf" target="_blank">Taxation of Services</a></li>
+                                <li><a href="http://www.servicetax.gov.in/faq-29sept11.pdf" target="_blank">Libraries</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 150px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                        <li><b>Income Tax</b>
+                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
+                                <li><a href="#">Income Tax</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 150px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                        <li><b>Library</b>
+                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
+                                <li><a href="#">Library</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 150px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                        <li><b>Services</b>
+                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
+                                <li><a href="#">Consulting</a></li>
+                                <li><a href="#">Book Keeping</a></li>
+                                <li><a href="#">Filling Returns</a></li>
+                                <li><a href="#">Forms & Registers</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

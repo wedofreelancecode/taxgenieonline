@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6C7D0B4-365D-4E59-9D02-C1C682793AF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxGenie_DAL</RootNamespace>
+    <AssemblyName>TaxGenie_DAL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CECNotifications.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CECNotifications.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CentralExcise.cs">
+      <DependentUpon>CentralExcise.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CentralExcise.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CentralExcise.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Circulars.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Circulars.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="customs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>customs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DGFT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DGFT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HomeContents.cs">
+      <DependentUpon>HomeContents.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HomeContents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomeContents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeTax.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeTax.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Library.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Library.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="news.cs">
+      <DependentUpon>news.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="news.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>news.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newsflash.cs">
+      <DependentUpon>newsflash.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="newsflash.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newsflash.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="search.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>search.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceTax.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceTax.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="STCaseLaws.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STCaseLaws.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="STNotifications.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STNotifications.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tariff.cs">
+      <DependentUpon>Tariff.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tariff.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tariff.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserProfile.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CECNotifications.xsc">
+      <DependentUpon>CECNotifications.xsd</DependentUpon>
+    </None>
+    <None Include="CECNotifications.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CECNotifications.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CECNotifications.xss">
+      <DependentUpon>CECNotifications.xsd</DependentUpon>
+    </None>
+    <None Include="CentralExcise.xsc">
+      <DependentUpon>CentralExcise.xsd</DependentUpon>
+    </None>
+    <None Include="CentralExcise.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CentralExcise.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CentralExcise.xss">
+      <DependentUpon>CentralExcise.xsd</DependentUpon>
+    </None>
+    <None Include="Circulars.xsc">
+      <DependentUpon>Circulars.xsd</DependentUpon>
+    </None>
+    <None Include="Circulars.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Circulars.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Circulars.xss">
+      <DependentUpon>Circulars.xsd</DependentUpon>
+    </None>
+    <None Include="customs.xsc">
+      <DependentUpon>customs.xsd</DependentUpon>
+    </None>
+    <None Include="customs.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>customs.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="customs.xss">
+      <DependentUpon>customs.xsd</DependentUpon>
+    </None>
+    <None Include="DGFT.xsc">
+      <DependentUpon>DGFT.xsd</DependentUpon>
+    </None>
+    <None Include="DGFT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DGFT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DGFT.xss">
+      <DependentUpon>DGFT.xsd</DependentUpon>
+    </None>
+    <None Include="HomeContents.xsc">
+      <DependentUpon>HomeContents.xsd</DependentUpon>
+    </None>
+    <None Include="HomeContents.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HomeContents.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HomeContents.xss">
+      <DependentUpon>HomeContents.xsd</DependentUpon>
+    </None>
+    <None Include="IncomeTax.xsc">
+      <DependentUpon>IncomeTax.xsd</DependentUpon>
+    </None>
+    <None Include="IncomeTax.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncomeTax.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IncomeTax.xss">
+      <DependentUpon>IncomeTax.xsd</DependentUpon>
+    </None>
+    <None Include="Library.xsc">
+      <DependentUpon>Library.xsd</DependentUpon>
+    </None>
+    <None Include="Library.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Library.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Library.xss">
+      <DependentUpon>Library.xsd</DependentUpon>
+    </None>
+    <None Include="news.xsc">
+      <DependentUpon>news.xsd</DependentUpon>
+    </None>
+    <None Include="news.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>news.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="news.xss">
+      <DependentUpon>news.xsd</DependentUpon>
+    </None>
+    <None Include="newsflash.xsc">
+      <DependentUpon>newsflash.xsd</DependentUpon>
+    </None>
+    <None Include="newsflash.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newsflash.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="newsflash.xss">
+      <DependentUpon>newsflash.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="search.xsc">
+      <DependentUpon>search.xsd</DependentUpon>
+    </None>
+    <None Include="search.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>search.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="search.xss">
+      <DependentUpon>search.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceTax.xsc">
+      <DependentUpon>ServiceTax.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceTax.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceTax.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ServiceTax.xss">
+      <DependentUpon>ServiceTax.xsd</DependentUpon>
+    </None>
+    <None Include="STCaseLaws.xsc">
+      <DependentUpon>STCaseLaws.xsd</DependentUpon>
+    </None>
+    <None Include="STCaseLaws.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>STCaseLaws.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="STCaseLaws.xss">
+      <DependentUpon>STCaseLaws.xsd</DependentUpon>
+    </None>
+    <None Include="STNotifications.xsc">
+      <DependentUpon>STNotifications.xsd</DependentUpon>
+    </None>
+    <None Include="STNotifications.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>STNotifications.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="STNotifications.xss">
+      <DependentUpon>STNotifications.xsd</DependentUpon>
+    </None>
+    <None Include="Tariff.xsc">
+      <DependentUpon>Tariff.xsd</DependentUpon>
+    </None>
+    <None Include="Tariff.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tariff.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Tariff.xss">
+      <DependentUpon>Tariff.xsd</DependentUpon>
+    </None>
+    <None Include="UserProfile.xsc">
+      <DependentUpon>UserProfile.xsd</DependentUpon>
+    </None>
+    <None Include="UserProfile.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserProfile.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UserProfile.xss">
+      <DependentUpon>UserProfile.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
