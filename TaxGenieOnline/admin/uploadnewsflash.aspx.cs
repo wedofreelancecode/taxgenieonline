@@ -23,22 +23,17 @@ namespace TaxGenieOnline.admin
         {
             try
             {
-
-                string content = Editor1.Content;
-                string actcontent1 = content.Replace("'", "");
-
-
+                string content = taNews.Value.Replace("'", "''");
                 newsflash_GetallTableAdapter newsflash_insert = new newsflash_GetallTableAdapter();
-              k =newsflash_insert.Insert(DateTime.Now, actcontent1);
+                k = newsflash_insert.Insert(DateTime.Now, content);
 
-              if (k > 0)
-              {
-                  Response.Write("<script>alert('Newsflash Uploded Successfully')</script>");
-              }
+                if (k > 0)
+                {
+                    Response.Write("<script>alert('Newsflash Uploded Successfully')</script>");
+                }
             }
             catch (Exception ex)
             {
-
                 lblstatus.Text = ex.Message;
             }
         }

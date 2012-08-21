@@ -70,6 +70,7 @@
     <Content Include="images\blue.jpg" />
     <Content Include="images\cartoon.jpg" />
     <Content Include="images\finance.jpg" />
+    <Content Include="images\fNews.png" />
     <Content Include="images\logo1.png" />
     <Content Include="images\news.png" />
     <Content Include="images\psslogo.png" />

@@ -232,31 +232,43 @@
     </div>
     <div>
     </div>
-    <div class="middimension" id="TICKER" style="display: none; border: 1px solid #CCCCCC;
-        margin-bottom: 5px; padding: 5px; overflow: hidden; background-color: #DDDDDD;
-        width: 980px" onmouseover="TICKER_PAUSED=true" onmouseout="TICKER_PAUSED=false">
-        <span style='background-color: #FFAA00;'>&nbsp; &nbsp; <font color="#FFFFFF"><b>Scrolling
-            News</b></font>&nbsp; &nbsp; </span>&nbsp; <b>You can add this ticker in your own web
-                pages. You can add this ticker in your own web pages.You can add this ticker in your own web
-                pages. You can add this ticker in your own web pages.You can add this ticker in your own web
-                pages. You can add this ticker in your own web pages.</b>&nbsp; 
+    <div class="middimension" style="width:990px">
+    <table style="background-color: #DDDDDD;margin-bottom:5px;">
+        <tr>
+            <td style='width:113px' class="flashNews">
+            </td>
+            <td>
+                <div class="middimension" id="TICKER" style="display: none;margin:5px; overflow: hidden;
+                    width: 877px" onmouseover="TICKER_PAUSED=true" onmouseout="TICKER_PAUSED=false">
+                    <asp:Repeater ID="dlNewsFlash" runat="server">
+                        <ItemTemplate>
+                            <%# Eval("Newsflash")%>
+                            &nbsp; <sub class="star">*</sub> &nbsp;
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+            </td>
+        </tr>
+    </table>
     </div>
     <script type="text/javascript" src="Scripts/webticker_lib.js" language="javascript"></script>
     <div class="middimension">
         <div id="adminpanel" runat="server" visible="false" class="adminbtn">
             <table width="100%">
-                <tr>
-                    <td>
+                <tr >
+                    <td align="right">
                         Content:<a href="/admin/uploadnotifications.aspx">Add\Upload</a><a href="/admin/editnotifications.aspx">Edit\Delete</a>
                     </td>
+                    <td style="width:250px"></td>
                     <td>
-                        News:<a href="/admin/uploadnews.aspx">Add\Upload</a><a href="/admin/editnews.aspx">Edit\Delete</a>
+                        Flash News:<a href="/admin/uploadnewsflash.aspx">Add\Upload</a><a href="#">Edit\Delete</a>
                     </td>
                 </tr>
                  <tr>
-                    <td>
+                    <td align="right">
                         Home Content:<a href="/admin/HomeContentEditor.aspx">Add\Upload</a><a href="#">Edit\Delete</a>
                     </td>
+                    <td style="width:250px"></td>
                     <td>
                        Tax Update:<a href="/admin/TaxUpdateEditor.aspx">Add\Upload</a><a href="#">Edit\Delete</a>
                     </td>

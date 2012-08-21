@@ -19,38 +19,38 @@ namespace TaxGenieOnline.admin
             {
 
 
-                newsflash_GetYearsTableAdapter dtyears = new newsflash_GetYearsTableAdapter();
-                DataTable dtGetYears = dtyears.newsflashgetyears();
+                //newsflash_GetYearsTableAdapter dtyears = new newsflash_GetYearsTableAdapter();
+                //DataTable dtGetYears = dtyears.newsflashgetyears();
 
-                if (dtGetYears.Rows.Count > 0)
-                {
-                    ddlyear.Items.Add(new ListItem("Select One", "0"));
+                //if (dtGetYears.Rows.Count > 0)
+                //{
+                //    ddlyear.Items.Add(new ListItem("Select One", "0"));
 
-                    foreach (DataRow i in dtGetYears.Rows)
-                    {
+                //    foreach (DataRow i in dtGetYears.Rows)
+                //    {
 
-                        ddlyear.Items.Add(i["Year"].ToString());
-                    }
-                }
+                //        ddlyear.Items.Add(i["Year"].ToString());
+                //    }
+                //}
             }
 
         }
 
         protected void ddlyear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            newsflash_GetMonthsTableAdapter dtmonths = new newsflash_GetMonthsTableAdapter();
-            DataTable dtGetMonths = dtmonths.newsflashgetmonths(ddlyear.SelectedValue);
+            //newsflash_GetMonthsTableAdapter dtmonths = new newsflash_GetMonthsTableAdapter();
+            //DataTable dtGetMonths = dtmonths.newsflashgetmonths(ddlyear.SelectedValue);
 
-            if (dtGetMonths.Rows.Count > 0)
-            {
-                ddlmonth.Items.Add(new ListItem("Select One", "0"));
+            //if (dtGetMonths.Rows.Count > 0)
+            //{
+            //    ddlmonth.Items.Add(new ListItem("Select One", "0"));
 
-                foreach (DataRow i in dtGetMonths.Rows)
-                {
+            //    foreach (DataRow i in dtGetMonths.Rows)
+            //    {
 
-                    ddlmonth.Items.Add(i["Month"].ToString());
-                }
-            }
+            //        ddlmonth.Items.Add(i["Month"].ToString());
+            //    }
+            //}
 
 
         }

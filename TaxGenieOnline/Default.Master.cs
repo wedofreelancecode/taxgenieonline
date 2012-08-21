@@ -25,18 +25,10 @@ namespace TaxGenieOnline
             {
                 adminpanel.Visible = false;
             }
-            // newsflash_GetDescriptionTableAdapter fetchdata = new newsflash_GetDescriptionTableAdapter();
-            // DataTable dtDesc = fetchdata.GetDatanewsflash();
-            //// if (dtDesc.Rows.Count > 0)
-            ////// {
-            //   //  string news = string.Empty;
-            //   ////  for (int i = 0; i < dtDesc.Rows.Count; i++)
-            //    // {
-            //       //  string desc = dtDesc.Rows[i]["Newsflash"].ToString() + "&nbsp;&nbsp;&nbsp;";
-            //       //  news = news + desc;
-            //    // }
-            //   //  lblnewsflash.Text = news;
-            // }
+
+            newsflash_GetDescriptionTableAdapter news = new newsflash_GetDescriptionTableAdapter();
+            dlNewsFlash.DataSource= news.GetDatanewsflash();
+            dlNewsFlash.DataBind();
         }
 
         protected void imgSearch_Click1(object sender, ImageClickEventArgs e)

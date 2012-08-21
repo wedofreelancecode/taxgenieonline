@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="newsflash_GetallTableAdapter" GeneratorDataComponentClassName="newsflash_GetallTableAdapter" Name="newsflash_Getall" UserDataComponentName="newsflash_GetallTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="TaxGenieConnectionString (Settings)" DbObjectName="TaxGenie.dbo.newsflash_Getall" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetnewsflashDescription" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetnewsflashDescription" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetnewsflashDescription" UserSourceName="Fill">
+              <DbSource ConnectionRef="TaxGenieConnectionString (Settings)" DbObjectName="TaxGenie.dbo.newsflash_Getall" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetnewsflashDescription" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetnewsflashDescription" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetnewsflashDescription" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.newsflash_Insert</CommandText>
@@ -50,7 +50,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="newsflash_GetDescriptionTableAdapter" GeneratorDataComponentClassName="newsflash_GetDescriptionTableAdapter" Name="newsflash_GetDescription" UserDataComponentName="newsflash_GetDescriptionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="TaxGenieConnectionString (Settings)" DbObjectName="TaxGenie.dbo.newsflash_GetDescription" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDatanewsflash" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetDatanewsflash" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDatanewsflash" UserSourceName="Fill">
+              <DbSource ConnectionRef="TaxGenieConnectionString (Settings)" DbObjectName="Dev_TaxGenie.dbo.newsflash_GetDescription" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDatanewsflash" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetDatanewsflash" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDatanewsflash" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.newsflash_GetDescription</CommandText>
@@ -66,46 +66,9 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="newsflash_GetYearsTableAdapter" GeneratorDataComponentClassName="newsflash_GetYearsTableAdapter" Name="newsflash_GetYears" UserDataComponentName="newsflash_GetYearsTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="TaxGenieConnectionString (Settings)" DbObjectName="TaxGenie.dbo.newsflash_GetYears" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="newsflashgetyears" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="newsflashgetyears" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="newsflashgetyears" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
-                    <CommandText>dbo.newsflash_GetYears</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="Column1" DataSetColumn="Column1" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="newsflash_GetMonthsTableAdapter" GeneratorDataComponentClassName="newsflash_GetMonthsTableAdapter" Name="newsflash_GetMonths" UserDataComponentName="newsflash_GetMonthsTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="TaxGenieConnectionString (Settings)" DbObjectName="TaxGenie.dbo.newsflash_GetMonths" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="newsflashgetmonths" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="newsflashgetmonths" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="newsflashgetmonths" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
-                    <CommandText>dbo.newsflash_GetMonths</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@year" Precision="0" ProviderType="VarChar" Scale="0" Size="5" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="Column1" DataSetColumn="Column1" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="newsflash_descriptionTableAdapter" GeneratorDataComponentClassName="newsflash_descriptionTableAdapter" Name="newsflash_description" UserDataComponentName="newsflash_descriptionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="TaxGenieConnectionString (Settings)" DbObjectName="TaxGenie.dbo.newsflash_description" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="newsflashgetdescription" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="newsflashgetdescription" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="newsflashgetdescription" UserSourceName="Fill">
+              <DbSource ConnectionRef="TaxGenieConnectionString (Settings)" DbObjectName="TaxGenie.dbo.newsflash_description" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="newsflashgetdescription" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="newsflashgetdescription" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="newsflashgetdescription" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.newsflash_description</CommandText>
@@ -127,28 +90,28 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="newsflash" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="newsflash" msprop:Generator_DataSetName="newsflash" msprop:EnableTableAdapterManager="true">
+  <xs:element name="newsflash" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="newsflash" msprop:Generator_UserDSName="newsflash">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="newsflash_Getall" msprop:Generator_UserTableName="newsflash_Getall" msprop:Generator_RowDeletedName="newsflash_GetallRowDeleted" msprop:Generator_RowChangedName="newsflash_GetallRowChanged" msprop:Generator_RowClassName="newsflash_GetallRow" msprop:Generator_RowChangingName="newsflash_GetallRowChanging" msprop:Generator_RowEvArgName="newsflash_GetallRowChangeEvent" msprop:Generator_RowEvHandlerName="newsflash_GetallRowChangeEventHandler" msprop:Generator_TableClassName="newsflash_GetallDataTable" msprop:Generator_TableVarName="tablenewsflash_Getall" msprop:Generator_RowDeletingName="newsflash_GetallRowDeleting" msprop:Generator_TablePropName="newsflash_Getall">
+        <xs:element name="newsflash_Getall" msprop:Generator_UserTableName="newsflash_Getall" msprop:Generator_RowEvArgName="newsflash_GetallRowChangeEvent" msprop:Generator_TableVarName="tablenewsflash_Getall" msprop:Generator_TablePropName="newsflash_Getall" msprop:Generator_RowDeletingName="newsflash_GetallRowDeleting" msprop:Generator_RowChangingName="newsflash_GetallRowChanging" msprop:Generator_RowDeletedName="newsflash_GetallRowDeleted" msprop:Generator_RowEvHandlerName="newsflash_GetallRowChangeEventHandler" msprop:Generator_RowChangedName="newsflash_GetallRowChanged" msprop:Generator_TableClassName="newsflash_GetallDataTable" msprop:Generator_RowClassName="newsflash_GetallRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
-              <xs:element name="Newsflash" msprop:Generator_UserColumnName="Newsflash" msprop:Generator_ColumnPropNameInRow="Newsflash" msprop:Generator_ColumnVarNameInTable="columnNewsflash" msprop:Generator_ColumnPropNameInTable="NewsflashColumn" minOccurs="0">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Newsflash" msprop:Generator_ColumnVarNameInTable="columnNewsflash" msprop:Generator_ColumnPropNameInRow="Newsflash" msprop:Generator_ColumnPropNameInTable="NewsflashColumn" msprop:Generator_UserColumnName="Newsflash" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="datetime" msprop:Generator_UserColumnName="datetime" msprop:Generator_ColumnPropNameInRow="datetime" msprop:Generator_ColumnVarNameInTable="columndatetime" msprop:Generator_ColumnPropNameInTable="datetimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="datetime" msprop:Generator_ColumnVarNameInTable="columndatetime" msprop:Generator_ColumnPropNameInRow="datetime" msprop:Generator_ColumnPropNameInTable="datetimeColumn" msprop:Generator_UserColumnName="datetime" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="newsflash_GetDescription" msprop:Generator_UserTableName="newsflash_GetDescription" msprop:Generator_RowDeletedName="newsflash_GetDescriptionRowDeleted" msprop:Generator_RowChangedName="newsflash_GetDescriptionRowChanged" msprop:Generator_RowClassName="newsflash_GetDescriptionRow" msprop:Generator_RowChangingName="newsflash_GetDescriptionRowChanging" msprop:Generator_RowEvArgName="newsflash_GetDescriptionRowChangeEvent" msprop:Generator_RowEvHandlerName="newsflash_GetDescriptionRowChangeEventHandler" msprop:Generator_TableClassName="newsflash_GetDescriptionDataTable" msprop:Generator_TableVarName="tablenewsflash_GetDescription" msprop:Generator_RowDeletingName="newsflash_GetDescriptionRowDeleting" msprop:Generator_TablePropName="newsflash_GetDescription">
+        <xs:element name="newsflash_GetDescription" msprop:Generator_UserTableName="newsflash_GetDescription" msprop:Generator_RowEvArgName="newsflash_GetDescriptionRowChangeEvent" msprop:Generator_TableVarName="tablenewsflash_GetDescription" msprop:Generator_TablePropName="newsflash_GetDescription" msprop:Generator_RowDeletingName="newsflash_GetDescriptionRowDeleting" msprop:Generator_RowChangingName="newsflash_GetDescriptionRowChanging" msprop:Generator_RowDeletedName="newsflash_GetDescriptionRowDeleted" msprop:Generator_RowEvHandlerName="newsflash_GetDescriptionRowChangeEventHandler" msprop:Generator_RowChangedName="newsflash_GetDescriptionRowChanged" msprop:Generator_TableClassName="newsflash_GetDescriptionDataTable" msprop:Generator_RowClassName="newsflash_GetDescriptionRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Newsflash" msprop:Generator_UserColumnName="Newsflash" msprop:Generator_ColumnPropNameInRow="Newsflash" msprop:Generator_ColumnVarNameInTable="columnNewsflash" msprop:Generator_ColumnPropNameInTable="NewsflashColumn" minOccurs="0">
+              <xs:element name="Newsflash" msprop:Generator_ColumnVarNameInTable="columnNewsflash" msprop:Generator_ColumnPropNameInRow="Newsflash" msprop:Generator_ColumnPropNameInTable="NewsflashColumn" msprop:Generator_UserColumnName="Newsflash" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -158,30 +121,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="newsflash_GetYears" msprop:Generator_UserTableName="newsflash_GetYears" msprop:Generator_RowDeletedName="newsflash_GetYearsRowDeleted" msprop:Generator_RowChangedName="newsflash_GetYearsRowChanged" msprop:Generator_RowClassName="newsflash_GetYearsRow" msprop:Generator_RowChangingName="newsflash_GetYearsRowChanging" msprop:Generator_RowEvArgName="newsflash_GetYearsRowChangeEvent" msprop:Generator_RowEvHandlerName="newsflash_GetYearsRowChangeEventHandler" msprop:Generator_TableClassName="newsflash_GetYearsDataTable" msprop:Generator_TableVarName="tablenewsflash_GetYears" msprop:Generator_RowDeletingName="newsflash_GetYearsRowDeleting" msprop:Generator_TablePropName="newsflash_GetYears">
+        <xs:element name="newsflash_description" msprop:Generator_UserTableName="newsflash_description" msprop:Generator_RowEvArgName="newsflash_descriptionRowChangeEvent" msprop:Generator_TableVarName="tablenewsflash_description" msprop:Generator_TablePropName="newsflash_description" msprop:Generator_RowDeletingName="newsflash_descriptionRowDeleting" msprop:Generator_RowChangingName="newsflash_descriptionRowChanging" msprop:Generator_RowDeletedName="newsflash_descriptionRowDeleted" msprop:Generator_RowEvHandlerName="newsflash_descriptionRowChangeEventHandler" msprop:Generator_RowChangedName="newsflash_descriptionRowChanged" msprop:Generator_TableClassName="newsflash_descriptionDataTable" msprop:Generator_RowClassName="newsflash_descriptionRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Column1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Column1" msprop:Generator_ColumnVarNameInTable="columnColumn1" msprop:Generator_ColumnPropNameInRow="Column1" msprop:Generator_ColumnPropNameInTable="Column1Column" type="xs:int" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="newsflash_GetMonths" msprop:Generator_UserTableName="newsflash_GetMonths" msprop:Generator_RowDeletedName="newsflash_GetMonthsRowDeleted" msprop:Generator_RowChangedName="newsflash_GetMonthsRowChanged" msprop:Generator_RowClassName="newsflash_GetMonthsRow" msprop:Generator_RowChangingName="newsflash_GetMonthsRowChanging" msprop:Generator_RowEvArgName="newsflash_GetMonthsRowChangeEvent" msprop:Generator_RowEvHandlerName="newsflash_GetMonthsRowChangeEventHandler" msprop:Generator_TableClassName="newsflash_GetMonthsDataTable" msprop:Generator_TableVarName="tablenewsflash_GetMonths" msprop:Generator_RowDeletingName="newsflash_GetMonthsRowDeleting" msprop:Generator_TablePropName="newsflash_GetMonths">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Column1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Column1" msprop:Generator_ColumnVarNameInTable="columnColumn1" msprop:Generator_ColumnPropNameInRow="Column1" msprop:Generator_ColumnPropNameInTable="Column1Column" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="newsflash_description" msprop:Generator_UserTableName="newsflash_description" msprop:Generator_RowDeletedName="newsflash_descriptionRowDeleted" msprop:Generator_RowChangedName="newsflash_descriptionRowChanged" msprop:Generator_RowClassName="newsflash_descriptionRow" msprop:Generator_RowChangingName="newsflash_descriptionRowChanging" msprop:Generator_RowEvArgName="newsflash_descriptionRowChangeEvent" msprop:Generator_RowEvHandlerName="newsflash_descriptionRowChangeEventHandler" msprop:Generator_TableClassName="newsflash_descriptionDataTable" msprop:Generator_TableVarName="tablenewsflash_description" msprop:Generator_RowDeletingName="newsflash_descriptionRowDeleting" msprop:Generator_TablePropName="newsflash_description">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="newsflash" msprop:Generator_UserColumnName="newsflash" msprop:Generator_ColumnVarNameInTable="columnnewsflash" msprop:Generator_ColumnPropNameInRow="newsflash" msprop:Generator_ColumnPropNameInTable="newsflashColumn" minOccurs="0">
+              <xs:element name="newsflash" msprop:Generator_ColumnVarNameInTable="columnnewsflash" msprop:Generator_ColumnPropNameInRow="newsflash" msprop:Generator_ColumnPropNameInTable="newsflashColumn" msprop:Generator_UserColumnName="newsflash" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />

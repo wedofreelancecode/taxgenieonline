@@ -202,6 +202,15 @@ ol, ul
     width: 990px; /*background: url(../images/flag.png) no-repeat center top;*/
     margin: 0 auto;
 }
+.star
+{
+    font-size:15px;
+    color:Orange;
+}
+.flashNews
+{
+    background:url(../images/fnews.png) no-repeat;
+}
 .menuhldr
 {
     width: 990px;
