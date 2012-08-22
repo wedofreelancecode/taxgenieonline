@@ -124,6 +124,15 @@ namespace TaxGenieOnline.admin
                                 edtData.Content = dtActs.Rows[0]["Data"].ToString();
                                 lbshowDoc.Visible = !isdoc;
                             }
+                            if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
+                            {
+                                txtCDrawbackIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
+                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
                             
                         }
 
@@ -165,6 +174,166 @@ namespace TaxGenieOnline.admin
                                 lbshowDoc.Visible = !isdoc;
                             }
                         }
+                        if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions"))
+                        {
+                            Circulars_Info_ByyearTableAdapter indexTariff = new Circulars_Info_ByyearTableAdapter();
+                            DataTable dtTariff = indexTariff.GetCEcircularsById(id);
+                            if (dtTariff.Rows.Count > 0)
+                            {
+                                bool isCircular = dtTariff.Rows[0]["GroupType"] == "Circulars";
+                                rdbCircularUploadType.SelectedValue = isCircular ? "Circulars" : "Instructions";
+                                txtCircularYear.Text = dtTariff.Rows[0]["Year"].ToString();
+                                txtCircularNumber.Text = dtTariff.Rows[0]["CircularNumber"].ToString();
+                                txtCircularFileNumber.Text = dtTariff.Rows[0]["FileNumber"].ToString();
+                                txtCircularDate.Text = dtTariff.Rows[0]["Date"].ToString();
+                                txtCircularSubject.Text = dtTariff.Rows[0]["Subject"].ToString();
+                                bool isdoc = dtTariff.Rows[0]["Data"] != null && dtTariff.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtTariff.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                        }
+                    }
+                    if (ddlcatagory.SelectedValue.Equals("Customs"))
+                    {
+                        ActsTableAdapter index = new ActsTableAdapter();
+                        DataTable dtActs = index.GetAllCustomsById(id);
+                        if (dtActs.Rows.Count > 0)
+                        {
+                            if (ddlsubcategory.SelectedValue.Equals("Acts"))
+                            {
+                                txtCActsIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
+                                txtCActsChapterName.Text = dtActs.Rows[0]["ChapterName"].ToString();
+                                edtCActsSections.Content = dtActs.Rows[0]["Sections"].ToString();
+                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                            if (ddlsubcategory.SelectedValue.Equals("Rules"))
+                            {
+                                txtCRulesIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
+                                txtSubRulesChapterName.Text = dtActs.Rows[0]["ChapterName"].ToString();
+                                ddlCRulesIndexGroup.SelectedValue = dtActs.Rows[0]["Headings"].ToString();
+                                edtSubRulesSections.Content = dtActs.Rows[0]["Sections"].ToString();
+                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                            if (ddlsubcategory.SelectedValue.Equals("Forms"))
+                            {
+                                ddlCformsgroup.SelectedValue = dtActs.Rows[0]["Headings"].ToString();
+                                ddlCformsgroup_SelectedIndexChanged(ddlCformsgroup, EventArgs.Empty);
+                                ddlCformssubgroups.SelectedValue = dtActs.Rows[0]["SubHeadings"].ToString();
+                                txtCFormsIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
+                                txtFormsSubject.Text = dtActs.Rows[0]["Subjects"].ToString();
+                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                            if (ddlsubcategory.SelectedValue.Equals("Regulations"))
+                            {
+                                txtCRegulationsIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
+                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                            if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
+                            {
+                                txtCDrawbackIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
+                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                            if (ddlsubcategory.SelectedValue.Equals("Drawback Schedule"))
+                            {
+                                txtCDrawbackIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
+                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                            if (ddlsubcategory.SelectedValue.Equals("SEZ"))
+                            {
+                                txtCSEZNotficationNo.Text = dtActs.Rows[0]["IndexName"].ToString();
+                                txtCSEZSubject.Text = dtActs.Rows[0]["Subjects"].ToString();
+                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+
+                        }
+                        if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13"))
+                        {
+                            Custom_Tariff_GetAllTableAdapter indexTariff = new Custom_Tariff_GetAllTableAdapter();
+                            DataTable dtTariff = indexTariff.SelectCustomTariffById(id);
+                            if (dtTariff.Rows.Count > 0)
+                            {
+                                ddlCtariffheading.SelectedValue = dtTariff.Rows[0]["Groups"].ToString();
+                                ddlCtariffheading_SelectedIndexChanged(ddlCtariffheading, EventArgs.Empty);
+                                ddlCtariffsubheading.SelectedValue = dtTariff.Rows[0]["SubGroup"].ToString();
+                                txtCtariffchapter.Text = dtTariff.Rows[0]["IndexName"].ToString();
+                                txtCtariffChaptername.Text = dtTariff.Rows[0]["ChapterName"].ToString();
+                                txtCtariffsubj.Text = dtTariff.Rows[0]["Subjects"].ToString();
+                                bool isdoc = dtTariff.Rows[0]["Data"] != null && dtTariff.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtTariff.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                        }
+                        if (ddlsubcategory.SelectedValue.Equals("Notifications"))
+                        {
+                            CECNotification_GetAllTableAdapter indexTariff = new CECNotification_GetAllTableAdapter();
+                            DataTable dtTariff = indexTariff.SelectAllCENotificationById(id);
+                            if (dtTariff.Rows.Count > 0)
+                            {
+                                rdbCECType.SelectedValue = dtTariff.Rows[0]["GroupType"].ToString();
+                                ddlCtariffheading_SelectedIndexChanged(ddlCtariffheading, EventArgs.Empty);
+                                txtCECYear.Text = dtTariff.Rows[0]["Year"].ToString();
+                                txtCECFnumber.Text = dtTariff.Rows[0]["FileNumber"].ToString();
+                                txtCECDate.Text = dtTariff.Rows[0]["Date"].ToString();
+                                txtCECSubject.Text = dtTariff.Rows[0]["Subject"].ToString();
+                                bool isdoc = dtTariff.Rows[0]["Data"] != null && dtTariff.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtTariff.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                        }
+                        if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions"))
+                        {
+                            Circulars_Info_ByyearTableAdapter indexTariff = new Circulars_Info_ByyearTableAdapter();
+                            DataTable dtTariff = indexTariff.GetCEcircularsById(id);
+                            if (dtTariff.Rows.Count > 0)
+                            {
+                                bool isCircular = dtTariff.Rows[0]["GroupType"].ToString().Equals("Circulars");
+                                rdbCircularUploadType.SelectedValue = isCircular ? "Circulars" : "Instructions";
+                                txtCircularYear.Text = dtTariff.Rows[0]["Year"].ToString();
+                                txtCircularNumber.Text = dtTariff.Rows[0]["CircularNumber"].ToString();
+                                txtCircularFileNumber.Text = dtTariff.Rows[0]["FileNumber"].ToString();
+                                txtCircularDate.Text = dtTariff.Rows[0]["Date"].ToString();
+                                txtCircularSubject.Text = dtTariff.Rows[0]["Subject"].ToString();
+                                bool isdoc = dtTariff.Rows[0]["Data"] != null && dtTariff.Rows[0]["Data"].ToString().Length > 0;
+                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                                edtData.Content = dtTariff.Rows[0]["Data"].ToString();
+                                lbshowDoc.Visible = !isdoc;
+                            }
+                        }
                     }
                 }
             }
@@ -173,27 +342,56 @@ namespace TaxGenieOnline.admin
         protected void lbshowDoc_Click(object sender, EventArgs e)
         {
             int? id = Int32.Parse(hdnId.Value);
-            if (ddlcatagory.SelectedValue.Equals("Central Excise") && ddlsubcategory.SelectedValue.Equals("Tariff 2012-13"))
+            if (ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
-                CentralExcise_Tariff_GetAllTableAdapter indexTariff = new CentralExcise_Tariff_GetAllTableAdapter();
-                DataTable dataTariff = indexTariff.SelectAllById(id);
-                if (dataTariff.Rows.Count > 0)
+                if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13"))
                 {
-                    byte[] b = ((byte[])dataTariff.Rows[0]["Document"]);
-                    Response.ContentType = "application/pdf";
-                    Response.BinaryWrite(b);
+                    CentralExcise_Tariff_GetAllTableAdapter indexTariff = new CentralExcise_Tariff_GetAllTableAdapter();
+                    DataTable dataTariff = indexTariff.SelectAllById(id);
+                    if (dataTariff.Rows.Count > 0)
+                    {
+                        byte[] b = ((byte[])dataTariff.Rows[0]["Document"]);
+                        Response.ContentType = "application/pdf";
+                        Response.BinaryWrite(b);
+                    }
+                }
+                else
+                {
+                    CEActsTableAdapter index = new CEActsTableAdapter();
+                    DataTable dtActs = index.CEGetAllById(id);
+                    if (dtActs.Rows.Count > 0)
+                    {
+                        byte[] b = ((byte[])dtActs.Rows[0]["Document"]);
+                        //Collect Bytes from database and write in Webpage
+                        Response.ContentType = "application/pdf";
+                        Response.BinaryWrite(b);
+                    }
                 }
             }
-            else
+            if (ddlcatagory.SelectedValue.Equals("Customs"))
             {
-                CEActsTableAdapter index = new CEActsTableAdapter();
-                DataTable dtActs = index.CEGetAllById(id);
-                if (dtActs.Rows.Count > 0)
+                if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13"))
                 {
-                    byte[] b = ((byte[])dtActs.Rows[0]["Document"]);
-                    //Collect Bytes from database and write in Webpage
-                    Response.ContentType = "application/pdf";
-                    Response.BinaryWrite(b);
+                    Custom_Tariff_GetAllTableAdapter indexTariff = new Custom_Tariff_GetAllTableAdapter();
+                    DataTable dataTariff = indexTariff.SelectCustomTariffById(id);
+                    if (dataTariff.Rows.Count > 0)
+                    {
+                        byte[] b = ((byte[])dataTariff.Rows[0]["Document"]);
+                        Response.ContentType = "application/pdf";
+                        Response.BinaryWrite(b);
+                    }
+                }
+                else
+                {
+                    ActsTableAdapter index = new ActsTableAdapter();
+                    DataTable dtActs = index.GetAllCustomsById(id);
+                    if (dtActs.Rows.Count > 0)
+                    {
+                        byte[] b = ((byte[])dtActs.Rows[0]["Document"]);
+                        //Collect Bytes from database and write in Webpage
+                        Response.ContentType = "application/pdf";
+                        Response.BinaryWrite(b);
+                    }
                 }
             }
 
@@ -1516,7 +1714,24 @@ namespace TaxGenieOnline.admin
                 UploadPDF();
             }
             Custom_GetAllTableAdapter insertActs = new Custom_GetAllTableAdapter();
-            insertActs.Insert(ddlsubcategory.SelectedValue, txtCActsIndex.Text.Trim(), txtCActsChapterName.Text, edtCActsSections.Content, edtData.Content, bytes);
+            ActsTableAdapter UpdateActs = new ActsTableAdapter();
+             if (hdnId.Value.Length > 0)
+             {
+                 int? id = Int32.Parse(hdnId.Value);
+                 if (bytes != null && bytes.Length > 1)
+                 {
+                     UpdateActs.UpdateCustomsById(ddlsubcategory.SelectedValue, txtCActsIndex.Text.Trim(),null,null, txtCActsChapterName.Text,null, edtCActsSections.Content, edtData.Content, bytes,id);
+                 }
+                 else
+                 {
+                     UpdateActs.UpdateCustomsByIdNoDoc(ddlsubcategory.SelectedValue, txtCActsIndex.Text.Trim(), null, null, txtCActsChapterName.Text, null, edtCActsSections.Content, edtData.Content,id);
+                 }
+                 Server.Transfer("editnotifications.aspx");
+             }
+             else
+             {
+                 insertActs.Insert(ddlsubcategory.SelectedValue, txtCActsIndex.Text.Trim(), txtCActsChapterName.Text, edtCActsSections.Content, edtData.Content, bytes);
+             }
         }
 
         public void CustomRules()
@@ -1526,7 +1741,24 @@ namespace TaxGenieOnline.admin
                 UploadPDF();
             }
             Custom_GetAllTableAdapter insertRules = new Custom_GetAllTableAdapter();
-            insertRules.CustomRules_Insert(ddlsubcategory.SelectedValue, ddlCRulesIndexGroup.SelectedValue, txtCRulesIndex.Text, edtData.Content, bytes);
+             ActsTableAdapter UpdateActs = new ActsTableAdapter();
+             if (hdnId.Value.Length > 0)
+             {
+                 int? id = Int32.Parse(hdnId.Value);
+                 if (bytes != null && bytes.Length > 1)
+                 {
+                     UpdateActs.UpdateCustomsById(ddlsubcategory.SelectedValue, txtCRulesIndex.Text, ddlCRulesIndexGroup.SelectedValue, null, txtSubRulesChapterName.Text, null, null, edtData.Content, bytes, id);
+                 }
+                 else
+                 {
+                     UpdateActs.UpdateCustomsByIdNoDoc(ddlsubcategory.SelectedValue, txtCRulesIndex.Text, ddlCRulesIndexGroup.SelectedValue, null, txtSubRulesChapterName.Text, null, null, edtData.Content, id);
+                 }
+                 Server.Transfer("editnotifications.aspx");
+             }
+             else
+             {
+                 insertRules.CustomRules_Insert(ddlsubcategory.SelectedValue, ddlCRulesIndexGroup.SelectedValue, txtCRulesIndex.Text, edtData.Content, bytes);
+             }
         }
 
         public void CustomRegulations()
@@ -1536,7 +1768,24 @@ namespace TaxGenieOnline.admin
                 UploadPDF();
             }
             Custom_GetAllTableAdapter insertRegulations = new Custom_GetAllTableAdapter();
-            insertRegulations.CustomRegulations_Insert(ddlsubcategory.SelectedValue, txtCRegulationsIndex.Text, edtData.Content, bytes);
+             ActsTableAdapter UpdateActs = new ActsTableAdapter();
+             if (hdnId.Value.Length > 0)
+             {
+                 int? id = Int32.Parse(hdnId.Value);
+                 if (bytes != null && bytes.Length > 1)
+                 {
+                     UpdateActs.UpdateCustomsById(ddlsubcategory.SelectedValue, txtCRegulationsIndex.Text, null, null, null, null, null, edtData.Content, bytes, id);
+                 }
+                 else
+                 {
+                     UpdateActs.UpdateCustomsByIdNoDoc(ddlsubcategory.SelectedValue, txtCRegulationsIndex.Text, null, null, null, null, null, edtData.Content, id);
+                 }
+                 Server.Transfer("editnotifications.aspx");
+             }
+             else
+             {
+                 insertRegulations.CustomRegulations_Insert(ddlsubcategory.SelectedValue, txtCRegulationsIndex.Text, edtData.Content, bytes);
+             }
         }
 
         public void CustomTariff()
@@ -1546,7 +1795,23 @@ namespace TaxGenieOnline.admin
                 UploadPDF();
             }
             Custom_Tariff_GetAllTableAdapter insertTariff = new Custom_Tariff_GetAllTableAdapter();
-            insertTariff.Insert(ddlCtariffheading.SelectedValue, ddlCtariffsubheading.SelectedValue, ddlCtariffSchemes.Text, txtCtariffchapter.Text, txtCtariffsubj.Text, edtData.Content, bytes, txtCtariffChaptername.Text);
+            if (hdnId.Value.Length > 0)
+            {
+                int? id = Int32.Parse(hdnId.Value);
+                if (bytes != null && bytes.Length > 1)
+                {
+                    insertTariff.UpdateAllCtariffById(ddlCtariffheading.SelectedValue, ddlCtariffsubheading.SelectedValue, ddlCtariffSchemes.Text, txtCtariffchapter.Text, txtCtariffsubj.Text, edtData.Content, bytes, txtCtariffChaptername.Text,id);
+                }
+                else
+                {
+                    insertTariff.UpdateAllCtariffByIdNoDoc(ddlCtariffheading.SelectedValue, ddlCtariffsubheading.SelectedValue, ddlCtariffSchemes.Text, txtCtariffsubj.Text, txtCtariffchapter.Text, edtData.Content, txtCtariffChaptername.Text, id);
+                }
+                Server.Transfer("editnotifications.aspx");
+            }
+            else
+            {
+                insertTariff.Insert(ddlCtariffheading.SelectedValue, ddlCtariffsubheading.SelectedValue, ddlCtariffSchemes.Text, txtCtariffchapter.Text, txtCtariffsubj.Text, edtData.Content, bytes, txtCtariffChaptername.Text);
+            }
         }
 
         public void CustomForms()
@@ -1556,7 +1821,24 @@ namespace TaxGenieOnline.admin
                 UploadPDF();
             }
             Custom_GetAllTableAdapter insertForms = new Custom_GetAllTableAdapter();
-            insertForms.CutomForms_Insert(ddlsubcategory.SelectedValue, ddlCformsgroup.SelectedValue, ddlCformssubgroups.SelectedValue, txtCFormsIndex.Text, edtData.Content, bytes);
+            ActsTableAdapter UpdateActs = new ActsTableAdapter();
+            if (hdnId.Value.Length > 0)
+            {
+                int? id = Int32.Parse(hdnId.Value);
+                if (bytes != null && bytes.Length > 1)
+                {
+                    UpdateActs.UpdateCustomsById(ddlsubcategory.SelectedValue, txtCFormsIndex.Text, ddlCformsgroup.SelectedValue, ddlCformssubgroups.SelectedValue, null, null, null, edtData.Content, bytes, id);
+                }
+                else
+                {
+                    UpdateActs.UpdateCustomsByIdNoDoc(ddlsubcategory.SelectedValue, txtCFormsIndex.Text, ddlCformsgroup.SelectedValue, ddlCformssubgroups.SelectedValue, null, null, null, edtData.Content, id);
+                }
+                Server.Transfer("editnotifications.aspx");
+            }
+            else
+            {
+                insertForms.CutomForms_Insert(ddlsubcategory.SelectedValue, ddlCformsgroup.SelectedValue, ddlCformssubgroups.SelectedValue, txtCFormsIndex.Text, edtData.Content, bytes);
+            }
 
         }
 
@@ -1567,7 +1849,24 @@ namespace TaxGenieOnline.admin
                 UploadPDF();
             }
             Custom_GetAllTableAdapter insertSez = new Custom_GetAllTableAdapter();
-            insertSez.CustomSEZ_Insert(ddlsubcategory.SelectedValue, txtCSEZNotficationNo.Text, txtCSEZSubject.Text, edtData.Content, bytes);
+              ActsTableAdapter UpdateActs = new ActsTableAdapter();
+              if (hdnId.Value.Length > 0)
+              {
+                  int? id = Int32.Parse(hdnId.Value);
+                  if (bytes != null && bytes.Length > 1)
+                  {
+                      UpdateActs.UpdateCustomsById(ddlsubcategory.SelectedValue, txtCSEZNotficationNo.Text, null, null, null, txtCSEZSubject.Text, null, edtData.Content, bytes, id);
+                  }
+                  else
+                  {
+                      UpdateActs.UpdateCustomsByIdNoDoc(ddlsubcategory.SelectedValue, txtCSEZNotficationNo.Text, null, null, null, txtCSEZSubject.Text, null, edtData.Content, id);
+                  }
+                  Server.Transfer("editnotifications.aspx");
+              }
+              else
+              {
+                  insertSez.CustomSEZ_Insert(ddlsubcategory.SelectedValue, txtCSEZNotficationNo.Text, txtCSEZSubject.Text, edtData.Content, bytes);
+              }
 
         }
 
@@ -1578,7 +1877,24 @@ namespace TaxGenieOnline.admin
                 UploadPDF();
             }
             Custom_GetAllTableAdapter insertDrawbackSchedule = new Custom_GetAllTableAdapter();
-            insertDrawbackSchedule.CustomDrawback_Insert(ddlsubcategory.SelectedValue, txtCDrawbackIndex.Text, edtData.Content, bytes);
+             ActsTableAdapter UpdateActs = new ActsTableAdapter();
+             if (hdnId.Value.Length > 0)
+             {
+                 int? id = Int32.Parse(hdnId.Value);
+                 if (bytes != null && bytes.Length > 1)
+                 {
+                     UpdateActs.UpdateCustomsById(ddlsubcategory.SelectedValue, txtCDrawbackIndex.Text, null, null, null, null, null, edtData.Content, bytes, id);
+                 }
+                 else
+                 {
+                     UpdateActs.UpdateCustomsByIdNoDoc(ddlsubcategory.SelectedValue, txtCDrawbackIndex.Text, null, null, null, null, null, edtData.Content, id);
+                 }
+                 Server.Transfer("editnotifications.aspx");
+             }
+             else
+             {
+                 insertDrawbackSchedule.CustomDrawback_Insert(ddlsubcategory.SelectedValue, txtCDrawbackIndex.Text, edtData.Content, bytes);
+             }
 
         }
 
@@ -1589,7 +1905,23 @@ namespace TaxGenieOnline.admin
                 UploadPDF();
             }
             CECNotification_GetAllTableAdapter insertNotifications = new CECNotification_GetAllTableAdapter();
-            insertNotifications.CEC_notification_Insert(ddlcatagory.SelectedValue,rdbCECType.SelectedValue,txtCECYear.Text,txtCECFnumber.Text,txtCECDate.Text,txtCECSubject.Text,edtData.Content,bytes);
+            if (hdnId.Value.Length > 0)
+            {
+                int? id = Int32.Parse(hdnId.Value);
+                if (bytes != null && bytes.Length > 1)
+                {
+                    insertNotifications.UpdateAllCENotifications(ddlcatagory.SelectedValue, rdbCECType.SelectedValue, txtCECYear.Text, txtCECFnumber.Text, txtCECDate.Text, txtCECSubject.Text, edtData.Content, bytes, id);
+                }
+                else
+                {
+                    insertNotifications.UpdateCENotificationsNoDoc(ddlcatagory.SelectedValue, rdbCECType.SelectedValue, txtCECYear.Text, txtCECFnumber.Text, txtCECDate.Text, txtCECSubject.Text, edtData.Content, id);
+                }
+                Server.Transfer("editnotifications.aspx");
+            }
+            else
+            {
+                insertNotifications.CEC_notification_Insert(ddlcatagory.SelectedValue, rdbCECType.SelectedValue, txtCECYear.Text, txtCECFnumber.Text, txtCECDate.Text, txtCECSubject.Text, edtData.Content, bytes);
+            }
 
         }
 
@@ -1832,7 +2164,24 @@ namespace TaxGenieOnline.admin
             try
             {
                 Circulars_InsertTableAdapter insertCirculars = new Circulars_InsertTableAdapter();
-                insertCirculars.Circulars_Insert(ddlcatagory.SelectedValue, rdbCircularUploadType.SelectedValue, txtCircularYear.Text, txtCircularNumber.Text, txtCircularDate.Text, txtCircularFileNumber.Text, txtCircularSubject.Text, edtData.Content, bytes);
+                Circulars_Info_ByyearTableAdapter updateCirculars = new Circulars_Info_ByyearTableAdapter();
+                if (hdnId.Value.Length > 0)
+                {
+                    int? id = Int32.Parse(hdnId.Value);
+                    if (bytes != null && bytes.Length > 1)
+                    {
+                        updateCirculars.UpdateCEcircularById(ddlcatagory.SelectedValue, rdbCircularUploadType.SelectedValue, txtCircularYear.Text, txtCircularNumber.Text, txtCircularDate.Text, txtCircularFileNumber.Text, txtCircularSubject.Text, edtData.Content, bytes,id);
+                    }
+                    else
+                    {
+                        updateCirculars.UpdateCEcircularByIdNoDoc(ddlcatagory.SelectedValue, rdbCircularUploadType.SelectedValue, txtCircularYear.Text, txtCircularNumber.Text, txtCircularDate.Text, txtCircularFileNumber.Text, txtCircularSubject.Text, edtData.Content,id);
+                    }
+                    Server.Transfer("editnotifications.aspx");
+                }
+                else
+                {
+                    insertCirculars.Circulars_Insert(ddlcatagory.SelectedValue, rdbCircularUploadType.SelectedValue, txtCircularYear.Text, txtCircularNumber.Text, txtCircularDate.Text, txtCircularFileNumber.Text, txtCircularSubject.Text, edtData.Content, bytes);
+                }
             }
             catch (Exception)
             {

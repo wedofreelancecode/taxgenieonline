@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using TaxGenie_DAL.CentralExciseTableAdapters;
 using TaxGenie_DAL.TariffTableAdapters;
 using TaxGenie_DAL.CECNotificationsTableAdapters;
+using TaxGenie_DAL.CircularsTableAdapters;
+using TaxGenie_DAL.customsTableAdapters;
 using System.Data;
 
 namespace TaxGenieOnline.admin
@@ -130,6 +132,54 @@ namespace TaxGenieOnline.admin
             {
                 LoadCENotification(editGrid);
             }
+            if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Central Excise"))
+            {
+                LoadCEActs(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Central Excise"))
+            {
+                LoadCECircularsInstructions(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Acts") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Rules") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Forms") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Regulations") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCustomsTariff(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCENotification(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCECircularsInstructions(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("SEZ") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Drawback Schedule") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                LoadCustoms(editGrid);
+            }
         }
         private void LoadCEActs(GridView eGrid)
         {
@@ -147,7 +197,15 @@ namespace TaxGenieOnline.admin
                     editGrid.HeaderRow.Cells[2].Visible = false;
                     foreach (GridViewRow gvr in editGrid.Rows)
                     {
-                        gvr.Cells[2].Visible = false;
+                        if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
+                        {
+                            gvr.Cells[2].Visible = false;
+                            gvr.Cells[3].Visible = false;
+                        }
+                        else
+                        {
+                            gvr.Cells[2].Visible = false;
+                        }
                     }
                 }
 
@@ -213,18 +271,131 @@ namespace TaxGenieOnline.admin
                 // editGrid.Columns[1].Visible = false;
             }
         }
+        private void LoadCECircularsInstructions(GridView eGrid)
+        {
+            Circulars_Info_ByyearTableAdapter index = new Circulars_Info_ByyearTableAdapter();
+            DataTable dtActsIndexName = index.GetCEcircularsByCat(ddlcatagory.SelectedValue);
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[4].Visible = false;
+                    editGrid.HeaderRow.Cells[5].Visible = false;
+                    //editGrid.HeaderRow.Cells[6].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                        gvr.Cells[4].Visible = false;
+                        gvr.Cells[5].Visible = false;
+                        //gvr.Cells[6].Visible = false;
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+
+        }
+
+        private void LoadCustoms(GridView eGrid)
+        {
+            ActsTableAdapter index = new ActsTableAdapter();
+            DataTable dtActsIndexName = index.GetCustomsBySubCat(ddlsubcategory.SelectedValue);
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[2].Visible = false;
+                    editGrid.HeaderRow.Cells[3].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                        if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
+                        {
+                            gvr.Cells[2].Visible = false;
+                            gvr.Cells[3].Visible = false;
+                        }
+                        else
+                        {
+                            gvr.Cells[2].Visible = false;
+                            gvr.Cells[3].Visible = false;
+                        }
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
+        private void LoadCustomsTariff(GridView eGrid)
+        {
+            Custom_Tariff_GetAllTableAdapter index = new Custom_Tariff_GetAllTableAdapter();
+            DataTable dtActsIndexName = index.Custom_GetAll();
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[1].Visible = false;
+                    editGrid.HeaderRow.Cells[4].Visible = false;
+                    editGrid.HeaderRow.Cells[6].Visible = false;
+                    editGrid.HeaderRow.Cells[7].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[4].Visible = false;
+                        gvr.Cells[6].Visible = false;
+                        gvr.Cells[7].Visible = false;
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
         protected void editGrid_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GridView gv = sender as GridView;
             GridViewRow row = gv.Rows[e.NewEditIndex];
             string id = string.Empty;
-            if ((ddlsubcategory.SelectedValue.Equals("Tariff 2012-13") && ddlcatagory.SelectedValue.Equals("Central Excise")) || (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Central Excise")))
+            if (ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
-                id = row.Cells[1].Text;
+                if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13") || ddlsubcategory.SelectedValue.Equals("Notifications"))
+                {
+                    id = row.Cells[1].Text;
+                }
+                else if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions"))
+                {
+                    id = row.Cells[5].Text;
+                }
+                else
+                {
+                    id = row.Cells[2].Text;
+                }
             }
-            else
+            if (ddlcatagory.SelectedValue.Equals("Customs"))
             {
-                 id = row.Cells[2].Text;
+                if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13") || ddlsubcategory.SelectedValue.Equals("Notifications"))
+                {
+                    id = row.Cells[1].Text;
+                }
+                else if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions"))
+                {
+                    id = row.Cells[5].Text;
+                }
+                else
+                {
+                    id = row.Cells[3].Text;
+                }
             }
             this.Category = ddlcatagory.SelectedValue;
             this.SubCategory = ddlsubcategory.SelectedValue;
@@ -276,6 +447,12 @@ namespace TaxGenieOnline.admin
                 index.CEDeleteById(id);
                 LoadCEActs(editGrid);
             }
+            if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Central Excise"))
+            {
+                CEActsTableAdapter index = new CEActsTableAdapter();
+                index.CEDeleteById(id);
+                LoadCEActs(editGrid);
+            }
             if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
                 CentralExcise_Tariff_GetAllTableAdapter index = new CentralExcise_Tariff_GetAllTableAdapter();
@@ -284,11 +461,76 @@ namespace TaxGenieOnline.admin
             }
             if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
-                CentralExcise_Tariff_GetAllTableAdapter index = new CentralExcise_Tariff_GetAllTableAdapter();
-                index.DeleteTariffById(id);
-                LoadCETariff(editGrid);
+                CECNotification_GetAllTableAdapter index = new CECNotification_GetAllTableAdapter();
+                index.DeleteCENotificationById(id);
+                LoadCENotification(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Central Excise"))
+            {
+                Circulars_Info_ByyearTableAdapter index = new Circulars_Info_ByyearTableAdapter();
+                index.DeleteCEcircularsById(id);
+                LoadCECircularsInstructions(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Acts") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                ActsTableAdapter index = new ActsTableAdapter();
+                index.DeleteCustomsById(id);
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Rules") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                ActsTableAdapter index = new ActsTableAdapter();
+                index.DeleteCustomsById(id);
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Forms") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                ActsTableAdapter index = new ActsTableAdapter();
+                index.DeleteCustomsById(id);
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                ActsTableAdapter index = new ActsTableAdapter();
+                index.DeleteCustomsById(id);
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Regulations") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                ActsTableAdapter index = new ActsTableAdapter();
+                index.DeleteCustomsById(id);
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                Custom_Tariff_GetAllTableAdapter index = new Custom_Tariff_GetAllTableAdapter();
+                index.DeleteCustomTariffById(id);
+                LoadCustomsTariff(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                CECNotification_GetAllTableAdapter index = new CECNotification_GetAllTableAdapter();
+                index.DeleteCENotificationById(id);
+                LoadCENotification(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                Circulars_Info_ByyearTableAdapter index = new Circulars_Info_ByyearTableAdapter();
+                index.DeleteCEcircularsById(id);
+                LoadCECircularsInstructions(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("SEZ") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                ActsTableAdapter index = new ActsTableAdapter();
+                index.DeleteCustomsById(id);
+                LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Drawback Schedule") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                ActsTableAdapter index = new ActsTableAdapter();
+                index.DeleteCustomsById(id);
+                LoadCustoms(editGrid);
             }
         }
     }
 }
- 

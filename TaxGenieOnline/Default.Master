@@ -266,11 +266,11 @@
                 </tr>
                  <tr>
                     <td align="right">
-                        Home Content:<a href="/admin/HomeContentEditor.aspx">Add\Upload</a><a href="#">Edit\Delete</a>
+                        Home Content:<a href="/admin/HomeContentEditor.aspx">Add\Upload</a>
                     </td>
                     <td style="width:250px"></td>
                     <td>
-                       Tax Update:<a href="/admin/TaxUpdateEditor.aspx">Add\Upload</a><a href="#">Edit\Delete</a>
+                       Tax Update:<a href="/admin/TaxUpdateEditor.aspx">Add\Upload</a>
                     </td>
                 </tr>
             </table>
