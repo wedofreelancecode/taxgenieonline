@@ -64,6 +64,7 @@
   <ItemGroup>
     <Content Include="admin\editnotifications.aspx" />
     <Content Include="admin\HomeContentEditor.aspx" />
+    <Content Include="admin\WhatsNew.aspx" />
     <Content Include="editprofile.aspx" />
     <Content Include="images\add1.jpg" />
     <Content Include="images\add2.jpg" />
@@ -155,6 +156,8 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WHshow.aspx" />
+    <Content Include="WHView.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about-us.aspx.cs">
@@ -205,6 +208,13 @@
     </Compile>
     <Compile Include="admin\uploadnotifications.aspx.designer.cs">
       <DependentUpon>uploadnotifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WhatsNew.aspx.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WhatsNew.aspx.designer.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contactus.aspx.cs">
       <DependentUpon>Contactus.aspx</DependentUpon>
@@ -382,6 +392,20 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WHshow.aspx.cs">
+      <DependentUpon>WHshow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WHshow.aspx.designer.cs">
+      <DependentUpon>WHshow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WHView.aspx.cs">
+      <DependentUpon>WHView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WHView.aspx.designer.cs">
+      <DependentUpon>WHView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

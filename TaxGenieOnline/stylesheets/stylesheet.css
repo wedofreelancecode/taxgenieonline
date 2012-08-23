@@ -76,7 +76,7 @@ body
     height: 100%;
     display: block;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #cfcfad;
+    background-color: whiteSmoke;
 }
 body, td, th
 {
@@ -931,4 +931,18 @@ li.rss-item {
 .txtwrap {
 margin:5px 0px 8px 8px;
 float: right;
+}
+.whnew {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.whnew a:visited {
+	color: #0071BB;
+}
+TD.whnew{
+	margin:3px;
+	padding:3px;
 }

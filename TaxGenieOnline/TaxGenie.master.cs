@@ -5,6 +5,7 @@ using System.Web.UI.WebControls;
 using TaxGenie_DAL;
 using TaxGenie_DAL.HomeContentsTableAdapters;
 using TaxGenie_DAL.TaxUpdateTableAdapters;
+using TaxGenie_DAL.WhatsNewTableAdapters;
 
 namespace TaxGenieOnline
 {
@@ -52,6 +53,10 @@ namespace TaxGenieOnline
                 }
                 dlLGuest.DataSource = lGst;
                 dlLGuest.DataBind();
+
+                WhatsNewContentTableAdapter whts= new WhatsNewContentTableAdapter();
+                dlWhats.DataSource=whts.GetWhatsNew();
+                dlWhats.DataBind();
             }
             if (!Page.IsPostBack)
             {

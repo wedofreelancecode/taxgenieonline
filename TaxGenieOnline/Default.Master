@@ -230,7 +230,8 @@
             </div>
         </div>
     </div>
-    <div>
+    
+    <div style="height:5px;">
     </div>
     <div class="middimension" style="width:990px">
     <table style="background-color: #DDDDDD;margin-bottom:5px;">
@@ -271,6 +272,11 @@
                     <td style="width:250px"></td>
                     <td>
                        Tax Update:<a href="/admin/TaxUpdateEditor.aspx">Add\Upload</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        What's New:<a href="/admin/WhatsNew.aspx">Add\Upload</a>
                     </td>
                 </tr>
             </table>

@@ -7,90 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TaxGenieOnline {
+namespace TaxGenieOnline.admin {
     
     
-    public partial class TaxGenie {
+    public partial class WhatsNew {
         
         /// <summary>
-        /// LoginView1 control.
+        /// lblContentType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView LoginView1;
+        protected global::System.Web.UI.WebControls.Label lblContentType;
         
         /// <summary>
-        /// cph_left control.
+        /// ddlcatagory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_left;
+        protected global::System.Web.UI.WebControls.DropDownList ddlcatagory;
         
         /// <summary>
-        /// dlWhats control.
+        /// lblTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater dlWhats;
+        protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
-        /// dlTaxUpdate control.
+        /// txtTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater dlTaxUpdate;
+        protected global::System.Web.UI.WebControls.TextBox txtTitle;
         
         /// <summary>
-        /// dlLGuest control.
+        /// edtData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater dlLGuest;
+        protected global::AjaxControlToolkit.HTMLEditor.Editor edtData;
         
         /// <summary>
-        /// cph_main control.
+        /// btnUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_main;
-        
-        /// <summary>
-        /// cph_right control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_right;
-        
-        /// <summary>
-        /// dlDeptNews control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater dlDeptNews;
-        
-        /// <summary>
-        /// dlRGuest control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater dlRGuest;
+        protected global::System.Web.UI.WebControls.Button btnUpload;
     }
 }

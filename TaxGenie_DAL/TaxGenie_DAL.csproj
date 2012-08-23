@@ -161,6 +161,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserProfile.xsd</DependentUpon>
     </Compile>
+    <Compile Include="WhatsNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WhatsNew.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -354,6 +359,17 @@
     </None>
     <None Include="UserProfile.xss">
       <DependentUpon>UserProfile.xsd</DependentUpon>
+    </None>
+    <None Include="WhatsNew.xsc">
+      <DependentUpon>WhatsNew.xsd</DependentUpon>
+    </None>
+    <None Include="WhatsNew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WhatsNew.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WhatsNew.xss">
+      <DependentUpon>WhatsNew.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

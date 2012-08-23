@@ -74,13 +74,29 @@
                     <img src="images/slogo.png" align="absmiddle" /> What's New</div>
                 <div class="brdhds">
                 </div>
-                <div class="src1">
-                    <p>
-                        In his speech greeting the delegates of the 20th CPI-M party congress which began
-                        in KozhikodeIn his speech greeting the delegates of the 20th CPI-M party congress
-                        which began in KozhikodeIn his speech greeting the delegates of the 20th CPI-M party
-                        congress which began in Kozhikode <span class="more"><a href="#">more...</a></span></p>
-                </div>
+                <table class="src1">
+                    <asp:Repeater ID="dlWhats" runat="server">
+                        <ItemTemplate>
+                            <tr>
+                                <td class="whnew">
+                                    <%# Eval("Category")%>
+                                </td>
+                                <td width="10px" class="whnew">
+                                    :</td>
+                                <td class="whnew">
+                                    <a href='WHShow.aspx?Id=<%# Eval("Id1") %>'><%# Eval("Title1") %></a>
+                                </td>
+                                <td class="whnew">
+                                    <a href='WHShow.aspx?Id=<%# Eval("Id2") %>'><%# Eval("Title2") %></a>
+                                </td>
+                                <td class="whnew">
+                                    <a href='WHShow.aspx?Id=<%# Eval("Id3") %>'><%# Eval("Title3") %></a>
+                                </td>
+                            </tr>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </table>
+                <span class="more"><a href="WHView.aspx">more...</a></span>
             </div>
             <div class="bxbottom">
             </div>
@@ -174,7 +190,7 @@
                 <div class="brdhds">
                 </div>
                 <div class="src1">
-                    <marquee direction="up" scrollamount="3" style="height: 151px"> 
+                    <marquee direction="up" scrollamount="3" style="height: 151px" onmouseover='this.stop();' onmouseout='this.start();'> 
                     <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.moneycontrol.com%2Frss%2Feconomy.xml&num=5&desc=90>1&targ=y&utf=y"  charset="UTF-8" type="text/javascript"></script>
                     <noscript>
                       <a href="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.moneycontrol.com%2Frss%2Feconomy.xml&num=5&desc=90>1&targ=y&utf=y&html=y">View RSS feed</a>
