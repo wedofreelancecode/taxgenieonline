@@ -38,8 +38,8 @@
                             </ItemTemplate>
                         </asp:Repeater>
                     </ol>
-                    <span class="more"><a href="/ShowContents.aspx?CType=Editor Desk">more...</a></span>
                 </div>
+                <span class="more"><a href="/ShowContents.aspx?CType=Editor Desk">more...</a></span>
             </div>
             <img src="images/middle_box_bottom.png" width="501" height="6" alt="" />
         </div>

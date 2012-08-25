@@ -3,13 +3,13 @@
   <siteMapNode url="Home.aspx" title="Home"  description="Home">
     
     <siteMapNode url="" title="Central Excise">
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Acts" title="acts"  description="acts"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Rules" title="rules"  description="rules"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Tariff/2012-13" title="Tariff 2012-13"  description="tariff"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Acts" title="Acts"  description="Acts"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Rules" title="Rules"  description="Rules"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Tariff/2012-13" title="Tariff 2012-13"  description="Tariff"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Forms" title="forms"  description="forms"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Notifications" title="notifications"  description="notifications"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Notifications" title="Notifications"  description=" Notifications"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Circulars/Instructions" title="Circulars/Instructions"  description="sez"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Section/37B/Order" title="Section 37B Order"  description="drawback schedule"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Section/37B/Order" title="Section 37B Order"  description="Drawback Schedule"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=CBEC/Manual" title="CBEC Manual"  description="CBEC Manual"/>
     </siteMapNode>   
     

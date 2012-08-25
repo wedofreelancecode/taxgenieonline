@@ -13,119 +13,41 @@ namespace TaxGenieOnline.admin
 {
     public partial class editnewsflash : System.Web.UI.Page
     {
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            newsflash_GetallTableAdapter adptr = new newsflash_GetallTableAdapter();
+            newsGrid.DataSource = adptr.GetnewsflashDescription();
+            newsGrid.DataBind();
+            newsGrid.HeaderRow.Cells[1].Visible = false;
+            newsGrid.HeaderRow.Cells[3].Visible = false;
+            foreach (GridViewRow gvr in newsGrid.Rows)
             {
-
-
-                newsflash_GetYearsTableAdapter dtyears = new newsflash_GetYearsTableAdapter();
-                DataTable dtGetYears = dtyears.newsflashgetyears();
-
-                if (dtGetYears.Rows.Count > 0)
-                {
-                    ddlyear.Items.Add(new ListItem("Select One", "0"));
-
-                    foreach (DataRow i in dtGetYears.Rows)
-                    {
-
-                        ddlyear.Items.Add(i["Year"].ToString());
-                    }
-                }
+                gvr.Cells[1].Visible = false;
+                gvr.Cells[3].Visible = false;
             }
-        }
 
-        protected void ddlyear_SelectedIndexChanged(object sender, EventArgs e)
+        }
+        protected void newsGrid_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-
-            newsflash_GetMonthsTableAdapter dtmonths = new newsflash_GetMonthsTableAdapter();
-            DataTable dtGetMonths = dtmonths.newsflashgetmonths(ddlyear.SelectedValue);
-
-            if (dtGetMonths.Rows.Count > 0)
-            {
-                ddlmonth.Items.Add(new ListItem("Select One", "0"));
-
-                foreach (DataRow i in dtGetMonths.Rows)
-                {
-
-                    ddlmonth.Items.Add(i["Month"].ToString());
-                }
-            }
-
-
-
+            GridView gv = sender as GridView;
+            GridViewRow row = gv.Rows[e.RowIndex];
+            int? id = Int32.Parse(row.Cells[1].Text);
+            newsflash_GetallTableAdapter adptr = new newsflash_GetallTableAdapter();
+            adptr.newsflash_delete(id);
         }
-
-        protected void ddlmonth_SelectedIndexChanged(object sender, EventArgs e)
-        
-        
+        public string Id
         {
-            newsflash_descriptionTableAdapter dtdesc = new newsflash_descriptionTableAdapter();
-            DataTable dtGetdesc = dtdesc.newsflashgetdescription(ddlmonth.SelectedValue);
-
-            if (dtGetdesc.Rows.Count > 0)
-            {
-                dlnewsflash.DataSource = dtGetdesc;
-                dlnewsflash.DataBind();
-            }
-
-
+            get;
+            set;
         }
 
-     
-        protected void dlnewsflash_ItemCommand(object source, DataListCommandEventArgs e)
+        protected void newsGrid_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            if (e.CommandName == "description")
-            {
-                LinkButton linkButton = e.CommandSource as LinkButton;
-
-                Editor1.Content = linkButton.Text;
-              
-
-
-            }
+            GridView gv = sender as GridView;
+            GridViewRow row = gv.Rows[e.NewEditIndex];
+            this.Id = row.Cells[1].Text;
+            Server.Transfer("uploadnewsflash.aspx");
         }
-
-        public static Control FindControlRecursive(Control root, string id)
-        {
-            if (id == string.Empty)
-                return null;
-
-            if (root.ID == id)
-                return root;
-
-            foreach (Control c in root.Controls)
-            {
-                Control t = FindControlRecursive(c, id);
-                if (t != null)
-                {
-                    return t;
-                }
-            }
-            return null;
-        }
-
-        protected void updatenewsflash(object sender, EventArgs e)
-        {
-            newsflash_GetallTableAdapter dtgetall = new newsflash_GetallTableAdapter();
-            dtgetall.Update(ddlyear.SelectedValue, ddlmonth.SelectedValue, Editor1.Content);
-            newsflash_GetDescriptionTableAdapter descr = new newsflash_GetDescriptionTableAdapter();
-            DataTable dtgetupdate = descr.GetDatanewsflash();
-            Label lblnewsflash = (Label)FindControlRecursive(Page, "lblnewsflash");
-            if (dtgetupdate.Rows.Count > 0)
-            {
-                string desc = dtgetupdate.Rows[0]["Newsflash"].ToString();
-                lblnewsflash.Text = desc;
-            }
-        }
-
-     
-
-
-       
-
-
-       
     }
 }

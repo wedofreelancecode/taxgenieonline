@@ -6,6 +6,7 @@ using TaxGenie_DAL;
 using TaxGenie_DAL.HomeContentsTableAdapters;
 using TaxGenie_DAL.TaxUpdateTableAdapters;
 using TaxGenie_DAL.WhatsNewTableAdapters;
+using TaxGenie_DAL.UserProfileTableAdapters;
 
 namespace TaxGenieOnline
 {
@@ -74,8 +75,16 @@ namespace TaxGenieOnline
             if (Page.User.Identity.Name != "")
             {
                 Label lblWlcmName = (Label)LoginView1.FindControl("lblWlcmName");
-                lblWlcmName.Text = Page.User.Identity.Name;
-
+                if (Session.IsNewSession)
+                {
+                    FormsAuthentication.SignOut();
+                    //FormsAuthentication.RedirectToLoginPage();
+                    Response.Redirect("~/Home.aspx");
+                }
+                else
+                {
+                    lblWlcmName.Text = Session["UFName"].ToString();
+                }
             }
             //news_GetDescriptionTableAdapter desc = new news_GetDescriptionTableAdapter();
             //DataTable dtDesc = desc.GetDescription();
@@ -94,6 +103,12 @@ namespace TaxGenieOnline
                 if (Membership.Provider.ValidateUser(Login1.UserName, Login1.Password))
                 {
                     e.Authenticated = true;
+
+                    MembershipUser user = Membership.GetUser(Login1.UserName);
+                    Guid? userId = user.ProviderUserKey as Guid?;
+                    aspnet_UserProfile_DetailsTableAdapter usrAdptr = new aspnet_UserProfile_DetailsTableAdapter();
+                   UserProfile.aspnet_UserProfile_DetailsDataTable dt = usrAdptr.UserProfile(userId);
+                   Session["UFName"] = dt[0]["FirstName"].ToString();
 
                     if (Roles.IsUserInRole(Login1.UserName, "Adminstrator"))
                     {

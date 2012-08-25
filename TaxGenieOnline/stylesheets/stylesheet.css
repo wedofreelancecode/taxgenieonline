@@ -850,7 +850,8 @@ li.rss-item {
     font:normal 11px Arial;
     line-height: 1.6em;
     text-align: justify;
-    padding: 5px 10px 10px 10px;
+    padding: 5px;
+    height:153px;
 }
 .ab1 b
 {
@@ -870,28 +871,23 @@ li.rss-item {
 
 .src1
 {
-    padding:5px 10px 10px 10px;
+    padding:5px;
     font:normal 11px arial; 
     line-height:17px;
     padding-bottom: 10px;
     color: #555;
+    height:150px;
 }
-.src1 p
-{   font:normal 11px arial;
-    line-height: 17px;
-    color: #555;
-}
-.src1 b
+.src2
 {
-    font:bold 11px arial;
-    color: #000;
+    width:100%;
 }
+
 .more
 {
-    font:bold 11px arial;
-    padding-bottom: 10px;
+    font: bold 11px arial;
     color: #fa9414;
-    float:right;
+    float: right;
 }
 .more a
 {
@@ -940,6 +936,9 @@ float: right;
 	text-decoration: none;
 }
 .whnew a:visited {
+	color: #0071BB;
+}
+.whnew a {
 	color: #0071BB;
 }
 TD.whnew{

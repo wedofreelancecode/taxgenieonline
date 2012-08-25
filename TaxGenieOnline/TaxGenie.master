@@ -14,6 +14,7 @@
             }).val(watermark).addClass('watermark');
         });
     </script>
+    <asp:HiddenField ID="UserFName" runat="server" />
     <asp:LoginView ID="LoginView1" runat="server">
         <AnonymousTemplate>
             <asp:Login ID="Login1" runat="server" Width="100%" OnAuthenticate="Login1_Authenticate">
@@ -74,28 +75,30 @@
                     <img src="images/slogo.png" align="absmiddle" /> What's New</div>
                 <div class="brdhds">
                 </div>
-                <table class="src1">
-                    <asp:Repeater ID="dlWhats" runat="server">
-                        <ItemTemplate>
-                            <tr>
-                                <td class="whnew">
-                                    <%# Eval("Category")%>
-                                </td>
-                                <td width="10px" class="whnew">
-                                    :</td>
-                                <td class="whnew">
-                                    <a href='WHShow.aspx?Id=<%# Eval("Id1") %>'><%# Eval("Title1") %></a>
-                                </td>
-                                <td class="whnew">
-                                    <a href='WHShow.aspx?Id=<%# Eval("Id2") %>'><%# Eval("Title2") %></a>
-                                </td>
-                                <td class="whnew">
-                                    <a href='WHShow.aspx?Id=<%# Eval("Id3") %>'><%# Eval("Title3") %></a>
-                                </td>
-                            </tr>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </table>
+                <div class="src1">
+                    <table>
+                        <asp:Repeater ID="dlWhats" runat="server">
+                            <ItemTemplate>
+                                <tr>
+                                    <td class="whnew">
+                                        <%# Eval("Category")%>
+                                    </td>
+                                    <td width="10px" class="whnew">
+                                        :</td>
+                                    <td class="whnew">
+                                        <a href='WHShow.aspx?Id=<%# Eval("Id1") %>'><%# Eval("Title1") %></a>
+                                    </td>
+                                    <td class="whnew">
+                                        <a href='WHShow.aspx?Id=<%# Eval("Id2") %>'><%# Eval("Title2") %></a>
+                                    </td>
+                                    <td class="whnew">
+                                        <a href='WHShow.aspx?Id=<%# Eval("Id3") %>'><%# Eval("Title3") %></a>
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </table>
+                </div>
                 <span class="more"><a href="WHView.aspx">more...</a></span>
             </div>
             <div class="bxbottom">
@@ -165,7 +168,7 @@
                     <img src="images/slogo.png" align="absmiddle" /> Department News</div>
                 <div class="brdhds">
                 </div>
-                <div class="rss-box">
+                <div class="rss-box src1">
                     <ul class="rss-items">
                         <asp:Repeater ID="dlDeptNews" runat="server">
                             <ItemTemplate>
@@ -194,9 +197,10 @@
                     <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.moneycontrol.com%2Frss%2Feconomy.xml&num=5&desc=90>1&targ=y&utf=y"  charset="UTF-8" type="text/javascript"></script>
                     <noscript>
                       <a href="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.moneycontrol.com%2Frss%2Feconomy.xml&num=5&desc=90>1&targ=y&utf=y&html=y">View RSS feed</a>
-                    </noscript></marquee><span class="more">
-                    <a href="http://www.moneycontrol.com/rss/economy.xml" target="_blank">more...</a></span>
+                    </noscript></marquee>
                 </div>
+                <span class="more">
+                <a href="http://www.moneycontrol.com/rss/economy.xml" target="_blank">more...</a></span>
             </div>
             <div class="bxbottom">
             </div>
@@ -210,7 +214,6 @@
             <div class="bxtop">
             </div>
             <div class="clmiddle">
-                <a href="#">
                 <div class="ne">
                     <img src="images/slogo.png" align="absmiddle" /> Guest Column</div>
                 <div class="brdhds">
@@ -224,7 +227,7 @@
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
-                </a><span class="more"><a href="/ShowContents.aspx?CType=Right Guest">more...</a></span>
+                <span class="more"><a href="/ShowContents.aspx?CType=Right Guest">more...</a></span>
             </div>
             <div class="bxbottom">
             </div>

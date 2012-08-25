@@ -7,7 +7,7 @@
   <div class="cl2 fleft">
         <div class="contentbox">
            <%-- <img src="../images/middle_box_top.png" width="726" height="4" alt="" />--%>
-            <div class="contentboxmiddle1 shdw shd">
+            <div class="contentboxmiddle1 shdw shd" style="min-height: 300px;">
                <table style="width: 100%; margin-top: 5px;">
                     <tr>
                         <td style="width: 20%; text-align: right">

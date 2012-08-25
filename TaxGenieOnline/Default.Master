@@ -94,7 +94,7 @@
                                 <li><a href="/index.aspx?cat=Central/Excise&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
                                 <li><a href="/index.aspx?cat=Central/Excise&subcat=Case/Laws">Case Laws</a></li>
                                 <li><a href="/index.aspx?cat=Central/Excise&subcat=Section/37B/Order">Section 37B Order</a></li>
-                                <%--   <li><a href="http://www.cbec.gov.in/frq-nms-cx-st-audits.pdf">Frequency norms of audit of Central Excise assessees</a></li>--%>
+                                <%--   <li><a href="http://www.cbec.gov.in/frq-nms-cx-st-audits.pdf" target="_blank">Frequency norms of audit of Central Excise assessees</a></li>--%>
                             </ul>
                         </li>
                         <li><a href="#">Customs</a><span class="small1">
@@ -108,8 +108,8 @@
                                 <li><a href="/index.aspx?cat=Customs&subcat=Tariff/2012-13">Tariff 2012-13</a></li>
                                 <li><a href="#">Manuals</a>
                                     <ul>
-                                        <li><a href="http://www.cbec.gov.in/cs-manual-2012.pdf">Customs Manual-2012</a></li>
-                                        <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf">Customs
+                                        <li><a href="http://www.cbec.gov.in/cs-manual-2012.pdf" target="_blank">Customs Manual-2012</a></li>
+                                        <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf" target="_blank">Customs
                                             Manual on Self Assessment-2011</a> </li>
                                     </ul>
                                 </li>
@@ -257,26 +257,25 @@
         <div id="adminpanel" runat="server" visible="false" class="adminbtn">
             <table width="100%">
                 <tr >
+                 <td align="right">
+                        Home Content:<a href="/admin/HomeContentEditor.aspx">Add\Upload</a>
+                    </td>
+                    
                     <td align="right">
+                        What's New:<a href="/admin/WhatsNew.aspx">Add\Upload</a>
+                    </td>
+                     <td>
+                       Tax Update:<a href="/admin/TaxUpdateEditor.aspx">Add\Upload</a>
+                    </td>
+                   
+                </tr>
+                 <tr>
+                   <td align="right">
                         Content:<a href="/admin/uploadnotifications.aspx">Add\Upload</a><a href="/admin/editnotifications.aspx">Edit\Delete</a>
                     </td>
                     <td style="width:250px"></td>
-                    <td>
-                        Flash News:<a href="/admin/uploadnewsflash.aspx">Add\Upload</a><a href="#">Edit\Delete</a>
-                    </td>
-                </tr>
-                 <tr>
-                    <td align="right">
-                        Home Content:<a href="/admin/HomeContentEditor.aspx">Add\Upload</a>
-                    </td>
-                    <td style="width:250px"></td>
-                    <td>
-                       Tax Update:<a href="/admin/TaxUpdateEditor.aspx">Add\Upload</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right">
-                        What's New:<a href="/admin/WhatsNew.aspx">Add\Upload</a>
+                     <td>
+                        Flash News:<a href="/admin/uploadnewsflash.aspx">Add\Upload</a><a href="/admin/editnewsflash.aspx">Edit\Delete</a>
                     </td>
                 </tr>
             </table>
@@ -340,7 +339,7 @@
                                 <li><a href="/index.aspx?cat=Central Excise&subcat=Notifications">Notifications</a></li>
                                 <li><a href="/index.aspx?cat=Central Excise&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
                                 <li><a href="/index.aspx?cat=Central Excise&subcat=Section 37B Order">Section 37B Order</a></li>
-                                <%--   <li><a href="http://www.cbec.gov.in/frq-nms-cx-st-audits.pdf">Frequency norms</a></li>--%>
+                                <%--   <li><a href="http://www.cbec.gov.in/frq-nms-cx-st-audits.pdf" target="_blank">Frequency norms</a></li>--%>
                             </ul>
                         </li>
                     </ul>

@@ -6,6 +6,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_left" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_main" runat="server">
+<asp:HiddenField ID="hdnId" runat="server" />
     <div class="cl2 fleft" style="margin-bottom:4px">
             <div class="contentboxmiddle1 shdw shd">
                 <div class="newshldr" style="padding-top: 15px; padding-bottom: 10px;">
@@ -13,7 +14,7 @@
                     <div align="center">
                         <asp:Label ID="lblstatus" runat="server"></asp:Label>
                         <br />
-                        <span class="nlsH"><b>Paste the News here</b></span>
+                        <span class="nlsH"><b>Enter the News here</b></span>
                         <br />
                         <textarea id="taNews" rows="15" runat="server" cols="100"></textarea>
                         <br />
