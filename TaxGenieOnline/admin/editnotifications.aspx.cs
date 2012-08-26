@@ -9,6 +9,9 @@ using TaxGenie_DAL.TariffTableAdapters;
 using TaxGenie_DAL.CECNotificationsTableAdapters;
 using TaxGenie_DAL.CircularsTableAdapters;
 using TaxGenie_DAL.customsTableAdapters;
+using TaxGenie_DAL.ServiceTaxTableAdapters;
+using TaxGenie_DAL.STCaseLawsTableAdapters;
+using TaxGenie_DAL.STNotificationsTableAdapters;
 using System.Data;
 
 namespace TaxGenieOnline.admin
@@ -179,6 +182,34 @@ namespace TaxGenieOnline.admin
             if (ddlsubcategory.SelectedValue.Equals("Drawback Schedule") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
                 LoadCustoms(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Act 1994") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                LoadST(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("ST Rules") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                LoadST(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Forms and Registers") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                LoadST(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Accounting Codes for new services") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                LoadST(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                LoadSTCaseLaws(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                LoadSTNotification(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                LoadCECircularsInstructions(editGrid);
             }
         }
         private void LoadCEActs(GridView eGrid)
@@ -362,6 +393,105 @@ namespace TaxGenieOnline.admin
                 // editGrid.Columns[1].Visible = false;
             }
         }
+
+        private void LoadST(GridView eGrid)
+        {
+            ServiceTax_GetAllTableAdapter index = new ServiceTax_GetAllTableAdapter();
+            DataTable dtActsIndexName = index.SelectSTByCat(ddlsubcategory.SelectedValue);
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[1].Visible = false;
+                    editGrid.HeaderRow.Cells[2].Visible = false;
+                    editGrid.HeaderRow.Cells[4].Visible = false;
+                    editGrid.HeaderRow.Cells[5].Visible = false;
+                    editGrid.HeaderRow.Cells[6].Visible = false;
+                    editGrid.HeaderRow.Cells[7].Visible = false;
+                    editGrid.HeaderRow.Cells[8].Visible = false;
+                    editGrid.HeaderRow.Cells[9].Visible = false;
+                    editGrid.HeaderRow.Cells[10].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                      
+                            gvr.Cells[1].Visible = false;
+                            gvr.Cells[2].Visible = false;
+                            gvr.Cells[4].Visible = false;
+                            gvr.Cells[5].Visible = false;
+                            gvr.Cells[6].Visible = false;
+                            gvr.Cells[7].Visible = false;
+                            gvr.Cells[8].Visible = false;
+                            gvr.Cells[9].Visible = false;
+                            gvr.Cells[10].Visible = false;
+                       
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
+        private void LoadSTCaseLaws(GridView eGrid)
+        {
+            STCaselaws_GetAllTableAdapter index = new STCaselaws_GetAllTableAdapter();
+            DataTable dtActsIndexName = index.GetAll();
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[1].Visible = false;
+                    editGrid.HeaderRow.Cells[3].Visible = false;
+                    editGrid.HeaderRow.Cells[4].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                            gvr.Cells[1].Visible = false;
+                            gvr.Cells[3].Visible = false;
+                            gvr.Cells[4].Visible = false;
+                        
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
+        private void LoadSTNotification(GridView eGrid)
+        {
+            STN_GetAllTableAdapter index = new STN_GetAllTableAdapter();
+            DataTable dtActsIndexName = index.STN_GetAll();
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[1].Visible = false;
+                    editGrid.HeaderRow.Cells[2].Visible = false;
+                    editGrid.HeaderRow.Cells[7].Visible = false;
+                    editGrid.HeaderRow.Cells[8].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[2].Visible = false;
+                        gvr.Cells[7].Visible = false;
+                        gvr.Cells[8].Visible = false;
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
         protected void editGrid_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GridView gv = sender as GridView;
@@ -395,6 +525,17 @@ namespace TaxGenieOnline.admin
                 else
                 {
                     id = row.Cells[3].Text;
+                }
+            }
+            if (ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions"))
+                {
+                    id = row.Cells[5].Text;
+                }
+                else
+                {
+                    id = row.Cells[1].Text;
                 }
             }
             this.Category = ddlcatagory.SelectedValue;
@@ -531,6 +672,49 @@ namespace TaxGenieOnline.admin
                 index.DeleteCustomsById(id);
                 LoadCustoms(editGrid);
             }
+            if (ddlsubcategory.SelectedValue.Equals("Act 1994") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                ServiceTax_GetAllTableAdapter index = new ServiceTax_GetAllTableAdapter();
+                index.DeleteSTById(id);
+                LoadST(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("ST Rules") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                ServiceTax_GetAllTableAdapter index = new ServiceTax_GetAllTableAdapter();
+                index.DeleteSTById(id);
+                LoadST(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Forms and Registers") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                ServiceTax_GetAllTableAdapter index = new ServiceTax_GetAllTableAdapter();
+                index.DeleteSTById(id);
+                LoadST(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Accounting Codes for new services") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                ServiceTax_GetAllTableAdapter index = new ServiceTax_GetAllTableAdapter();
+                index.DeleteSTById(id);
+                LoadST(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                STCaselaws_GetAllTableAdapter index = new STCaselaws_GetAllTableAdapter();
+                index.DeleteSTCaseLawsById(id);
+                LoadSTCaseLaws(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            {
+                STN_GetAllTableAdapter index = new STN_GetAllTableAdapter();
+                index.DeleteSTNById(id);
+                LoadSTNotification(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Customs"))
+            {
+                Circulars_Info_ByyearTableAdapter index = new Circulars_Info_ByyearTableAdapter();
+                index.DeleteCEcircularsById(id);
+                LoadCECircularsInstructions(editGrid);
+            }
+
         }
     }
 }
