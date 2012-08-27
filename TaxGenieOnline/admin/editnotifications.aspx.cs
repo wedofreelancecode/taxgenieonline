@@ -12,6 +12,8 @@ using TaxGenie_DAL.customsTableAdapters;
 using TaxGenie_DAL.ServiceTaxTableAdapters;
 using TaxGenie_DAL.STCaseLawsTableAdapters;
 using TaxGenie_DAL.STNotificationsTableAdapters;
+using TaxGenie_DAL.IncomeTaxTableAdapters;
+using TaxGenie_DAL.DGFTTableAdapters;
 using System.Data;
 
 namespace TaxGenieOnline.admin
@@ -73,6 +75,10 @@ namespace TaxGenieOnline.admin
             {
                 ddlsubcategory.Items.Clear();
                 ddlsubcategory.Items.Add(new ListItem("select one", "0"));
+                ddlsubcategory.Items.Add("Acts");
+                ddlsubcategory.Items.Add("Rules");
+                ddlsubcategory.Items.Add("Circulars");
+                ddlsubcategory.Items.Add("Notifications");
 
             }
             else if (ddlcatagory.SelectedValue.Equals("Library") && !ddlcatagory.SelectedValue.Equals("select one"))
@@ -210,6 +216,42 @@ namespace TaxGenieOnline.admin
             if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
                 LoadCECircularsInstructions(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Acts") && ddlcatagory.SelectedValue.Equals("Income Tax"))
+            {
+                LoadITActs(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Rules") && ddlcatagory.SelectedValue.Equals("Income Tax"))
+            {
+                LoadITRules(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars") && ddlcatagory.SelectedValue.Equals("Income Tax"))
+            {
+                LoadITCN(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Income Tax"))
+            {
+                LoadITCN(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("FTP") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+                LoadDGFT(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("FTDR Notifications") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+                LoadDGFT(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("public notices") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+                LoadDGFTPN(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+
+            }
+            if (ddlsubcategory.SelectedValue.Equals("SION") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+
             }
         }
         private void LoadCEActs(GridView eGrid)
@@ -418,17 +460,17 @@ namespace TaxGenieOnline.admin
                     editGrid.HeaderRow.Cells[10].Visible = false;
                     foreach (GridViewRow gvr in editGrid.Rows)
                     {
-                      
-                            gvr.Cells[1].Visible = false;
-                            gvr.Cells[2].Visible = false;
-                            gvr.Cells[4].Visible = false;
-                            gvr.Cells[5].Visible = false;
-                            gvr.Cells[6].Visible = false;
-                            gvr.Cells[7].Visible = false;
-                            gvr.Cells[8].Visible = false;
-                            gvr.Cells[9].Visible = false;
-                            gvr.Cells[10].Visible = false;
-                       
+
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[2].Visible = false;
+                        gvr.Cells[4].Visible = false;
+                        gvr.Cells[5].Visible = false;
+                        gvr.Cells[6].Visible = false;
+                        gvr.Cells[7].Visible = false;
+                        gvr.Cells[8].Visible = false;
+                        gvr.Cells[9].Visible = false;
+                        gvr.Cells[10].Visible = false;
+
                     }
                 }
 
@@ -453,10 +495,10 @@ namespace TaxGenieOnline.admin
                     editGrid.HeaderRow.Cells[4].Visible = false;
                     foreach (GridViewRow gvr in editGrid.Rows)
                     {
-                            gvr.Cells[1].Visible = false;
-                            gvr.Cells[3].Visible = false;
-                            gvr.Cells[4].Visible = false;
-                        
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[3].Visible = false;
+                        gvr.Cells[4].Visible = false;
+
                     }
                 }
 
@@ -467,6 +509,165 @@ namespace TaxGenieOnline.admin
         {
             STN_GetAllTableAdapter index = new STN_GetAllTableAdapter();
             DataTable dtActsIndexName = index.STN_GetAll();
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[1].Visible = false;
+                    editGrid.HeaderRow.Cells[2].Visible = false;
+                    editGrid.HeaderRow.Cells[7].Visible = false;
+                    editGrid.HeaderRow.Cells[8].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[2].Visible = false;
+                        gvr.Cells[7].Visible = false;
+                        gvr.Cells[8].Visible = false;
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
+        private void LoadITActs(GridView eGrid)
+        {
+            IncomeTaxActs_SelectAllTableAdapter index = new IncomeTaxActs_SelectAllTableAdapter();
+            DataTable dtActsIndexName = index.GetAllITActs();
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[1].Visible = false;
+                    editGrid.HeaderRow.Cells[6].Visible = false;
+                    editGrid.HeaderRow.Cells[7].Visible = false;
+                    editGrid.HeaderRow.Cells[8].Visible = false;
+                    editGrid.HeaderRow.Cells[9].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[6].Visible = false;
+                        gvr.Cells[7].Visible = false;
+                        gvr.Cells[8].Visible = false;
+                        gvr.Cells[9].Visible = false;
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
+        private void LoadITRules(GridView eGrid)
+        {
+            IncomeTaxRules_SelectAllTableAdapter index = new IncomeTaxRules_SelectAllTableAdapter();
+            DataTable dtActsIndexName = index.GetAllITRules();
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[1].Visible = false;
+                    editGrid.HeaderRow.Cells[5].Visible = false;
+                    editGrid.HeaderRow.Cells[6].Visible = false;
+                    editGrid.HeaderRow.Cells[7].Visible = false;
+                    editGrid.HeaderRow.Cells[8].Visible = false;
+                    editGrid.HeaderRow.Cells[9].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[5].Visible = false;
+                        gvr.Cells[6].Visible = false;
+                        gvr.Cells[7].Visible = false;
+                        gvr.Cells[8].Visible = false;
+                        gvr.Cells[9].Visible = false;
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
+        private void LoadITCN(GridView eGrid)
+        {
+            IncomeTaxCircularsNotification_SelectAllTableAdapter index = new IncomeTaxCircularsNotification_SelectAllTableAdapter();
+            DataTable dtActsIndexName = index.GetITCNBySubCat(ddlsubcategory.SelectedValue);
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[1].Visible = false;
+                    editGrid.HeaderRow.Cells[2].Visible = false;
+                    editGrid.HeaderRow.Cells[4].Visible = false;
+                    editGrid.HeaderRow.Cells[5].Visible = false;
+                    editGrid.HeaderRow.Cells[7].Visible = false;
+                    editGrid.HeaderRow.Cells[8].Visible = false;
+                    editGrid.HeaderRow.Cells[9].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[2].Visible = false;
+                        gvr.Cells[4].Visible = false;
+                        gvr.Cells[5].Visible = false;
+                        gvr.Cells[7].Visible = false;
+                        gvr.Cells[8].Visible = false;
+                        gvr.Cells[9].Visible = false;
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
+        private void LoadDGFT(GridView eGrid)
+        {
+            DGFT_GetAllTableAdapter index = new DGFT_GetAllTableAdapter();
+            DataTable dtActsIndexName = index.GetDGFTBySubCat(ddlsubcategory.SelectedValue);
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                editGrid.Visible = true;
+                editGrid.DataSource = dtActsIndexName;
+                editGrid.DataBind();
+                if (editGrid.Columns.Count > 0)
+                    editGrid.Columns[0].Visible = false;
+                else
+                {
+                    editGrid.HeaderRow.Cells[1].Visible = false;
+                    editGrid.HeaderRow.Cells[2].Visible = false;
+                    editGrid.HeaderRow.Cells[5].Visible = false;
+                    editGrid.HeaderRow.Cells[6].Visible = false;
+                    editGrid.HeaderRow.Cells[7].Visible = false;
+                    foreach (GridViewRow gvr in editGrid.Rows)
+                    {
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[2].Visible = false;
+                        gvr.Cells[5].Visible = false;
+                        gvr.Cells[6].Visible = false;
+                        gvr.Cells[7].Visible = false;
+                    }
+                }
+
+                // editGrid.Columns[1].Visible = false;
+            }
+        }
+        private void LoadDGFTPN(GridView eGrid)
+        {
+            DGFTpublicnotices_GETALLTableAdapter index = new DGFTpublicnotices_GETALLTableAdapter();
+            DataTable dtActsIndexName = index.GetAllDgftPN();
             if (dtActsIndexName.Rows.Count > 0)
             {
                 editGrid.Visible = true;
@@ -537,6 +738,22 @@ namespace TaxGenieOnline.admin
                 {
                     id = row.Cells[1].Text;
                 }
+            }
+            if (ddlcatagory.SelectedValue.Equals("Income Tax"))
+            {
+                if (ddlsubcategory.SelectedValue.Equals("Rules"))
+                {
+                    id = row.Cells[9].Text;
+                }
+                else
+                {
+                    id = row.Cells[1].Text;
+                }
+
+            }
+            if (ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+                id = row.Cells[1].Text;
             }
             this.Category = ddlcatagory.SelectedValue;
             this.SubCategory = ddlsubcategory.SelectedValue;
@@ -708,11 +925,61 @@ namespace TaxGenieOnline.admin
                 index.DeleteSTNById(id);
                 LoadSTNotification(editGrid);
             }
-            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Customs"))
+            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
                 Circulars_Info_ByyearTableAdapter index = new Circulars_Info_ByyearTableAdapter();
                 index.DeleteCEcircularsById(id);
                 LoadCECircularsInstructions(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Acts") && ddlcatagory.SelectedValue.Equals("Income Tax"))
+            {
+                IncomeTaxActs_SelectAllTableAdapter index = new IncomeTaxActs_SelectAllTableAdapter();
+                index.DeleteITActsById(id);
+                LoadITActs(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Rules") && ddlcatagory.SelectedValue.Equals("Income Tax"))
+            {
+                IncomeTaxRules_SelectAllTableAdapter index = new IncomeTaxRules_SelectAllTableAdapter();
+                index.DeleteITRulesById(id);
+                LoadITRules(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars") && ddlcatagory.SelectedValue.Equals("Income Tax"))
+            {
+                IncomeTaxCircularsNotification_SelectAllTableAdapter index = new IncomeTaxCircularsNotification_SelectAllTableAdapter();
+                index.DeleteITCNById(id);
+                LoadITCN(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Income Tax"))
+            {
+                IncomeTaxCircularsNotification_SelectAllTableAdapter index = new IncomeTaxCircularsNotification_SelectAllTableAdapter();
+                index.DeleteITCNById(id);
+                LoadITCN(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("FTP") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+                DGFT_GetAllTableAdapter index = new DGFT_GetAllTableAdapter();
+                index.DeleteDGFTById(id);
+                LoadDGFT(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("FTDR Notifications") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+                DGFT_GetAllTableAdapter index = new DGFT_GetAllTableAdapter();
+                index.DeleteDGFTById(id);
+                LoadDGFT(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("public notices") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+                DGFTpublicnotices_GETALLTableAdapter index = new DGFTpublicnotices_GETALLTableAdapter();
+                index.DeleteDgftPNById(id);
+                LoadDGFTPN(editGrid);
+            }
+            if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+
+            }
+            if (ddlsubcategory.SelectedValue.Equals("SION") && ddlcatagory.SelectedValue.Equals("DGFT"))
+            {
+
             }
 
         }
