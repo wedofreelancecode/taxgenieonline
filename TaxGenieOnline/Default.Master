@@ -55,12 +55,11 @@
     <div class="tl">
     </div>
     <div class="header">
-    <a href="/Home.aspx" target="_self">
+        <a href="/Home.aspx" target="_self">
             <div class="logoIcon title">
                 Logo
             </div>
-        </a>
-        <a href="/Home.aspx" target="_self">
+        </a><a href="/Home.aspx" target="_self">
             <div class="logo title">
                 Logo
             </div>
@@ -109,8 +108,8 @@
                                 <li><a href="#">Manuals</a>
                                     <ul>
                                         <li><a href="http://www.cbec.gov.in/cs-manual-2012.pdf" target="_blank">Customs Manual-2012</a></li>
-                                        <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf" target="_blank">Customs
-                                            Manual on Self Assessment-2011</a> </li>
+                                        <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf" target="_blank">
+                                            Customs Manual on Self Assessment-2011</a> </li>
                                     </ul>
                                 </li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Forms">Forms</a></li>
@@ -135,8 +134,8 @@
                                 <li><a href="/Serviceprocedures.htm" target="_blank">Service Tax Procedures</a></li>
                                 <li><a href="/index.aspx?cat=Service/Tax&subcat=Accounting/Codes/for/new/services">Accounting
                                     Codes for new services</a></li>
-                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Taxation/of/Services/An/Educational/Guide" target="_blank">
-                                    Taxation of Services: An Educational Guide</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Taxation/of/Services/An/Educational/Guide"
+                                    target="_blank">Taxation of Services: An Educational Guide</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Income Tax</a> <span class="small2">
@@ -230,73 +229,53 @@
             </div>
         </div>
     </div>
-    
-    <div style="height:5px;">
+    <div style="height: 5px;">
     </div>
-    <div class="middimension" style="width:990px">
-    <table style="background-color: #DDDDDD;margin-bottom:5px;">
-        <tr>
-            <td style='width:113px' class="flashNews">
-            </td>
-            <td>
-                <div class="middimension" id="TICKER" style="display: none;margin:5px; overflow: hidden;
-                    width: 877px" onmouseover="TICKER_PAUSED=true" onmouseout="TICKER_PAUSED=false">
-                    <asp:Repeater ID="dlNewsFlash" runat="server">
-                        <ItemTemplate>
-                            <%# Eval("Newsflash")%>
-                            &nbsp; <sub class="star">*</sub> &nbsp;
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </div>
-            </td>
-        </tr>
-    </table>
+    <div class="middimension" style="width: 990px">
+        <table style="background-color: #DDDDDD; margin-bottom: 5px;">
+            <tr>
+                <td style='width: 113px' class="flashNews">
+                </td>
+                <td>
+                    <div class="middimension" id="TICKER" style="display: none; margin: 5px; overflow: hidden;
+                        width: 877px" onmouseover="TICKER_PAUSED=true" onmouseout="TICKER_PAUSED=false">
+                        <asp:Repeater ID="dlNewsFlash" runat="server">
+                            <ItemTemplate>
+                                <%# Eval("Newsflash")%>
+                                &nbsp; <sub class="star">*</sub> &nbsp;
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
     <script type="text/javascript" src="Scripts/webticker_lib.js" language="javascript"></script>
     <div class="middimension">
         <div id="adminpanel" runat="server" visible="false" class="adminbtn">
             <table width="100%">
-                <tr >
-                 <td align="right">
+                <tr>
+                    <td align="right">
                         Home Content:<a href="/admin/HomeContentEditor.aspx">Add\Upload</a>
                     </td>
-                    
                     <td align="right">
                         What's New:<a href="/admin/WhatsNew.aspx">Add\Upload</a>
                     </td>
-                     <td>
-                       Tax Update:<a href="/admin/TaxUpdateEditor.aspx">Add\Upload</a>
+                    <td>
+                        Tax Update:<a href="/admin/TaxUpdateEditor.aspx">Add\Upload</a>
                     </td>
-                   
                 </tr>
-                 <tr>
-                   <td align="right">
+                <tr>
+                    <td align="right">
                         Content:<a href="/admin/uploadnotifications.aspx">Add\Upload</a><a href="/admin/editnotifications.aspx">Edit\Delete</a>
                     </td>
-                    <td style="width:250px"></td>
-                     <td>
+                    <td style="width: 250px">
+                    </td>
+                    <td>
                         Flash News:<a href="/admin/uploadnewsflash.aspx">Add\Upload</a><a href="/admin/editnewsflash.aspx">Edit\Delete</a>
                     </td>
                 </tr>
             </table>
-            <%--   <ul>
-                    <li><a href="/admin/uploadnotifications.aspx">Upload Documents</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/admin/uploadnews.aspx">Upload News</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/admin/uploadnewsflash.aspx">Upload Newsflash</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Edit Documents</a></li>--%><%--/admin/editandupdatenotifications.aspx --%>
-            <%-- </ul>
-                <ul>
-                    <li><a href="/admin/editnews.aspx">Edit News</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/admin/editflashnews.aspx">Edit Newsflash</a></li>
-                </ul>--%>
         </div>
         <div class="cont">
             <asp:ContentPlaceHolder ID="cph_page" runat="server">
@@ -331,15 +310,15 @@
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Central Excise</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
-                                <li><a href="/index.aspx?cat=Central Excise&subcat=Acts">Acts</a></li>
-                                <li><a href="/index.aspx?cat=Central Excise&subcat=Rules">Rules</a></li>
-                                <li><a href="/index.aspx?cat=Central Excise&subcat=Tariff 2012-13">Tariff 2012-13</a></li>
-                                <li><a href="http://www.cbec.gov.in/cx-manual.pdf" target="_blank">CBEC Manual</a></li>
-                                <li><a href="/index.aspx?cat=Central Excise&subcat=Forms">Forms</a></li>
-                                <li><a href="/index.aspx?cat=Central Excise&subcat=Notifications">Notifications</a></li>
-                                <li><a href="/index.aspx?cat=Central Excise&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
-                                <li><a href="/index.aspx?cat=Central Excise&subcat=Section 37B Order">Section 37B Order</a></li>
-                                <%--   <li><a href="http://www.cbec.gov.in/frq-nms-cx-st-audits.pdf" target="_blank">Frequency norms</a></li>--%>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Acts">Acts</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Rules">Rules</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Tariff/2012-13">Tariff 2012-13</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=CBEC/Manual">CBEC Manual</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Forms">Forms</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Notifications">Notifications</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Case/Laws">Case Laws</a></li>
+                                <li><a href="/index.aspx?cat=Central/Excise&subcat=Section/37B/Order">Section 37B Order</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -351,15 +330,16 @@
                                 <li><a href="/index.aspx?cat=Customs&subcat=Acts">Acts</a></li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Rules">Rules</a></li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Regulations">Regulations</a></li>
-                                <li><a href="/index.aspx?cat=Customs&subcat=Tariff 2012-13">Tariff 2012-13</a></li>
-                                <li><a href="http://www.cbec.gov.in/cs-manual-2012.pdf" target="_blank">Manual-2012</a></li>
-                                <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf" target="_blank">Self
-                                    Assessment-2011</a> </li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Tariff/2012-13">Tariff 2012-13</a></li>
+                                <li><a href="http://www.cbec.gov.in/cs-manual-2012.pdf">Manual-2012</a></li>
+                                <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf">Manual
+                                    on Self Assessment-2011</a> </li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Forms">Forms</a></li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Notifications">Notifications</a></li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Case/Laws">Case Laws</a></li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=SEZ">SEZ</a></li>
-                                <li><a href="/index.aspx?cat=Customs&subcat=Drawback Schedule">Drawback Schedule</a></li>
+                                <li><a href="/index.aspx?cat=Customs&subcat=Drawback/Schedule">Drawback Schedule</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -368,17 +348,17 @@
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Service Tax</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
-                                <li><a href="/index.aspx?cat=Service Tax&subcat=Act 1994">Act 1994</a></li>
-                                <li><a href="/index.aspx?cat=Service Tax&subcat=ST Rules">ST Rules</a></li>
-                                <li><a href="/index.aspx?cat=Service Tax&subcat=Notifications">Notifications</a></li>
-                                <li><a href="/index.aspx?cat=Service Tax&subcat=Forms and Registers">Forms and Registers</a></li>
-                                <li><a href="/index.aspx?cat=Service Tax&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
-                                <li><a href="#">Case Laws</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Act/1994">Act 1994</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=ST/Rules">ST Rules</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Notifications">Notifications</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Forms/and/Registers">Forms and Registers</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Case/Laws">Case Laws</a></li>
                                 <li><a href="/Serviceprocedures.htm" target="_blank">Service Tax Procedures</a></li>
-                                <li><a href="/index.aspx?cat=Service Tax&subcat=Accounting Codes for new services">Accounting
-                                    Codes</a></li>
-                                <li><a href="http://www.servicetax.gov.in/st-edu-guide.pdf" target="_blank">Taxation of Services</a></li>
-                                <li><a href="http://www.servicetax.gov.in/faq-29sept11.pdf" target="_blank">Libraries</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Accounting/Codes/for/new/services">Accounting
+                                    Codes for new services</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Taxation/of/Services/An/Educational/Guide">
+                                    Taxation of Services: An Educational Guide</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -387,7 +367,31 @@
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Income Tax</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
-                                <li><a href="#">Income Tax</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Income/Tax/Act">Income Tax Act</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Wealth/Tax/Act">Wealth Tax Act</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Gift/Tax/Act">Gift Tax Act</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Expenditure/Tax/Act">Expenditure Tax
+                                    Act</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Interest/Tax/Act">Interest Tax Act</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Finance/Act">Finance Act</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Income/Tax/Rules">Income Tax Rules</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Other/Direct/Tax/Rules">Other Direct
+                                    Tax Rules</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Circulars">Circulars</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Notifications">Notifications</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 150px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                        <li><b>DGFT</b>
+                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
+                                <li><a href="/index.aspx?cat=DGFT&subcat=FTP">FTP</a></li>
+                                <li><a href="/index.aspx?cat=DGFT&subcat=FTDR/Notifications">FTDR Notifications</a></li>
+                                <li><a href="/index.aspx?cat=DGFT&subcat=public/notices">Public Notices</a></li>
+                                <li><a href="/index.aspx?cat=DGFT&subcat=Circulars/Instructions">Circulars</a></li>
+                                <li><a href="/index.aspx?cat=DGFT&subcat=SION">SION</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -396,7 +400,8 @@
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Library</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
-                                <li><a href="#">Library</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Rescinded/Rules">CE Rescinded Rules</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=ST/Libraries">ST Libraries</a></li>
                             </ul>
                         </li>
                     </ul>

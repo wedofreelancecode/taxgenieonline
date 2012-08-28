@@ -35,9 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit, Version=3.5.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Ram\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll</HintPath>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\..\AjaxControlToolkitBinary\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -480,6 +479,18 @@
   <ItemGroup>
     <None Include="cx-manual.pdf" />
     <None Include="faq-29sept11.pdf" />
+    <Content Include="SION\chem-0910.zip" />
+    <Content Include="SION\ele-0910.zip" />
+    <Content Include="SION\engg-0910.zip" />
+    <Content Include="SION\fish-0910.zip" />
+    <Content Include="SION\food-0910.zip" />
+    <Content Include="SION\hand-0910.zip" />
+    <Content Include="SION\leath-0910.zip" />
+    <Content Include="SION\misc-0910.zip" />
+    <Content Include="SION\notes-0910.zip" />
+    <Content Include="SION\plast-0910.zip" />
+    <Content Include="SION\sport-0910.zip" />
+    <Content Include="SION\text-0910.zip" />
     <None Include="st-edu-guide.pdf" />
   </ItemGroup>
   <ItemGroup>

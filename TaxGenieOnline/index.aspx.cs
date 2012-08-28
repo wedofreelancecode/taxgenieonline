@@ -91,6 +91,7 @@ namespace TaxGenieOnline
                 pnlITActsGift.Visible = false;
                 pnlITActsInterest.Visible = false;
                 dlantidumpingduty.Visible = false;
+                pnlSION.Visible = false;
                 //visible Circular/Instruction Headings
                 if (category == "DGFT")
                 {
@@ -165,6 +166,7 @@ namespace TaxGenieOnline
                         dlsafeguards.Visible = false;
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
+                        pnlSION.Visible = false;
                         lblAgreements.Text = "Agreements between nations";
                         lblBaggage.Text = "Baggage Rules, 1998";
 
@@ -233,7 +235,7 @@ namespace TaxGenieOnline
                         dlsafeguards.Visible = false;
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
-
+                        pnlSION.Visible = false;
                         ActsTableAdapter indexByHeadings = new ActsTableAdapter();
 
                         DataTable dtRefunds = indexByHeadings.GetIndexbyFormsHeadings(subcategory, "Application Forms", "Refunds");
@@ -312,7 +314,7 @@ namespace TaxGenieOnline
                         dlsafeguards.Visible = false;
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
-
+                        pnlSION.Visible = false;
                         ActsTableAdapter index = new ActsTableAdapter();
                         DataTable dtSEZ = index.SEZ_Index(subcategory);
                         gvSEZ.DataSource = dtSEZ;
@@ -362,7 +364,7 @@ namespace TaxGenieOnline
                         dlsafeguards.Visible = false;
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
-
+                        pnlSION.Visible = false;
                         DataTable dtGroups = new DataTable();
                         DataRow row = null;
 
@@ -489,7 +491,7 @@ namespace TaxGenieOnline
                         dlsafeguards.Visible = true;
                         dlCECothers.Visible = true;
                         dlSTN.Visible = false;
-
+                        pnlSION.Visible = false;
                         CECNotifications();
 
 
@@ -538,7 +540,7 @@ namespace TaxGenieOnline
                         dlsafeguards.Visible = false;
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
-
+                        pnlSION.Visible = false;
                         ActsTableAdapter actsIndexName = new ActsTableAdapter();
                         DataTable dtActsIndexName = actsIndexName.Index_Select(subcategory);
                         if (dtActsIndexName.Rows.Count > 0)
@@ -602,7 +604,7 @@ namespace TaxGenieOnline
                         pnlITActsGift.Visible = false;
                         pnlITActsInterest.Visible = false;
                         dlantidumpingduty.Visible = false;
-
+                        pnlSION.Visible = false;
                         CEActsTableAdapter indexByHeadings = new CEActsTableAdapter();
                         DataTable dtAgreements = indexByHeadings.IndexByHeadings(subcategory, "Central Excise Rules");
                         dlAgreements.DataSource = dtAgreements;
@@ -656,7 +658,7 @@ namespace TaxGenieOnline
                         dlsafeguards.Visible = false;
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
-
+                        pnlSION.Visible = false;
                         CEActsTableAdapter index = new CEActsTableAdapter();
                         DataTable dtForms = index.CEForms(subcategory);
                         gvSEZ.DataSource = dtForms;
@@ -709,7 +711,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
-
+                        pnlSION.Visible = false;
                         DataTable dtGroups = new DataTable();
                         DataRow row = null;
 
@@ -832,6 +834,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
+                        pnlSION.Visible = false;
                     }
                     else if (category == "Central Excise" & subcategory == "Notifications")
                     {
@@ -877,7 +880,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = true;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = true;
-
+                        pnlSION.Visible = false;
                         CECNotifications();
                     }
                     else
@@ -923,7 +926,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
-
+                        pnlSION.Visible = false;
                         CEActsTableAdapter index = new CEActsTableAdapter();
                         DataTable dtActsIndexName = index.CEIndex(subcategory);
                         if (dtActsIndexName.Rows.Count > 0)
@@ -982,7 +985,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
-
+                        pnlSION.Visible = false;
 
                         ServiceTax_GetAll1TableAdapter index = new ServiceTax_GetAll1TableAdapter();
 
@@ -1048,7 +1051,7 @@ namespace TaxGenieOnline
                         dlITActs.Visible = false;
                         pnlITActsGift.Visible = false;
                         pnlITActsInterest.Visible = false;
-
+                        pnlSION.Visible = false;
                         ServiceTax_GetAll1TableAdapter indexrules = new ServiceTax_GetAll1TableAdapter();
 
                         DataTable dtIndex = indexrules.STRules_Index_Select(subcategory);
@@ -1101,7 +1104,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
-
+                        pnlSION.Visible = false;
                         ServiceTax_GetAll1TableAdapter indexforms = new ServiceTax_GetAll1TableAdapter();
 
                         DataTable dtIndexForms = indexforms.STForms_Index_Select(subcategory);
@@ -1165,6 +1168,8 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
+                        pnlSION.Visible = false;
+
                         ServiceTax_GetAll1TableAdapter indexaccountcodes = new ServiceTax_GetAll1TableAdapter();
 
                         DataTable dtIndexindexaccountcodes = indexaccountcodes.STAccountcode_Index_Select(subcategory);
@@ -1226,6 +1231,7 @@ namespace TaxGenieOnline
                         dlITActs.Visible = false;
                         pnlITActsGift.Visible = false;
                         pnlITActsInterest.Visible = false;
+                        pnlSION.Visible = false;
 
                         STCaselaws_GetAllTableAdapter getSTCaslawsindex = new STCaselaws_GetAllTableAdapter();
                         DataTable dtSTCaslawsindex = getSTCaslawsindex.GetSTCaseLawsIndex();
@@ -1294,6 +1300,7 @@ namespace TaxGenieOnline
                         dlITActs.Visible = false;
                         pnlITActsGift.Visible = false;
                         pnlITActsInterest.Visible = false;
+                        pnlSION.Visible = false;
                     }
                     else if (category == "Service Tax" & subcategory == "Notifications")
                     {
@@ -1338,7 +1345,7 @@ namespace TaxGenieOnline
                         dlSTN.Visible = true;
                         pnlITActsInterest.Visible = false;
                         dlantidumpingduty.Visible = true;
-
+                        pnlSION.Visible = false;
                         STN_GetAllTableAdapter styear = new STN_GetAllTableAdapter();
                         DataTable dtstnYear = styear.STN_Index();
                         if (dtstnYear.Rows.Count > 0)
@@ -1393,6 +1400,7 @@ namespace TaxGenieOnline
                         dlSTN.Visible = false;
                         pnlITActsInterest.Visible = false;
                         dlantidumpingduty.Visible = false;
+                        pnlSION.Visible = false;
                         //CEActsTableAdapter index = new CEActsTableAdapter();
                         //DataTable dtActsIndexName = index.CEIndex(subcategory);
                         //if (dtActsIndexName.Rows.Count > 0)
@@ -1464,6 +1472,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
+                        pnlSION.Visible = false;
 
                     }
                     #endregion
@@ -1518,6 +1527,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
+                        pnlSION.Visible = false;
 
                         Library_RSRules_SelectAllTableAdapter indexByHeadings = new Library_RSRules_SelectAllTableAdapter();
                         DataTable dtBaggage = indexByHeadings.RSRules_Index(subcategory);
@@ -1583,6 +1593,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
+                        pnlSION.Visible = false;
                         IncomeTaxActs_SelectAllTableAdapter getITDetails = new IncomeTaxActs_SelectAllTableAdapter();
                         DataTable dtGetITDetails = getITDetails.GetIndex(subcategory);
                         if (dtGetITDetails.Rows.Count > 0)
@@ -1651,7 +1662,7 @@ namespace TaxGenieOnline
                         pnlSTlibraries.Visible = false;
                         pnlITActsGift.Visible = false;
                         pnlITActsInterest.Visible = false;
-
+                        pnlSION.Visible = false;
                         IncomeTaxActs_SelectAllTableAdapter getITDetails = new IncomeTaxActs_SelectAllTableAdapter();
                         DataTable dtGetITDetails = getITDetails.GetFinanceActsDetails(subcategory);
                         if (dtGetITDetails.Rows.Count > 0)
@@ -1729,6 +1740,7 @@ namespace TaxGenieOnline
                         pnlSTlibraries.Visible = false;
                         dlITActs.Visible = false;
                         pnlITActsGift.Visible = false;
+                        pnlSION.Visible = false;
                     }
 
                     if (subcategory == "Gift Tax Act")
@@ -1787,6 +1799,8 @@ namespace TaxGenieOnline
                         pnlSTlibraries.Visible = false;
                         dlITActs.Visible = false;
                         pnlITActsInterest.Visible = false;
+                        pnlSION.Visible = false;
+
 
                     }
                     if (subcategory == "Income Tax Rules" || subcategory == "Other Direct Tax Rules")
@@ -1845,6 +1859,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
+                        pnlSION.Visible = false;
 
                         IncomeTaxRules_SelectAllTableAdapter getITDetails = new IncomeTaxRules_SelectAllTableAdapter();
                         DataTable dtGetITDetails = getITDetails.GetIndex(subcategory);
@@ -1912,6 +1927,7 @@ namespace TaxGenieOnline
                         dlCECothers.Visible = false;
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
+                        pnlSION.Visible = false;
                         IncomeTaxCircularsNotification_SelectAllTableAdapter getITDetails = new IncomeTaxCircularsNotification_SelectAllTableAdapter();
                         DataTable dtGetITDetails = getITDetails.GetIndex(subcategory);
                         if (dtGetITDetails.Rows.Count > 0)
@@ -1969,17 +1985,18 @@ namespace TaxGenieOnline
                     pnlITActsGift.Visible = false;
                     pnlITActsInterest.Visible = false;
                     dlantidumpingduty.Visible = false;
-
+                    pnlSION.Visible = false;
 
                     dltariff.Visible = false;
                     dlnontariff.Visible = false;
                     dlsafeguards.Visible = false;
                     dlCECothers.Visible = false;
                     dlSTN.Visible = false;
-                    DGFT_GetAllTableAdapter indexBySubCategeory = new DGFT_GetAllTableAdapter();
-                    DataTable dtDGFTFTDR = indexBySubCategeory.DGFTFTDR_Index_Select(subcategory);
+                    DGFT_FTDR_Notifications_GetAllTableAdapter indexBySubCategeory = new DGFT_FTDR_Notifications_GetAllTableAdapter();
+                    DataTable dtDGFTFTDR = indexBySubCategeory.DGFT_FTDRNotification_Index(subcategory);
                     dlDGFT.DataSource = dtDGFTFTDR;
                     dlDGFT.DataBind();
+
 
                     #endregion
 
@@ -2024,7 +2041,7 @@ namespace TaxGenieOnline
                     dlITActs.Visible = false;
                     pnlITActsGift.Visible = false;
                     pnlITActsInterest.Visible = false;
-
+                    pnlSION.Visible = false;
 
                     dltariff.Visible = false;
                     dlnontariff.Visible = false;
@@ -2080,7 +2097,7 @@ namespace TaxGenieOnline
                     dlITActs.Visible = false;
                     pnlITActsGift.Visible = false; dlantidumpingduty.Visible = false;
                     pnlITActsInterest.Visible = false;
-
+                    pnlSION.Visible = false;
                     dltariff.Visible = false;
                     dlnontariff.Visible = false;
                     dlsafeguards.Visible = false;
@@ -2091,13 +2108,14 @@ namespace TaxGenieOnline
                     DataTable dtDGFTpublicnotice = indexBySubCategeory.DGFT_publicnotices_Index_select();
                     dlDGFT.DataSource = dtDGFTpublicnotice;
                     dlDGFT.DataBind();
-
                     #endregion
 
                 }
                 if (category == "DGFT" && subcategory == "SION")
                 {
                     #region DGFTSION
+
+                    pnlSION.Visible = true;
 
                     InvisibleRuleLabels();
                     InvisibleFormLabels();
@@ -2193,7 +2211,7 @@ namespace TaxGenieOnline
             }
         }
 
-        
+
 
 
         protected void dlIndex_ItemCommand(object source, DataListCommandEventArgs e)
@@ -2686,7 +2704,7 @@ namespace TaxGenieOnline
                 string indexname = linkButton.Text;
                 if (e.CommandArgument.ToString() == "True")
                 {
-                    Response.Redirect("shownotifications.aspx?name=" + indexname + "+&cat=" + category + "&subcat=" + subcategory,"_blank",string.Empty);
+                    Response.Redirect("shownotifications.aspx?name=" + indexname + "+&cat=" + category + "&subcat=" + subcategory, "_blank", string.Empty);
                 }
                 else
                 {
@@ -2708,7 +2726,7 @@ namespace TaxGenieOnline
                 DataTable dtstnInfo = stnInfo.STN_InfoByYear(_year2, subcategory);
                 if (dtstnInfo.Rows.Count > 0)
                 {
-                    Response.Redirect("displayindex.aspx?cat=" + category + "&subcat=" + subcategory + "&year=" + _year2 );
+                    Response.Redirect("displayindex.aspx?cat=" + category + "&subcat=" + subcategory + "&year=" + _year2);
                 }
             }
         }
