@@ -333,6 +333,48 @@ namespace TaxGenieOnline
             }
 
             #endregion
+
+            #region DGFT
+                        else if (category == "DGFT" & subcategeory == "public notices")
+            {
+                DGFTpublicnotices_GETALLTableAdapter DGFTNoticenum = new DGFTpublicnotices_GETALLTableAdapter();
+               DataTable dtChapterName = DGFTNoticenum.DGFT_publicnoticdata(indexName, chapter);
+               string stcl = Convert.ToString(dtChapterName.Rows[0]["Data"]);
+
+               if (stcl != null)
+               {
+                   ltl.Text = Convert.ToString(dtChapterName.Rows[0]["Data"]);
+               }
+               else
+               {
+                   byte[] b = ((byte[])dtChapterName.Rows[0]["Document"]);
+                   //Collect Bytes from database and write in Webpage
+                   Response.ContentType = "application/pdf";
+                   Response.BinaryWrite(b);
+                   Response.Write("<script>window.open('Page.html','_blank')</script>");
+               }
+            }
+            else if (category == "DGFT" & subcategeory == "FTDR Notifications")
+            {
+                DGFT_FTDR_Notifications_GetAllTableAdapter DGFTNoticenum = new DGFT_FTDR_Notifications_GetAllTableAdapter();
+               DataTable dtChapterName = DGFTNoticenum.DGFT_FTDRnotic_Data(indexName, chapter);
+               string stcl = Convert.ToString(dtChapterName.Rows[0]["Data"]);
+
+               if (stcl != null)
+               {
+                   ltl.Text = Convert.ToString(dtChapterName.Rows[0]["Data"]);
+               }
+               else
+               {
+                   byte[] b = ((byte[])dtChapterName.Rows[0]["Document"]);
+                   //Collect Bytes from database and write in Webpage
+                   Response.ContentType = "application/pdf";
+                   Response.BinaryWrite(b);
+                   Response.Write("<script>window.open('Page.html','_blank')</script>");
+               }
+
+            }
+            #endregion
             else
             {
                 DataTable dtChapterName = new DataTable();
@@ -358,21 +400,12 @@ namespace TaxGenieOnline
                     dtChapterName = CEActsChapter.Library_Data_Select(subcategeory, indexName);
                 }
 
-                else if (category == "DGFT" & subcategeory == "FTDR Notifications")
-                {
-                    DGFT_GetAllTableAdapter FTDRchapterName = new DGFT_GetAllTableAdapter();
-                    dtChapterName = FTDRchapterName.DGFT_Data_Select(subcategeory, indexName);
-                }
                 else if (category == "DGFT" & subcategeory == "FTP")
                 {
                     DGFT_GetAllTableAdapter FTPchapterName = new DGFT_GetAllTableAdapter();
                     dtChapterName = FTPchapterName.DGFT_FTP_Data_select(subcategeory, indexName);
                 }
-                else if (category == "DGFT" & subcategeory == "public notices")
-                {
-                    DGFT_GetAllTableAdapter DGFTNoticenum = new DGFT_GetAllTableAdapter();
-                    dtChapterName = DGFTNoticenum.DGFT_publicnotice_Data_select(indexName, chapter);
-                }
+               
                 else if (category == "Income Tax" & (subcategeory == "Income Tax Act" || subcategeory == "Wealth Tax Act" || subcategeory == "Expenditure Tax Act" || subcategeory == "Finance Act"))
                 {
                     IncomeTaxActs_SelectAllTableAdapter itActsData = new IncomeTaxActs_SelectAllTableAdapter();

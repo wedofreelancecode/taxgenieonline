@@ -167,6 +167,15 @@ namespace TaxGenieOnline
                 gvDGFTpublicnotice.DataBind();
 
             }
+            else if (category == "DGFT" & subcategory == "FTDR Notifications")
+            {
+
+                DGFT_FTDR_Notifications_GetAllTableAdapter DGFTpublicnotices = new DGFT_FTDR_Notifications_GetAllTableAdapter();
+                DataTable dtpublicnotices = DGFTpublicnotices.DGFT_FTDR_NotinumByIndex(indexName);
+                gvDGFTpublicnotice.DataSource = dtpublicnotices;
+                gvDGFTpublicnotice.DataBind();
+
+            }
             if (dtAChapter.Rows.Count > 0)
             {
                 gvindex.DataSource = dtAChapter;

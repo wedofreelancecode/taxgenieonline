@@ -359,6 +359,30 @@
                                 <asp:TextBox ID="txtDGFTFTDRindex" runat="server" CssClass="nl"></asp:TextBox>
                             </td>
                         </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblDGFTFTDR" runat="server" Text="Notification Number" CssClass="nls"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:TextBox ID="txtDGFTFTDRnotificationnum" runat="server" CssClass="nl"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblDGFTFTDRdate" runat="server" Text="Date" CssClass="nls"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:TextBox ID="txtDGFTFTDRdate" runat="server" CssClass="nl"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblDGFTFTDRSUB" runat="server" Text="Subject" CssClass="nls"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:TextBox ID="txtDGFTFTDRsub" runat="server" CssClass="nl" TextMode="MultiLine"></asp:TextBox>
+                            </td>
+                        </tr>
                     </table>
                 </asp:Panel>
                 <asp:Panel ID="pnlDGFTFTP" Width="100%" runat="server">
