@@ -76,7 +76,7 @@ body
     height: 100%;
     display: block;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: whiteSmoke;
+    background-color: #fff;
 }
 body, td, th
 {

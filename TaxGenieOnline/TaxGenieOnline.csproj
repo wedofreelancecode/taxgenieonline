@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="AjaxControlToolkit">
       <HintPath>..\..\..\..\AjaxControlToolkitBinary\AjaxControlToolkit.dll</HintPath>
+      <HintPath>G:\AjaxControlToolkitBinary\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

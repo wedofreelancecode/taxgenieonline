@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
 using TaxGenie_DAL.UserProfileTableAdapters;
+using System.Net.Mail;
+using System.Text;
 
 namespace TaxGenieOnline.UserRegistration
 {
@@ -43,9 +45,31 @@ namespace TaxGenieOnline.UserRegistration
             try
             {
                 //update email into membership table
-                Label lblPWD = (Label)CompleteWizardStep1.ContentTemplateContainer.FindControl("lblPWD");
-                lblPWD.Text = CreateUserWizard1.Password;
+                Literal lblPWD = (Literal)CompleteWizardStep1.ContentTemplateContainer.FindControl("lblPWD");
+                Literal lblUsername = (Literal)CompleteWizardStep1.ContentTemplateContainer.FindControl("lblUsername");
                 TextBox UserName = (TextBox)CreateUserWizardStep1.ContentTemplateContainer.FindControl("UserName");
+                TextBox fstName = (TextBox)CreateUserWizardStep1.ContentTemplateContainer.FindControl("txtFirstname");
+
+                //Sending Mail
+                MailMessage msg = new MailMessage();
+                msg.To.Add(UserName.Text);
+                msg.Subject = "TaxGenieOnline Login Credentials";
+                msg.SubjectEncoding = System.Text.Encoding.UTF8;
+                StringBuilder msgBody = new StringBuilder( "Dear "+fstName.Text + "<br/>");
+                msgBody.Append("<p> Welcome to TaxGenieOnline. Below are credentials to login <br/> User Name : " + UserName.Text + "<br/>");
+                msgBody.Append("Password : " + CreateUserWizard1.Password + "</p><br/><br/><br/>");
+                msgBody.Append("Thanks,<br/> TaxGenieOnline.com");
+                msg.Body = msgBody.ToString();
+                msg.BodyEncoding = System.Text.Encoding.UTF8;
+                msg.IsBodyHtml = true;
+                msg.Priority = MailPriority.High;
+                msg.From = new MailAddress("taxgenieonline@gmail.com", "TaxGenieOnline", System.Text.Encoding.UTF8);
+                SmtpClient mailClinet = new SmtpClient();
+                mailClinet.EnableSsl = true;
+                mailClinet.Send(msg); 
+                //lblPWD.Text = CreateUserWizard1.Password;
+                lblPWD.Text = UserName.Text;
+                lblUsername.Text = UserName.Text;
                 u = Membership.GetUser(UserName.Text);
                 u.Email = UserName.Text;
                 Membership.UpdateUser(u);

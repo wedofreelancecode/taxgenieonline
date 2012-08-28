@@ -84,7 +84,8 @@
                         </asp:ObjectDataSource>
                         <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" RequireEmail="False"
                             AutoGeneratePassword="True" LoginCreatedUser="False" OnCreatedUser="CreateUserWizard1_CreatedUser"
-                            OnCreatingUser="CreateUserWizard1_OnCreatingUser" CreateUserButtonText="Create">
+                            OnCreatingUser="CreateUserWizard1_OnCreatingUser" 
+                            CreateUserButtonText="Create">
                             <WizardSteps>
                                 <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                                     <ContentTemplate>
@@ -273,21 +274,20 @@
                                     <ContentTemplate>
                                         <table border="0" style="font-size: 100%; font-family: Verdana" id="TABLE1">
                                             <tr>
-                                                <td align="center" colspan="2" style="font-weight: bold; color: white; background-color: #5d7b9d;
+                                                <td align="center" style="font-weight: bold; color: white; background-color: #5d7b9d;
                                                     height: 18px;">
                                                     Complete
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    This account has been successfully created. Please make a note of the follwoing
-                                                    password.<br />
-                                                    The Password for this account is: <b>
-                                                        <asp:Label ID="lblPWD" runat="server" Text=""></asp:Label></b>
+                                                    This account has been created successfully for the <br /> user <b><asp:Literal ID="lblUsername" runat="server" Text=""></asp:Literal></b>.<br /><br />
+                                                    Your login credentials has been sent to your <br /> E-Mail(<b>
+                                                        <asp:Literal ID="lblPWD" runat="server" Text=""></asp:Literal></b>).
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="right" colspan="2">
+                                                <td align="right">
                                                     &nbsp;<asp:Button ID="ContinueButton" runat="server" BackColor="#FFFBFF" BorderColor="#CCCCCC"
                                                         BorderStyle="Solid" BorderWidth="1px" CausesValidation="False" CommandName="Continue"
                                                         Font-Names="Verdana" ForeColor="#284775" Text="Continue" ValidationGroup="CreateUserWizard1"
