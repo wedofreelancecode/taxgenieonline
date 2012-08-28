@@ -1473,7 +1473,6 @@ namespace TaxGenieOnline
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
                         pnlSION.Visible = false;
-
                     }
                     #endregion
 
@@ -1528,6 +1527,8 @@ namespace TaxGenieOnline
                         dlSTN.Visible = false;
                         dlantidumpingduty.Visible = false;
                         pnlSION.Visible = false;
+                        pnlITActsGift.Visible = false;
+                        pnlITActsInterest.Visible = false;
 
                         Library_RSRules_SelectAllTableAdapter indexByHeadings = new Library_RSRules_SelectAllTableAdapter();
                         DataTable dtBaggage = indexByHeadings.RSRules_Index(subcategory);
@@ -2675,7 +2676,7 @@ namespace TaxGenieOnline
                 {
                     LinkButton linkButton = e.CommandSource as LinkButton;
                     string indexname = linkButton.Text;
-                    Response.Redirect("shownotifications.aspx?name=" + indexname + "+&cat=" + category + "&subcat=" + subcategory);
+                    Response.Redirect("~/displayindex.aspx?cat=" + category + "&subcat=" + subcategory + "&name=" + indexname);
 
                 }
 

@@ -79,13 +79,13 @@
                                 <asp:Label ID="lblCRulesIndex" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 23%; text-align: left">
-                                <asp:TextBox ID="txtCRulesIndex" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCRulesIndex" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                             <td style="width: 10%; text-align: right">
                                 <asp:Label ID="lblSubRulesChapterName" runat="server" Text="Chapter Name" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 23%; text-align: left">
-                                <asp:TextBox ID="txtSubRulesChapterName" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtSubRulesChapterName" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -115,7 +115,7 @@
                                 <asp:Label ID="lblCRegulationsIndex" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCRegulationsIndex" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCRegulationsIndex" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -161,7 +161,7 @@
                                 <asp:Label ID="lblCFormsIndex" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCFormsIndex" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCFormsIndex" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -169,7 +169,7 @@
                                 <asp:Label ID="lblFormsSubject" runat="server" Text="Subject" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtFormsSubject" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtFormsSubject" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -181,7 +181,7 @@
                                 <asp:Label ID="lblCSEZNotficationNo" runat="server" Text="Notfication No" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCSEZNotficationNo" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCSEZNotficationNo" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -189,7 +189,7 @@
                                 <asp:Label ID="lblCSEZSubject" runat="server" Text="Subject" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCSEZSubject" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCSEZSubject" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -201,7 +201,7 @@
                                 <asp:Label ID="lblCDrawbackIndex" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 80%; text-align: left">
-                                <asp:TextBox ID="txtCDrawbackIndex" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCDrawbackIndex" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -225,7 +225,7 @@
                                 <asp:Label ID="lblCircularYear" runat="server" Text="Year" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCircularYear" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCircularYear" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -233,7 +233,7 @@
                                 <asp:Label ID="lblCircularNumber" runat="server" Text="Circular Number" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCircularNumber" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCircularNumber" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -241,7 +241,7 @@
                                 <asp:Label ID="lblCircularDate" runat="server" Text="Date" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCircularDate" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCircularDate" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -249,7 +249,7 @@
                                 <asp:Label ID="lblCircularFileName" runat="server" Text="File Name" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCircularFileNumber" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCircularFileNumber" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -257,7 +257,7 @@
                                 <asp:Label ID="lblCircularSubject" runat="server" Text="Subject" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCircularSubject" runat="server" TextMode="MultiLine" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCircularSubject" runat="server" TextMode="MultiLine" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -312,7 +312,7 @@
                                 <asp:Label ID="lblCtariffchapter" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCtariffchapter" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCtariffchapter" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -320,15 +320,15 @@
                                 <asp:Label ID="lblCtariffChaptername" runat="server" Text="Chapter Name" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCtariffChaptername" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCtariffChaptername" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblCtariffsubj" runat="server" Text="Subject" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblCtariffsubj" runat="server" Text="Subject" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCtariffsubj" runat="server" TextMode="MultiLine" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtCtariffsubj" runat="server" TextMode="MultiLine" CssClass="nls"></asp:TextBox>
                             </td>
                             <td>
                             </td>
@@ -344,7 +344,7 @@
                                 <asp:Label ID="lblSTCaselaws" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtSTCaselaws" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtSTCaselaws" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -353,34 +353,34 @@
                     <table width="100%" style="margin-top: 20px">
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTFTDRindex" runat="server" Text="Index" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTFTDRindex" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtDGFTFTDRindex" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTFTDRindex" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTFTDR" runat="server" Text="Notification Number" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTFTDR" runat="server" Text="Notification Number" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtDGFTFTDRnotificationnum" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTFTDRnotificationnum" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTFTDRdate" runat="server" Text="Date" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTFTDRdate" runat="server" Text="Date" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtDGFTFTDRdate" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTFTDRdate" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTFTDRSUB" runat="server" Text="Subject" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTFTDRSUB" runat="server" Text="Subject" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtDGFTFTDRsub" runat="server" CssClass="nl" TextMode="MultiLine"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTFTDRsub" runat="server" CssClass="nls" TextMode="MultiLine"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -389,24 +389,24 @@
                     <table width="100%" style="margin-top: 20px">
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblpnlDGFTFTPindex" runat="server" Text="Index" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblpnlDGFTFTPindex" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 40%; text-align: left">
-                                <asp:TextBox ID="txtpnlDGFTFTPindex" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtpnlDGFTFTPindex" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTFTPsubject" runat="server" Text="Subject" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTFTPsubject" runat="server" Text="Subject" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 40%; text-align: left">
-                                <asp:TextBox ID="txtDGFTFTPsubject" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTFTPsubject" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTFTPchaptername" runat="server" Text="ChapterName" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTFTPchaptername" runat="server" Text="ChapterName" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 40%; text-align: left">
-                                <asp:TextBox ID="txtDGFTFTPchaptername" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTFTPchaptername" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -415,34 +415,34 @@
                     <table width="100%" style="margin-top: 20px">
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTpublicnoticeindex" runat="server" Text="Index" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTpublicnoticeindex" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtDGFTpublicnoticeindex" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTpublicnoticeindex" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTpublicnoticenum" runat="server" Text="Notice Number" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTpublicnoticenum" runat="server" Text="Notice Number" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtDGFTpublicnoticenum" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTpublicnoticenum" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTpublicnoticedate" runat="server" Text="Date" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTpublicnoticedate" runat="server" Text="Date" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtDGFTpublicnoticedate" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTpublicnoticedate" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblDGFTpublicnoticesubject" runat="server" Text="Subject" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblDGFTpublicnoticesubject" runat="server" Text="Subject" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtDGFTpublicnoticesubject" runat="server" CssClass="nl" TextMode="MultiLine"></asp:TextBox>
+                                <asp:TextBox ID="txtDGFTpublicnoticesubject" runat="server" CssClass="nls" TextMode="MultiLine"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -451,34 +451,34 @@
                     <table width="100%" style="margin-top: 20px">
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblSTNYear" runat="server" Text="Year" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblSTNYear" runat="server" Text="Year" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtSTNYear" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtSTNYear" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblSTNFNumber" runat="server" Text="File Number" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblSTNFNumber" runat="server" Text="File Number" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtSTNFNumber" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtSTNFNumber" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblSTNDate" runat="server" Text="Date" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblSTNDate" runat="server" Text="Date" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtSTNDate" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtSTNDate" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblSTNSubject" runat="server" Text="Subject" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblSTNSubject" runat="server" Text="Subject" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtSTNSubject" runat="server" TextMode="MultiLine" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtSTNSubject" runat="server" TextMode="MultiLine" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -487,7 +487,7 @@
                     <table width="100%" style="margin-top: 20px">
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblCECGroupType" runat="server" Text="Group Type" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblCECGroupType" runat="server" Text="Group Type" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
                                 <asp:RadioButtonList ID="rdbCECType" runat="server" RepeatDirection="Horizontal"
@@ -502,34 +502,34 @@
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblCECYear" runat="server" Text="Year" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblCECYear" runat="server" Text="Year" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCECYear" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtCECYear" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblCECFnumber" runat="server" Text="File Number" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblCECFnumber" runat="server" Text="File Number" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCECFnumber" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtCECFnumber" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblCECDate" runat="server" Text="Date" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblCECDate" runat="server" Text="Date" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCECDate" runat="server" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtCECDate" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblCECSubject" runat="server" Text="Subject" CssClass="nls"></asp:Label>
+                                <asp:Label ID="lblCECSubject" runat="server" Text="Subject" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCECSubject" runat="server" TextMode="MultiLine" CssClass="nl"></asp:TextBox>
+                                <asp:TextBox ID="txtCECSubject" runat="server" TextMode="MultiLine" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -557,7 +557,7 @@
                                 <asp:Label ID="lblSectionNo" runat="server" CssClass="nlsN" Text="Section No"></asp:Label>
                             </td>
                             <td style="width: 80%; text-align: left">
-                                <asp:TextBox ID="txtSectionNo" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtSectionNo" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -565,7 +565,7 @@
                                 <asp:Label ID="lblSectionName" runat="server" CssClass="nlsN" Text="Section Name"></asp:Label>
                             </td>
                             <td style="width: 80%; text-align: left">
-                                <asp:TextBox ID="txtSectionName" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtSectionName" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -575,7 +575,7 @@
                     <table width="100%" style="margin-top: 20px">
                         <tr>
                             <td style="width: 20%; text-align: right">
-                                <asp:Label ID="lblGroup" runat="server" CssClass="nls" Text="Group"></asp:Label>
+                                <asp:Label ID="lblGroup" runat="server" CssClass="nlsN" Text="Group"></asp:Label>
                             </td>
                             <td style="width: 80%; text-align: left">
                                 <asp:DropDownList ID="ddlGroup" runat="server" CssClass="nls">
@@ -593,7 +593,7 @@
                                 <asp:Label ID="lblHeadings" runat="server" CssClass="nlsN" Text="Heading"></asp:Label>
                             </td>
                             <td style="width: 80%; text-align: left">
-                                <asp:TextBox ID="txtHeadings" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtHeadings" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -606,7 +606,7 @@
                                 <asp:Label ID="lblITCircularNo" runat="server" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 80%; text-align: left">
-                                <asp:TextBox ID="txtITCircularNo" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtITCircularNo" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -614,7 +614,7 @@
                                 <asp:Label ID="lblITCircularDate" runat="server" CssClass="nlsN" Text="Date"></asp:Label>
                             </td>
                             <td style="width: 80%; text-align: left">
-                                <asp:TextBox ID="txtITCircularDate" runat="server" CssClass="nl2"></asp:TextBox>
+                                <asp:TextBox ID="txtITCircularDate" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
                     </table>

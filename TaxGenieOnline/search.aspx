@@ -4,10 +4,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_left" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_main" runat="server">
-    <div class="cl22 fleft">
+    <div class="cl2 fleft">
         <div class="contentbox">
-            <div class="contentboxmiddle1 shdw shd">
-                <div class="newshldr" style="padding: 15px 0px 10px 20px">
+            <div class="contentboxmiddle1 shdw shd" style="min-height: 300px; padding: 15px 10px 10px 40px">
+                <div class="newshldr" style="width: 100%; margin-top: 5px;">
                     <div align="left">
                         <asp:GridView ID="gv_Search" runat="server" AutoGenerateColumns="False" AllowPaging="True"
                             OnPageIndexChanging="gv_Search_PageIndexChanging" ForeColor="#333333" GridLines="None">
@@ -27,4 +27,6 @@
             </div>
         </div>
     </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cph_right" runat="server">
 </asp:Content>
