@@ -59,11 +59,11 @@
             <div class="logoIcon title">
                 Logo
             </div>
-        </a><a href="/Home.aspx" target="_self">
+        </a><%--<a href="/Home.aspx" target="_self">
             <div class="logo title">
                 Logo
             </div>
-        </a>
+        </a>--%>
         <div class="hright fright">
             <a href="/Home.aspx" target="_self">Home</a> | <a href="/about-us.aspx" target="_self">
                 About Us</a> | <a href="/sitemap.aspx">Sitemap</a> | <a href="/Contactus.aspx" target="_self">
