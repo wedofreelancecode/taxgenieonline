@@ -13,8 +13,6 @@
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=CBEC/Manual" title="CBEC Manual"  description="CBEC Manual"/>
     </siteMapNode>
 
-
-
     <siteMapNode url="" title="Customs">
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Acts" title="Acts"  description="Acts"/>
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Rules" title="Rules"  description="Rules"/>
@@ -26,9 +24,6 @@
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=SEZ" title="SEZ"  description="SEZ"/>
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Drawback/Schedule" title="Drawback Schedule"  description="Drawback Schedule"/>
     </siteMapNode>
-
-
-
 
     <siteMapNode url="" title="Service Tax">
       <siteMapNode url="index.aspx?cat=Service/Tax&amp;subcat=Act/1994" title="Act 1994"  description="Act 1994"/>
@@ -42,8 +37,6 @@
       <siteMapNode url="index.aspx?cat=Service/Tax&amp;subcat=Libraries" title="Libraries"  description="Libraries"/>
     </siteMapNode>
 
-
-
     <siteMapNode url="" title="DGFT">
 
       <siteMapNode url="index.aspx?cat=DGFT&amp;subcat=FTP" title="FTP"  description="Acts"/>
@@ -53,9 +46,6 @@
       <siteMapNode url="index.aspx?cat=DGFT&amp;subcat=SION" title="SION"  description="Forms"/>
 
     </siteMapNode>
-
-
-
 
     <siteMapNode url="" title="Income Tax">
 
@@ -85,8 +75,6 @@
 
 
     </siteMapNode>
-
-
 
     <siteMapNode url="" title="Library">
 
