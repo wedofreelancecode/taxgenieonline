@@ -477,7 +477,9 @@
   <ItemGroup>
     <Content Include="images\rtarw.png" />
     <Content Include="sitemap.aspx" />
-    <Content Include="Web.sitemap" />
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="cx-manual.pdf" />
