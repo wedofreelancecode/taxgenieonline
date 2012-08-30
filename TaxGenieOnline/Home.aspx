@@ -12,8 +12,9 @@
                 <div id="slides">
                     <div class="slides_container">
                         <img src="images/slide1.jpg" width="490" height="198" alt="" />
-                        <%-- <img src="images/slide2.jpg" width="490" height="198" alt=""/>--%>
                         <img src="images/slide3.jpg" width="490" height="198" alt="" />
+                        <img src="images/slide4.jpg" width="490" height="198" alt="" />
+                        <img src="images/slide5.jpg" width="490" height="198" alt="" />
                     </div>
                 </div>
             </div>
@@ -137,15 +138,15 @@
                 <div class="brdhdsblue">
                 </div>
                 <div class="ab1">
-                <ol>
-                    <asp:Repeater ID="dlCaseAnalysis" runat="server">
-                        <ItemTemplate>
-                            <li><a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
-                                <%# Eval("Data") %>
-                                ...</a></li>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </ol>
+                    <ol>
+                        <asp:Repeater ID="dlCaseAnalysis" runat="server">
+                            <ItemTemplate>
+                                <li><a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                                    <%# Eval("Data") %>
+                                    ...</a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ol>
                 </div>
                 <span class="more"><a href="/ShowContents.aspx?CType=Case Analysis">more...</a></span>
             </div>
