@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="Home.aspx" title="Home"  description="Home">
-    
+
     <siteMapNode url="" title="Central Excise">
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Acts" title="Acts"  description="Acts"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Rules" title="Rules"  description="Rules"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Tariff/2012-13" title="Tariff 2012-13"  description="Tariff"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Acts" title="acts"  description="acts"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Rules" title="rules"  description="rules"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Tariff/2012-13" title="Tariff 2012-13"  description="tariff"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Forms" title="forms"  description="forms"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Notifications" title="Notifications"  description=" Notifications"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Notifications" title="notifications"  description="notifications"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Circulars/Instructions" title="Circulars/Instructions"  description="sez"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Section/37B/Order" title="Section 37B Order"  description="Drawback Schedule"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Section/37B/Order" title="Section 37B Order"  description="drawback schedule"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=CBEC/Manual" title="CBEC Manual"  description="CBEC Manual"/>
-    </siteMapNode>   
-    
-    
-    
-      <siteMapNode url="" title="Customs">
+    </siteMapNode>
+
+
+
+    <siteMapNode url="" title="Customs">
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Acts" title="Acts"  description="Acts"/>
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Rules" title="Rules"  description="Rules"/>
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Regulations" title="Regulations"  description="Regulations"/>
@@ -25,12 +25,12 @@
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Circulars/Instructions" title="Circulars/Instructions"  description="Circulars/Instructions"/>
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=SEZ" title="SEZ"  description="SEZ"/>
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Drawback/Schedule" title="Drawback Schedule"  description="Drawback Schedule"/>
-      </siteMapNode>
+    </siteMapNode>
 
 
-    
-   
-      <siteMapNode url="" title="Service Tax">
+
+
+    <siteMapNode url="" title="Service Tax">
       <siteMapNode url="index.aspx?cat=Service/Tax&amp;subcat=Act/1994" title="Act 1994"  description="Act 1994"/>
       <siteMapNode url="index.aspx?cat=Service/Tax&amp;subcat=ST/Rules" title="ST Rules"  description="ST Rules"/>
       <siteMapNode url="index.aspx?cat=Service/Tax&amp;subcat=Notifications" title="Notifications"  description="Notifications"/>
@@ -40,10 +40,70 @@
       <siteMapNode url="index.aspx?cat=Service/Tax&amp;subcat=Accounting/Codes/for/new/services" title="Accounting Codes for new services"  description="Accounting Codes for new services"/>
       <siteMapNode url="index.aspx?cat=Service/Tax&amp;subcat=Taxation/of/Services/An/Educational/Guide" title="Taxation of Services: An Educational Guide"  description="Taxation of Services: An Educational Guide"/>
       <siteMapNode url="index.aspx?cat=Service/Tax&amp;subcat=Libraries" title="Libraries"  description="Libraries"/>
+    </siteMapNode>
+
+
+
+    <siteMapNode url="" title="DGFT">
+
+      <siteMapNode url="index.aspx?cat=DGFT&amp;subcat=FTP" title="FTP"  description="Acts"/>
+      <siteMapNode url="index.aspx?cat=DGFT&amp;subcat=FTDR/Notifications" title="FTDR Notifications"  description="Rules"/>
+      <siteMapNode url="index.aspx?cat=DGFT&amp;subcat=public/notices" title="Public Notices"  description="Regulations"/>
+      <siteMapNode url="index.aspx?cat=DGFT&amp;subcat=Circulars/Instructions" title="Circulars/Instructions"  description="Tariff 2012-13"/>
+      <siteMapNode url="index.aspx?cat=DGFT&amp;subcat=SION" title="SION"  description="Forms"/>
+
+    </siteMapNode>
+
+
+
+
+    <siteMapNode url="" title="Income Tax">
+
+
+
+      <siteMapNode url="" title="Acts">
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Income/Tax/Act" title="Income Tax Acts"  description="Acts"/>
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Wealth/Tax/Act" title="Wealth Tax Acts"  description="Acts"/>
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Gift/Tax/Act" title="Gift Tax Acts"  description="Acts"/>
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Expenditure/Tax/Act" title="Expenditure Tax Acts"  description="Acts"/>
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Interest/Tax/Act" title="Intrest Tax Acts"  description="Acts"/>
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Finance/Act" title="Finance Acts"  description="Acts"/>
+      </siteMapNode>
+
+
+
+
+      <siteMapNode url="" title="Rules">
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Income/Tax/Rules" title="Income Tax Acts"  description="Acts"/>
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Other/Direct/Tax/Rules" title="Wealth Tax Acts"  description="Acts"/>
+      </siteMapNode>
+
+
+
+      <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Circulars" title="Circulars"  description="Tariff 2012-13"/>
+      <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Notifications" title="Notifications"  description="Forms"/>
+
+
+    </siteMapNode>
+
+
+
+    <siteMapNode url="" title="Library">
+
+
+
+      <siteMapNode url="" title="Central Excise">
+        <siteMapNode url="index.aspx?cat=Library&amp;subcat=Rescinded/Rules" title="Rescinded Rules"  description="Rescinded Rules"/>
+        <siteMapNode url="index.aspx?cat=Library&amp;subcat=ST/Libraries" title="ST Libraries"  description="ST Libraries"/>
+        </siteMapNode>
+      
+      
       </siteMapNode>
     
-     </siteMapNode>
-     </siteMap>
+    
+    
+    </siteMapNode>
+</siteMap>
 
 
 
