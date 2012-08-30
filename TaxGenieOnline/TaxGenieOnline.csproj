@@ -80,6 +80,7 @@
     <Content Include="images\Slide5.jpg" />
     <Content Include="images\slogo.png" />
     <Content Include="images\TaxUpdate\Mark logo_web.png" />
+    <Content Include="images\TGOlogo.png" />
     <Content Include="InterestTaxAct.htm" />
     <Content Include="GiftTaxAct.htm" />
     <Content Include="images\au.jpg" />
