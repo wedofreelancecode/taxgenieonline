@@ -123,7 +123,7 @@ ol, ul
     height: 80px;
     text-indent: -9999px;
     display: block;
-    margin-left: 1px;
+    margin-left: -18px;
     margin-top:2px;
 }
 .hright
