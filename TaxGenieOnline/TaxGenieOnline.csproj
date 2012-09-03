@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxControlToolkit">
-      <HintPath>..\..\..\..\AjaxControlToolkitBinary\AjaxControlToolkit.dll</HintPath>
+      <HintPath>..\..\..\AjaxControlToolkitBinary\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -152,6 +152,7 @@
     <Content Include="searchdata.aspx" />
     <Content Include="ShowContents.aspx" />
     <Content Include="ShowTaxUpdates.aspx" />
+    <Content Include="SQL Sripts\Alter_data_search_select.sql" />
     <Content Include="TaxGenieOnline.Publish.xml" />
     <Content Include="admin\TaxUpdateEditor.aspx" />
     <Content Include="ViewContent.aspx" />
