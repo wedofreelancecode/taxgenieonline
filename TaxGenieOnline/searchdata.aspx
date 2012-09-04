@@ -10,6 +10,7 @@
                 <div class="newshldr" style="padding-top: 15px; padding-bottom: 10px;">
                     <div align="left" style="width: 100%; margin-top: 5px;">
                         <div align="right">
+                        
                             <a class="back" href='javascript:window.history.back();'></a>
                         </div>
                         <asp:Literal ID="ltlData" runat="server"></asp:Literal>
