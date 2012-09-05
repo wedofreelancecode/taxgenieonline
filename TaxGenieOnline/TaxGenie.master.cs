@@ -41,9 +41,11 @@ namespace TaxGenieOnline
                 HomeContents.HomeContentsDataTable hContents = hContentsadptr.GetContentByType("Department News", 2);
                 foreach (HomeContents.HomeContentsRow row in hContents)
                 {
-                    int len = 90 - row.Title.Length;
-                    if (row.Data.Length > len && len > 0)
-                        row.Data = row.Data.Substring(0, len);
+                    //int len = 90 - row.Title.Length;
+                    //if (row.Data.Length > len && len > 0)
+                    //    row.Data = row.Data.Substring(0, len);
+                    if (row.Title.Length > 90)
+                        row.Title = row.Title.Substring(0, 90);
                 }
                 dlDeptNews.DataSource = hContents;
                 dlDeptNews.DataBind();

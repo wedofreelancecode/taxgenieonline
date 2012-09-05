@@ -14,8 +14,7 @@
             <asp:Repeater ID="dlDeptNews" runat="server">
                 <ItemTemplate>
                     <li class="rss-item"><a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
-                        <%# Eval("Title") %></a><br />
-                        <%# Eval("Data") %>...</li>
+                        <%# Eval("Title") %></a>...</li>
                 </ItemTemplate>
             </asp:Repeater>
         </ul>
