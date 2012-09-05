@@ -34,7 +34,7 @@
                         <asp:Repeater ID="dlEditorDesk" runat="server">
                             <ItemTemplate>
                                 <li><a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
-                                    <%# Eval("Data") %>
+                                    <%# Eval("Title") %>
                                     ...</a></li>
                             </ItemTemplate>
                         </asp:Repeater>
@@ -142,7 +142,7 @@
                         <asp:Repeater ID="dlCaseAnalysis" runat="server">
                             <ItemTemplate>
                                 <li><a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
-                                    <%# Eval("Data") %>
+                                    <%# Eval("Title") %>
                                     ...</a></li>
                             </ItemTemplate>
                         </asp:Repeater>

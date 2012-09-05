@@ -51,19 +51,23 @@ namespace TaxGenieOnline
                 HomeContents.HomeContentsDataTable rGst = hContentsadptr.GetContentByType("Right Guest", 1);
                 foreach (HomeContents.HomeContentsRow row in rGst)
                 {
-                    int len = 190 - row.Title.Length;
-                    if (row.Data.Length > len && len > 0)
-                        row.Data = row.Data.Substring(0, len);
+                    //int len = 190 - row.Title.Length;
+                    //if (row.Data.Length > len && len > 0)
+                    //    row.Data = row.Data.Substring(0, len);
+                    if (row.Title.Length > 190)
+                        row.Title = row.Title.Substring(0, 190);
                 }
                 dlRGuest.DataSource = rGst;
                 dlRGuest.DataBind();
 
-                HomeContents.HomeContentsDataTable lGst = hContentsadptr.GetContentByType("Right Guest", 1);
+                HomeContents.HomeContentsDataTable lGst = hContentsadptr.GetContentByType("Left Guest", 1);
                 foreach (HomeContents.HomeContentsRow row in lGst)
                 {
-                    int len = 190 - row.Title.Length;
-                    if (row.Data.Length > len && len > 0)
-                        row.Data = row.Data.Substring(0, len);
+                    //int len = 190 - row.Title.Length;
+                    //if (row.Data.Length > len && len > 0)
+                    //    row.Data = row.Data.Substring(0, len);
+                    if (row.Title.Length > 190)
+                        row.Title = row.Title.Substring(0, 190);
                 }
                 dlLGuest.DataSource = lGst;
                 dlLGuest.DataBind();

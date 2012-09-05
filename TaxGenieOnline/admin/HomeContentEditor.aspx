@@ -15,7 +15,7 @@
                             <asp:Label ID="lblContentType" runat="server" Text="Content Type" CssClass="nlsN"></asp:Label>
                         </td>
                         <td align="left">
-                            <asp:DropDownList ID="ddlContentType" CssClass="nls" AutoPostBack="true" 
+                            <asp:DropDownList ID="ddlContentType" CssClass="nls" AutoPostBack="false" 
                                 runat="server" onselectedindexchanged="ddlContentType_SelectedIndexChanged">
                                 <asp:ListItem>select one</asp:ListItem>
                                 <asp:ListItem>Department News</asp:ListItem>
@@ -27,11 +27,21 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="right">
-                            <asp:Label ID="lblTitle" runat="server" Text="Title" CssClass="nlsN"></asp:Label>
+                        <td colspan="2" align="center" style="padding:10px">
+                            <asp:Label ID="lblTitle" runat="server" Text="Title" CssClass="nlsN"
+                                Font-Bold="True" Font-Size="12pt" Font-Underline="False" ></asp:Label>
                         </td>
-                        <td align="left">
-                            <asp:TextBox ID="txtTitle" runat="server" CssClass="nls"></asp:TextBox>
+                    </tr>
+                      <tr>
+                        <td colspan="2" align="center">
+                            <asp:TextBox ID="txtTitle" runat="server" CssClass="nls" Rows="4"
+                                TextMode="MultiLine" Width="95%"></asp:TextBox>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td colspan="2" align="center" style="padding:10px">
+                            <asp:Label ID="Label1" runat="server" Text="Content" CssClass="nlsN"
+                                Font-Bold="True" Font-Size="12pt" Font-Underline="False" ></asp:Label>
                         </td>
                     </tr>
                     <tr>

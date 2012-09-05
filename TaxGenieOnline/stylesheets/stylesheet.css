@@ -518,7 +518,8 @@ ol, ul
     font-family: arial;
     font-size: 14px;
     padding: 3px;
-    }
+    margin-left: 0px;
+}
     
     .nlsH
 {

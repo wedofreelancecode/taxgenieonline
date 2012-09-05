@@ -145,7 +145,7 @@
                     <asp:Repeater ID="dlLGuest" runat="server">
                         <ItemTemplate>
                             <a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
-                            <%# Eval("Data") %>...</a>
+                            <%# Eval("Title") %>...</a>
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
@@ -223,7 +223,7 @@
                     <asp:Repeater ID="dlRGuest" runat="server">
                         <ItemTemplate>
                             <a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
-                            <%# Eval("Data") %>...</a>
+                            <%# Eval("Title") %>...</a>
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>

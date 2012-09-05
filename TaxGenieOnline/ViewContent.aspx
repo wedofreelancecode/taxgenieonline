@@ -13,6 +13,7 @@
                 <asp:Label ID="ltl" runat="server" Width="100%" CssClass="adminbtn"></asp:Label>
                 <br /><br />
                 <asp:Label ID="lbldata" runat="server" Width="100%"></asp:Label>
+                <br /><br />
             </div>
         </div>
     </div>
