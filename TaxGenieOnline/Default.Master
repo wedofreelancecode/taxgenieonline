@@ -59,7 +59,8 @@
             <div class="logoIcon title">
                 Logo
             </div>
-        </a><%--<a href="/Home.aspx" target="_self">
+        </a>
+        <%--<a href="/Home.aspx" target="_self">
             <div class="logo title">
                 Logo
             </div>
@@ -188,22 +189,11 @@
                             </div>
                         </span>
                             <ul>
-                                <li><a href="#">Central Excise</a><span class="subsmall">
-                                    <div class="smallpng" align="center">
-                                    </div>
-                                </span>
-                                    <ul>
-                                        <li><a href="/index.aspx?cat=Library&subcat=Rescinded/Rules">Rescinded Rules</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Service Tax</a><span class="subsmall">
-                                    <div class="smallpng" align="center">
-                                    </div>
-                                </span>
-                                    <ul>
-                                        <li><a href="/index.aspx?cat=Library&subcat=ST/Libraries">ST Libraries</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Central Excise">Central Excise</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Customs">Customs</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Service Tax">Service Tax</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Income Tax">Income Tax</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=DGFT">DGFT</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Services</a><span class="small1">

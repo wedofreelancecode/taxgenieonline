@@ -24,7 +24,7 @@ namespace TaxGenie_DAL {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class Library : global::System.Data.DataSet {
         
-        private Library_RSRules_SelectAllDataTable tableLibrary_RSRules_SelectAll;
+        private Library_SelectAllDataTable tableLibrary_SelectAll;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace TaxGenie_DAL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Library_RSRules_SelectAll"] != null)) {
-                    base.Tables.Add(new Library_RSRules_SelectAllDataTable(ds.Tables["Library_RSRules_SelectAll"]));
+                if ((ds.Tables["Library_SelectAll"] != null)) {
+                    base.Tables.Add(new Library_SelectAllDataTable(ds.Tables["Library_SelectAll"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TaxGenie_DAL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Library_RSRules_SelectAllDataTable Library_RSRules_SelectAll {
+        public Library_SelectAllDataTable Library_SelectAll {
             get {
-                return this.tableLibrary_RSRules_SelectAll;
+                return this.tableLibrary_SelectAll;
             }
         }
         
@@ -152,8 +152,8 @@ namespace TaxGenie_DAL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Library_RSRules_SelectAll"] != null)) {
-                    base.Tables.Add(new Library_RSRules_SelectAllDataTable(ds.Tables["Library_RSRules_SelectAll"]));
+                if ((ds.Tables["Library_SelectAll"] != null)) {
+                    base.Tables.Add(new Library_SelectAllDataTable(ds.Tables["Library_SelectAll"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TaxGenie_DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableLibrary_RSRules_SelectAll = ((Library_RSRules_SelectAllDataTable)(base.Tables["Library_RSRules_SelectAll"]));
+            this.tableLibrary_SelectAll = ((Library_SelectAllDataTable)(base.Tables["Library_SelectAll"]));
             if ((initTable == true)) {
-                if ((this.tableLibrary_RSRules_SelectAll != null)) {
-                    this.tableLibrary_RSRules_SelectAll.InitVars();
+                if ((this.tableLibrary_SelectAll != null)) {
+                    this.tableLibrary_SelectAll.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace TaxGenie_DAL {
             this.Namespace = "http://tempuri.org/Library.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableLibrary_RSRules_SelectAll = new Library_RSRules_SelectAllDataTable();
-            base.Tables.Add(this.tableLibrary_RSRules_SelectAll);
+            this.tableLibrary_SelectAll = new Library_SelectAllDataTable();
+            base.Tables.Add(this.tableLibrary_SelectAll);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeLibrary_RSRules_SelectAll() {
+        private bool ShouldSerializeLibrary_SelectAll() {
             return false;
         }
         
@@ -270,28 +270,20 @@ namespace TaxGenie_DAL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Library_RSRules_SelectAllRowChangeEventHandler(object sender, Library_RSRules_SelectAllRowChangeEvent e);
+        public delegate void Library_SelectAllRowChangeEventHandler(object sender, Library_SelectAllRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Library_RSRules_SelectAllDataTable : global::System.Data.TypedTableBase<Library_RSRules_SelectAllRow> {
+        public partial class Library_SelectAllDataTable : global::System.Data.TypedTableBase<Library_SelectAllRow> {
             
             private global::System.Data.DataColumn columnId;
             
             private global::System.Data.DataColumn columnSubCategory;
             
             private global::System.Data.DataColumn columnIndexName;
-            
-            private global::System.Data.DataColumn columnChapterName;
-            
-            private global::System.Data.DataColumn columnSections;
-            
-            private global::System.Data.DataColumn columnHeadings;
-            
-            private global::System.Data.DataColumn columnSubjects;
             
             private global::System.Data.DataColumn columnData;
             
@@ -301,8 +293,8 @@ namespace TaxGenie_DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Library_RSRules_SelectAllDataTable() {
-                this.TableName = "Library_RSRules_SelectAll";
+            public Library_SelectAllDataTable() {
+                this.TableName = "Library_SelectAll";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +302,7 @@ namespace TaxGenie_DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Library_RSRules_SelectAllDataTable(global::System.Data.DataTable table) {
+            internal Library_SelectAllDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,7 +319,7 @@ namespace TaxGenie_DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Library_RSRules_SelectAllDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Library_SelectAllDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -353,38 +345,6 @@ namespace TaxGenie_DAL {
             public global::System.Data.DataColumn IndexNameColumn {
                 get {
                     return this.columnIndexName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ChapterNameColumn {
-                get {
-                    return this.columnChapterName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SectionsColumn {
-                get {
-                    return this.columnSections;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HeadingsColumn {
-                get {
-                    return this.columnHeadings;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SubjectsColumn {
-                get {
-                    return this.columnSubjects;
                 }
             }
             
@@ -423,54 +383,57 @@ namespace TaxGenie_DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Library_RSRules_SelectAllRow this[int index] {
+            public Library_SelectAllRow this[int index] {
                 get {
-                    return ((Library_RSRules_SelectAllRow)(this.Rows[index]));
+                    return ((Library_SelectAllRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Library_RSRules_SelectAllRowChangeEventHandler Library_RSRules_SelectAllRowChanging;
+            public event Library_SelectAllRowChangeEventHandler Library_SelectAllRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Library_RSRules_SelectAllRowChangeEventHandler Library_RSRules_SelectAllRowChanged;
+            public event Library_SelectAllRowChangeEventHandler Library_SelectAllRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Library_RSRules_SelectAllRowChangeEventHandler Library_RSRules_SelectAllRowDeleting;
+            public event Library_SelectAllRowChangeEventHandler Library_SelectAllRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Library_RSRules_SelectAllRowChangeEventHandler Library_RSRules_SelectAllRowDeleted;
+            public event Library_SelectAllRowChangeEventHandler Library_SelectAllRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddLibrary_RSRules_SelectAllRow(Library_RSRules_SelectAllRow row) {
+            public void AddLibrary_SelectAllRow(Library_SelectAllRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Library_RSRules_SelectAllRow AddLibrary_RSRules_SelectAllRow(string SubCategory, string IndexName, string ChapterName, string Sections, string Headings, string Subjects, string Data, byte[] Document, System.DateTime datetime) {
-                Library_RSRules_SelectAllRow rowLibrary_RSRules_SelectAllRow = ((Library_RSRules_SelectAllRow)(this.NewRow()));
+            public Library_SelectAllRow AddLibrary_SelectAllRow(string SubCategory, string IndexName, string Data, byte[] Document, System.DateTime datetime) {
+                Library_SelectAllRow rowLibrary_SelectAllRow = ((Library_SelectAllRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         SubCategory,
                         IndexName,
-                        ChapterName,
-                        Sections,
-                        Headings,
-                        Subjects,
                         Data,
                         Document,
                         datetime};
-                rowLibrary_RSRules_SelectAllRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowLibrary_RSRules_SelectAllRow);
-                return rowLibrary_RSRules_SelectAllRow;
+                rowLibrary_SelectAllRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLibrary_SelectAllRow);
+                return rowLibrary_SelectAllRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Library_SelectAllRow FindById(int Id) {
+                return ((Library_SelectAllRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Library_RSRules_SelectAllDataTable cln = ((Library_RSRules_SelectAllDataTable)(base.Clone()));
+                Library_SelectAllDataTable cln = ((Library_SelectAllDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -478,7 +441,7 @@ namespace TaxGenie_DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Library_RSRules_SelectAllDataTable();
+                return new Library_SelectAllDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -487,10 +450,6 @@ namespace TaxGenie_DAL {
                 this.columnId = base.Columns["Id"];
                 this.columnSubCategory = base.Columns["SubCategory"];
                 this.columnIndexName = base.Columns["IndexName"];
-                this.columnChapterName = base.Columns["ChapterName"];
-                this.columnSections = base.Columns["Sections"];
-                this.columnHeadings = base.Columns["Headings"];
-                this.columnSubjects = base.Columns["Subjects"];
                 this.columnData = base.Columns["Data"];
                 this.columnDocument = base.Columns["Document"];
                 this.columndatetime = base.Columns["datetime"];
@@ -505,58 +464,49 @@ namespace TaxGenie_DAL {
                 base.Columns.Add(this.columnSubCategory);
                 this.columnIndexName = new global::System.Data.DataColumn("IndexName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIndexName);
-                this.columnChapterName = new global::System.Data.DataColumn("ChapterName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnChapterName);
-                this.columnSections = new global::System.Data.DataColumn("Sections", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSections);
-                this.columnHeadings = new global::System.Data.DataColumn("Headings", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHeadings);
-                this.columnSubjects = new global::System.Data.DataColumn("Subjects", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSubjects);
                 this.columnData = new global::System.Data.DataColumn("Data", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData);
                 this.columnDocument = new global::System.Data.DataColumn("Document", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDocument);
                 this.columndatetime = new global::System.Data.DataColumn("datetime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndatetime);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
                 this.columnId.AutoIncrement = true;
                 this.columnId.AutoIncrementSeed = -1;
                 this.columnId.AutoIncrementStep = -1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
                 this.columnSubCategory.MaxLength = 2147483647;
                 this.columnIndexName.MaxLength = 2147483647;
-                this.columnChapterName.MaxLength = 2147483647;
-                this.columnSections.MaxLength = 2147483647;
-                this.columnHeadings.MaxLength = 2147483647;
-                this.columnSubjects.MaxLength = 2147483647;
                 this.columnData.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Library_RSRules_SelectAllRow NewLibrary_RSRules_SelectAllRow() {
-                return ((Library_RSRules_SelectAllRow)(this.NewRow()));
+            public Library_SelectAllRow NewLibrary_SelectAllRow() {
+                return ((Library_SelectAllRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Library_RSRules_SelectAllRow(builder);
+                return new Library_SelectAllRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Library_RSRules_SelectAllRow);
+                return typeof(Library_SelectAllRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Library_RSRules_SelectAllRowChanged != null)) {
-                    this.Library_RSRules_SelectAllRowChanged(this, new Library_RSRules_SelectAllRowChangeEvent(((Library_RSRules_SelectAllRow)(e.Row)), e.Action));
+                if ((this.Library_SelectAllRowChanged != null)) {
+                    this.Library_SelectAllRowChanged(this, new Library_SelectAllRowChangeEvent(((Library_SelectAllRow)(e.Row)), e.Action));
                 }
             }
             
@@ -564,8 +514,8 @@ namespace TaxGenie_DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Library_RSRules_SelectAllRowChanging != null)) {
-                    this.Library_RSRules_SelectAllRowChanging(this, new Library_RSRules_SelectAllRowChangeEvent(((Library_RSRules_SelectAllRow)(e.Row)), e.Action));
+                if ((this.Library_SelectAllRowChanging != null)) {
+                    this.Library_SelectAllRowChanging(this, new Library_SelectAllRowChangeEvent(((Library_SelectAllRow)(e.Row)), e.Action));
                 }
             }
             
@@ -573,8 +523,8 @@ namespace TaxGenie_DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Library_RSRules_SelectAllRowDeleted != null)) {
-                    this.Library_RSRules_SelectAllRowDeleted(this, new Library_RSRules_SelectAllRowChangeEvent(((Library_RSRules_SelectAllRow)(e.Row)), e.Action));
+                if ((this.Library_SelectAllRowDeleted != null)) {
+                    this.Library_SelectAllRowDeleted(this, new Library_SelectAllRowChangeEvent(((Library_SelectAllRow)(e.Row)), e.Action));
                 }
             }
             
@@ -582,14 +532,14 @@ namespace TaxGenie_DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Library_RSRules_SelectAllRowDeleting != null)) {
-                    this.Library_RSRules_SelectAllRowDeleting(this, new Library_RSRules_SelectAllRowChangeEvent(((Library_RSRules_SelectAllRow)(e.Row)), e.Action));
+                if ((this.Library_SelectAllRowDeleting != null)) {
+                    this.Library_SelectAllRowDeleting(this, new Library_SelectAllRowChangeEvent(((Library_SelectAllRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveLibrary_RSRules_SelectAllRow(Library_RSRules_SelectAllRow row) {
+            public void RemoveLibrary_SelectAllRow(Library_SelectAllRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -616,7 +566,7 @@ namespace TaxGenie_DAL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Library_RSRules_SelectAllDataTable";
+                attribute2.FixedValue = "Library_SelectAllDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -660,25 +610,25 @@ namespace TaxGenie_DAL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Library_RSRules_SelectAllRow : global::System.Data.DataRow {
+        public partial class Library_SelectAllRow : global::System.Data.DataRow {
             
-            private Library_RSRules_SelectAllDataTable tableLibrary_RSRules_SelectAll;
+            private Library_SelectAllDataTable tableLibrary_SelectAll;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Library_RSRules_SelectAllRow(global::System.Data.DataRowBuilder rb) : 
+            internal Library_SelectAllRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableLibrary_RSRules_SelectAll = ((Library_RSRules_SelectAllDataTable)(this.Table));
+                this.tableLibrary_SelectAll = ((Library_SelectAllDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tableLibrary_RSRules_SelectAll.IdColumn]));
+                    return ((int)(this[this.tableLibrary_SelectAll.IdColumn]));
                 }
                 set {
-                    this[this.tableLibrary_RSRules_SelectAll.IdColumn] = value;
+                    this[this.tableLibrary_SelectAll.IdColumn] = value;
                 }
             }
             
@@ -687,15 +637,14 @@ namespace TaxGenie_DAL {
             public string SubCategory {
                 get {
                     try {
-                        return ((string)(this[this.tableLibrary_RSRules_SelectAll.SubCategoryColumn]));
+                        return ((string)(this[this.tableLibrary_SelectAll.SubCategoryColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SubCategory\' in table \'Library_RSRules_SelectAll\' is DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SubCategory\' in table \'Library_SelectAll\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLibrary_RSRules_SelectAll.SubCategoryColumn] = value;
+                    this[this.tableLibrary_SelectAll.SubCategoryColumn] = value;
                 }
             }
             
@@ -704,79 +653,14 @@ namespace TaxGenie_DAL {
             public string IndexName {
                 get {
                     try {
-                        return ((string)(this[this.tableLibrary_RSRules_SelectAll.IndexNameColumn]));
+                        return ((string)(this[this.tableLibrary_SelectAll.IndexNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IndexName\' in table \'Library_RSRules_SelectAll\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IndexName\' in table \'Library_SelectAll\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLibrary_RSRules_SelectAll.IndexNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ChapterName {
-                get {
-                    try {
-                        return ((string)(this[this.tableLibrary_RSRules_SelectAll.ChapterNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ChapterName\' in table \'Library_RSRules_SelectAll\' is DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableLibrary_RSRules_SelectAll.ChapterNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Sections {
-                get {
-                    try {
-                        return ((string)(this[this.tableLibrary_RSRules_SelectAll.SectionsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Sections\' in table \'Library_RSRules_SelectAll\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLibrary_RSRules_SelectAll.SectionsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Headings {
-                get {
-                    try {
-                        return ((string)(this[this.tableLibrary_RSRules_SelectAll.HeadingsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Headings\' in table \'Library_RSRules_SelectAll\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLibrary_RSRules_SelectAll.HeadingsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Subjects {
-                get {
-                    try {
-                        return ((string)(this[this.tableLibrary_RSRules_SelectAll.SubjectsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Subjects\' in table \'Library_RSRules_SelectAll\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLibrary_RSRules_SelectAll.SubjectsColumn] = value;
+                    this[this.tableLibrary_SelectAll.IndexNameColumn] = value;
                 }
             }
             
@@ -785,14 +669,14 @@ namespace TaxGenie_DAL {
             public string Data {
                 get {
                     try {
-                        return ((string)(this[this.tableLibrary_RSRules_SelectAll.DataColumn]));
+                        return ((string)(this[this.tableLibrary_SelectAll.DataColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Data\' in table \'Library_RSRules_SelectAll\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Data\' in table \'Library_SelectAll\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLibrary_RSRules_SelectAll.DataColumn] = value;
+                    this[this.tableLibrary_SelectAll.DataColumn] = value;
                 }
             }
             
@@ -801,14 +685,14 @@ namespace TaxGenie_DAL {
             public byte[] Document {
                 get {
                     try {
-                        return ((byte[])(this[this.tableLibrary_RSRules_SelectAll.DocumentColumn]));
+                        return ((byte[])(this[this.tableLibrary_SelectAll.DocumentColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Document\' in table \'Library_RSRules_SelectAll\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Document\' in table \'Library_SelectAll\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLibrary_RSRules_SelectAll.DocumentColumn] = value;
+                    this[this.tableLibrary_SelectAll.DocumentColumn] = value;
                 }
             }
             
@@ -817,123 +701,75 @@ namespace TaxGenie_DAL {
             public System.DateTime datetime {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableLibrary_RSRules_SelectAll.datetimeColumn]));
+                        return ((global::System.DateTime)(this[this.tableLibrary_SelectAll.datetimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'datetime\' in table \'Library_RSRules_SelectAll\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'datetime\' in table \'Library_SelectAll\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLibrary_RSRules_SelectAll.datetimeColumn] = value;
+                    this[this.tableLibrary_SelectAll.datetimeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSubCategoryNull() {
-                return this.IsNull(this.tableLibrary_RSRules_SelectAll.SubCategoryColumn);
+                return this.IsNull(this.tableLibrary_SelectAll.SubCategoryColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSubCategoryNull() {
-                this[this.tableLibrary_RSRules_SelectAll.SubCategoryColumn] = global::System.Convert.DBNull;
+                this[this.tableLibrary_SelectAll.SubCategoryColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIndexNameNull() {
-                return this.IsNull(this.tableLibrary_RSRules_SelectAll.IndexNameColumn);
+                return this.IsNull(this.tableLibrary_SelectAll.IndexNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIndexNameNull() {
-                this[this.tableLibrary_RSRules_SelectAll.IndexNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsChapterNameNull() {
-                return this.IsNull(this.tableLibrary_RSRules_SelectAll.ChapterNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetChapterNameNull() {
-                this[this.tableLibrary_RSRules_SelectAll.ChapterNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSectionsNull() {
-                return this.IsNull(this.tableLibrary_RSRules_SelectAll.SectionsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSectionsNull() {
-                this[this.tableLibrary_RSRules_SelectAll.SectionsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHeadingsNull() {
-                return this.IsNull(this.tableLibrary_RSRules_SelectAll.HeadingsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHeadingsNull() {
-                this[this.tableLibrary_RSRules_SelectAll.HeadingsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSubjectsNull() {
-                return this.IsNull(this.tableLibrary_RSRules_SelectAll.SubjectsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSubjectsNull() {
-                this[this.tableLibrary_RSRules_SelectAll.SubjectsColumn] = global::System.Convert.DBNull;
+                this[this.tableLibrary_SelectAll.IndexNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDataNull() {
-                return this.IsNull(this.tableLibrary_RSRules_SelectAll.DataColumn);
+                return this.IsNull(this.tableLibrary_SelectAll.DataColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDataNull() {
-                this[this.tableLibrary_RSRules_SelectAll.DataColumn] = global::System.Convert.DBNull;
+                this[this.tableLibrary_SelectAll.DataColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDocumentNull() {
-                return this.IsNull(this.tableLibrary_RSRules_SelectAll.DocumentColumn);
+                return this.IsNull(this.tableLibrary_SelectAll.DocumentColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDocumentNull() {
-                this[this.tableLibrary_RSRules_SelectAll.DocumentColumn] = global::System.Convert.DBNull;
+                this[this.tableLibrary_SelectAll.DocumentColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsdatetimeNull() {
-                return this.IsNull(this.tableLibrary_RSRules_SelectAll.datetimeColumn);
+                return this.IsNull(this.tableLibrary_SelectAll.datetimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetdatetimeNull() {
-                this[this.tableLibrary_RSRules_SelectAll.datetimeColumn] = global::System.Convert.DBNull;
+                this[this.tableLibrary_SelectAll.datetimeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -941,22 +777,22 @@ namespace TaxGenie_DAL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Library_RSRules_SelectAllRowChangeEvent : global::System.EventArgs {
+        public class Library_SelectAllRowChangeEvent : global::System.EventArgs {
             
-            private Library_RSRules_SelectAllRow eventRow;
+            private Library_SelectAllRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Library_RSRules_SelectAllRowChangeEvent(Library_RSRules_SelectAllRow row, global::System.Data.DataRowAction action) {
+            public Library_SelectAllRowChangeEvent(Library_SelectAllRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Library_RSRules_SelectAllRow Row {
+            public Library_SelectAllRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -984,7 +820,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Library_RSRules_SelectAllTableAdapter : global::System.ComponentModel.Component {
+    public partial class Library_SelectAllTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -998,7 +834,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Library_RSRules_SelectAllTableAdapter() {
+        public Library_SelectAllTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1095,37 +931,30 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Library_RSRules_SelectAll";
+            tableMapping.DataSetTable = "Library_SelectAll";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("SubCategory", "SubCategory");
             tableMapping.ColumnMappings.Add("IndexName", "IndexName");
-            tableMapping.ColumnMappings.Add("ChapterName", "ChapterName");
-            tableMapping.ColumnMappings.Add("Sections", "Sections");
-            tableMapping.ColumnMappings.Add("Headings", "Headings");
-            tableMapping.ColumnMappings.Add("Subjects", "Subjects");
             tableMapping.ColumnMappings.Add("Data", "Data");
             tableMapping.ColumnMappings.Add("Document", "Document");
             tableMapping.ColumnMappings.Add("datetime", "datetime");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "dbo.Library_RSRules_Insert";
+            this._adapter.InsertCommand.CommandText = "dbo.Library_Insert";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SubCategory", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SubCategory", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IndexName", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "IndexName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ChapterName", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "ChapterName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sections", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Sections", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Document", global::System.Data.SqlDbType.VarBinary, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Document", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Headings", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Headings", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TaxGenie_DAL.Properties.Settings.Default.TaxGenieConnectionString;
+            this._connection.ConnectionString = global::TaxGenie_DAL.Properties.Settings.Default.Dev_TaxGenieConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1134,31 +963,31 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.Library_RSRules_SelectAll";
+            this._commandCollection[0].CommandText = "dbo.Library_SelectAll";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@subcategory", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@indexname", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "dbo.Library_RSRules_Data_Select";
+            this._commandCollection[1].CommandText = "dbo.Library_Index_Select";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@subcategory", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@indexname", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "dbo.Library_RSRules_Index";
+            this._commandCollection[2].CommandText = "dbo.Library_Data_Select";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@subcategory", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@indexname", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Library.Library_RSRules_SelectAllDataTable dataTable, string subcategory, string indexname) {
+        public virtual int Fill(Library.Library_SelectAllDataTable dataTable, string subcategory, string indexname) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((subcategory == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1183,7 +1012,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Library.Library_RSRules_SelectAllDataTable GetData(string subcategory, string indexname) {
+        public virtual Library.Library_SelectAllDataTable GetAll(string subcategory, string indexname) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((subcategory == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1197,7 +1026,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(indexname));
             }
-            Library.Library_RSRules_SelectAllDataTable dataTable = new Library.Library_RSRules_SelectAllDataTable();
+            Library.Library_SelectAllDataTable dataTable = new Library.Library_SelectAllDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1206,8 +1035,44 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(Library.Library_RSRules_SelectAllDataTable dataTable, string subcategory, string indexname) {
+        public virtual int FillBy(Library.Library_SelectAllDataTable dataTable, string subcategory) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((subcategory == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(subcategory));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Library.Library_SelectAllDataTable Library_Index_Select(string subcategory) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((subcategory == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(subcategory));
+            }
+            Library.Library_SelectAllDataTable dataTable = new Library.Library_SelectAllDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(Library.Library_SelectAllDataTable dataTable, string subcategory, string indexname) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((subcategory == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -1231,8 +1096,8 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Library.Library_RSRules_SelectAllDataTable Library_Data_Select(string subcategory, string indexname) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+        public virtual Library.Library_SelectAllDataTable Library_Data_Select(string subcategory, string indexname) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((subcategory == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -1245,7 +1110,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(indexname));
             }
-            Library.Library_RSRules_SelectAllDataTable dataTable = new Library.Library_RSRules_SelectAllDataTable();
+            Library.Library_SelectAllDataTable dataTable = new Library.Library_SelectAllDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1253,43 +1118,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy1(Library.Library_RSRules_SelectAllDataTable dataTable, string subcategory) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((subcategory == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(subcategory));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Library.Library_RSRules_SelectAllDataTable RSRules_Index(string subcategory) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((subcategory == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(subcategory));
-            }
-            Library.Library_RSRules_SelectAllDataTable dataTable = new Library.Library_RSRules_SelectAllDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Library.Library_RSRules_SelectAllDataTable dataTable) {
+        public virtual int Update(Library.Library_SelectAllDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1297,7 +1126,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(Library dataSet) {
-            return this.Adapter.Update(dataSet, "Library_RSRules_SelectAll");
+            return this.Adapter.Update(dataSet, "Library_SelectAll");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1319,7 +1148,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string SubCategory, string IndexName, string ChapterName, string Sections, string Data, byte[] Document, string Headings) {
+        public virtual int Insert(string SubCategory, string IndexName, string Data, byte[] Document) {
             if ((SubCategory == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -1332,35 +1161,17 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(IndexName));
             }
-            if ((ChapterName == null)) {
+            if ((Data == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ChapterName));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Data));
             }
-            if ((Sections == null)) {
+            if ((Document == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Sections));
-            }
-            if ((Data == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Data));
-            }
-            if ((Document == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((byte[])(Document));
-            }
-            if ((Headings == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Headings));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((byte[])(Document));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1391,7 +1202,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private Library_RSRules_SelectAllTableAdapter _library_RSRules_SelectAllTableAdapter;
+        private Library_SelectAllTableAdapter _library_SelectAllTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1413,12 +1224,12 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Library_RSRules_SelectAllTableAdapter Library_RSRules_SelectAllTableAdapter {
+        public Library_SelectAllTableAdapter Library_SelectAllTableAdapter {
             get {
-                return this._library_RSRules_SelectAllTableAdapter;
+                return this._library_SelectAllTableAdapter;
             }
             set {
-                this._library_RSRules_SelectAllTableAdapter = value;
+                this._library_SelectAllTableAdapter = value;
             }
         }
         
@@ -1441,9 +1252,9 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._library_RSRules_SelectAllTableAdapter != null) 
-                            && (this._library_RSRules_SelectAllTableAdapter.Connection != null))) {
-                    return this._library_RSRules_SelectAllTableAdapter.Connection;
+                if (((this._library_SelectAllTableAdapter != null) 
+                            && (this._library_SelectAllTableAdapter.Connection != null))) {
+                    return this._library_SelectAllTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1458,7 +1269,7 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._library_RSRules_SelectAllTableAdapter != null)) {
+                if ((this._library_SelectAllTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1472,12 +1283,12 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(Library dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._library_RSRules_SelectAllTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Library_RSRules_SelectAll.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._library_SelectAllTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Library_SelectAll.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._library_RSRules_SelectAllTableAdapter.Update(updatedRows));
+                    result = (result + this._library_SelectAllTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1491,11 +1302,11 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(Library dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._library_RSRules_SelectAllTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Library_RSRules_SelectAll.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._library_SelectAllTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Library_SelectAll.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._library_RSRules_SelectAllTableAdapter.Update(addedRows));
+                    result = (result + this._library_SelectAllTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1509,11 +1320,11 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(Library dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._library_RSRules_SelectAllTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Library_RSRules_SelectAll.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._library_SelectAllTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Library_SelectAll.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._library_RSRules_SelectAllTableAdapter.Update(deletedRows));
+                    result = (result + this._library_SelectAllTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1556,8 +1367,8 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._library_RSRules_SelectAllTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._library_RSRules_SelectAllTableAdapter.Connection) == false))) {
+            if (((this._library_SelectAllTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._library_SelectAllTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1593,13 +1404,13 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._library_RSRules_SelectAllTableAdapter != null)) {
-                    revertConnections.Add(this._library_RSRules_SelectAllTableAdapter, this._library_RSRules_SelectAllTableAdapter.Connection);
-                    this._library_RSRules_SelectAllTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._library_RSRules_SelectAllTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._library_RSRules_SelectAllTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._library_RSRules_SelectAllTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._library_RSRules_SelectAllTableAdapter.Adapter);
+                if ((this._library_SelectAllTableAdapter != null)) {
+                    revertConnections.Add(this._library_SelectAllTableAdapter, this._library_SelectAllTableAdapter.Connection);
+                    this._library_SelectAllTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._library_SelectAllTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._library_SelectAllTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._library_SelectAllTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._library_SelectAllTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1660,9 +1471,9 @@ namespace TaxGenie_DAL.LibraryTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._library_RSRules_SelectAllTableAdapter != null)) {
-                    this._library_RSRules_SelectAllTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._library_RSRules_SelectAllTableAdapter]));
-                    this._library_RSRules_SelectAllTableAdapter.Transaction = null;
+                if ((this._library_SelectAllTableAdapter != null)) {
+                    this._library_SelectAllTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._library_SelectAllTableAdapter]));
+                    this._library_SelectAllTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

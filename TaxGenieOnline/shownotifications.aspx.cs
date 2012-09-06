@@ -375,6 +375,33 @@ namespace TaxGenieOnline
 
             }
             #endregion
+
+            #region Library
+             else if (category == "Library")
+                {
+                    Library_SelectAllTableAdapter LibraryData = new Library_SelectAllTableAdapter();
+                    //Library_RSRules_SelectAllTableAdapter CEActsChapter = new Library_RSRules_SelectAllTableAdapter();
+                   DataTable dtChapterName = LibraryData.Library_Data_Select(subcategeory, indexName);
+
+
+                    string stcl = Convert.ToString(dtChapterName.Rows[0]["Data"]);
+
+                    if (stcl != null & stcl !="")
+                    {
+                        ltl.Text = Convert.ToString(dtChapterName.Rows[0]["Data"]);
+                    }
+                    else
+                    {
+                        byte[] b = ((byte[])dtChapterName.Rows[0]["Document"]);
+                        //Collect Bytes from database and write in Webpage
+                        Response.ContentType = "application/pdf";
+                        Response.BinaryWrite(b);
+                        Response.Write("<script>window.open('Page.html','_blank')</script>");
+                    }
+
+                }
+            #endregion
+
             else
             {
                 DataTable dtChapterName = new DataTable();
@@ -394,11 +421,7 @@ namespace TaxGenieOnline
                     ServiceTax_GetAll1TableAdapter STchaptername = new ServiceTax_GetAll1TableAdapter();
                     dtChapterName = STchaptername.GetSTData(subcategeory, indexName);
                 }
-                else if (category == "Library")
-                {
-                    Library_RSRules_SelectAllTableAdapter CEActsChapter = new Library_RSRules_SelectAllTableAdapter();
-                    dtChapterName = CEActsChapter.Library_Data_Select(subcategeory, indexName);
-                }
+               
 
                 else if (category == "DGFT" & subcategeory == "FTP")
                 {

@@ -1255,6 +1255,33 @@ namespace TaxGenieOnline.admin {
         protected global::System.Web.UI.WebControls.TextBox txtITCircularDate;
         
         /// <summary>
+        /// pnllibrary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnllibrary;
+        
+        /// <summary>
+        /// lblindexlibrary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblindexlibrary;
+        
+        /// <summary>
+        /// txtindexlibrary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtindexlibrary;
+        
+        /// <summary>
         /// Panel1 control.
         /// </summary>
         /// <remarks>

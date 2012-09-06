@@ -16,7 +16,7 @@ using System.Data;
 using TaxGenie_DAL.IncomeTaxTableAdapters;
 using TaxGenie_DAL.CECNotificationsTableAdapters;
 using TaxGenie_DAL.STNotificationsTableAdapters;
-
+using TaxGenie_DAL.LibraryTableAdapters;
 
 namespace TaxGenieOnline.admin
 {
@@ -44,7 +44,7 @@ namespace TaxGenieOnline.admin
                 lblPasteHere.Visible = false;
                 lblUploadDoc.Visible = false;
                 btnUpload.Visible = false;
-                rdbUploadType.Visible = false;
+                rdbUploadType.Visible = false; pnllibrary.Visible = false;
                 pnlDGFTFTDR.Visible = false;
                 pnlDGFTFTP.Visible = false;
                 pnlDGFTpublicnotices.Visible = false;
@@ -816,6 +816,11 @@ namespace TaxGenieOnline.admin
             {
                 ddlsubcategory.Items.Clear();
                 ddlsubcategory.Items.Add(new ListItem("select one", "0"));
+                ddlsubcategory.Items.Add("Central Excise");
+                ddlsubcategory.Items.Add("Customs");
+                ddlsubcategory.Items.Add("Service Tax");
+                ddlsubcategory.Items.Add("Income Tax");
+                ddlsubcategory.Items.Add("DGFT");
 
             }
             else if (ddlcatagory.SelectedValue.Equals("DGFT") && !ddlcatagory.SelectedValue.Equals("select one"))
@@ -881,7 +886,7 @@ namespace TaxGenieOnline.admin
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITCirculars.Visible = false;
-
+                pnllibrary.Visible = false;
                 uploadDocument.Visible = false;
                 lblPasteHere.Visible = false;
                 lblUploadDoc.Visible = false;
@@ -923,7 +928,7 @@ namespace TaxGenieOnline.admin
                 pnlDGFTFTP.Visible = false;
                 pnlCECnotifications.Visible = false;
                 pnlStNotifications.Visible = false;
-
+                pnllibrary.Visible = false;
                 ddlCRulesIndexGroup.Items.Clear();
                 ddlCRulesIndexGroup.Items.Add(new ListItem("select one", "0"));
                 ddlCRulesIndexGroup.Items.Add("Agreements between nations");
@@ -956,7 +961,7 @@ namespace TaxGenieOnline.admin
                 lblPasteHere.Visible = false;
                 lblUploadDoc.Visible = false;
                 edtData.Visible = false;
-                btnUpload.Visible = false;
+                btnUpload.Visible = false; pnllibrary.Visible = false;
                 pnlDGFTFTDR.Visible = false;
                 pnlDGFTFTP.Visible = false;
                 pnlCECnotifications.Visible = false;
@@ -983,7 +988,7 @@ namespace TaxGenieOnline.admin
                 pnlITType.Visible = false;
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
-                pnlITCirculars.Visible = false;
+                pnlITCirculars.Visible = false; pnllibrary.Visible = false;
 
                 uploadDocument.Visible = false;
                 lblPasteHere.Visible = false;
@@ -1008,7 +1013,7 @@ namespace TaxGenieOnline.admin
                 pnlCRules.Visible = false;
                 pnlDGFTpublicnotices.Visible = false;
                 pnlCRegulations.Visible = false;
-                pnlCTariff.Visible = false;
+                pnlCTariff.Visible = false; pnllibrary.Visible = false;
                 pnlCSEZ.Visible = false;
                 pnlCDrawback.Visible = false;
                 pnlCirculars.Visible = false;
@@ -1046,7 +1051,7 @@ namespace TaxGenieOnline.admin
                 pnlCirculars.Visible = false;
                 pnlDGFTFTDR.Visible = false;
                 rdbUploadType.ClearSelection();
-                pnlITType.Visible = false;
+                pnlITType.Visible = false; pnllibrary.Visible = false;
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITCirculars.Visible = false;
@@ -1082,7 +1087,7 @@ namespace TaxGenieOnline.admin
                 pnlITCirculars.Visible = false;
 
                 uploadDocument.Visible = false;
-                lblPasteHere.Visible = false;
+                lblPasteHere.Visible = false; pnllibrary.Visible = false;
                 lblUploadDoc.Visible = false;
                 edtData.Visible = false;
                 btnUpload.Visible = false;
@@ -1112,7 +1117,7 @@ namespace TaxGenieOnline.admin
                 pnlITCirculars.Visible = false;
 
                 uploadDocument.Visible = false;
-                lblPasteHere.Visible = false;
+                lblPasteHere.Visible = false; pnllibrary.Visible = false;
                 lblUploadDoc.Visible = false;
                 edtData.Visible = false;
                 btnUpload.Visible = false;
@@ -1142,7 +1147,7 @@ namespace TaxGenieOnline.admin
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITCirculars.Visible = false;
-
+                pnllibrary.Visible = false;
                 uploadDocument.Visible = false;
                 lblPasteHere.Visible = false;
                 lblUploadDoc.Visible = false;
@@ -1176,7 +1181,7 @@ namespace TaxGenieOnline.admin
 
                 uploadDocument.Visible = false;
                 lblPasteHere.Visible = false;
-                lblUploadDoc.Visible = false;
+                lblUploadDoc.Visible = false; pnllibrary.Visible = false;
                 edtData.Visible = false;
                 btnUpload.Visible = false;
                 pnlDGFTFTP.Visible = false;
@@ -1186,7 +1191,7 @@ namespace TaxGenieOnline.admin
                 ddlCRulesIndexGroup.Items.Clear();
                 ddlCRulesIndexGroup.Items.Add(new ListItem("select one", "0"));
                 ddlCRulesIndexGroup.Items.Add("Central Excise Rules");
-                ddlCRulesIndexGroup.Items.Add("Rescinded or Superseded Rules");
+               // ddlCRulesIndexGroup.Items.Add("Rescinded or Superseded Rules");
             }
             if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
@@ -1206,7 +1211,7 @@ namespace TaxGenieOnline.admin
                 pnlCirculars.Visible = false;
                 rdbUploadType.ClearSelection();
                 pnlITType.Visible = false;
-                pnlITIncomeWealthAct.Visible = false;
+                pnlITIncomeWealthAct.Visible = false; pnllibrary.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITCirculars.Visible = false;
 
@@ -1236,7 +1241,7 @@ namespace TaxGenieOnline.admin
                 pnlCRules.Visible = false;
                 pnlDGFTFTDR.Visible = false;
                 pnlDGFTpublicnotices.Visible = false;
-                pnlCRegulations.Visible = false;
+                pnlCRegulations.Visible = false; pnllibrary.Visible = false;
                 pnlCTariff.Visible = false;
                 pnlDGFTFTP.Visible = false;
                 pnlCSEZ.Visible = false;
@@ -1274,7 +1279,7 @@ namespace TaxGenieOnline.admin
                 pnlCirculars.Visible = false;
                 rdbUploadType.ClearSelection();
                 pnlITType.Visible = false;
-                pnlITIncomeWealthAct.Visible = false;
+                pnlITIncomeWealthAct.Visible = false; pnllibrary.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITCirculars.Visible = false;
 
@@ -1302,7 +1307,7 @@ namespace TaxGenieOnline.admin
                 pnlCirculars.Visible = false;
                 pnlDGFTFTP.Visible = false;
                 rdbUploadType.ClearSelection();
-                pnlITType.Visible = false;
+                pnlITType.Visible = false; pnllibrary.Visible = false;
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITCirculars.Visible = false;
@@ -1331,7 +1336,7 @@ namespace TaxGenieOnline.admin
                 pnlCRegulations.Visible = false;
                 pnlCTariff.Visible = false;
                 pnlCForms.Visible = false;
-                pnlCSEZ.Visible = false;
+                pnlCSEZ.Visible = false; pnllibrary.Visible = false;
                 pnlCDrawback.Visible = false;
                 pnlDGFTFTDR.Visible = false;
                 pnlCirculars.Visible = false;
@@ -1364,7 +1369,7 @@ namespace TaxGenieOnline.admin
                 pnlDGFTFTP.Visible = false;
 
                 pnlCSEZ.Visible = false;
-                pnlCDrawback.Visible = false;
+                pnlCDrawback.Visible = false; pnllibrary.Visible = false;
                 pnlDGFTpublicnotices.Visible = false;
                 pnlCirculars.Visible = false;
                 rdbUploadType.ClearSelection();
@@ -1400,7 +1405,7 @@ namespace TaxGenieOnline.admin
                 pnlITCirculars.Visible = false;
 
                 lblCformssubgroup.Visible = false;
-                ddlCformssubgroups.Visible = false;
+                ddlCformssubgroups.Visible = false; pnllibrary.Visible = false;
                 pnlCActs.Visible = false;
                 pnlCRules.Visible = false;
                 pnlCRegulations.Visible = false;
@@ -1434,7 +1439,7 @@ namespace TaxGenieOnline.admin
                 pnlCSEZ.Visible = false;
                 pnlCDrawback.Visible = false;
                 pnlCirculars.Visible = false;
-                pnlITType.Visible = false;
+                pnlITType.Visible = false; pnllibrary.Visible = false;
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITCirculars.Visible = false;
@@ -1464,7 +1469,7 @@ namespace TaxGenieOnline.admin
                 pnlCDrawback.Visible = false;
                 pnlCirculars.Visible = false;
                 pnlDGFTFTP.Visible = false;
-                pnlDGFTpublicnotices.Visible = false;
+                pnlDGFTpublicnotices.Visible = false; pnllibrary.Visible = false;
                 rdbUploadType.ClearSelection();
                 pnlITType.Visible = false;
                 pnlITIncomeWealthAct.Visible = false;
@@ -1505,7 +1510,7 @@ namespace TaxGenieOnline.admin
                 pnlCTariff.Visible = false;
                 pnlCForms.Visible = false;
                 pnlCDrawback.Visible = false;
-                pnlDGFTFTDR.Visible = false;
+                pnlDGFTFTDR.Visible = false; pnllibrary.Visible = false;
                 pnlCSEZ.Visible = false;
                 rdbCircularUploadType.ClearSelection();
                 pnlCECnotifications.Visible = false;
@@ -1568,7 +1573,7 @@ namespace TaxGenieOnline.admin
                 pnlDGFTpublicnotices.Visible = false;
                 lblUploadDoc.Visible = false;
                 edtData.Visible = false;
-                btnUpload.Visible = false;
+                btnUpload.Visible = false; pnllibrary.Visible = false;
                 pnlDGFTFTP.Visible = true;
                 pnlITType.Visible = false;
                 pnlITIncomeWealthAct.Visible = false;
@@ -1633,7 +1638,7 @@ namespace TaxGenieOnline.admin
                 pnlCDrawback.Visible = false;
                 pnlCirculars.Visible = false;
                 pnlDGFTFTP.Visible = false;
-                pnlDGFTFTDR.Visible = false;
+                pnlDGFTFTDR.Visible = false; pnllibrary.Visible = false;
                 rdbUploadType.ClearSelection();
 
                 uploadDocument.Visible = false;
@@ -1662,7 +1667,7 @@ namespace TaxGenieOnline.admin
                 pnlDGFTFTDR.Visible = false;
                 pnlCTariff.Visible = false;
                 pnlCForms.Visible = false;
-                pnlCSEZ.Visible = false;
+                pnlCSEZ.Visible = false; pnllibrary.Visible = false;
                 pnlCDrawback.Visible = false;
                 pnlCirculars.Visible = false;
                 rdbUploadType.ClearSelection();
@@ -1694,7 +1699,7 @@ namespace TaxGenieOnline.admin
                 pnlCForms.Visible = false;
                 pnlCSEZ.Visible = false;
                 pnlCDrawback.Visible = false;
-                pnlCirculars.Visible = false;
+                pnlCirculars.Visible = false; pnllibrary.Visible = false;
                 rdbUploadType.ClearSelection();
 
                 uploadDocument.Visible = false;
@@ -1733,7 +1738,7 @@ namespace TaxGenieOnline.admin
                 pnlDGFTFTP.Visible = false;
                 rdbUploadType.ClearSelection();
 
-                uploadDocument.Visible = false;
+                uploadDocument.Visible = false; pnllibrary.Visible = false;
                 lblPasteHere.Visible = false;
                 lblUploadDoc.Visible = false;
                 edtData.Visible = false;
@@ -1786,6 +1791,7 @@ namespace TaxGenieOnline.admin
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITCirculars.Visible = false;
+                pnllibrary.Visible = false;
             }
 
             if (ddlsubcategory.SelectedValue.Equals("Rules") && ddlcatagory.SelectedValue.Equals("Income Tax"))
@@ -1816,7 +1822,7 @@ namespace TaxGenieOnline.admin
                 lblUploadDoc.Visible = false;
                 edtData.Visible = false;
                 btnUpload.Visible = false;
-                pnlDGFTFTDR.Visible = false;
+                pnlDGFTFTDR.Visible = false; pnllibrary.Visible = false;
                 pnlDGFTFTP.Visible = false;
                 pnlDGFTpublicnotices.Visible = false;
                 pnlCECnotifications.Visible = false;
@@ -1855,7 +1861,7 @@ namespace TaxGenieOnline.admin
                 pnlDGFTpublicnotices.Visible = false;
                 pnlCECnotifications.Visible = false;
                 pnlStNotifications.Visible = false;
-                pnlITType.Visible = false;
+                pnlITType.Visible = false; pnllibrary.Visible = false;
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITType.Visible = false;
@@ -1885,7 +1891,7 @@ namespace TaxGenieOnline.admin
                 uploadDocument.Visible = false;
                 lblPasteHere.Visible = false;
                 lblUploadDoc.Visible = false;
-                edtData.Visible = false;
+                edtData.Visible = false; pnllibrary.Visible = false;
                 btnUpload.Visible = false;
                 pnlDGFTFTDR.Visible = false;
                 pnlDGFTFTP.Visible = false;
@@ -1896,6 +1902,41 @@ namespace TaxGenieOnline.admin
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
 
+            }
+            #endregion
+
+            #region Library
+            if (ddlsubcategory.SelectedValue.Equals("Central Excise") || ddlsubcategory.SelectedValue.Equals("Customs") || ddlsubcategory.SelectedValue.Equals("Service Tax") || ddlsubcategory.SelectedValue.Equals("Income Tax") || ddlsubcategory.SelectedValue.Equals("DGFT") && ddlcatagory.SelectedValue.Equals("Library"))
+
+            {
+                pnllibrary.Visible = true;
+                pnlCActs.Visible = false;
+                rdbUploadType.Visible = true;
+
+                pnlSTCaselaws.Visible = false;
+                pnlCRules.Visible = false;
+                pnlCRegulations.Visible = false;
+                pnlCTariff.Visible = false;
+                pnlCForms.Visible = false;
+                pnlCSEZ.Visible = false;
+                pnlCDrawback.Visible = false;
+                pnlCirculars.Visible = false;
+                rdbUploadType.ClearSelection();
+                pnlITType.Visible = false;
+                pnlITIncomeWealthAct.Visible = false;
+                pnpITFinanceAct.Visible = false;
+                pnlITCirculars.Visible = false;
+
+                uploadDocument.Visible = false;
+                lblPasteHere.Visible = false;
+                lblUploadDoc.Visible = false;
+                edtData.Visible = false;
+                btnUpload.Visible = false;
+                pnlDGFTFTDR.Visible = false;
+                pnlDGFTFTP.Visible = false;
+                pnlDGFTpublicnotices.Visible = false;
+                pnlCECnotifications.Visible = false;
+                pnlStNotifications.Visible = false;
             }
             #endregion
         }
@@ -2038,6 +2079,8 @@ namespace TaxGenieOnline.admin
 
             #endregion
 
+    
+
             #region Income Tax
 
             if (ddlcatagory.SelectedValue == "Income Tax" & (ddlITActType.SelectedValue == "Income Tax Act" || ddlITActType.SelectedValue == "Wealth Tax Act" || ddlITActType.SelectedValue == "Expenditure Tax Act"))
@@ -2062,6 +2105,17 @@ namespace TaxGenieOnline.admin
                 ITCircularsNotifications();
             }
             #endregion
+
+
+            #region Library
+             if (ddlcatagory.SelectedValue == "Library")
+            {
+                libraryinsert();
+            }
+            #endregion
+
+
+
 
             ClearControls();
         }
@@ -2833,6 +2887,22 @@ namespace TaxGenieOnline.admin
         }
 
         #endregion
+
+        #region Library
+
+        public void libraryinsert()
+        {
+            if (rdbUploadType.SelectedValue == "Upload the Document")
+            {
+                UploadPDF();
+            }
+
+            Library_SelectAllTableAdapter insertlibrary = new Library_SelectAllTableAdapter();
+            insertlibrary.Insert(ddlsubcategory.SelectedValue, txtindexlibrary.Text, edtData.Content, bytes);
+
+        }
+        #endregion
+     
 
         protected void rblUploadType_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -619,6 +619,18 @@
                         </tr>
                     </table>
                 </asp:Panel>
+                  <asp:Panel ID="pnllibrary" Width="100%" runat="server">
+                    <table width="100%" style="margin-top: 20px">
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblindexlibrary" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
+                            </td>
+                            <td style="width: 40%; text-align: left">
+                                <asp:TextBox ID="txtindexlibrary" runat="server" CssClass="nls"></asp:TextBox>
+                            </td>
+                        </tr>
+                        </table>
+                        </asp:Panel>
                 <asp:Panel ID="Panel1" Width="100%" runat="server">
                     <table width="100%" style="margin-top: 30px; margin-bottom: 30px">
                         <tr>

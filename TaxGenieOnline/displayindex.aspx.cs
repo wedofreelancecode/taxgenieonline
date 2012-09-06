@@ -146,8 +146,8 @@ namespace TaxGenieOnline
             }
             else if (category == "Library")
             {
-                Library_RSRules_SelectAllTableAdapter CEActsChapter = new Library_RSRules_SelectAllTableAdapter();
-                dtAChapter = CEActsChapter.Library_Data_Select(subcategory, indexName);
+                 //Library_RSRules_SelectAllTableAdapter CEActsChapter = new Library_RSRules_SelectAllTableAdapter();
+               // dtAChapter = CEActsChapter.Library_Data_Select(subcategory, indexName);
             }
             else if (category == "DGFT" & subcategory == "FTP")
             {

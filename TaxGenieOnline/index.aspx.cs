@@ -1414,130 +1414,93 @@ namespace TaxGenieOnline
                 }
                 if (category == "Library")
                 {
-                    #region ST Libraries
 
-                    if (category == "Library" & subcategory == "ST Libraries")
+                    #region Library
+
+
+                    // VisibleRuleLabels();
+                    InvisibleFormLabels();
+                    dlIndex.Visible = false;
+                    //visible rules
+                    dlAgreements.Visible = false;
+                    dlBaggage.Visible = true;
+                    dlCustomDrawBack.Visible = false;
+                    dlCustomValuation.Visible = false;
+                    dlOthers.Visible = false;
+                    //invisible froms
+                    dlRefunds.Visible = false;
+                    dlAppeals.Visible = false;
+                    dlDrawback.Visible = false;
+                    dlOthersApplicationForms.Visible = false;
+                    dlShipping.Visible = false;
+                    dllBill.Visible = false;
+                    dlBonds.Visible = false;
+                    dlDGFT.Visible = false;
+                    dlSettlementCommission.Visible = false;
+                    dlSTCaseLaws.Visible = false;
+                    //invisible SEZ
+                    gvSEZ.Visible = false;
+                    //invisible ServiceTax Data
+                    gvservicetaxforms.Visible = false;
+                    gvstacts.Visible = false;
+                    gvstrules.Visible = false;
+                    dtstaccodes.Visible = false;
+                    pnlCEManual.Visible = false;
+                    //invisible Circular/Instruction Headings
+                    lblCircularHeading.Visible = false;
+                    lblInstructionHeading.Visible = false;
+
+                    lblAgreements.Text = string.Empty;
+
+                    if (subcategory == "Central Excise")
                     {
-                        InvisibleRuleLabels();
-                        // VisibleFormLabels();
-                        dlIndex.Visible = false;
-                        //invisible rules
-                        dlAgreements.Visible = false;
-                        dtstaccodes.Visible = false;
-                        dlBaggage.Visible = false;
-                        dlCustomDrawBack.Visible = false;
-                        dlCustomValuation.Visible = false;
-                        dlDGFT.Visible = false;
-                        dlOthers.Visible = false;
-                        //visible froms
-                        dlRefunds.Visible = false;
-                        dlAppeals.Visible = false;
-                        dlDrawback.Visible = false;
-                        dlOthersApplicationForms.Visible = false;
-                        dlShipping.Visible = false;
-                        dllBill.Visible = false;
-                        dlBonds.Visible = false;
-                        dlSettlementCommission.Visible = false;
-                        dlSTCaseLaws.Visible = false;
-
-                        lblAppeals.Visible = false;
-                        lblApplicationForm.Visible = false;
-                        lblBill.Visible = false;
-                        lblBonds.Visible = false;
-
-                        lblDrawback.Visible = false;
-                        lblOthersApplicationForms.Visible = false;
-                        lblRefunds.Visible = false;
-                        lblSettlementCommission.Visible = false;
-                        lblShipping.Visible = false;
-                        //invisible Circular/Instruction Headings
-                        lblCircularHeading.Visible = false;
-                        lblInstructionHeading.Visible = false;
-
-
-                        //invisible SEZ
-                        gvSEZ.Visible = false;
-
-                        pnlSTlibraries.Visible = true;
-                        pnlSTTaxation.Visible = false;
-                        pnlCEManual.Visible = false;
-                        dlITActs.Visible = false;
-                        pnlITActsGift.Visible = false;
-                        pnlITActsInterest.Visible = false;
-
-
-                        dltariff.Visible = false;
-                        dlnontariff.Visible = false;
-                        dlsafeguards.Visible = false;
-                        dlCECothers.Visible = false;
-                        dlSTN.Visible = false;
-                        dlantidumpingduty.Visible = false;
-                        pnlSION.Visible = false;
-                    }
-                    #endregion
-
-                    #region Resciding Rules
-                    if (category == "Library" & subcategory == "Rescinded Rules")
-                    {
-                        VisibleRuleLabels();
-                        InvisibleFormLabels();
-                        dlIndex.Visible = false;
-                        //visible rules
-                        dlAgreements.Visible = true;
-                        dlBaggage.Visible = true;
-                        dlCustomDrawBack.Visible = false;
-                        dlCustomValuation.Visible = false;
-                        dlOthers.Visible = false;
-                        //invisible froms
-                        dlRefunds.Visible = false;
-                        dlAppeals.Visible = false;
-                        dlDrawback.Visible = false;
-                        dlOthersApplicationForms.Visible = false;
-                        dlShipping.Visible = false;
-                        dllBill.Visible = false;
-                        dlBonds.Visible = false;
-                        dlDGFT.Visible = false;
-                        dlSettlementCommission.Visible = false;
-                        dlSTCaseLaws.Visible = false;
-                        //invisible SEZ
-                        gvSEZ.Visible = false;
-                        //invisible ServiceTax Data
-                        gvservicetaxforms.Visible = false;
-                        gvstacts.Visible = false;
-                        gvstrules.Visible = false;
-                        dtstaccodes.Visible = false;
-                        pnlCEManual.Visible = false;
-                        //invisible Circular/Instruction Headings
-                        lblCircularHeading.Visible = false;
-                        lblInstructionHeading.Visible = false;
-
-                        lblAgreements.Text = string.Empty;
                         lblBaggage.Text = "Rescinded or Superseded Rules";
-                        lblCustomDrawBack.Visible = false;
-                        lblCustomValuation.Visible = false;
-                        lblOthers.Visible = false;
-                        pnlSTlibraries.Visible = false;
-                        pnlSTTaxation.Visible = false;
-                        dlITActs.Visible = false;
-
-                        dltariff.Visible = false;
-                        dlnontariff.Visible = false;
-                        dlsafeguards.Visible = false;
-                        dlCECothers.Visible = false;
-                        dlSTN.Visible = false;
-                        dlantidumpingduty.Visible = false;
-                        pnlSION.Visible = false;
-                        pnlITActsGift.Visible = false;
-                        pnlITActsInterest.Visible = false;
-
-                        Library_RSRules_SelectAllTableAdapter indexByHeadings = new Library_RSRules_SelectAllTableAdapter();
-                        DataTable dtBaggage = indexByHeadings.RSRules_Index(subcategory);
-                        dlBaggage.DataSource = dtBaggage;
-                        dlBaggage.DataBind();
+                    }
+                    if (subcategory == "Service Tax")
+                    {
+                        lblBaggage.Text = "Service Tax Libraries";
+                    }
+                    if (subcategory == "Customs")
+                    {
+                        lblBaggage.Text = "Custom Libraries";
+                    }
+                    if (subcategory == "Income Tax")
+                    {
+                        lblBaggage.Text = "Income Tax Libraries";
+                    }
+                    if (subcategory == "DGFT")
+                    {
+                        lblBaggage.Text = "DGFT Libraries";
                     }
 
+                    lblCustomDrawBack.Visible = false;
+                    lblCustomValuation.Visible = false;
+                    lblOthers.Visible = false;
+                    pnlSTlibraries.Visible = false;
+                    pnlSTTaxation.Visible = false;
+                    dlITActs.Visible = false;
+
+                    dltariff.Visible = false;
+                    dlnontariff.Visible = false;
+                    dlsafeguards.Visible = false;
+                    dlCECothers.Visible = false;
+                    dlSTN.Visible = false;
+                    dlantidumpingduty.Visible = false;
+                    pnlSION.Visible = false;
+                    pnlITActsGift.Visible = false;
+                    pnlITActsInterest.Visible = false;
+
+                    Library_SelectAllTableAdapter indexselect = new Library_SelectAllTableAdapter();
+                    DataTable dtBaggage = indexselect.Library_Index_Select(subcategory);
+
+                    // Library_RSRules_SelectAllTableAdapter indexByHeadings = new Library_RSRules_SelectAllTableAdapter();
+                    //  DataTable dtBaggage = indexByHeadings.RSRules_Index(subcategory);
+                    dlBaggage.DataSource = dtBaggage;
+                    dlBaggage.DataBind();
                     #endregion
                 }
+
+
                 if (category == "Income Tax")
                 {
                     #region Income Tax
@@ -2212,9 +2175,6 @@ namespace TaxGenieOnline
             }
         }
 
-
-
-
         protected void dlIndex_ItemCommand(object source, DataListCommandEventArgs e)
         {
             if (e.CommandName == "Index")
@@ -2279,30 +2239,31 @@ namespace TaxGenieOnline
             {
                 LinkButton linkButton = e.CommandSource as LinkButton;
                 string _name = linkButton.Text;
-                if (category == "Library" & subcategory == "Rescinded Rules")
+                if (category == "Library")
                 {
-                    Library_RSRules_SelectAllTableAdapter CEActsChapter = new Library_RSRules_SelectAllTableAdapter();
-                    DataTable dtActsChapter = CEActsChapter.Library_Data_Select(subcategory, _name);
-                    if (dtActsChapter.Rows.Count > 0)
-                    {
-                        string aChapter = Convert.ToString(dtActsChapter.Rows[0]["chaptername"]);
-                        if (aChapter.Equals(""))
-                        {
-                            string aData = Convert.ToString(dtActsChapter.Rows[0]["data"]);
-                            if (aData.Equals(""))
-                            {
+                   // Library_SelectAllTableAdapter CEActsChapter = new Library_SelectAllTableAdapter();
+                    //Library_RSRules_SelectAllTableAdapter CEActsChapter = new Library_RSRules_SelectAllTableAdapter();
+                    //DataTable dtActsChapter = CEActsChapter.Library_Data_Select(subcategory, _name);
+                    //if (dtActsChapter.Rows.Count > 0)
+                    //{
+                      //  string aChapter = Convert.ToString(dtActsChapter.Rows[0]["chaptername"]);
+                        //if (aChapter.Equals(""))
+                        //{
+                          //  string aData = Convert.ToString(dtActsChapter.Rows[0]["data"]);
+                            //if (aData.Equals(""))
+                            //{
                                 Response.Redirect("shownotifications.aspx?cat=" + category + "&subcat=" + subcategory + "&name=" + _name, "_blank", string.Empty);
-                            }
-                            else
-                            {
-                                Response.Redirect("shownotifications.aspx?cat=" + category + "&subcat=" + subcategory + "&name=" + _name);
-                            }
-                        }
-                        else
-                        {
-                            Response.Redirect("displayindex.aspx?cat=" + category + "&subcat=" + subcategory + "&name=" + _name);
-                        }
-                    }
+                           // }
+                           // else
+                            //{
+                              //  Response.Redirect("shownotifications.aspx?cat=" + category + "&subcat=" + subcategory + "&name=" + _name);
+      //                      }
+        //                }
+          //              else
+            //            {
+                  //          Response.Redirect("displayindex.aspx?cat=" + category + "&subcat=" + subcategory + "&name=" + _name);
+              //          }
+                //    }
                 }
                 else if (category == "Central Excise" & subcategory == "Rules")
                 {
