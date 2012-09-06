@@ -217,8 +217,9 @@
                 <asp:GridView ID="gvservicetaxforms" runat="server" AutoGenerateColumns="False" OnRowCommand="gvservicetaxforms_RowCommand"
                     Width="100%">
                     <Columns>
-                        <asp:TemplateField HeaderText="Form Type">
-                            <HeaderStyle BackColor="#D9D9D9" ForeColor="#002700" Height="15px" CssClass="nlsH" />
+                        <asp:TemplateField HeaderText="Form Type" HeaderStyle-HorizontalAlign="Left">
+                            <HeaderStyle BackColor="#D9D9D9" ForeColor="#002700" Height="15px" CssClass="nls"
+                                Font-Names="Verdana" Font-Size="18px" Font-Bold="true" />
                             <ItemTemplate>
                                 <br />
                                 <asp:LinkButton ID="lnkStforms" runat="server" Text='<%# Eval("IndexName") %>' CommandName="STForms"
@@ -227,8 +228,9 @@
                                 <br />
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="Subjects" HeaderText="Brief Description">
-                            <HeaderStyle BackColor="#D9D9D9" ForeColor="#002700" Height="15px" CssClass="nlsH" />
+                        <asp:BoundField DataField="Subjects" HeaderText="Brief Description" HeaderStyle-HorizontalAlign="Left">
+                            <HeaderStyle BackColor="#D9D9D9" ForeColor="#002700" Height="15px" CssClass="nls"
+                                Font-Names="Verdana" Font-Size="18px" Font-Bold="true" />
                         </asp:BoundField>
                     </Columns>
                 </asp:GridView>
@@ -289,8 +291,8 @@
                     </tr>
                     <tr>
                         <td style="width: 40%; text-align: center; vertical-align: top;">
-                            <asp:DataList ID="dlIndexCirculars" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
-                                OnItemCommand="dlIndexCirculars_ItemCommand" Width="100%">
+                            <asp:DataList ID="dlIndexCirculars" runat="server" RepeatDirection="Horizontal" CaptionAlign="Top"
+                                OnItemCommand="dlIndexCirculars_ItemCommand" Width="100%" RepeatColumns="5" ItemStyle-Width="10px">
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lnkcircular" runat="server" Text='<%# Eval("Year") %>' CommandName="CircularIndex"></asp:LinkButton>
                                     <br />
@@ -301,8 +303,9 @@
                         <td width="20%">
                         </td>
                         <td style="width: 40%; text-align: center; vertical-align: top;">
-                            <asp:DataList ID="dlIndexInstrcutions" runat="server" RepeatDirection="Vertical"
-                                CaptionAlign="Top" OnItemCommand="dlIndexInstrcutions_ItemCommand" Width="100%">
+                            <asp:DataList ID="dlIndexInstrcutions" runat="server" RepeatDirection="Horizontal"
+                                CaptionAlign="Top" OnItemCommand="dlIndexInstrcutions_ItemCommand" Width="100%"
+                                RepeatColumns="5">
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lnkinstruction" runat="server" Text='<%# Eval("Year") %>' CommandName="InstructionsIndex"></asp:LinkButton>
                                     <br />

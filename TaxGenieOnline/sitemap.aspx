@@ -11,8 +11,8 @@
                 <br />
                 <div style="padding: 0 0 10px 0;">
                     <div style="font: bold 12px arial; color: #000000; padding-left: 18px;">
-                        <span style="text-decoration: none; font: normal 12px arial;"><a href="/Home.aspx"
-                            target="_self">Home</a> &nbsp;<span class="frontraquo">»</span>&nbsp; sitemap</span></div>
+                        <span style="text-decoration: none;font-weight:bold;font-size:small"><a href="/Home.aspx"
+                            target="_self">Home</a> &nbsp;<span class="frontraquo">></span>&nbsp; Sitemap</span></div>
                     <br />
                     <br />
                     <div align="left" style="width: 720px; overflow: auto">
@@ -213,8 +213,19 @@
                                 <ul>
                                     <li>Library
                                         <ul>
-                                            <li><a href="/index.aspx?cat=Library&subcat=Rescinded/Rules">CE Rescinded Rules</a></li>
-                                            <li><a href="/index.aspx?cat=Library&subcat=ST/Libraries">ST Libraries</a></li>
+                                            <li><a href="/index.aspx?cat=Library&subcat=Central/Excise">Central Excise</a></li>
+                                            <li><a href="/index.aspx?cat=Library&subcat=Customs">Customs</a></li>
+                                            <li><a href="/index.aspx?cat=Library&subcat=Service/Tax">Service Tax</a></li>
+                                            <li><a href="/index.aspx?cat=Library&subcat=Income/Tax">Income Tax</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sitemap">
+                                <ul>
+                                    <li style="padding-top: 15px;">
+                                        <ul>
+                                            <li><a href="/index.aspx?cat=Library&subcat=DGFT">DGFT</a></li>
                                         </ul>
                                     </li>
                                 </ul>

@@ -189,10 +189,10 @@
                             </div>
                         </span>
                             <ul>
-                                <li><a href="/index.aspx?cat=Library&subcat=Central Excise">Central Excise</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Central/Excise">Central Excise</a></li>
                                 <li><a href="/index.aspx?cat=Library&subcat=Customs">Customs</a></li>
-                                <li><a href="/index.aspx?cat=Library&subcat=Service Tax">Service Tax</a></li>
-                                <li><a href="/index.aspx?cat=Library&subcat=Income Tax">Income Tax</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Service/Tax">Service Tax</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Income/Tax">Income Tax</a></li>
                                 <li><a href="/index.aspx?cat=Library&subcat=DGFT">DGFT</a></li>
                             </ul>
                         </li>
@@ -290,7 +290,7 @@
     <div class="footer fleft" style="background-color: #565656; width: 100%;">
         <div class="" style="width: 100%" align="center">
             <div>
-                <div class="copyright fright" style="text-align: right">
+                <div class="copyright fright" style="text-align: right; margin-right: 7px;">
                     <p>
                         © 2012 Tax Genie Online | Powered by <span>MARK Profession​al Services Pvt. Limited</span></p>
                 </div>
@@ -388,16 +388,6 @@
                 </div>
                 <div style="float: left; width: 150px;">
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
-                        <li><b>Library</b>
-                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
-                                <li><a href="/index.aspx?cat=Library&subcat=Rescinded/Rules">CE Rescinded Rules</a></li>
-                                <li><a href="/index.aspx?cat=Library&subcat=ST/Libraries">ST Libraries</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div style="float: left; width: 150px;">
-                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Services</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
                                 <li><a href="#">Consulting</a></li>
@@ -405,6 +395,19 @@
                                 <li><a href="#">Filling Returns</a></li>
                                 <li><a href="#">Forms & Registers</a></li>
                                 <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 150px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                        <li><b>Library</b>
+                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
+                                <li><a href="/index.aspx?cat=Library&subcat=Central/Excise">Central Excise</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Customs">Customs</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Service/Tax">Service Tax</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=Income/Tax">Income Tax</a></li>
+                                <li><a href="/index.aspx?cat=Library&subcat=DGFT">DGFT</a></li>
                             </ul>
                         </li>
                     </ul>

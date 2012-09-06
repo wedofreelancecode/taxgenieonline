@@ -718,12 +718,28 @@ ol, ul
     width:650px !important;
 }.doc1 table tr td
 {
-    width:200px;margin-right:25px;line-height:1.2em;
+   margin-right:25px;line-height:1.2em;
 }
    .doc1 table td p span
 {
     width:5px !important;
 }
+
+.doc2 table
+{
+    width: 850px !important;
+    line-height: 1.2em;
+}
+.doc2 table tr td
+{
+    margin-right: 25px;
+}
+.doc2 table td p span
+{
+    width: 5px !important;
+}
+
+
 .adminbtn{
 	color:#333;
     text-align: center;

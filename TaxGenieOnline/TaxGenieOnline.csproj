@@ -153,6 +153,7 @@
     <Content Include="ShowContents.aspx" />
     <Content Include="ShowTaxUpdates.aspx" />
     <Content Include="SQL Sripts\Alter_data_search_select.sql" />
+    <Content Include="SQL Sripts\library_Sep06.sql" />
     <Content Include="TaxGenieOnline.Publish.xml" />
     <Content Include="admin\TaxUpdateEditor.aspx" />
     <Content Include="ViewContent.aspx" />

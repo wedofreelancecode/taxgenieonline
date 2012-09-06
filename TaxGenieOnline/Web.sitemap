@@ -3,11 +3,11 @@
   <siteMapNode url="Home.aspx" title="Home"  description="Home">
 
     <siteMapNode url="" title="Central Excise">
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Acts" title="acts"  description="acts"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Rules" title="rules"  description="rules"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Acts" title="Acts"  description="acts"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Rules" title="Rules"  description="rules"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Tariff/2012-13" title="Tariff 2012-13"  description="tariff"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Forms" title="forms"  description="forms"/>
-      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Notifications" title="notifications"  description="notifications"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Forms" title="Forms"  description="forms"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Notifications" title="Notifications"  description="notifications"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Circulars/Instructions" title="Circulars/Instructions"  description="sez"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Section/37B/Order" title="Section 37B Order"  description="drawback schedule"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=CBEC/Manual" title="CBEC Manual"  description="CBEC Manual"/>
@@ -77,20 +77,17 @@
     </siteMapNode>
 
     <siteMapNode url="" title="Library">
+      <siteMapNode url="index.aspx?cat=Library&amp;subcat=Central/Excise" title="Central Excise"  description="Library"/>
+      <siteMapNode url="index.aspx?cat=Library&amp;subcat=Customs" title="Customs"  description="Library"/>
+      <siteMapNode url="index.aspx?cat=Library&amp;subcat=Service/Tax" title="Service Tax"  description="Library"/>
+      <siteMapNode url="index.aspx?cat=Library&amp;subcat=Income/Tax" title="Income Tax"  description="Library"/>
+      <siteMapNode url="index.aspx?cat=Library&amp;subcat=DGFT" title="DGFT"  description="Library"/>
 
-
-
-      <siteMapNode url="" title="Central Excise">
-        <siteMapNode url="index.aspx?cat=Library&amp;subcat=Rescinded/Rules" title="Rescinded Rules"  description="Rescinded Rules"/>
-        <siteMapNode url="index.aspx?cat=Library&amp;subcat=ST/Libraries" title="ST Libraries"  description="ST Libraries"/>
-        </siteMapNode>
-      
-      
-      </siteMapNode>
-    
-    
-    
     </siteMapNode>
+
+
+
+  </siteMapNode>
 </siteMap>
 
 
