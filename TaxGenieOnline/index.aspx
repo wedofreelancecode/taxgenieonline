@@ -371,127 +371,142 @@
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
-                <asp:DataList ID="dltariff" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
-                    OnItemCommand="dltariff_ItemCommand">
-                    <HeaderTemplate>
-                        Tariff</HeaderTemplate>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lnktariff" runat="server" Text='<%# Eval("Year") %>' CommandName="TariffIndex"></asp:LinkButton>
-                        <br />
-                        <br />
-                    </ItemTemplate>
-                </asp:DataList>
-                <asp:DataList ID="dlnontariff" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
-                    OnItemCommand="dlnontariff_ItemCommand">
-                    <HeaderTemplate>
-                        Non-Tariff</HeaderTemplate>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lnknontariff" runat="server" Text='<%# Eval("Year") %>' CommandName="NonTariffIndex"></asp:LinkButton>
-                        <br />
-                        <br />
-                    </ItemTemplate>
-                </asp:DataList>
-                <asp:DataList ID="dlsafeguards" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
-                    OnItemCommand="dlsafeguards_ItemCommand">
-                    <HeaderTemplate>
-                        Safeguards</HeaderTemplate>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lnksafeguards" runat="server" Text='<%# Eval("Year") %>' CommandName="SafeguardsIndex"></asp:LinkButton>
-                        <br />
-                        <br />
-                    </ItemTemplate>
-                </asp:DataList>
-                <asp:DataList ID="dlantidumpingduty" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
-                    OnItemCommand="dlantidumpingduty_ItemCommand">
-                    <HeaderTemplate>
-                        Anti Dumping Duty</HeaderTemplate>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lnkantidumpingduty" runat="server" Text='<%# Eval("Year") %>'
-                            CommandName="AntiDumpingDutyIndex"></asp:LinkButton>
-                        <br />
-                        <br />
-                    </ItemTemplate>
-                </asp:DataList>
-                <asp:DataList ID="dlCECothers" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
-                    OnItemCommand="dlCECothers_ItemCommand">
-                    <HeaderTemplate>
-                        Others</HeaderTemplate>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lnkothers" runat="server" Text='<%# Eval("Year") %>' CommandName="others"></asp:LinkButton>
-                        <br />
-                        <br />
-                    </ItemTemplate>
-                </asp:DataList>
-                <asp:DataList ID="dlSTN" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
-                    OnItemCommand="dlSTN_ItemCommand">
-                    <HeaderTemplate>
-                        ServiceTax Notifications</HeaderTemplate>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lnkSTN" runat="server" Text='<%# Eval("Year") %>' CommandName="STN"></asp:LinkButton>
-                        <br />
-                        <br />
-                    </ItemTemplate>
-                </asp:DataList>
-                <asp:Panel ID="pnlITActsGift" runat="server">
-                    <a href="/GiftTaxAct.htm" target="_blank">
-                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;Gift Tax
-                        Act</a>
-                </asp:Panel>
-                <asp:Panel ID="pnlITActsInterest" runat="server">
-                    <a href="/InterestTaxAct.htm" target="_blank">
-                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;Interest
-                        Tax Act</a>
-                </asp:Panel>
-                <asp:Panel ID="pnlSION" runat="server">
-                    <asp:HyperLink ID="hlkSION1" runat="server" NavigateUrl="~/SION/notes-0910.zip">
+                <div align="center">
+                    <table class="mtable">
+                        <tr>
+                            <td>
+                                <asp:DataList ID="dltariff" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
+                                    OnItemCommand="dltariff_ItemCommand">
+                                    <HeaderTemplate>
+                                        <span style="font-weight: bold">Tariff</span></HeaderTemplate>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnktariff" runat="server" Text='<%# Eval("Year") %>' CommandName="TariffIndex"></asp:LinkButton>
+                                        <br />
+                                        <br />
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </td>
+                            <td>
+                                <asp:DataList ID="dlnontariff" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
+                                    OnItemCommand="dlnontariff_ItemCommand">
+                                    <HeaderTemplate>
+                                        <span style="font-weight: bold">Non-Tariff</span></HeaderTemplate>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnknontariff" runat="server" Text='<%# Eval("Year") %>' CommandName="NonTariffIndex"></asp:LinkButton>
+                                        <br />
+                                        <br />
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </td>
+                            <td>
+                                <asp:DataList ID="dlsafeguards" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
+                                    OnItemCommand="dlsafeguards_ItemCommand">
+                                    <HeaderTemplate>
+                                        <span style="font-weight: bold">Safeguards</span></HeaderTemplate>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnksafeguards" runat="server" Text='<%# Eval("Year") %>' CommandName="SafeguardsIndex"></asp:LinkButton>
+                                        <br />
+                                        <br />
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </td>
+                            <td>
+                                <asp:DataList ID="dlantidumpingduty" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
+                                    OnItemCommand="dlantidumpingduty_ItemCommand">
+                                    <HeaderTemplate>
+                                        <span style="font-weight: bold">Anti Dumping Duty</span></HeaderTemplate>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnkantidumpingduty" runat="server" Text='<%# Eval("Year") %>'
+                                            CommandName="AntiDumpingDutyIndex"></asp:LinkButton>
+                                        <br />
+                                        <br />
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </td>
+                            <td>
+                                <asp:DataList ID="dlCECothers" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
+                                    OnItemCommand="dlCECothers_ItemCommand">
+                                    <HeaderTemplate>
+                                        <span style="font-weight: bold">Others</span></HeaderTemplate>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnkothers" runat="server" Text='<%# Eval("Year") %>' CommandName="others"></asp:LinkButton>
+                                        <br />
+                                        <br />
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:DataList ID="dlSTN" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
+                        CssClass="mtable" OnItemCommand="dlSTN_ItemCommand">
+                        <HeaderTemplate>
+                            <span style="font-weight: bold">Notifications</span>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkSTN" runat="server" Text='<%# Eval("Year") %>' CommandName="STN"></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </div>
+            <asp:Panel ID="pnlITActsGift" runat="server">
+                <a href="/GiftTaxAct.htm" target="_blank">
+                    <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;Gift Tax
+                    Act</a>
+            </asp:Panel>
+            <asp:Panel ID="pnlITActsInterest" runat="server">
+                <a href="/InterestTaxAct.htm" target="_blank">
+                    <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;Interest
+                    Tax Act</a>
+            </asp:Panel>
+            <asp:Panel ID="pnlSION" runat="server">
+                <asp:HyperLink ID="hlkSION1" runat="server" NavigateUrl="~/SION/notes-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     	NOTES</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION2" runat="server" NavigateUrl="~/SION/chem-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION2" runat="server" NavigateUrl="~/SION/chem-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     	CHEMICALS AND ALLIED PRODUCTS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION3" runat="server" NavigateUrl="~/SION/ele-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION3" runat="server" NavigateUrl="~/SION/ele-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     ELECTRONICS PRODUCTS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION4" runat="server" NavigateUrl="~/SION/engg-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION4" runat="server" NavigateUrl="~/SION/engg-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     ENGINEERING PRODUCTS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION5" runat="server" NavigateUrl="~/SION/fish-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION5" runat="server" NavigateUrl="~/SION/fish-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     FISH AND MARINE PRODUCTS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION6" runat="server" NavigateUrl="~/SION/food-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION6" runat="server" NavigateUrl="~/SION/food-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     FOOD PRODUCTS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION7" runat="server" NavigateUrl="~/SION/hand-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION7" runat="server" NavigateUrl="~/SION/hand-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     HANDICRAFTS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION8" runat="server" NavigateUrl="~/SION/leath-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION8" runat="server" NavigateUrl="~/SION/leath-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     LEATHER PRODUCTS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION9" runat="server" NavigateUrl="~/SION/plast-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION9" runat="server" NavigateUrl="~/SION/plast-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     	PLASTIC PRODUCTS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION10" runat="server" NavigateUrl="~/SION/sport-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION10" runat="server" NavigateUrl="~/SION/sport-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     SPORT GOODS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION11" runat="server" NavigateUrl="~/SION/text-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION11" runat="server" NavigateUrl="~/SION/text-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     TEXTILES,READYMADE GARMENTS,HOSIERY AND KNITWEARS</asp:HyperLink><br />
-                    <br />
-                    <asp:HyperLink ID="hlkSION12" runat="server" NavigateUrl="~/SION/misc-0910.zip">
+                <br />
+                <asp:HyperLink ID="hlkSION12" runat="server" NavigateUrl="~/SION/misc-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     MISCELLANEOUS PRODUCTS</asp:HyperLink><br />
-                    <br />
-                </asp:Panel>
+                <br />
+            </asp:Panel>
             </div>
         </div>
     </div>
