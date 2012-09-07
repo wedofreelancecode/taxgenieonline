@@ -28,7 +28,8 @@
                             <asp:Label ID="lblTitle" runat="server" Text="Title" CssClass="nlsN"></asp:Label>
                         </td>
                         <td align="left">
-                            <asp:TextBox ID="txtTitle" runat="server" CssClass="nls"></asp:TextBox>
+                            <asp:TextBox ID="txtTitle" runat="server" CssClass="nls" MaxLength="6"></asp:TextBox>
+                             <asp:Label ID="lblTip" runat="server" Text="(Maximum 6 characters)" Font-Size="Smaller" ForeColor="Gray"></asp:Label>
                         </td>
                     </tr>
                     <tr>

@@ -371,10 +371,10 @@
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
-                <div align="center">
+                <div align="center" >
                     <table class="mtable">
                         <tr>
-                            <td>
+                            <td style="vertical-align:top">
                                 <asp:DataList ID="dltariff" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dltariff_ItemCommand">
                                     <HeaderTemplate>
@@ -386,7 +386,7 @@
                                     </ItemTemplate>
                                 </asp:DataList>
                             </td>
-                            <td>
+                            <td style="vertical-align:top">
                                 <asp:DataList ID="dlnontariff" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dlnontariff_ItemCommand">
                                     <HeaderTemplate>
@@ -398,7 +398,7 @@
                                     </ItemTemplate>
                                 </asp:DataList>
                             </td>
-                            <td>
+                            <td style="vertical-align:top">
                                 <asp:DataList ID="dlsafeguards" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dlsafeguards_ItemCommand">
                                     <HeaderTemplate>
@@ -410,7 +410,7 @@
                                     </ItemTemplate>
                                 </asp:DataList>
                             </td>
-                            <td>
+                            <td style="vertical-align:top">
                                 <asp:DataList ID="dlantidumpingduty" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dlantidumpingduty_ItemCommand">
                                     <HeaderTemplate>
@@ -423,7 +423,7 @@
                                     </ItemTemplate>
                                 </asp:DataList>
                             </td>
-                            <td>
+                            <td style="vertical-align:top">
                                 <asp:DataList ID="dlCECothers" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dlCECothers_ItemCommand">
                                     <HeaderTemplate>
