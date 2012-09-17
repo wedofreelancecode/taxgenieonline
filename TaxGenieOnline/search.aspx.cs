@@ -14,7 +14,7 @@ namespace TaxGenieOnline
         string _keyword;
         protected void Page_Load(object sender, EventArgs e)
         {
-            _keyword = Request.QueryString["keyword"].ToString();
+            _keyword = Request.QueryString["keyword"].ToString().Trim();
             Session["keyword"] = _keyword;
             if (!IsPostBack)
             {
@@ -37,7 +37,7 @@ namespace TaxGenieOnline
             {
                 gv_Search.DataSource = dtKeywordData;
                 gv_Search.DataBind();
-                lblseachword.Text = "see results about <span style='font-weight:bold;'>" + _keyword + "</span>";
+                lblseachword.Text = "Search Phrase: <span style='font-weight:bold;'><u>" + _keyword + "</u></span>";
             }
             else
             {

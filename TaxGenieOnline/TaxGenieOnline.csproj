@@ -81,6 +81,7 @@
     <Content Include="images\slogo.png" />
     <Content Include="images\TaxUpdate\Mark logo_web.png" />
     <Content Include="images\TGOlogo.png" />
+    <Content Include="images\underconstruction.jpg" />
     <Content Include="InterestTaxAct.htm" />
     <Content Include="GiftTaxAct.htm" />
     <Content Include="images\au.jpg" />
@@ -156,6 +157,7 @@
     <Content Include="SQL Sripts\library_Sep06.sql" />
     <Content Include="TaxGenieOnline.Publish.xml" />
     <Content Include="admin\TaxUpdateEditor.aspx" />
+    <Content Include="underconstruction.aspx" />
     <Content Include="ViewContent.aspx" />
     <Content Include="ViewTaxUpdate.aspx" />
     <Content Include="Web.config">
@@ -376,6 +378,13 @@
     </Compile>
     <Compile Include="admin\uploadnews.aspx.designer.cs">
       <DependentUpon>uploadnews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="underconstruction.aspx.cs">
+      <DependentUpon>underconstruction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="underconstruction.aspx.designer.cs">
+      <DependentUpon>underconstruction.aspx</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\BreadCrumb.ascx.cs">
       <DependentUpon>BreadCrumb.ascx</DependentUpon>

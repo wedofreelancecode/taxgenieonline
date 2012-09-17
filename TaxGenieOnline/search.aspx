@@ -8,7 +8,7 @@
         <div class="contentbox">
             <div class="contentboxmiddle1 shdw shd" style="min-height: 300px; padding: 15px 10px 10px 40px">
                 <div class="newshldr" style="width: 100%; margin-top: 5px;">
-                <div align="center" style="font-size:1.2em;margin-top:15px">
+                <div align="center" style="font-size:1.2em;border-color:#CCCCCC;border:2;background-color:#F0F0F0;margin-top:15px">
                 <asp:Label ID="lblseachword" runat="server"></asp:Label>
                 </div>
                     <div align="left">

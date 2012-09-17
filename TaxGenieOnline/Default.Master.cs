@@ -37,6 +37,11 @@ namespace TaxGenieOnline
             {
                 Response.Redirect("~/search.aspx?keyword=" + txtSearch.Value);
             }
+            else
+            {
+
+                ScriptManager.RegisterClientScriptBlock(Page, this.GetType(), "alert", "alert('please enter keywords to perform search')", true);
+            }
         }
 
 
