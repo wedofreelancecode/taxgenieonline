@@ -221,7 +221,7 @@ ol, ul
 }
 .srchhldr
 {
-    width: 173px;
+    width: 150px;
     background: url(../images/searchbg.jpg) no-repeat left top;
     height: 27px;
     display: inline-table;
@@ -237,7 +237,7 @@ ol, ul
     color: #555555;
     float: left;
     border: none;
-    width: 130px;
+    width: 120px;
 }
 .newsscrl
 {
@@ -687,11 +687,17 @@ input.nls
     width: 17px;
     height: 16px;
     float: right;
-    margin-top: 5px;
-    margin-right: 10px;
+    margin: 5px 5px 0px 0px;
+    
 }
 
-
+.admg
+{
+    float:right;
+    height:35px;
+    width:102px;
+    margin-top:4px;
+    }
 .smallpng
 {
     width: 7px;

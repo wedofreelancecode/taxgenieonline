@@ -212,6 +212,8 @@
                 </div>
             </div>
             <!-- end of menu -->
+            <asp:ImageButton ID="imgADSrc" runat="server" CssClass="fright admg" 
+                ImageUrl="~/images/adSearch_TG.png"/>
             <div class="srchhldr fright">
                 <input type="text" name="txtSearch" id="txtSearch" runat="server" class="srch" />
                 <asp:ImageButton ID="imgSearch" runat="server" CssClass="mg" ImageUrl="~/images/mg.jpg"
