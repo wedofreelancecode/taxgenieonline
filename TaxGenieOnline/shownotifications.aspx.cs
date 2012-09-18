@@ -16,18 +16,39 @@ using TaxGenie_DAL.DGFTTableAdapters;
 using TaxGenie_DAL.IncomeTaxTableAdapters;
 using TaxGenie_DAL.CECNotificationsTableAdapters;
 using TaxGenie_DAL.STNotificationsTableAdapters;
+using TaxGenie_DAL.CaseLawsTableAdapters;
 
 namespace TaxGenieOnline
 {
     public partial class shownotifications : System.Web.UI.Page
     {
-        string cNumber, fNumber, year;
+        string cNumber, fNumber, year,citation;
+        string subcategeory;
         protected void Page_Load(object sender, EventArgs e)
         {
             string category = Convert.ToString(Request.QueryString["cat"]);
-            string subcategeory = Request.QueryString["subcat"];
+
+            if (category == "Central")
+            {
+                category = "Central Excise";
+                 subcategeory = "Case Laws";
+            }
+
+            else if (category == "Service")
+            {
+                category = "Service Tax";
+                 subcategeory = "Case Laws";
+            }
+
+            else
+            {
+                 subcategeory = Request.QueryString["subcat"];
+            }
+
+           
             string indexName = Request.QueryString["name"];
             string chapter = Request.QueryString["chaptername"];
+            string citation = Request.QueryString["citation"];
             cNumber = Convert.ToString(Request.QueryString["cnums"]);
             fNumber = Convert.ToString(Request.QueryString["fnums"]);
             year = Convert.ToString(Request.QueryString["years"]);
@@ -186,28 +207,28 @@ namespace TaxGenieOnline
             #endregion
 
             #region Service Tax CaseLaws
-            else if (category == "Service Tax" && subcategeory == "Case Laws")
-            {
-                STCaselaws_GetAllTableAdapter getSTCaselawsDataByindex = new STCaselaws_GetAllTableAdapter();
-                DataTable dtSTCaselawsDataByindex = getSTCaselawsDataByindex.GetDataByIndexName(indexName);
+            //else if (category == "Service Tax" && subcategeory == "Case Laws")
+            //{
+            //    STCaselaws_GetAllTableAdapter getSTCaselawsDataByindex = new STCaselaws_GetAllTableAdapter();
+            //    DataTable dtSTCaselawsDataByindex = getSTCaselawsDataByindex.GetDataByIndexName(indexName);
 
-                string stcl = Convert.ToString(dtSTCaselawsDataByindex.Rows[0]["Data"]);
+            //    string stcl = Convert.ToString(dtSTCaselawsDataByindex.Rows[0]["Data"]);
 
-                if (stcl != null)
-                {
-                    ltl.Text = Convert.ToString(dtSTCaselawsDataByindex.Rows[0]["Data"]);
-                }
-                else
-                {
-                    byte[] b = ((byte[])dtSTCaselawsDataByindex.Rows[0]["Document"]);
-                    //Collect Bytes from database and write in Webpage
-                    Response.ContentType = "application/pdf";
-                    Response.BinaryWrite(b);
-                    Response.Write("<script>window.open('Page.html','_blank')</script>");
-                }
+            //    if (stcl != null)
+            //    {
+            //        ltl.Text = Convert.ToString(dtSTCaselawsDataByindex.Rows[0]["Data"]);
+            //    }
+            //    else
+            //    {
+            //        byte[] b = ((byte[])dtSTCaselawsDataByindex.Rows[0]["Document"]);
+            //        //Collect Bytes from database and write in Webpage
+            //        Response.ContentType = "application/pdf";
+            //        Response.BinaryWrite(b);
+            //        Response.Write("<script>window.open('Page.html','_blank')</script>");
+            //    }
 
 
-            }
+            //}
             #endregion
 
             #region STLibraries
@@ -401,6 +422,74 @@ namespace TaxGenieOnline
 
                 }
             #endregion
+
+            #region Caselaws
+            else if (subcategeory == "Case Laws" || subcategeory == "Case")
+              {
+                  GetAllCaseLawsTableAdapter getdatabycitation = new GetAllCaseLawsTableAdapter();
+                  DataTable dtgetdatabycitation = getdatabycitation.GetDataByCitation(category, citation);
+
+                  if (dtgetdatabycitation.Rows.Count > 0)
+                  {
+
+                      ltl.Text += "<table>";
+                      ltl.Text += "<tr><td style='width:920px' align='center';>" + citation + "</td></tr>";
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td style='width:920px'  align='center';>";
+                      ltl.Text += "IN THE " + dtgetdatabycitation.Rows[0]["Court"] + "</td></tr>";
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='center';>";
+                      ltl.Text += "Civil Appeal No. " + dtgetdatabycitation.Rows[0]["CaseNumber"] + "</td></tr>";
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='center';>";
+                      ltl.Text += dtgetdatabycitation.Rows[0]["APPELLANTParty"] + "</td></tr>";
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='center';>";
+                      ltl.Text += "V/S</td></tr>";
+
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='center';>";
+                      ltl.Text += dtgetdatabycitation.Rows[0]["RESPONDENTParty"] + "</td></tr>";
+
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='left';>";
+                      ltl.Text += dtgetdatabycitation.Rows[0]["JudgesName"] + "</td></tr>";
+
+
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='right';>";
+                      ltl.Text +="Dated :" +dtgetdatabycitation.Rows[0]["DateofDecision"] + "</td></tr>";
+
+
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='justify';>";
+                      ltl.Text += dtgetdatabycitation.Rows[0]["HeadNotes"]+"</td></tr>";
+
+
+
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='center';>";
+                      ltl.Text += "JUDGEMENT</td></tr>";
+
+
+
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='left';>";
+                      ltl.Text += "Per:" + dtgetdatabycitation.Rows[0]["JudgementinFavourof"] + "</td></tr>";
+
+
+                      ltl.Text += "<tr>";
+                      ltl.Text += "<td  align='justify';>";
+
+                      ltl.Text += dtgetdatabycitation.Rows[0]["JUDGEMENTContent"] + "</td></tr></table>";
+
+
+                  }
+
+               }
+
+            #endregion
+
 
             else
             {

@@ -17,6 +17,7 @@ using TaxGenie_DAL.IncomeTaxTableAdapters;
 using TaxGenie_DAL.CECNotificationsTableAdapters;
 using TaxGenie_DAL.STNotificationsTableAdapters;
 using TaxGenie_DAL.LibraryTableAdapters;
+using TaxGenie_DAL.CaseLawsTableAdapters;
 
 namespace TaxGenieOnline.admin
 {
@@ -247,15 +248,15 @@ namespace TaxGenieOnline.admin
                                 edtData.Content = dtActs.Rows[0]["Data"].ToString();
                                 lbshowDoc.Visible = !isdoc;
                             }
-                            if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
-                            {
-                                txtCDrawbackIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
-                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
-                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
-                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
-                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
-                                lbshowDoc.Visible = !isdoc;
-                            }
+                            //if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
+                            //{
+                            //    txtCDrawbackIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
+                            //    bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                            //    rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                            //    rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                            //    edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                            //    lbshowDoc.Visible = !isdoc;
+                            //}
                             if (ddlsubcategory.SelectedValue.Equals("Drawback Schedule"))
                             {
                                 txtCDrawbackIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
@@ -383,20 +384,20 @@ namespace TaxGenieOnline.admin
 
 
                         }
-                        if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
-                        {
-                            STCaselaws_GetAllTableAdapter indexTariff = new STCaselaws_GetAllTableAdapter();
-                            DataTable dtTariff = indexTariff.SelectSTCaseLawsById(id);
-                            if (dtTariff.Rows.Count > 0)
-                            {
-                                txtSTCaselaws.Text = dtTariff.Rows[0]["IndexName"].ToString();
-                                bool isdoc = dtTariff.Rows[0]["Data"] != null && dtTariff.Rows[0]["Data"].ToString().Length > 0;
-                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
-                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
-                                edtData.Content = dtTariff.Rows[0]["Data"].ToString();
-                                lbshowDoc.Visible = !isdoc;
-                            }
-                        }
+                        //if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
+                        //{
+                        //    STCaselaws_GetAllTableAdapter indexTariff = new STCaselaws_GetAllTableAdapter();
+                        //    DataTable dtTariff = indexTariff.SelectSTCaseLawsById(id);
+                        //    if (dtTariff.Rows.Count > 0)
+                        //    {
+                        //        txtSTCaselaws.Text = dtTariff.Rows[0]["IndexName"].ToString();
+                        //        bool isdoc = dtTariff.Rows[0]["Data"] != null && dtTariff.Rows[0]["Data"].ToString().Length > 0;
+                        //        rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                        //        rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                        //        edtData.Content = dtTariff.Rows[0]["Data"].ToString();
+                        //        lbshowDoc.Visible = !isdoc;
+                        //    }
+                        //}
                         if (ddlsubcategory.SelectedValue.Equals("Notifications"))
                         {
                             STN_GetAllTableAdapter indexTariff = new STN_GetAllTableAdapter();
@@ -1037,10 +1038,10 @@ namespace TaxGenieOnline.admin
             }
             if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
-                pnlCDrawback.Visible = true;
-                rdbUploadType.Visible = true;
+               // pnlCDrawback.Visible = true;
+                rdbUploadType.Visible = false;
 
-                pnlSTCaselaws.Visible = false;
+                pnlSTCaselaws.Visible = true;
                 pnlCActs.Visible = false;
                 pnlDGFTpublicnotices.Visible = false;
                 pnlCRules.Visible = false;
@@ -1060,7 +1061,7 @@ namespace TaxGenieOnline.admin
                 lblPasteHere.Visible = false;
                 lblUploadDoc.Visible = false;
                 edtData.Visible = false;
-                btnUpload.Visible = false;
+                btnUpload.Visible = true;
                 pnlDGFTFTP.Visible = false;
                 pnlCECnotifications.Visible = false;
                 pnlStNotifications.Visible = false;
@@ -1263,10 +1264,10 @@ namespace TaxGenieOnline.admin
             }
             if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
-                pnlCDrawback.Visible = true;
-                rdbUploadType.Visible = true;
+                //pnlCDrawback.Visible = true;
+                rdbUploadType.Visible = false;
 
-                pnlSTCaselaws.Visible = false;
+                pnlSTCaselaws.Visible = true;
                 pnlCSEZ.Visible = false;
                 pnlCActs.Visible = false;
                 pnlDGFTFTDR.Visible = false;
@@ -1287,7 +1288,7 @@ namespace TaxGenieOnline.admin
                 lblPasteHere.Visible = false;
                 lblUploadDoc.Visible = false;
                 edtData.Visible = false;
-                btnUpload.Visible = false;
+                btnUpload.Visible = true;
                 pnlCECnotifications.Visible = false;
                 pnlStNotifications.Visible = false;
             }
@@ -1457,7 +1458,7 @@ namespace TaxGenieOnline.admin
             if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
                 pnlSTCaselaws.Visible = true;
-                rdbUploadType.Visible = true;
+                rdbUploadType.Visible = false;
 
                 pnlCActs.Visible = false;
                 pnlCRules.Visible = false;
@@ -1482,7 +1483,7 @@ namespace TaxGenieOnline.admin
                 lblPasteHere.Visible = false;
                 lblUploadDoc.Visible = false;
                 edtData.Visible = false;
-                btnUpload.Visible = false;
+                btnUpload.Visible = true;
             }
 
             #endregion
@@ -1966,7 +1967,7 @@ namespace TaxGenieOnline.admin
             }
             if (ddlcatagory.SelectedValue == "Customs" & ddlsubcategory.SelectedValue == "Case Laws")
             {
-                CustomDrawbackSchedule();
+                CaseLaws();
             }
             if (ddlcatagory.SelectedValue == "Customs" & ddlsubcategory.SelectedValue == "SEZ")
             {
@@ -2001,7 +2002,7 @@ namespace TaxGenieOnline.admin
             }
             if (ddlcatagory.SelectedValue == "Central Excise" & ddlsubcategory.SelectedValue == "Case Laws")
             {
-                CESections();
+                CaseLaws();
             }
             if (ddlcatagory.SelectedValue == "Central Excise" & ddlsubcategory.SelectedValue == "Section 37B Order")
             {
@@ -2039,7 +2040,7 @@ namespace TaxGenieOnline.admin
             }
             if (ddlcatagory.SelectedValue == "Service Tax" & ddlsubcategory.SelectedValue == "Case Laws")
             {
-                STCaseLaws();
+                CaseLaws();
             }
             if (ddlcatagory.SelectedValue == "Service Tax" & ddlsubcategory.SelectedValue == "Notifications")
             {
@@ -2688,31 +2689,45 @@ namespace TaxGenieOnline.admin
 
         #endregion
 
-        #region STCaseLawsMethods
-        public void STCaseLaws()
+        #region CaseLawsMethods
+        public void CaseLaws()
         {
-            if (rdbUploadType.SelectedValue == "Upload the Document")
-            {
-                UploadPDF();
-            }
-            STCaselaws_GetAllTableAdapter insertCaseLaws = new STCaselaws_GetAllTableAdapter();
-            if (hdnId.Value.Length > 0)
-            {
-                int? id = Int32.Parse(hdnId.Value);
-                if (bytes != null && bytes.Length > 1)
-                {
-                    insertCaseLaws.UpdateSTCaseLawsById(txtSTCaselaws.Text, edtData.Content, bytes, id);
-                }
-                else
-                {
-                    insertCaseLaws.UpdateSTCaseLawsByIdNoDoc(txtSTCaselaws.Text, edtData.Content, id);
-                }
-                Server.Transfer("editnotifications.aspx");
-            }
-            else
-            {
-                insertCaseLaws.STCaseLaws_Insert(txtSTCaselaws.Text, edtData.Content, bytes);
-            }
+
+            #region  Old Code
+            
+          
+
+            //if (rdbUploadType.SelectedValue == "Upload the Document")
+            //{
+              //  UploadPDF();
+            //}
+            //STCaselaws_GetAllTableAdapter insertCaseLaws = new STCaselaws_GetAllTableAdapter();
+            
+            //if (hdnId.Value.Length > 0)
+            //{
+            //    int? id = Int32.Parse(hdnId.Value);
+            //    if (bytes != null && bytes.Length > 1)
+            //    {
+            //        insertCaseLaws.UpdateSTCaseLawsById(txtSTCaselaws.Text, edtData.Content, bytes, id);
+            //    }
+            //    else
+            //    {
+            //        insertCaseLaws.UpdateSTCaseLawsByIdNoDoc(txtSTCaselaws.Text, edtData.Content, id);
+            //    }
+            //    Server.Transfer("editnotifications.aspx");
+            //}
+            //else
+            //{
+            //    insertCaseLaws.STCaseLaws_Insert(txtSTCaselaws.Text, edtData.Content, bytes);
+            //}
+            #endregion
+
+            DateTime dt = Convert.ToDateTime(txtCLdateofdec.Text);
+            string TGOLC = txtCLcitationyear.Text + "-TGOL-" + txtClNumber.Text + "-" + txtCL.Text;
+            int TGOLyear=Convert.ToInt32(txtCLcitationyear.Text);
+            GetAllCaseLawsTableAdapter insertCaseLaws = new GetAllCaseLawsTableAdapter();
+            insertCaseLaws.Insert(ddlcatagory.SelectedValue, TGOLC, ddlCLlawscourt.SelectedValue, txtCLcasenumber.Text, txtCLAPPELLANTParty.Text, txtCLrespondentparty.Text, txtCLjudgesname.Text, dt, txtCLJinFavour.Text, edtCLheadnotes.Content, edtCLcontent.Content,TGOLyear,txtClNumber.Text);
+
         }
 
 
@@ -2996,10 +3011,10 @@ namespace TaxGenieOnline.admin
             txtCtariffchapter.Text = string.Empty;
             txtCtariffsubj.Text = string.Empty;
             edtData.Content = string.Empty;
-            txtSTCaselaws.Text = string.Empty;
-            txtSTCaselaws.Text = string.Empty;
+           // txtSTCaselaws.Text = string.Empty;
+            //txtSTCaselaws.Text = string.Empty;
             ddlITActType.ClearSelection();
-            txtSTCaselaws.Text = string.Empty;
+           // txtSTCaselaws.Text = string.Empty;
             txtSectionName.Text = string.Empty;
             ddlGroup.ClearSelection();
             txtITCircularNo.Text = string.Empty;

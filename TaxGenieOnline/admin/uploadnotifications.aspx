@@ -340,11 +340,107 @@
                 <asp:Panel ID="pnlSTCaselaws" Width="100%" runat="server">
                     <table width="100%" style="margin-top: 20px">
                         <tr>
+                            <td style="width: 100%;">
+                                <asp:Label ID="lblCLcitation" runat="server" Text="TGOL Citation" CssClass="nlsN"></asp:Label>
+                            
+                                <asp:TextBox ID="txtCLcitationyear" runat="server" CssClass="nls"></asp:TextBox>
+                            
+                                <asp:Label ID="lbltgol" runat="server" Text="-TGOL-" CssClass="nlsN"></asp:Label>
+                           
+                                <asp:TextBox ID="txtClNumber" runat="server" CssClass="nls"></asp:TextBox>
+                            
+                                <asp:Label ID="lblhypen" runat="server" Text="-" CssClass="nlsN"></asp:Label>
+                           
+                                <asp:TextBox ID="txtCL" runat="server" CssClass="nls"></asp:TextBox>
+                            </td>
+                        </tr>
+                        </table>
+                        <table width="100%" style="margin-top: 20px">
+                        <tr>
                             <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblSTCaselaws" runat="server" Text="Index" CssClass="nlsN"></asp:Label>
+                                <asp:Label ID="lblCLcourt" runat="server" Text="Court" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtSTCaselaws" runat="server" CssClass="nls"></asp:TextBox>
+                                <asp:DropDownList ID="ddlCLlawscourt" runat="server" CssClass="nls">
+                                    <asp:ListItem>--Select One--</asp:ListItem>
+                                    <asp:ListItem>Supreme Court of India   </asp:ListItem>
+                                    <asp:ListItem>High Court </asp:ListItem>
+                                    <asp:ListItem>CESTAT</asp:ListItem>
+                                    <asp:ListItem>CEGAT</asp:ListItem>
+                                    <asp:ListItem>ATFE</asp:ListItem>
+                                    <asp:ListItem>TRIBUNAL</asp:ListItem>
+                                    <asp:ListItem>Revisionary Authority</asp:ListItem>
+                                    <asp:ListItem>Settlement Commossion</asp:ListItem>
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%; text-align: right">
+                                <asp:Label ID="lblCLcasenumber" runat="server" Text="Case Number" CssClass="nlsN"></asp:Label>
+                            </td>
+                            <td style="width: 80%; text-align: left">
+                                <asp:TextBox ID="txtCLcasenumber" runat="server" CssClass="nls"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblCLAPPELLANTParty" runat="server" Text="APPELLANT Party" CssClass="nlsN"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:TextBox ID="txtCLAPPELLANTParty" runat="server" CssClass="nls"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblCLrespondentparty" runat="server" Text="Respondent Party" CssClass="nlsN"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:TextBox ID="txtCLrespondentparty" runat="server" CssClass="nls"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblCTjudgesname" runat="server" Text="Judge's Name" CssClass="nlsN"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:TextBox ID="txtCLjudgesname" runat="server" CssClass="nls"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblCLdateofdec" runat="server" Text="Date Of Decision" CssClass="nlsN"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:TextBox ID="txtCLdateofdec" runat="server" CssClass="nls"></asp:TextBox>
+                                <asp:Image ID="imgCal" runat="server" ImageUrl="~/images/c.jpg" style="height:15px;width:15px;"/>
+                                <span
+                                    style="font-size: smaller; color: Gray;">(MM-DD-YYYY)</span>
+                                <asp:CalendarExtender ID="cldate" runat="server" TargetControlID="txtCLdateofdec" PopupButtonID="imgCal">
+                                </asp:CalendarExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblCLJinFavour" runat="server" Text="Judgement in Favour Of" CssClass="nlsN"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:TextBox ID="txtCLJinFavour" runat="server" CssClass="nls"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblheadnotes" runat="server" Text="HeadNotes" CssClass="nlsN"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:Editor ID="edtCLheadnotes" runat="server" CssClass="hidden" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%; text-align: right">
+                                <asp:Label ID="lblJcontent" runat="server" Text="Judgement" CssClass="nlsN"></asp:Label>
+                            </td>
+                            <td style="width: 90%; text-align: left">
+                                <asp:Editor ID="edtCLcontent" runat="server" CssClass="hidden" />
                             </td>
                         </tr>
                     </table>
@@ -619,7 +715,7 @@
                         </tr>
                     </table>
                 </asp:Panel>
-                  <asp:Panel ID="pnllibrary" Width="100%" runat="server">
+                <asp:Panel ID="pnllibrary" Width="100%" runat="server">
                     <table width="100%" style="margin-top: 20px">
                         <tr>
                             <td style="width: 10%; text-align: right">
@@ -629,8 +725,8 @@
                                 <asp:TextBox ID="txtindexlibrary" runat="server" CssClass="nls"></asp:TextBox>
                             </td>
                         </tr>
-                        </table>
-                        </asp:Panel>
+                    </table>
+                </asp:Panel>
                 <asp:Panel ID="Panel1" Width="100%" runat="server">
                     <table width="100%" style="margin-top: 30px; margin-bottom: 30px">
                         <tr>

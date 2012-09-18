@@ -178,6 +178,9 @@
                             </Columns>
                         </asp:GridView>
                         <asp:Literal ID="ltlIndex" runat="server"></asp:Literal>
+                        <asp:Label ID="lblCL" runat="server"></asp:Label>
+                         <asp:Literal ID="ltlCL" runat="server"></asp:Literal>
+                          <asp:Literal ID="ltlCLheadnotes" runat="server"></asp:Literal>
                     </div>
                 </div>
             </div>

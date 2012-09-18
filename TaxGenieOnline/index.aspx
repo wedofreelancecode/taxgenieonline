@@ -13,15 +13,15 @@
         } 
 </script> --%>
     <div class="cl2 fleft">
-        <asp:SiteMapPath ID="sitemap" runat="server" ParentLevelsDisplayed="3" Font-Bold="true"
-            Font-Size="Small" ForeColor="Black">
-        </asp:SiteMapPath>
+        <div  style="background-color:#f1f1f1; padding:6px 10px 6px 10px; border:1px solid #dcdcdc; font:normal 11px arial"> 
+        <asp:SiteMapPath ID="sitemap" runat="server" ParentLevelsDisplayed="3">
+        </asp:SiteMapPath></div>
         <asp:Label ID="sub" runat="server" />
         <div align="right">
             <a class="back" href='javascript:window.history.back();'></a>
         </div>
         <div class="newshldr" style="padding-top: 5px; padding-bottom: 10px; min-height: 200px">
-            <div align="left" style="font: 13px Verdana;">
+            <div align="left" style="font:normal 12px Arial;">
                 <asp:DataList ID="dlIndex" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                     CaptionAlign="Top" OnItemCommand="dlIndex_ItemCommand" Width="100%">
                     <ItemTemplate>
@@ -219,7 +219,7 @@
                     <Columns>
                         <asp:TemplateField HeaderText="Form Type" HeaderStyle-HorizontalAlign="Left">
                             <HeaderStyle BackColor="#D9D9D9" ForeColor="#002700" Height="15px" CssClass="nls"
-                                Font-Names="Verdana" Font-Size="18px" Font-Bold="true" />
+                                Font-Names="Arial" Font-Size="18px" Font-Bold="true" />
                             <ItemTemplate>
                                 <br />
                                 <asp:LinkButton ID="lnkStforms" runat="server" Text='<%# Eval("IndexName") %>' CommandName="STForms"
@@ -230,7 +230,7 @@
                         </asp:TemplateField>
                         <asp:BoundField DataField="Subjects" HeaderText="Brief Description" HeaderStyle-HorizontalAlign="Left">
                             <HeaderStyle BackColor="#D9D9D9" ForeColor="#002700" Height="15px" CssClass="nls"
-                                Font-Names="Verdana" Font-Size="18px" Font-Bold="true" />
+                                Font-Names="Arial" Font-Size="18px" Font-Bold="true" />
                         </asp:BoundField>
                     </Columns>
                 </asp:GridView>
@@ -507,6 +507,8 @@
                     MISCELLANEOUS PRODUCTS</asp:HyperLink><br />
                 <br />
             </asp:Panel>
+
+               <asp:Literal ID="ltlCaselwas" runat="server"></asp:Literal>
             </div>
         </div>
     </div>

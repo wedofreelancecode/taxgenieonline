@@ -13,6 +13,7 @@ using TaxGenieOnline.Helpers;
 using TaxGenie_DAL.IncomeTaxTableAdapters;
 using TaxGenie_DAL.CECNotificationsTableAdapters;
 using TaxGenie_DAL.STNotificationsTableAdapters;
+using TaxGenie_DAL.CaseLawsTableAdapters;
 
 namespace TaxGenieOnline
 {
@@ -27,6 +28,12 @@ namespace TaxGenieOnline
                 category = Request.QueryString["cat"].Replace("/", " ");
                 subcategory = Request.QueryString["subcat"];
             }
+            else if (Request.QueryString["subcat"] == "Case/Laws")
+            {
+                category = Request.QueryString["cat"].Replace("/", " ");
+                subcategory = Request.QueryString["subcat"].Replace("/", " ");
+            }
+
             else
             {
                 category = Request.QueryString["cat"].Replace("/", " ");
@@ -496,9 +503,10 @@ namespace TaxGenieOnline
 
 
                     }
-
-                    else
+                    else if (category == "Customs" & subcategory == "Acts" || subcategory == "Regulations")
                     {
+
+
                         InvisibleRuleLabels();
                         InvisibleFormLabels();
                         dlIndex.Visible = true;
@@ -547,6 +555,98 @@ namespace TaxGenieOnline
                         {
                             dlIndex.DataSource = dtActsIndexName;
                             dlIndex.DataBind();
+                        }
+                    }
+
+                    else
+                    {
+                        InvisibleRuleLabels();
+                        InvisibleFormLabels();
+                        dlIndex.Visible = false;
+                        //invisible rules
+                        dlAgreements.Visible = false;
+                        dlBaggage.Visible = false;
+                        dlCustomDrawBack.Visible = false;
+                        dlCustomValuation.Visible = false;
+                        dlOthers.Visible = false;
+                        //invisible forms
+                        dlRefunds.Visible = false;
+                        dlAppeals.Visible = false;
+                        dlDrawback.Visible = false;
+                        dlOthersApplicationForms.Visible = false;
+                        dlShipping.Visible = false;
+                        dllBill.Visible = false;
+                        dlBonds.Visible = false;
+                        dlSettlementCommission.Visible = false;
+                        dlSTCaseLaws.Visible = false;
+                        //invisible SEZ
+                        gvSEZ.Visible = false;
+                        dlDGFT.Visible = false;
+                        //invisible ServiceTax Data
+                        gvservicetaxforms.Visible = false;
+                        gvstacts.Visible = false;
+                        gvstrules.Visible = false;
+                        dtstaccodes.Visible = false;
+                        //invisible Circular/Instruction Headings
+                        lblCircularHeading.Visible = false;
+                        lblInstructionHeading.Visible = false;
+                        pnlSTlibraries.Visible = false;
+                        pnlSTTaxation.Visible = false;
+                        pnlCEManual.Visible = false;
+                        dlITActs.Visible = false;
+                        pnlITActsGift.Visible = false;
+                        pnlITActsInterest.Visible = false;
+                        dltariff.Visible = false;
+                        dlnontariff.Visible = false;
+                        dlsafeguards.Visible = false;
+                        dlCECothers.Visible = false;
+                        dlSTN.Visible = false;
+                        pnlSION.Visible = false;
+                        GetAllCaseLawsTableAdapter CLyear = new GetAllCaseLawsTableAdapter();
+                        DataTable dtCLyear = CLyear.GetYearsByCategory(category);
+                        if (dtCLyear.Rows.Count > 0)
+                        {
+                            ltlCaselwas.Text = string.Empty;
+                            
+                            foreach (DataRow CL in dtCLyear.Rows)
+                            {
+                                int CLuniqueyear=(int)CL["Year"];
+                                GetAllCaseLawsTableAdapter CLNumber = new GetAllCaseLawsTableAdapter();
+                                DataTable dtCLNumber = CLyear.GetCLNumByYear(category, CLuniqueyear);
+                                if(dtCLNumber.Rows.Count>0)
+
+                                {
+                                    string CLmaxNumberforyears = dtCLNumber.Rows[0]["maxclnum"].ToString();
+
+                                    int CLmaxNumberforyear = Convert.ToInt32(CLmaxNumberforyears);
+
+                                    if (CLmaxNumberforyear > 0)
+                                    {
+                                        int c = 1;
+                                        int d = 50;
+                                         ltlCaselwas.Text += "<table style='background-color:#f1f1f1; width:100%; padding:6px 10px 6px 10px; border:1px solid #dcdcdc; font:normal 11px arial'>";
+                                         ltlCaselwas.Text += "<tr><td colspan='10' align='center' style='background-color:gray; font-size:10px;'>Citation of Year&nbsp;"+CLuniqueyear+"</td></tr>";
+                                         ltlCaselwas.Text += "<tr>";
+                                        for (int v = CLmaxNumberforyear; v > 0; )
+                                        {
+                                            v = v - 50;
+                                            ltlCaselwas.Text += "<td>";
+                                            ltlCaselwas.Text += "<a href=displayindex.aspx?CLnum1=" + d + "&CLnum2=" + c + "&year=" + CLuniqueyear + "&cat=" + category + "&subcat=" + subcategory +">" + c + "-" + d + "</a>";
+                                            ltlCaselwas.Text += "&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+                                            c = c + 50;
+                                            d = d + 50;
+                                        }
+                                        ltlCaselwas.Text += "</tr>";
+                                        ltlCaselwas.Text += "</table><br/><br/>";
+                                       
+                                        
+                                        
+                                    }
+            
+                            }
+                            }
+
+                           
                         }
                     }
                     #endregion
@@ -883,6 +983,99 @@ namespace TaxGenieOnline
                         pnlSION.Visible = false;
                         CECNotifications();
                     }
+
+                    else  if (category == "Central Excise" & subcategory == "Case Laws" || subcategory == "Case")
+                    {
+                        InvisibleRuleLabels();
+                        InvisibleFormLabels();
+                        dlIndex.Visible = false;
+                        //invisible rules
+                        dlAgreements.Visible = false;
+                        dlBaggage.Visible = false;
+                        dlCustomDrawBack.Visible = false;
+                        dlCustomValuation.Visible = false;
+                        dlOthers.Visible = false;
+                        //invisible forms
+                        dlRefunds.Visible = false;
+                        dlAppeals.Visible = false;
+                        dlDrawback.Visible = false;
+                        dlOthersApplicationForms.Visible = false;
+                        dlShipping.Visible = false;
+                        dllBill.Visible = false;
+                        dlBonds.Visible = false;
+                        dlSettlementCommission.Visible = false;
+                        dlSTCaseLaws.Visible = false;
+                        //invisible SEZ
+                        gvSEZ.Visible = false;
+                        dlDGFT.Visible = false;
+                        //invisible ServiceTax Data
+                        gvservicetaxforms.Visible = false;
+                        gvstacts.Visible = false;
+                        gvstrules.Visible = false;
+                        dtstaccodes.Visible = false;
+                        //invisible Circular/Instruction Headings
+                        lblCircularHeading.Visible = false;
+                        lblInstructionHeading.Visible = false;
+                        pnlSTlibraries.Visible = false;
+                        pnlSTTaxation.Visible = false;
+                        pnlCEManual.Visible = false;
+                        dlITActs.Visible = false;
+                        pnlITActsGift.Visible = false;
+                        pnlITActsInterest.Visible = false;
+                        dltariff.Visible = false;
+                        dlnontariff.Visible = false;
+                        dlsafeguards.Visible = false;
+                        dlCECothers.Visible = false;
+                        dlSTN.Visible = false;
+                        pnlSION.Visible = false;
+                        GetAllCaseLawsTableAdapter CLyear = new GetAllCaseLawsTableAdapter();
+                        DataTable dtCLyear = CLyear.GetYearsByCategory(category);
+                        if (dtCLyear.Rows.Count > 0)
+                        {
+                            ltlCaselwas.Text = string.Empty;
+
+                            foreach (DataRow CL in dtCLyear.Rows)
+                            {
+                                int CLuniqueyear = (int)CL["Year"];
+                                GetAllCaseLawsTableAdapter CLNumber = new GetAllCaseLawsTableAdapter();
+                                DataTable dtCLNumber = CLyear.GetCLNumByYear(category, CLuniqueyear);
+                                if (dtCLNumber.Rows.Count > 0)
+                                {
+                                    string CLmaxNumberforyears = dtCLNumber.Rows[0]["maxclnum"].ToString();
+
+                                    int CLmaxNumberforyear = Convert.ToInt32(CLmaxNumberforyears);
+
+                                    if (CLmaxNumberforyear > 0)
+                                    {
+                                        int c = 1;
+                                        int d = 50;
+                                        ltlCaselwas.Text += "<table style='background-color:#f1f1f1; width:100%; padding:6px 10px 6px 10px; border:1px solid #dcdcdc; font:normal 11px arial'>";
+                                        ltlCaselwas.Text += "<tr><td colspan='10' align='center' style='background-color:gray; font-size:10px;'>Citation of Year&nbsp;" + CLuniqueyear + "</td></tr>";
+                                        ltlCaselwas.Text += "<tr>";
+                                        for (int v = CLmaxNumberforyear; v > 0; )
+                                        {
+                                            v = v - 50;
+                                            ltlCaselwas.Text += "<td>";
+                                            ltlCaselwas.Text += "<a href=displayindex.aspx?CLnum1=" + d + "&CLnum2=" + c + "&year=" + CLuniqueyear + "&cat=Central%20Excise&subcat=Case%20Laws>" + c + "-" + d + "</a>";
+                                            ltlCaselwas.Text += "&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+                                            c = c + 50;
+                                            d = d + 50;
+                                        }
+                                        ltlCaselwas.Text += "</tr>";
+                                        ltlCaselwas.Text += "</table><br/><br/>";
+
+
+
+                                    }
+
+                                }
+                            }
+
+
+                        }
+
+                    }
+
                     else
                     {
                         InvisibleRuleLabels();
@@ -935,6 +1128,7 @@ namespace TaxGenieOnline
                             dlIndex.DataBind();
                         }
                     }
+
                     #endregion
                 }
                 if (category == "Service Tax")
@@ -1199,7 +1393,7 @@ namespace TaxGenieOnline
                         dllBill.Visible = false;
                         dlBonds.Visible = false;
                         dlSettlementCommission.Visible = false;
-                        dlSTCaseLaws.Visible = true;
+                        dlSTCaseLaws.Visible = false;
 
                         lblAppeals.Visible = false;
                         lblApplicationForm.Visible = false;
@@ -1232,14 +1426,52 @@ namespace TaxGenieOnline
                         pnlITActsGift.Visible = false;
                         pnlITActsInterest.Visible = false;
                         pnlSION.Visible = false;
-
-                        STCaselaws_GetAllTableAdapter getSTCaslawsindex = new STCaselaws_GetAllTableAdapter();
-                        DataTable dtSTCaslawsindex = getSTCaslawsindex.GetSTCaseLawsIndex();
-                        if (dtSTCaslawsindex.Rows.Count > 0)
+                        GetAllCaseLawsTableAdapter CLyear = new GetAllCaseLawsTableAdapter();
+                        DataTable dtCLyear = CLyear.GetYearsByCategory(category);
+                        if (dtCLyear.Rows.Count > 0)
                         {
-                            dlSTCaseLaws.DataSource = dtSTCaslawsindex;
-                            dlSTCaseLaws.DataBind();
+                            ltlCaselwas.Text = string.Empty;
+
+                            foreach (DataRow CL in dtCLyear.Rows)
+                            {
+                                int CLuniqueyear = (int)CL["Year"];
+                                GetAllCaseLawsTableAdapter CLNumber = new GetAllCaseLawsTableAdapter();
+                                DataTable dtCLNumber = CLyear.GetCLNumByYear(category, CLuniqueyear);
+                                if (dtCLNumber.Rows.Count > 0)
+                                {
+                                    string CLmaxNumberforyears = dtCLNumber.Rows[0]["maxclnum"].ToString();
+
+                                    int CLmaxNumberforyear = Convert.ToInt32(CLmaxNumberforyears);
+
+                                    if (CLmaxNumberforyear > 0)
+                                    {
+                                        int c = 1;
+                                        int d = 50;
+                                        ltlCaselwas.Text += "<table style='background-color:#f1f1f1; width:100%; padding:6px 10px 6px 10px; border:1px solid #dcdcdc; font:normal 11px arial'>";
+                                        ltlCaselwas.Text += "<tr><td colspan='10' align='center' style='background-color:gray; font-size:10px;'>Citation of Year&nbsp;" + CLuniqueyear + "</td></tr>";
+                                        ltlCaselwas.Text += "<tr>";
+                                        for (int v = CLmaxNumberforyear; v > 0; )
+                                        {
+                                            v = v - 50;
+                                            ltlCaselwas.Text += "<td>";
+                                            ltlCaselwas.Text += "<a href=displayindex.aspx?CLnum1=" + d + "&CLnum2=" + c + "&year=" + CLuniqueyear + "&cat=Service%20Tax&subcat=Case%20Laws>" + c + "-" + d + "</a>";
+                                            ltlCaselwas.Text += "&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+                                            c = c + 50;
+                                            d = d + 50;
+                                        }
+                                        ltlCaselwas.Text += "</tr>";
+                                        ltlCaselwas.Text += "</table><br/><br/>";
+
+
+
+                                    }
+
+                                }
+                            }
+
+
                         }
+                     
 
                     }
 

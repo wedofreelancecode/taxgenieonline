@@ -223,13 +223,13 @@
     </div>
     <div style="height: 5px;">
     </div>
-    <div class="middimension" style="width: 990px">
+    <div class="middimension" style="width: 990px;">
         <table style="background-color: #DDDDDD; margin-bottom: 5px;">
             <tr>
                 <td style='width: 113px' class="flashNews">
                 </td>
-                <td>
-                    <div class="middimension" id="TICKER" style="display: none; margin: 5px; overflow: hidden;
+                <td style=" font:normal 12px Arial;">
+                    <div id="TICKER" style="display: none; font:normal 12px Arial; margin: 5px; overflow: hidden;
                         width: 877px" onmouseover="TICKER_PAUSED=true" onmouseout="TICKER_PAUSED=false">
                         <asp:Repeater ID="dlNewsFlash" runat="server">
                             <ItemTemplate>
@@ -290,16 +290,15 @@
     </div>
     </form>
     <div class="footer fleft" style="background-color: #565656; width: 100%;">
-        <div class="" style="width: 100%" align="center">
+        <div class="" style="width:980px; margin:0 Auto;" align="center">
             <div>
-                <div class="copyright fright" style="text-align: right; margin-right: 7px;">
-                    <p>
-                        © 2012 Tax Genie Online | Powered by <span>MARK Profession​al Services Pvt. Limited</span></p>
+                <div class="copyright" align="right">
+                    <p>© 2012 Tax Genie Online | Powered by <span>MARK Profession​al Services Pvt. Limited</span></p>
                 </div>
             </div>
             <div align="left" class="shrtct">
-                <div style="float: left; width: 150px;">
-                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                <div style="float: left; width: 140px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 0px; font: normal 11px arial;">
                         <li><b>Central Excise</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
                                 <li><a href="/index.aspx?cat=Central/Excise&subcat=Acts">Acts</a></li>
@@ -315,7 +314,7 @@
                         </li>
                     </ul>
                 </div>
-                <div style="float: left; width: 150px;">
+                <div style="float: left; width: 220px;">
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Customs</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
@@ -324,8 +323,7 @@
                                 <li><a href="/index.aspx?cat=Customs&subcat=Regulations">Regulations</a></li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Tariff/2012-13">Tariff 2012-13</a></li>
                                 <li><a href="http://www.cbec.gov.in/cs-manual-2012.pdf">Manual-2012</a></li>
-                                <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf">Manual
-                                    on Self Assessment-2011</a> </li>
+                                <li><a href="http://www.cbec.gov.in/deptt_offcr/cs-self-assesmt2011-manual.pdf">Manual on Self Assessment-2011</a> </li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Forms">Forms</a></li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Notifications">Notifications</a></li>
                                 <li><a href="/index.aspx?cat=Customs&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
@@ -336,7 +334,7 @@
                         </li>
                     </ul>
                 </div>
-                <div style="float: left; width: 150px;">
+                <div style="float: left; width:185px;">
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Service Tax</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
@@ -347,35 +345,31 @@
                                 <li><a href="/index.aspx?cat=Service/Tax&subcat=Circulars/Instructions">Circulars/Instructions</a></li>
                                 <li><a href="/index.aspx?cat=Service/Tax&subcat=Case/Laws">Case Laws</a></li>
                                 <li><a href="/Serviceprocedures.htm" target="_blank">Service Tax Procedures</a></li>
-                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Accounting/Codes/for/new/services">Accounting
-                                    Codes for new services</a></li>
-                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Taxation/of/Services/An/Educational/Guide">
-                                    Taxation of Services: An Educational Guide</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Accounting/Codes/for/new/services">Accounting Codes for new services</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Taxation/of/Services/An/Educational/Guide">Taxation of Services: An Educational Guide</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div style="float: left; width: 150px;">
+                <div style="float: left; width: 160px;">
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Income Tax</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
                                 <li><a href="/index.aspx?cat=Income/Tax&subcat=Income/Tax/Act">Income Tax Act</a></li>
                                 <li><a href="/index.aspx?cat=Income/Tax&subcat=Wealth/Tax/Act">Wealth Tax Act</a></li>
                                 <li><a href="/index.aspx?cat=Income/Tax&subcat=Gift/Tax/Act">Gift Tax Act</a></li>
-                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Expenditure/Tax/Act">Expenditure Tax
-                                    Act</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Expenditure/Tax/Act">Expenditure Tax Act</a></li>
                                 <li><a href="/index.aspx?cat=Income/Tax&subcat=Interest/Tax/Act">Interest Tax Act</a></li>
                                 <li><a href="/index.aspx?cat=Income/Tax&subcat=Finance/Act">Finance Act</a></li>
                                 <li><a href="/index.aspx?cat=Income/Tax&subcat=Income/Tax/Rules">Income Tax Rules</a></li>
-                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Other/Direct/Tax/Rules">Other Direct
-                                    Tax Rules</a></li>
+                                <li><a href="/index.aspx?cat=Income/Tax&subcat=Other/Direct/Tax/Rules">Other Direct Tax Rules</a></li>
                                 <li><a href="/index.aspx?cat=Income/Tax&subcat=Circulars">Circulars</a></li>
                                 <li><a href="/index.aspx?cat=Income/Tax&subcat=Notifications">Notifications</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div style="float: left; width: 150px;">
+                <div style="float: left; width: 140px;">
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>DGFT</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
@@ -388,7 +382,7 @@
                         </li>
                     </ul>
                 </div>
-                <div style="float: left; width: 150px;">
+                <div style="float: left; width: 145px;">
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Services</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">

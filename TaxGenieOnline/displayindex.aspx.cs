@@ -13,12 +13,13 @@ using TaxGenie_DAL.LibraryTableAdapters;
 using TaxGenie_DAL.DGFTTableAdapters;
 using TaxGenie_DAL.CECNotificationsTableAdapters;
 using TaxGenie_DAL.STNotificationsTableAdapters;
+using TaxGenie_DAL.CaseLawsTableAdapters;
 
 namespace TaxGenieOnline
 {
     public partial class displayindex : System.Web.UI.Page
     {
-        string category, subcategory, indexName;
+        string category, subcategory, indexName, caselawnum1, caselawnum2;
         string year;
         string tariffIndex;
         string notification;
@@ -29,6 +30,9 @@ namespace TaxGenieOnline
             indexName = Request.QueryString["name"];
             year = Request.QueryString["year"];
             notification = Request.QueryString["notification"];
+            caselawnum1 = Request.QueryString["CLnum1"];
+            caselawnum2 = Request.QueryString["CLnum2"];
+
             #region Customs Tariff
 
 
@@ -123,6 +127,52 @@ namespace TaxGenieOnline
             {
                 STNotifications();
             }
+            #endregion
+
+            #region Caselaws
+
+            else if (subcategory == "Case Laws")
+            {
+
+                lblCL.Text = category+"&nbsp;Case Laws";
+
+                ltlCL.Text += "<table style='background-color:#f1f1f1; width:100%;  border:1px solid #dcdcdc; align:center; font:normal 11px arial'>";
+                ltlCL.Text += "<tr><td align='center' style='background-color:gray; font-size:10px;'>Citation of Year&nbsp;" + year + "</td></tr>";
+                ltlCL.Text += "<tr>";
+                ltlCL.Text += "<td>";
+                ltlCL.Text += caselawnum2 + "-" + caselawnum1 ;
+                ltlCL.Text += "&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>";
+
+
+                GetAllCaseLawsTableAdapter getall = new GetAllCaseLawsTableAdapter();
+                DataTable dtgetall = getall.GetCitationNum(category, Convert.ToInt32(year), Convert.ToInt32(caselawnum1),Convert.ToInt32(caselawnum2));
+
+                if (dtgetall.Rows.Count > 0)
+                {
+                    ltlCLheadnotes.Text = string.Empty;
+                    foreach (DataRow drcitation in dtgetall.Rows)
+                    {
+                        string TGOLcitationnum = drcitation["TGOLCitation"].ToString();
+                        string APPELLANTParty = drcitation["APPELLANTParty"].ToString();
+                        string RESPONDENTParty = drcitation["RESPONDENTParty"].ToString();
+                        string HeadNotes = drcitation["HeadNotes"].ToString();
+                        string DateofDecision = drcitation["DateofDecision"].ToString().Trim();
+
+                        ltlCLheadnotes.Text += "<table style='background-color:#f1f1f1; width:100%;  border:1px solid #dcdcdc; align:center; font:normal 11px arial'>";
+                        ltlCLheadnotes.Text += "<tr><td align='center' style='background-color:gray; font-size:10px;'><a href=shownotifications.aspx?citation=" + TGOLcitationnum + "&cat=" + category + "&subcat=" + subcategory+">" + TGOLcitationnum + "</a></td></tr>";
+                        ltlCLheadnotes.Text += "<tr><td>" + APPELLANTParty + " V/S " + RESPONDENTParty + " (Dated: " + DateofDecision + ")</td></tr>";
+                        ltlCLheadnotes.Text += "<br/><br/>";
+                        ltlCLheadnotes.Text += "<tr><td>" + HeadNotes + "</td></tr>";
+                        ltlCLheadnotes.Text += "</table>";
+
+                    }
+                }
+
+            }
+
+
+
+
             #endregion
 
             else

@@ -49,6 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaseLaws.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseLaws.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CECNotifications.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -169,6 +174,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="CaseLaws.xsc">
+      <DependentUpon>CaseLaws.xsd</DependentUpon>
+    </None>
+    <None Include="CaseLaws.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CaseLaws.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CaseLaws.xss">
+      <DependentUpon>CaseLaws.xsd</DependentUpon>
+    </None>
     <None Include="CECNotifications.xsc">
       <DependentUpon>CECNotifications.xsd</DependentUpon>
     </None>

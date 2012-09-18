@@ -6,7 +6,7 @@
 <div class="contentbox">
             <div class="contentboxmiddle1 shdw shd" >
             <div style=" min-height:200px;" align="center">
-                <img src="images/underconstruction.jpg" align="absmiddle" alt="Site is under Construction" />
+                <img src="images/underconstruction.jpg" align="absmiddle" alt="Site is under Construction"/>
                  
              </div>
             </div>

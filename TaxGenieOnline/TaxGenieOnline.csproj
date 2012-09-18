@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit">
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\AjaxControlToolkitBinary\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -69,6 +70,7 @@
     <Content Include="images\add1.jpg" />
     <Content Include="images\add2.jpg" />
     <Content Include="images\blue.jpg" />
+    <Content Include="images\c.jpg" />
     <Content Include="images\cartoon.jpg" />
     <Content Include="images\finance.jpg" />
     <Content Include="images\fNews.png" />
@@ -533,7 +535,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>57845</DevelopmentServerPort>
+          <DevelopmentServerPort>1202</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
