@@ -32,6 +32,7 @@ namespace TaxGenieOnline
             {
                 category = Request.QueryString["cat"].Replace("/", " ");
                 subcategory = Request.QueryString["subcat"].Replace("/", " ");
+                lblAgreements.Text = category + " " + subcategory;
             }
 
             else
@@ -622,25 +623,21 @@ namespace TaxGenieOnline
 
                                     if (CLmaxNumberforyear > 0)
                                     {
-                                        int c = 1;
-                                        int d = 50;
-                                         ltlCaselwas.Text += "<table style='background-color:#f1f1f1; width:100%; padding:6px 10px 6px 10px; border:1px solid #dcdcdc; font:normal 11px arial'>";
-                                         ltlCaselwas.Text += "<tr><td colspan='10' align='center' style='background-color:gray; font-size:10px;'>Citation of Year&nbsp;"+CLuniqueyear+"</td></tr>";
-                                         ltlCaselwas.Text += "<tr>";
+                                        int c = 1, i = 0, d = 50;
+                                        ltlCaselwas.Text += "<table class='citation'><tr><th colspan='3' align='center'>Citation of Year&nbsp;" + CLuniqueyear + "</th></tr><tr>";
                                         for (int v = CLmaxNumberforyear; v > 0; )
                                         {
                                             v = v - 50;
-                                            ltlCaselwas.Text += "<td>";
-                                            ltlCaselwas.Text += "<a href=displayindex.aspx?CLnum1=" + d + "&CLnum2=" + c + "&year=" + CLuniqueyear + "&cat=" + category + "&subcat=" + subcategory +">" + c + "-" + d + "</a>";
-                                            ltlCaselwas.Text += "&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+                                            ltlCaselwas.Text += "<td align='center'><a href=displayindex.aspx?CLnum1=" + d + "&CLnum2=" + c + "&year=" + CLuniqueyear + "&cat=" + category + "&subcat=" + subcategory + ">" + c + "-" + d + "</a></td>";
                                             c = c + 50;
+                                            if (++i % 3 == 0)
+                                            {
+                                                ltlCaselwas.Text += "</tr><tr>";
+                                            }
                                             d = d + 50;
                                         }
                                         ltlCaselwas.Text += "</tr>";
                                         ltlCaselwas.Text += "</table><br/><br/>";
-                                       
-                                        
-                                        
                                     }
             
                             }
@@ -1047,17 +1044,16 @@ namespace TaxGenieOnline
 
                                     if (CLmaxNumberforyear > 0)
                                     {
-                                        int c = 1;
-                                        int d = 50;
-                                        ltlCaselwas.Text += "<table style='background-color:#f1f1f1; width:100%; padding:6px 10px 6px 10px; border:1px solid #dcdcdc; font:normal 11px arial'>";
-                                        ltlCaselwas.Text += "<tr><td colspan='10' align='center' style='background-color:gray; font-size:10px;'>Citation of Year&nbsp;" + CLuniqueyear + "</td></tr>";
-                                        ltlCaselwas.Text += "<tr>";
+                                        int c = 1,i=0, d = 50;
+                                        ltlCaselwas.Text += "<table class='citation'><tr><th colspan='3' align='center'>Citation of Year&nbsp;" + CLuniqueyear + "</th></tr><tr>";
                                         for (int v = CLmaxNumberforyear; v > 0; )
                                         {
                                             v = v - 50;
-                                            ltlCaselwas.Text += "<td>";
-                                            ltlCaselwas.Text += "<a href=displayindex.aspx?CLnum1=" + d + "&CLnum2=" + c + "&year=" + CLuniqueyear + "&cat=Central%20Excise&subcat=Case%20Laws>" + c + "-" + d + "</a>";
-                                            ltlCaselwas.Text += "&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+                                            ltlCaselwas.Text += "<td align='center'><a href=displayindex.aspx?CLnum1=" + d + "&CLnum2=" + c + "&year=" + CLuniqueyear + "&cat=Central%20Excise&subcat=Case%20Laws>" + c + "-" + d + "</a></td>";
+                                            if (++i % 3 == 0)
+                                            {
+                                                ltlCaselwas.Text += "</tr><tr>";
+                                            }
                                             c = c + 50;
                                             d = d + 50;
                                         }
@@ -1445,17 +1441,16 @@ namespace TaxGenieOnline
 
                                     if (CLmaxNumberforyear > 0)
                                     {
-                                        int c = 1;
-                                        int d = 50;
-                                        ltlCaselwas.Text += "<table style='background-color:#f1f1f1; width:100%; padding:6px 10px 6px 10px; border:1px solid #dcdcdc; font:normal 11px arial'>";
-                                        ltlCaselwas.Text += "<tr><td colspan='10' align='center' style='background-color:gray; font-size:10px;'>Citation of Year&nbsp;" + CLuniqueyear + "</td></tr>";
-                                        ltlCaselwas.Text += "<tr>";
+                                        int c = 1, i = 0, d = 50;
+                                        ltlCaselwas.Text += "<table class='citation'><tr><th colspan='3' align='center'>Citation of Year&nbsp;" + CLuniqueyear + "</th></tr><tr>";
                                         for (int v = CLmaxNumberforyear; v > 0; )
                                         {
                                             v = v - 50;
-                                            ltlCaselwas.Text += "<td>";
-                                            ltlCaselwas.Text += "<a href=displayindex.aspx?CLnum1=" + d + "&CLnum2=" + c + "&year=" + CLuniqueyear + "&cat=Service%20Tax&subcat=Case%20Laws>" + c + "-" + d + "</a>";
-                                            ltlCaselwas.Text += "&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+                                            ltlCaselwas.Text += "<td align='center'><a href=displayindex.aspx?CLnum1=" + d + "&CLnum2=" + c + "&year=" + CLuniqueyear + "&cat=Service%20Tax&subcat=Case%20Laws>" + c + "-" + d + "</a></td>";
+                                            if (++i % 3 == 0)
+                                            {
+                                                ltlCaselwas.Text += "</tr><tr>";
+                                            }
                                             c = c + 50;
                                             d = d + 50;
                                         }
@@ -2676,7 +2671,10 @@ namespace TaxGenieOnline
 
         public void InvisibleRuleLabels()
         {
-            lblAgreements.Visible = false;
+            if (subcategory != "Case Laws")
+            {
+                lblAgreements.Visible = false;
+            }
             lblBaggage.Visible = false;
             lblCustomDrawBack.Visible = false;
             lblCustomValuation.Visible = false;

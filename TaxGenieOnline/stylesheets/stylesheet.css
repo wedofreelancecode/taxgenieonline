@@ -20,7 +20,7 @@ img
 }
 input, select, textarea
 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 1em;
 }
 
@@ -76,7 +76,7 @@ body
 {
     height: 100%;
     display: block;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
     background-color: #fff;
 }
 body, td, th
@@ -135,20 +135,20 @@ ol, ul
     text-align: center;
     color: #FFF;
     line-height: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
 .hrightL
 {
     width: 448px;
     height: 50px; /*border: 1px #000000 solid;     -webkit-border-radius:5px;     -moz-border-radius: 5px;     border-radius: 5px;*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  Verdana, Arial, Helvetica, sans-serif;
     font-size: 11px;
     line-height: 16px;
 }
 .hright a
 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 11px;
     color: #FFF;
 }
@@ -175,13 +175,7 @@ ol, ul
 {
     padding: 5px 0px 0px 0px;
     color: #fff;
-    font-family: arial;
-    font-size: 12px;
-}
-.fgt a
-{
-    color: #fff;
-    font-family: arial;
+    font-family: Verdana, arial;
     font-size: 12px;
 }
 .fgt a:hover
@@ -232,7 +226,7 @@ ol, ul
     height: 18px;
     margin: 4px 2px 0px 4px;
     background-color: #fafafa;
-    font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+    font-family: Verdana, "Trebuchet MS" , Arial, Helvetica, sans-serif;
     font-size: 11px;
     color: #555555;
     float: left;
@@ -278,7 +272,7 @@ ol, ul
 .srcright p a
 {
     color: #888888;
-    font-family: Arial;
+    font-family: Verdana, Arial;
     font-size: 11px;
     line-height: 1.6em;
     display: block;
@@ -290,7 +284,7 @@ ol, ul
 .lnk
 {
     color: #888888;
-    font-family: Arial;
+    font-family: Verdana, Arial;
     font-size: 11px;
 }
 .lnk p:hover
@@ -308,7 +302,7 @@ ol, ul
     height: 200px;
     text-align: center;
     line-height: 200px;
-    font-family: Arial;
+    font-family: Verdana, Arial;
     font-size: 15px;
     position: relative;
 }
@@ -337,7 +331,7 @@ ol, ul
 {
     padding-bottom: 10px;
     color: #333;
-    font-family: Arial;
+    font-family: Verdana, Arial;
     font-size: 12px;
     line-height: 18px;
     text-align: justify;
@@ -354,7 +348,7 @@ ol, ul
 .ab ul li
 {
     padding-bottom: 10px;
-    font-family: Arial;
+    font-family: Verdana, Arial;
     font-size: 12px;
     font-weight: bold;
     padding-left: 20px;
@@ -365,14 +359,14 @@ ol, ul
     padding-bottom: 10px;
     color: #888888;
     border-bottom: 1px dotted #1a89cf;
+    font-family: Verdana, Arial;
+    display: block;
 }
 .centerbox p a
 {
     color: #888888;
-    font-family: arial;
     font-size: 11px;
     line-height: 1.6em;
-    display: block;
 }
 .centerbox p a:hover
 {
@@ -383,8 +377,6 @@ ol, ul
     color: #1a89cf;
     font-weight: bold;
     font-size: 12px;
-    font-family: arial;
-    display: block;
     padding-bottom: 5px;
     padding-top: 5px;
 }
@@ -392,7 +384,7 @@ ol, ul
 {
     width: 990px;
     margin: 0 auto;
-    font-family: Arial;
+    font-family: Verdana, Arial;
     padding-bottom: 3px;
 }
 .footer a:link, .footer a:visited, .footer a:active
@@ -421,6 +413,7 @@ ol, ul
 {
     width: 980px;
     margin:0 auto;
+    font-family: Verdana, arial;
 }
 .copyright p
 {
@@ -428,12 +421,10 @@ ol, ul
     font-size: 11px;
     padding-top: 3px;
     line-height: 2.5em;
-    font-family: arial;
 }
 .copyright p span
 {
     font-weight: bold;
-    font-family: arial;
 }
 .socialicons
 {
@@ -449,7 +440,7 @@ ol, ul
     height: 25px;
     color: #419023;
     font-weight: bold;
-    font-family: arial;
+    font-family: Verdana, arial;
     font-size: 13px;
     line-height: 25px; /* [disabled]overflow: hidden; */
 }
@@ -470,7 +461,7 @@ ol, ul
     border: 1px solid #000000;
     padding-left: 5px;
     color: #474747;
-    font-family: arial;
+    font-family: Verdana, arial;
     margin-bottom: 5px;
     text-align: left;
     -webkit-border-radius: 3px;
@@ -483,7 +474,7 @@ ol, ul
     border: 1px solid #000000;
     padding-left: 5px;
     color: #474747;
-    font-family: arial;
+    font-family: Verdana, arial;
     text-align: left;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -495,7 +486,7 @@ ol, ul
     border: 0px;
     padding: 5px;
     color: #474747;
-    font-family: arial;
+    font-family: Verdana, arial;
     text-align: left;
     font-size: 14px;
     margin-bottom: 3px;
@@ -514,7 +505,7 @@ input.nll
 }
 .nls
 {
-    font-family: arial;
+    font-family: Verdana, arial;
     font-size: 14px;
     padding: 3px;
     margin-left: 0px;
@@ -522,7 +513,7 @@ input.nll
 
 .nlsH
 {
-    font-family: Arial;
+    font-family: Verdana, Arial;
     font-size: 18px;
     color: #002700;
     padding: 0px;
@@ -532,7 +523,7 @@ input.nll
 }
 .nlsHl
 {
-    font-family: Arial;
+    font-family: Verdana, Arial;
     font-size: 18px;
     color: #002700;
     padding: 7px;
@@ -548,7 +539,7 @@ input.nll
 
 .nlsStatic
 {
-    font-family: Arial;
+    font-family: Verdana, Arial;
     font-size: 15px;
     color: #555555;
     padding: 3px;
@@ -567,9 +558,14 @@ input.nls
     margin-bottom: 3px;
     margin-left: 5px;
 }
+input.nlss
+{
+    margin-bottom: 3px;
+    margin-left: 5px;
+}
 .nlsCentre
 {
-    font-family: arial;
+    font-family: Verdana, Arial;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
@@ -580,7 +576,7 @@ input.nls
     border: 1px solid #c7c7c7;
     height: 25px;
     color: #474747;
-    font-family: arial;
+    font-family: Verdana, arial;
     text-align: left;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -589,8 +585,67 @@ input.nls
 }
 .nlsN
 {
-    font-family: arial;
+    font-family: Verdana, arial;
     font-size: 14px;
+}
+.citCase
+{
+    font-size: 13px;
+    font-weight:bold;
+    text-align:center;
+    width:100% !important
+}
+.citCase td
+{
+   padding:5px;
+}
+.citCase .parties
+{
+    color:Green;
+}
+.citCase th
+{
+    text-decoration:underline;
+    color:Green;
+    padding:5px;
+}
+.citation
+{
+    border:2px solid #dcdcdc;
+    font-size: 12px;
+    font-weight:bold;
+    width:50% !important;
+    text-align:center;
+}
+.citation a
+{
+    color: green;
+}
+.citation a:hover
+{
+    text-decoration:underline;
+}
+.citation a:visited,a:active
+{
+    color: green;
+}
+.citCon
+{
+    width:100% !important
+}
+.citation tr th
+{
+    background-color:#f0f0f0;
+    padding:6px 10px 6px 10px;
+}
+.citation tr td
+{
+    padding:6px 10px 6px 10px;
+    border:2px solid #dcdcdc; 
+}
+.citation tr td span
+{
+    color:Gray;
 }
 .nbs
 {
@@ -720,7 +775,7 @@ input.nls
 
 .doc1 table
 {
-    width: 650px !important;
+    width: 650px;
 }
 .doc1 table tr td
 {
@@ -734,7 +789,7 @@ input.nls
 
 .doc2 table
 {
-    width: 850px !important;
+    width: 850px;
     line-height: 1.2em;
 }
 .doc2 table tr td
@@ -751,7 +806,7 @@ input.nls
 {
     color: #333;
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Verdana,Arial, Helvetica, sans-serif;
     font-size: 12px;
     display: block;
     padding-top: 10px;
@@ -816,7 +871,7 @@ input.nls
 }
 .rss-item
 {
-    font-family: Arial, arial, sans-serif;
+    font-family: Verdana, Arial, arial, sans-serif;
     line-height: 1.25;
     font-size: 11px;
 }
@@ -984,7 +1039,7 @@ li.rss-item
 }
 .whnew
 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 11px;
     font-weight: bold;
     color: #000000;

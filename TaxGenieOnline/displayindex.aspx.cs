@@ -131,17 +131,14 @@ namespace TaxGenieOnline
 
             #region Caselaws
 
-            else if (subcategory == "Case Laws")
+            else if (subcategory == "Case Laws" || subcategory == "Case")
             {
 
                 lblCL.Text = category+"&nbsp;Case Laws";
 
-                ltlCL.Text += "<table style='background-color:#f1f1f1; width:100%;  border:1px solid #dcdcdc; align:center; font:normal 11px arial'>";
-                ltlCL.Text += "<tr><td align='center' style='background-color:gray; font-size:10px;'>Citation of Year&nbsp;" + year + "</td></tr>";
-                ltlCL.Text += "<tr>";
-                ltlCL.Text += "<td>";
+                ltlCL.Text += "<table class='citation'><tr><th align='center'>Citation of Year&nbsp;" + year + "</td></tr><tr><td align='center'>";
                 ltlCL.Text += caselawnum2 + "-" + caselawnum1 ;
-                ltlCL.Text += "&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>";
+                ltlCL.Text += "</td></tr></table><br/><br/>";
 
 
                 GetAllCaseLawsTableAdapter getall = new GetAllCaseLawsTableAdapter();
@@ -152,19 +149,13 @@ namespace TaxGenieOnline
                     ltlCLheadnotes.Text = string.Empty;
                     foreach (DataRow drcitation in dtgetall.Rows)
                     {
-                        string TGOLcitationnum = drcitation["TGOLCitation"].ToString();
-                        string APPELLANTParty = drcitation["APPELLANTParty"].ToString();
-                        string RESPONDENTParty = drcitation["RESPONDENTParty"].ToString();
-                        string HeadNotes = drcitation["HeadNotes"].ToString();
-                        string DateofDecision = drcitation["DateofDecision"].ToString().Trim();
+                        string TGOLcitationnum = drcitation["TGOLCitation"].ToString(), APPELLANTParty = drcitation["APPELLANTParty"].ToString(), RESPONDENTParty = drcitation["RESPONDENTParty"].ToString();
+                        string HeadNotes = drcitation["HeadNotes"].ToString(), DateofDecision =((System.DateTime)drcitation["DateofDecision"]).ToString("dd-MMMM-yyyy");
 
-                        ltlCLheadnotes.Text += "<table style='background-color:#f1f1f1; width:100%;  border:1px solid #dcdcdc; align:center; font:normal 11px arial'>";
-                        ltlCLheadnotes.Text += "<tr><td align='center' style='background-color:gray; font-size:10px;'><a href=shownotifications.aspx?citation=" + TGOLcitationnum + "&cat=" + category + "&subcat=" + subcategory+">" + TGOLcitationnum + "</a></td></tr>";
-                        ltlCLheadnotes.Text += "<tr><td>" + APPELLANTParty + " V/S " + RESPONDENTParty + " (Dated: " + DateofDecision + ")</td></tr>";
-                        ltlCLheadnotes.Text += "<br/><br/>";
-                        ltlCLheadnotes.Text += "<tr><td>" + HeadNotes + "</td></tr>";
-                        ltlCLheadnotes.Text += "</table>";
-
+                        ltlCLheadnotes.Text += "<table class='citation citCon'>";
+                        ltlCLheadnotes.Text += "<tr><td align='center'><a href=shownotifications.aspx?citation=" + TGOLcitationnum + "&cat=" + category + "&subcat=" + subcategory+">" + TGOLcitationnum + "</a></td></tr>";
+                        ltlCLheadnotes.Text += "<tr><td align='center'>" + APPELLANTParty + " <span>v/s</span> " + RESPONDENTParty + "<br/>(Dated:&nbsp;" + DateofDecision + ")</td></tr>";
+                        ltlCLheadnotes.Text += "<tr><td style='text-align:justify;font-weight:normal'>" + HeadNotes + "</td></tr></table><br/>";
                     }
                 }
 

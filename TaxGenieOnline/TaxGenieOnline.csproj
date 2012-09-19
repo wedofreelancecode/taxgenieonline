@@ -66,6 +66,7 @@
     <Content Include="admin\editnotifications.aspx" />
     <Content Include="admin\HomeContentEditor.aspx" />
     <Content Include="admin\WhatsNew.aspx" />
+    <Content Include="adSearch.aspx" />
     <Content Include="editprofile.aspx" />
     <Content Include="images\add1.jpg" />
     <Content Include="images\add2.jpg" />
@@ -231,6 +232,13 @@
     </Compile>
     <Compile Include="admin\WhatsNew.aspx.designer.cs">
       <DependentUpon>WhatsNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adSearch.aspx.cs">
+      <DependentUpon>adSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adSearch.aspx.designer.cs">
+      <DependentUpon>adSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contactus.aspx.cs">
       <DependentUpon>Contactus.aspx</DependentUpon>
@@ -409,13 +417,6 @@
     <Compile Include="ViewTaxUpdate.aspx.designer.cs">
       <DependentUpon>ViewTaxUpdate.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WHshow.aspx.cs">
       <DependentUpon>WHshow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -475,7 +476,6 @@
     <Content Include="stylesheets\stylesheet.css" />
     <Content Include="TaxGenie.master" />
     <Content Include="usercontrols\BreadCrumb.ascx" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Acrobat">

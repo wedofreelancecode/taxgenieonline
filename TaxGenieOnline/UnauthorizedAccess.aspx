@@ -21,13 +21,12 @@
                             <AnonymousTemplate>
                                 <asp:Login ID="Login1" runat="server" Width="100%" OnAuthenticate="Login1_Authenticate">
                                     <LayoutTemplate>
-                                        <table style="width: 100%">
                                             <tr>
                                                 <td style="text-align: right">
                                                     User Name:
                                                 </td>
                                                 <td>
-                                                    <asp:TextBox ID="UserName" runat="server" style="margin-bottom:5px;" CssClass="nll login"></asp:TextBox>
+                                                    <asp:TextBox ID="UserName" runat="server" style="margin-bottom:5px;" CssClass="una nll login"></asp:TextBox>
                                                     <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName"
                                                         ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                                 </td>
@@ -37,7 +36,7 @@
                                                     Password:
                                                 </td>
                                                 <td>
-                                                    <asp:TextBox ID="Password" runat="server" style="margin-bottom:5px;" TextMode="Password" CssClass="nll login"></asp:TextBox>
+                                                    <asp:TextBox ID="Password" runat="server" style="margin-bottom:5px;" TextMode="Password" CssClass="una nll login"></asp:TextBox>
                                                     <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password"
                                                         ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                                 </td>
@@ -46,7 +45,7 @@
                                                 <td>
                                                 </td>
                                                 <td align="center">
-                                                    <asp:Button ID="btnLogin" runat="server" CssClass="nbs fleft" CommandName="Login"
+                                                    <asp:Button ID="btnLogin" runat="server" CssClass="una nbs fleft" CommandName="Login"
                                                         ValidationGroup="Login1" />
                                                 </td>
                                             </tr>
@@ -84,4 +83,15 @@
             <img src="images/middle_box_bottom.png" width="501" height="6" alt="" />
         </div>
     </div>
+    <script type="text/javascript">
+        $(function () {
+            $("input.una[name*='UserName'], input.una[name*='Password']").keypress(function (event) {
+                var e = event || window.event;
+                if (e.charCode === 13) {
+                    $('.una').filter(":submit").click();
+                }
+            })
+        });
+    </script>
 </asp:Content>
+ 

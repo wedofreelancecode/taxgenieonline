@@ -330,32 +330,27 @@
                             <td style="width: 90%; text-align: left">
                                 <asp:TextBox ID="txtCtariffsubj" runat="server" TextMode="MultiLine" CssClass="nls"></asp:TextBox>
                             </td>
-                            <td>
-                            </td>
-                            <td>
-                            </td>
                         </tr>
                     </table>
                 </asp:Panel>
                 <asp:Panel ID="pnlSTCaselaws" Width="100%" runat="server">
                     <table width="100%" style="margin-top: 20px">
                         <tr>
-                            <td style="width: 100%;">
+                            <td style="width: 10%;text-align: right">
                                 <asp:Label ID="lblCLcitation" runat="server" Text="TGOL Citation" CssClass="nlsN"></asp:Label>
-                            
-                                <asp:TextBox ID="txtCLcitationyear" runat="server" CssClass="nls"></asp:TextBox>
+                            </td>
+                            <td  style="width: 90%">
+                                <asp:TextBox ID="txtCLcitationyear" runat="server" CssClass="nlss" Columns="5"></asp:TextBox>
                             
                                 <asp:Label ID="lbltgol" runat="server" Text="-TGOL-" CssClass="nlsN"></asp:Label>
                            
-                                <asp:TextBox ID="txtClNumber" runat="server" CssClass="nls"></asp:TextBox>
+                                <asp:TextBox ID="txtClNumber" runat="server" CssClass="nlss" Columns="5"></asp:TextBox>
                             
                                 <asp:Label ID="lblhypen" runat="server" Text="-" CssClass="nlsN"></asp:Label>
                            
-                                <asp:TextBox ID="txtCL" runat="server" CssClass="nls"></asp:TextBox>
+                                <asp:TextBox ID="txtCL" runat="server" CssClass="nlss" Columns="6"></asp:TextBox>
                             </td>
                         </tr>
-                        </table>
-                        <table width="100%" style="margin-top: 20px">
                         <tr>
                             <td style="width: 10%; text-align: right">
                                 <asp:Label ID="lblCLcourt" runat="server" Text="Court" CssClass="nlsN"></asp:Label>
@@ -414,8 +409,8 @@
                                 <asp:TextBox ID="txtCLdateofdec" runat="server" CssClass="nls"></asp:TextBox>
                                 <asp:Image ID="imgCal" runat="server" ImageUrl="~/images/c.jpg" style="height:15px;width:15px;"/>
                                 <span
-                                    style="font-size: smaller; color: Gray;">(MM-DD-YYYY)</span>
-                                <asp:CalendarExtender ID="cldate" runat="server" TargetControlID="txtCLdateofdec" PopupButtonID="imgCal">
+                                    style="font-size: smaller; color: Gray;">(DD-MM-YYYY)</span>
+                                <asp:CalendarExtender ID="cldate" runat="server" TargetControlID="txtCLdateofdec" PopupButtonID="imgCal" Format="dd-MM-yyyy">
                                 </asp:CalendarExtender>
                             </td>
                         </tr>
@@ -428,19 +423,24 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblheadnotes" runat="server" Text="HeadNotes" CssClass="nlsN"></asp:Label>
+                            <td colspan="2" style="text-align:center">
+                                <asp:Label ID="lblheadnotes" runat="server" Text="Head Notes" CssClass="nlsN" Font-Size="Large" Font-Bold="True"></asp:Label>
                             </td>
-                            <td style="width: 90%; text-align: left">
-                                <asp:Editor ID="edtCLheadnotes" runat="server" CssClass="hidden" />
+                            </tr>
+                            <tr>
+                            <td colspan="2">
+                                <asp:Editor ID="edtCLheadnotes" runat="server" CssClass="hidden" BorderWidth="1px" />
                             </td>
                         </tr>
+                        <tr><td>&nbsp;</td></tr>
                         <tr>
-                            <td style="width: 10%; text-align: right">
-                                <asp:Label ID="lblJcontent" runat="server" Text="Judgement" CssClass="nlsN"></asp:Label>
+                            <td style="text-align: center" colspan="2">
+                                <asp:Label ID="lblJcontent" runat="server" Text="Judgement" Font-Bold="true" Font-Size="Large" CssClass="nlsN"></asp:Label>
                             </td>
-                            <td style="width: 90%; text-align: left">
-                                <asp:Editor ID="edtCLcontent" runat="server" CssClass="hidden" />
+                            </tr>
+                            <tr>
+                            <td colspan="2">
+                                <asp:Editor ID="edtCLcontent" runat="server" CssClass="hidden" BorderWidth="1px" Height="400px" />
                             </td>
                         </tr>
                     </table>

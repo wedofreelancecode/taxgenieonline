@@ -11,6 +11,7 @@
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Circulars/Instructions" title="Circulars/Instructions"  description="sez"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Section/37B/Order" title="Section 37B Order"  description="drawback schedule"/>
       <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=CBEC/Manual" title="CBEC Manual"  description="CBEC Manual"/>
+      <siteMapNode url="index.aspx?cat=Central/Excise&amp;subcat=Case/Laws" title="Case Laws"  description="Case Laws"/>
     </siteMapNode>
 
     <siteMapNode url="" title="Customs">
@@ -23,6 +24,7 @@
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Circulars/Instructions" title="Circulars/Instructions"  description="Circulars/Instructions"/>
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=SEZ" title="SEZ"  description="SEZ"/>
       <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Drawback/Schedule" title="Drawback Schedule"  description="Drawback Schedule"/>
+      <siteMapNode url="index.aspx?cat=Customs&amp;subcat=Case/Laws" title="Case Laws"  description="Case Laws"/>
     </siteMapNode>
 
     <siteMapNode url="" title="Service Tax">

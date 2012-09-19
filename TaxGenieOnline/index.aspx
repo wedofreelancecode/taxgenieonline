@@ -507,8 +507,11 @@
                     MISCELLANEOUS PRODUCTS</asp:HyperLink><br />
                 <br />
             </asp:Panel>
-
+            <table width="100%">
+            <tr>
+            <td width="100%" align="center">
                <asp:Literal ID="ltlCaselwas" runat="server"></asp:Literal>
+            </td></tr></table>
             </div>
         </div>
     </div>

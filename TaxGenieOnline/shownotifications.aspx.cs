@@ -432,57 +432,19 @@ namespace TaxGenieOnline
                   if (dtgetdatabycitation.Rows.Count > 0)
                   {
 
-                      ltl.Text += "<table>";
-                      ltl.Text += "<tr><td style='width:920px' align='center';>" + citation + "</td></tr>";
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td style='width:920px'  align='center';>";
-                      ltl.Text += "IN THE " + dtgetdatabycitation.Rows[0]["Court"] + "</td></tr>";
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='center';>";
-                      ltl.Text += "Civil Appeal No. " + dtgetdatabycitation.Rows[0]["CaseNumber"] + "</td></tr>";
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='center';>";
-                      ltl.Text += dtgetdatabycitation.Rows[0]["APPELLANTParty"] + "</td></tr>";
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='center';>";
-                      ltl.Text += "V/S</td></tr>";
+                      ltl.Text += "<table class='citCase' width='100%'><tr><th width='100%' align='center'>" + citation.ToUpper() + "</th></tr><tr>";
+                      ltl.Text += "<td width='100%' align='center'>IN THE " + dtgetdatabycitation.Rows[0]["Court"].ToString().ToUpper() + "</td></tr><tr>";
+                      ltl.Text += "<td align='center'>Civil Appeal No. " + dtgetdatabycitation.Rows[0]["CaseNumber"] + "</td></tr><tr>";
+                      ltl.Text += "<td align='center' class='parties'>";
+                      ltl.Text += dtgetdatabycitation.Rows[0]["APPELLANTParty"].ToString().ToUpper() + "<br/>v/s<br/>";
+                      ltl.Text += dtgetdatabycitation.Rows[0]["RESPONDENTParty"].ToString().ToUpper() + "</td></tr><tr><td  align='left'>";
+                      ltl.Text += dtgetdatabycitation.Rows[0]["JudgesName"] + "</td></tr><tr><td  align='right'>";
+                      ltl.Text +="Dated:&nbsp;" +((DateTime)dtgetdatabycitation.Rows[0]["DateofDecision"]).ToString("MMMM dd, yyyy") + "</td></tr><tr><td  align='justify'>";
+                      ltl.Text += dtgetdatabycitation.Rows[0]["HeadNotes"] + "</td></tr><tr><td>&nbsp;</td></tr><tr><td  align='center'>JUDGEMENT</td></tr>";
 
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='center';>";
-                      ltl.Text += dtgetdatabycitation.Rows[0]["RESPONDENTParty"] + "</td></tr>";
-
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='left';>";
-                      ltl.Text += dtgetdatabycitation.Rows[0]["JudgesName"] + "</td></tr>";
-
-
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='right';>";
-                      ltl.Text +="Dated :" +dtgetdatabycitation.Rows[0]["DateofDecision"] + "</td></tr>";
-
-
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='justify';>";
-                      ltl.Text += dtgetdatabycitation.Rows[0]["HeadNotes"]+"</td></tr>";
-
-
-
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='center';>";
-                      ltl.Text += "JUDGEMENT</td></tr>";
-
-
-
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='left';>";
-                      ltl.Text += "Per:" + dtgetdatabycitation.Rows[0]["JudgementinFavourof"] + "</td></tr>";
-
-
-                      ltl.Text += "<tr>";
-                      ltl.Text += "<td  align='justify';>";
+                      ltl.Text += "<tr><td align='left'>Per:" + dtgetdatabycitation.Rows[0]["JudgementinFavourof"] + "</td></tr><tr><td style='font-weight:normal' align='justify'>";
 
                       ltl.Text += dtgetdatabycitation.Rows[0]["JUDGEMENTContent"] + "</td></tr></table>";
-
 
                   }
 

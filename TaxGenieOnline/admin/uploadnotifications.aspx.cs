@@ -56,9 +56,7 @@ namespace TaxGenieOnline.admin
                 pnlITIncomeWealthAct.Visible = false;
                 pnpITFinanceAct.Visible = false;
                 pnlITCirculars.Visible = false;
-
-
-
+                cldate.EndDate = DateTime.Now;
             }
             editnotifications epage = Context.Handler as editnotifications;
             if (epage != null)

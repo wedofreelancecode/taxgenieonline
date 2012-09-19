@@ -213,7 +213,7 @@
             </div>
             <!-- end of menu -->
             <asp:ImageButton ID="imgADSrc" runat="server" CssClass="fright admg" 
-                ImageUrl="~/images/adSearch_TG.png"/>
+                ImageUrl="~/images/adSearch_TG.png" PostBackUrl="~/adSearch.aspx"/>
             <div class="srchhldr fright">
                 <input type="text" name="txtSearch" id="txtSearch" runat="server" class="srch" />
                 <asp:ImageButton ID="imgSearch" runat="server" CssClass="mg" ImageUrl="~/images/mg.jpg"
@@ -234,7 +234,7 @@
                         <asp:Repeater ID="dlNewsFlash" runat="server">
                             <ItemTemplate>
                                 <%# Eval("Newsflash")%>
-                                &nbsp; <sub class="star">*</sub> &nbsp;
+                                &nbsp; <img src="images/slogo.png" /> &nbsp;
                             </ItemTemplate>
                         </asp:Repeater>
                     </div>

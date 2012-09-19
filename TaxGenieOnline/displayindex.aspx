@@ -15,9 +15,9 @@
                 <div align="right">
                     <a class="back" href='javascript:window.history.back();'></a>
                 </div>
-                <div class="newshldr" style="padding-top: 15px; padding-bottom: 10px; margin-left: 30px;
+                <div class="newshldr" style="padding-top: 15px; padding-bottom: 10px;
                     min-height: 200px">
-                    <div class="doc2" align="left" style="margin-left: 30px;">
+                    <div class="doc2" align="center">
                         <asp:Label ID="lblHeader" runat="server" ForeColor="Blue" Font-Size="1.4em"></asp:Label>
                         <asp:GridView ID="gvindex" runat="server" AutoGenerateColumns="False" OnRowCommand="gvindex_RowCommand"
                             CssClass="sGrid" AlternatingRowStyle-CssClass="alt">
@@ -178,9 +178,23 @@
                             </Columns>
                         </asp:GridView>
                         <asp:Literal ID="ltlIndex" runat="server"></asp:Literal>
-                        <asp:Label ID="lblCL" runat="server"></asp:Label>
-                         <asp:Literal ID="ltlCL" runat="server"></asp:Literal>
-                          <asp:Literal ID="ltlCLheadnotes" runat="server"></asp:Literal>
+                        <table width="100%">
+                            <tr>
+                                <td width="100%" align="center">
+                                    <asp:Label Font-Bold="true" ID="lblCL" runat="server"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" align="center">
+                                    <asp:Literal ID="ltlCL" runat="server"></asp:Literal>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%">
+                                    <asp:Literal ID="ltlCLheadnotes" runat="server"></asp:Literal>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
