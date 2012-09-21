@@ -70,6 +70,8 @@
     <Content Include="editprofile.aspx" />
     <Content Include="images\add1.jpg" />
     <Content Include="images\add2.jpg" />
+    <Content Include="images\bc_bg.png" />
+    <Content Include="images\bc_separator.png" />
     <Content Include="images\blue.jpg" />
     <Content Include="images\c.jpg" />
     <Content Include="images\cartoon.jpg" />

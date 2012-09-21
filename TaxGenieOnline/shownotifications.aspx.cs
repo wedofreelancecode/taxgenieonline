@@ -432,7 +432,7 @@ namespace TaxGenieOnline
                   if (dtgetdatabycitation.Rows.Count > 0)
                   {
 
-                      ltl.Text += "<table class='citCase' width='100%'><tr><th width='100%' align='center'>" + citation.ToUpper() + "</th></tr><tr>";
+                      ltl.Text += "<table class='citCase' width='100%'  align='center'><tr><th width='100%' align='center'>" + citation.ToUpper() + "</th></tr><tr>";
                       ltl.Text += "<td width='100%' align='center'>IN THE " + dtgetdatabycitation.Rows[0]["Court"].ToString().ToUpper() + "</td></tr><tr>";
                       ltl.Text += "<td align='center'>Civil Appeal No. " + dtgetdatabycitation.Rows[0]["CaseNumber"] + "</td></tr><tr>";
                       ltl.Text += "<td align='center' class='parties'>";

@@ -780,195 +780,227 @@ namespace TaxGenieOnline.admin
         {
             GridView gv = sender as GridView;
             GridViewRow row = gv.Rows[e.RowIndex];
-            int? id = Int32.Parse(row.Cells[2].Text);
+           // int? id = Int32.Parse(row.Cells[2].Text);
             if (ddlsubcategory.SelectedValue.Equals("Acts") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
+                int? id = Int32.Parse(row.Cells[2].Text);
                 CEActsTableAdapter index = new CEActsTableAdapter();
                 index.CEDeleteById(id);
                 LoadCEActs(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Rules") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
+                int? id = Int32.Parse(row.Cells[2].Text);
                 CEActsTableAdapter index = new CEActsTableAdapter();
                 index.CEDeleteById(id);
                 LoadCEActs(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Forms") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
+                int? id = Int32.Parse(row.Cells[2].Text);
                 CEActsTableAdapter index = new CEActsTableAdapter();
                 index.CEDeleteById(id);
                 LoadCEActs(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Section 37B Order") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
+                int? id = Int32.Parse(row.Cells[2].Text);
                 CEActsTableAdapter index = new CEActsTableAdapter();
                 index.CEDeleteById(id);
                 LoadCEActs(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
+                int? id = Int32.Parse(row.Cells[2].Text);
                 CEActsTableAdapter index = new CEActsTableAdapter();
                 index.CEDeleteById(id);
                 LoadCEActs(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 CentralExcise_Tariff_GetAllTableAdapter index = new CentralExcise_Tariff_GetAllTableAdapter();
                 index.DeleteTariffById(id);
                 LoadCETariff(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 CECNotification_GetAllTableAdapter index = new CECNotification_GetAllTableAdapter();
                 index.DeleteCENotificationById(id);
                 LoadCENotification(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
+                int? id = Int32.Parse(row.Cells[5].Text);
                 Circulars_Info_ByyearTableAdapter index = new Circulars_Info_ByyearTableAdapter();
                 index.DeleteCEcircularsById(id);
                 LoadCECircularsInstructions(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Acts") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[3].Text);
                 ActsTableAdapter index = new ActsTableAdapter();
                 index.DeleteCustomsById(id);
                 LoadCustoms(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Rules") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[3].Text);
                 ActsTableAdapter index = new ActsTableAdapter();
                 index.DeleteCustomsById(id);
                 LoadCustoms(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Forms") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[3].Text);
                 ActsTableAdapter index = new ActsTableAdapter();
                 index.DeleteCustomsById(id);
                 LoadCustoms(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[3].Text);
                 ActsTableAdapter index = new ActsTableAdapter();
                 index.DeleteCustomsById(id);
                 LoadCustoms(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Regulations") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[3].Text);
                 ActsTableAdapter index = new ActsTableAdapter();
                 index.DeleteCustomsById(id);
                 LoadCustoms(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Tariff 2012-13") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 Custom_Tariff_GetAllTableAdapter index = new Custom_Tariff_GetAllTableAdapter();
                 index.DeleteCustomTariffById(id);
                 LoadCustomsTariff(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 CECNotification_GetAllTableAdapter index = new CECNotification_GetAllTableAdapter();
                 index.DeleteCENotificationById(id);
                 LoadCENotification(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[5].Text);
                 Circulars_Info_ByyearTableAdapter index = new Circulars_Info_ByyearTableAdapter();
                 index.DeleteCEcircularsById(id);
                 LoadCECircularsInstructions(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("SEZ") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[3].Text);
                 ActsTableAdapter index = new ActsTableAdapter();
                 index.DeleteCustomsById(id);
                 LoadCustoms(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Drawback Schedule") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
+                int? id = Int32.Parse(row.Cells[3].Text);
                 ActsTableAdapter index = new ActsTableAdapter();
                 index.DeleteCustomsById(id);
                 LoadCustoms(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Act 1994") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 ServiceTax_GetAllTableAdapter index = new ServiceTax_GetAllTableAdapter();
                 index.DeleteSTById(id);
                 LoadST(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("ST Rules") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 ServiceTax_GetAllTableAdapter index = new ServiceTax_GetAllTableAdapter();
                 index.DeleteSTById(id);
                 LoadST(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Forms and Registers") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 ServiceTax_GetAllTableAdapter index = new ServiceTax_GetAllTableAdapter();
                 index.DeleteSTById(id);
                 LoadST(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Accounting Codes for new services") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 ServiceTax_GetAllTableAdapter index = new ServiceTax_GetAllTableAdapter();
                 index.DeleteSTById(id);
                 LoadST(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 STCaselaws_GetAllTableAdapter index = new STCaselaws_GetAllTableAdapter();
                 index.DeleteSTCaseLawsById(id);
                 LoadSTCaseLaws(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 STN_GetAllTableAdapter index = new STN_GetAllTableAdapter();
                 index.DeleteSTNById(id);
                 LoadSTNotification(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
+                int? id = Int32.Parse(row.Cells[5].Text);
                 Circulars_Info_ByyearTableAdapter index = new Circulars_Info_ByyearTableAdapter();
                 index.DeleteCEcircularsById(id);
                 LoadCECircularsInstructions(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Acts") && ddlcatagory.SelectedValue.Equals("Income Tax"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 IncomeTaxActs_SelectAllTableAdapter index = new IncomeTaxActs_SelectAllTableAdapter();
                 index.DeleteITActsById(id);
                 LoadITActs(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Rules") && ddlcatagory.SelectedValue.Equals("Income Tax"))
             {
+                int? id = Int32.Parse(row.Cells[9].Text);
                 IncomeTaxRules_SelectAllTableAdapter index = new IncomeTaxRules_SelectAllTableAdapter();
                 index.DeleteITRulesById(id);
                 LoadITRules(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Circulars") && ddlcatagory.SelectedValue.Equals("Income Tax"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 IncomeTaxCircularsNotification_SelectAllTableAdapter index = new IncomeTaxCircularsNotification_SelectAllTableAdapter();
                 index.DeleteITCNById(id);
                 LoadITCN(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Income Tax"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 IncomeTaxCircularsNotification_SelectAllTableAdapter index = new IncomeTaxCircularsNotification_SelectAllTableAdapter();
                 index.DeleteITCNById(id);
                 LoadITCN(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("FTP") && ddlcatagory.SelectedValue.Equals("DGFT"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 DGFT_GetAllTableAdapter index = new DGFT_GetAllTableAdapter();
                 index.DeleteDGFTById(id);
                 LoadDGFT(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("FTDR Notifications") && ddlcatagory.SelectedValue.Equals("DGFT"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 DGFT_GetAllTableAdapter index = new DGFT_GetAllTableAdapter();
                 index.DeleteDGFTById(id);
                 LoadDGFT(editGrid);
             }
             if (ddlsubcategory.SelectedValue.Equals("public notices") && ddlcatagory.SelectedValue.Equals("DGFT"))
             {
+                int? id = Int32.Parse(row.Cells[1].Text);
                 DGFTpublicnotices_GETALLTableAdapter index = new DGFTpublicnotices_GETALLTableAdapter();
                 index.DeleteDgftPNById(id);
                 LoadDGFTPN(editGrid);

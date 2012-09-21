@@ -173,7 +173,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="CaseLaws.xsc">
       <DependentUpon>CaseLaws.xsd</DependentUpon>
     </None>

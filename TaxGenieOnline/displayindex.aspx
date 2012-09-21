@@ -8,16 +8,15 @@
         <div class="contentbox">
             <div class="contentboxmiddle1 shdw shd">
                 <div>
-                    <asp:SiteMapPath ID="sitemap" runat="server" ParentLevelsDisplayed="2" Font-Bold="true"
-                        Font-Size="Small" ForeColor="Black">
+                    <asp:SiteMapPath ID="sitemap" runat="server" ParentLevelsDisplayed="4" Font-Bold="true"
+                        EnableViewState="true" Font-Size="Small" ForeColor="Black">
                     </asp:SiteMapPath>
                 </div>
                 <div align="right">
                     <a class="back" href='javascript:window.history.back();'></a>
                 </div>
-                <div class="newshldr" style="padding-top: 15px; padding-bottom: 10px;
-                    min-height: 200px">
-                    <div class="doc2" align="center">
+                <div class="newshldr" style="padding-top: 15px; padding-bottom: 10px; min-height: 200px">
+                    <div class="doc" align="center">
                         <asp:Label ID="lblHeader" runat="server" ForeColor="Blue" Font-Size="1.4em"></asp:Label>
                         <asp:GridView ID="gvindex" runat="server" AutoGenerateColumns="False" OnRowCommand="gvindex_RowCommand"
                             CssClass="sGrid" AlternatingRowStyle-CssClass="alt">
@@ -35,7 +34,7 @@
                         <asp:GridView ID="gvindexcircular" runat="server" AutoGenerateColumns="False" OnRowCommand="gvindexcircular_RowCommand"
                             EnableModelValidation="True" CssClass="mGrid" AlternatingRowStyle-CssClass="alt">
                             <Columns>
-                                <asp:TemplateField HeaderText="CircularNumber" HeaderStyle-Font-Bold="true">
+                                <asp:TemplateField HeaderText="Circular Number" HeaderStyle-Font-Bold="true">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="lnkCircularNumber" runat="server" Text='<%#Eval("CircularNumber") %>'
                                             CommandName="number"></asp:LinkButton>
@@ -48,7 +47,7 @@
                                     </ItemTemplate>
                                     <HeaderStyle HorizontalAlign="Left" Font-Bold="True" Width="100px"></HeaderStyle>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="FileNumber" HeaderStyle-Font-Bold="true">
+                                <asp:TemplateField HeaderText="File Number" HeaderStyle-Font-Bold="true">
                                     <ItemTemplate>
                                         <asp:Label ID="lblcircularfileno" runat="server" Text='<%#Eval("FileNumber") %>'></asp:Label>
                                     </ItemTemplate>
@@ -66,7 +65,7 @@
                             OnRowCommand="gvindexinstructions_RowCommand" EnableModelValidation="True" CssClass="mGrid"
                             AlternatingRowStyle-CssClass="alt">
                             <Columns>
-                                <asp:TemplateField HeaderText="FileNumber" HeaderStyle-Font-Bold="true">
+                                <asp:TemplateField HeaderText="File Number" HeaderStyle-Font-Bold="true">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="lnkFileNumber" runat="server" Text='<%#Eval("FileNumber") %>'
                                             CommandName="fnumber"></asp:LinkButton>
@@ -103,7 +102,7 @@
                             OnRowCommand="gvDGFTpublicnotice_RowCommand" EnableModelValidation="True" CssClass="mGrid"
                             AlternatingRowStyle-CssClass="alt">
                             <Columns>
-                                <asp:TemplateField HeaderText="Public Notice No." HeaderStyle-Font-Bold="true">
+                                <asp:TemplateField HeaderText="Public Notice Number" HeaderStyle-Font-Bold="true">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="lnkNoticenum" runat="server" Text='<%#Eval("NoticeNumber") %>'
                                             CommandName="number"></asp:LinkButton>
@@ -130,7 +129,7 @@
                             OnRowCommand="gvCECNotifications_RowCommand" EnableModelValidation="True" CssClass="mGrid"
                             AlternatingRowStyle-CssClass="alt">
                             <Columns>
-                                <asp:TemplateField HeaderText="Notification No " HeaderStyle-Font-Bold="true">
+                                <asp:TemplateField HeaderText="Notification Number " HeaderStyle-Font-Bold="true">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="lnkNoticenum" runat="server" Text='<%#Eval("FileNumber") %>'
                                             CommandName="Notificationnum"></asp:LinkButton>
@@ -155,7 +154,7 @@
                         <asp:GridView ID="gvSTNotification" runat="server" AutoGenerateColumns="False" OnRowCommand="gvSTNotification_RowCommand"
                             EnableModelValidation="True" CssClass="mGrid" AlternatingRowStyle-CssClass="alt">
                             <Columns>
-                                <asp:TemplateField HeaderText="Notification No " HeaderStyle-Font-Bold="true">
+                                <asp:TemplateField HeaderText="Notification Number" HeaderStyle-Font-Bold="true">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="lnkNoticenum" runat="server" Text='<%#Eval("FileNumber") %>'
                                             CommandName="Notificationnum"></asp:LinkButton>

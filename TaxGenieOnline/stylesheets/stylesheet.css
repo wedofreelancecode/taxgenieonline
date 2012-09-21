@@ -20,7 +20,7 @@ img
 }
 input, select, textarea
 {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
 }
 
@@ -585,11 +585,11 @@ input.nlss
 }
 .nlsN
 {
-    font-family: Verdana, arial;
+    font-family: Arial;
     font-size: 14px;
 }
 .citCase
-{
+{ font-family:Arial;
     font-size: 13px;
     font-weight:bold;
     text-align:center;
@@ -769,22 +769,26 @@ input.nlss
 }
 .doc table
 {
-    width: 975px !important;
+    width:850px !important;
     margin: 0;
 }
 
 .doc1 table
 {
-    width: 650px;
+    width: 650px !important;
 }
 .doc1 table tr td
 {
-    margin-right: 25px;
-    line-height: 1.2em;
+    margin-right: 25px !important;
+    line-height: 1.2em !important;
+    font-family:Arial !important;
+    text-align:justify !important;
 }
 .doc1 table td p span
 {
     width: 5px !important;
+    font-family:Arial !important;
+  
 }
 
 .doc2 table
@@ -1030,7 +1034,7 @@ li.rss-item
 {
     background-color: #fff;
     padding: 0px 6px 0px 4px;
-    height: 80px;
+    height: 76px;
 }
 .txtwrap
 {

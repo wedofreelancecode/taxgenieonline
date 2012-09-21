@@ -13,22 +13,31 @@
         } 
 </script> --%>
     <div class="cl2 fleft">
-        <div  style="background-color:#f1f1f1; padding:6px 10px 6px 10px; border:1px solid #dcdcdc; font:normal 11px arial"> 
-        <asp:SiteMapPath ID="sitemap" runat="server" ParentLevelsDisplayed="3">
-        </asp:SiteMapPath></div>
+        <asp:SiteMapPath ID="sitemap" runat="server" ParentLevelsDisplayed="3" EnableViewState="true"
+            Font-Size="11px" ForeColor="#21759B">
+        </asp:SiteMapPath>
         <asp:Label ID="sub" runat="server" />
-        <div align="right">
-            <a class="back" href='javascript:window.history.back();'></a>
-        </div>
+        <br />
+        <br />
         <div class="newshldr" style="padding-top: 5px; padding-bottom: 10px; min-height: 200px">
-            <div align="left" style="font:normal 12px Arial;">
+            <div align="left" style="font: normal 12px Arial; border: 2px solid #ccc; padding: 5px 10px 10px 15px;">
+                <div align="right">
+                    <a class="back" href='javascript:window.history.back();'></a>
+                </div>
                 <asp:DataList ID="dlIndex" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                     CaptionAlign="Top" OnItemCommand="dlIndex_ItemCommand" Width="100%">
                     <ItemTemplate>
-                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                        &nbsp;
-                        <asp:LinkButton ID="lnknames" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Index"></asp:LinkButton>
-                        <br />
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                    &nbsp;&nbsp;
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="lnknames" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Index"></asp:LinkButton>
+                                </td>
+                            </tr>
+                        </table>
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
@@ -38,11 +47,18 @@
                     <asp:DataList ID="dlAgreements" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlAgreements_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkAgreements" runat="server" Text='<%# Eval("IndexName") %>'
-                                CommandName="Agreements"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkAgreements" runat="server" Text='<%# Eval("IndexName") %>'
+                                            CommandName="Agreements"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -50,10 +66,17 @@
                     <asp:DataList ID="dlBaggage" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlBaggage_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkBaggage" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Baggage"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp; &nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkBaggage" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Baggage"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -62,11 +85,18 @@
                     <asp:DataList ID="dlCustomDrawBack" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlCustomDrawBack_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkCustomDrawBack" runat="server" Text='<%# Eval("IndexName") %>'
-                                CommandName="CustomDrawBack"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp; &nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkCustomDrawBack" runat="server" Text='<%# Eval("IndexName") %>'
+                                            CommandName="CustomDrawBack"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -75,11 +105,18 @@
                     <asp:DataList ID="dlCustomValuation" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlCustomValuation_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkCustomValuation" runat="server" Text='<%# Eval("IndexName") %>'
-                                CommandName="CustomValuation"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkCustomValuation" runat="server" Text='<%# Eval("IndexName") %>'
+                                            CommandName="CustomValuation"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -87,10 +124,17 @@
                     <asp:DataList ID="dlOthers" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlOthers_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkOthers" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Others"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkOthers" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Others"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -104,10 +148,17 @@
                     <asp:DataList ID="dlRefunds" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlRefunds_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkRefunds" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Refunds"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkRefunds" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Refunds"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -115,10 +166,18 @@
                     <asp:DataList ID="dlAppeals" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlAppeals_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkAppeals" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Appeals"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp; &nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkAppeals" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Appeals"></asp:LinkButton>
+                                        <
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -126,10 +185,17 @@
                     <asp:DataList ID="dlDrawback" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlDrawback_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkDrawback" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Drawback"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkDrawback" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Drawback"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -138,11 +204,18 @@
                     <asp:DataList ID="dlOthersApplicationForms" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlOthersApplicationForms_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkOthersApplicationForms" runat="server" Text='<%# Eval("IndexName") %>'
-                                CommandName="OthersApplicationForms"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkOthersApplicationForms" runat="server" Text='<%# Eval("IndexName") %>'
+                                            CommandName="OthersApplicationForms"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -174,10 +247,17 @@
                     <asp:DataList ID="dlBonds" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlBonds_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkBonds" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Bonds"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp; &nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkBonds" runat="server" Text='<%# Eval("IndexName") %>' CommandName="Bonds"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -186,11 +266,18 @@
                     <asp:DataList ID="dlSettlementCommission" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                         OnItemCommand="dlSettlementCommission_ItemCommand" CaptionAlign="Top">
                         <ItemTemplate>
-                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                            &nbsp;
-                            <asp:LinkButton ID="lnkSettlementCommission" runat="server" Text='<%# Eval("IndexName") %>'
-                                CommandName="SettlementCommission"></asp:LinkButton>
-                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                        &nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        <asp:LinkButton ID="lnkSettlementCommission" runat="server" Text='<%# Eval("IndexName") %>'
+                                            CommandName="SettlementCommission"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
@@ -198,7 +285,7 @@
                 <%--Custom SEZ--%>
                 <asp:GridView ID="gvSEZ" runat="server" AutoGenerateColumns="false" OnRowCommand="gvSEZ_RowCommand">
                     <Columns>
-                        <asp:TemplateField HeaderText="Notification No.">
+                        <asp:TemplateField HeaderText="Notification Number">
                             <HeaderStyle BackColor="#D9D9D9" ForeColor="#002700" Height="15px" CssClass="nlsH" />
                             <ItemTemplate>
                                 <asp:LinkButton ID="lnkSEZ" runat="server" Text='<%# Eval("IndexName") %>' CommandName="SEZ"></asp:LinkButton>
@@ -239,11 +326,18 @@
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                                &nbsp;
-                                <asp:LinkButton ID="lnkStacts" runat="server" Text='<%# Eval("IndexName") %>' CommandName="STacts"
-                                    CommandArgument='<%# Eval("IsDoc") %>'></asp:LinkButton>
-                                <br />
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                            &nbsp;&nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:LinkButton ID="lnkStacts" runat="server" Text='<%# Eval("IndexName") %>' CommandName="STacts"
+                                                CommandArgument='<%# Eval("IsDoc") %>'></asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                </table>
                                 <br />
                             </ItemTemplate>
                         </asp:TemplateField>
@@ -255,11 +349,18 @@
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                                &nbsp;
-                                <asp:LinkButton ID="lnkStrules" runat="server" Text='<%# Eval("IndexName") %>' CommandName="STrules"
-                                    CommandArgument='<%# Eval("IsDoc") %>'></asp:LinkButton>
-                                <br />
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                            &nbsp;&nbsp;
+                                        </td>
+                                        <td>
+                                            <asp:LinkButton ID="lnkStrules" runat="server" Text='<%# Eval("IndexName") %>' CommandName="STrules"
+                                                CommandArgument='<%# Eval("IsDoc") %>'></asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                </table>
                                 <br />
                             </ItemTemplate>
                         </asp:TemplateField>
@@ -269,11 +370,18 @@
                 <asp:DataList ID="dtstaccodes" runat="server" ShowHeader="false" RepeatDirection="Vertical"
                     CaptionAlign="Top" OnItemCommand="dtstaccodes_ItemCommand">
                     <ItemTemplate>
-                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                        &nbsp;
-                        <asp:LinkButton ID="lnkstaccodes" runat="server" Text='<%# Eval("IndexName") %>'
-                            CommandName="accodes"></asp:LinkButton>
-                        <br />
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                    &nbsp;&nbsp;
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="lnkstaccodes" runat="server" Text='<%# Eval("IndexName") %>'
+                                        CommandName="accodes"></asp:LinkButton>
+                                </td>
+                            </tr>
+                        </table>
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
@@ -324,11 +432,18 @@
                     CaptionAlign="Top" OnItemCommand="dlSTCaseLaws_ItemCommand">
                     <%--OnItemCommand="dlSTCaseLaws_ItemCommand"--%>
                     <ItemTemplate>
-                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                        &nbsp;
-                        <asp:LinkButton ID="lnkSTCaseLaws" runat="server" Text='<%# Eval("IndexName") %>'
-                            CommandName="STCaseLaws"></asp:LinkButton>
-                        <br />
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                    &nbsp;&nbsp;
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="lnkSTCaseLaws" runat="server" Text='<%# Eval("IndexName") %>'
+                                        CommandName="STCaseLaws"></asp:LinkButton>
+                                </td>
+                            </tr>
+                        </table>
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
@@ -351,10 +466,17 @@
                     CaptionAlign="Top" OnItemCommand="dlDGFT_ItemCommand">
                     <%--OnItemCommand="dlDGFT_ItemCommand"--%>
                     <ItemTemplate>
-                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                        &nbsp;
-                        <asp:LinkButton ID="lnkDGFT" runat="server" Text='<%# Eval("IndexName") %>' CommandName="DGFT"></asp:LinkButton>
-                        <br />
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                    &nbsp;&nbsp;
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="lnkDGFT" runat="server" Text='<%# Eval("IndexName") %>' CommandName="DGFT"></asp:LinkButton>
+                                </td>
+                            </tr>
+                        </table>
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
@@ -362,23 +484,34 @@
                 <asp:DataList ID="dlITActs" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                     Width="100%" OnItemCommand="dlITActs_ItemCommand">
                     <ItemTemplate>
-                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
-                        &nbsp;
-                        <asp:Label ID="lblSectionNo" runat="server" Text='<%# Eval("SectionNo") %>' CssClass="nls"></asp:Label>
-                        <asp:LinkButton ID="lnkSectionHeading" runat="server" Text='<%# Eval("IndexName") %>'
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblSectionNo" runat="server" Text='<%# Eval("SectionNo") %>' CssClass="nls"></asp:Label>
+                                </td>
+                                <td>
+                                 <asp:LinkButton ID="lnkSectionHeading" runat="server" Text='<%# Eval("IndexName") %>'
                             CommandName="ITActs" CommandArgument='<%# Eval("IsDoc") %>'></asp:LinkButton>
-                        <br />
+                                </td>
+                            </tr>
+                        </table>
+                       
+                       
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
-                <div align="center" >
+                <div align="center">
                     <table class="mtable">
                         <tr>
-                            <td style="vertical-align:top">
+                            <td style="vertical-align: top">
                                 <asp:DataList ID="dltariff" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dltariff_ItemCommand">
                                     <HeaderTemplate>
-                                        <span style="font-weight: bold">Tariff</span></HeaderTemplate>
+                                        <span style="background: #D9D9D9; text-align: center;" class="nlsH">Tariff</span></HeaderTemplate>
                                     <ItemTemplate>
                                         <asp:LinkButton ID="lnktariff" runat="server" Text='<%# Eval("Year") %>' CommandName="TariffIndex"></asp:LinkButton>
                                         <br />
@@ -386,50 +519,54 @@
                                     </ItemTemplate>
                                 </asp:DataList>
                             </td>
-                            <td style="vertical-align:top">
+                            <td style="vertical-align: top">
                                 <asp:DataList ID="dlnontariff" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dlnontariff_ItemCommand">
                                     <HeaderTemplate>
-                                        <span style="font-weight: bold">Non-Tariff</span></HeaderTemplate>
+                                        <span style="background: #D9D9D9; text-align: center;" class="nlsH">Non-Tariff</span></HeaderTemplate>
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="lnknontariff" runat="server" Text='<%# Eval("Year") %>' CommandName="NonTariffIndex"></asp:LinkButton>
+                                        <span style="text-align: center;">
+                                            <asp:LinkButton ID="lnknontariff" runat="server" Text='<%# Eval("Year") %>' CommandName="NonTariffIndex"></asp:LinkButton></span>
                                         <br />
                                         <br />
                                     </ItemTemplate>
                                 </asp:DataList>
                             </td>
-                            <td style="vertical-align:top">
+                            <td style="vertical-align: top">
                                 <asp:DataList ID="dlsafeguards" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dlsafeguards_ItemCommand">
                                     <HeaderTemplate>
-                                        <span style="font-weight: bold">Safeguards</span></HeaderTemplate>
+                                        <span style="background: #D9D9D9; text-align: center;" class="nlsH">Safeguards</span></HeaderTemplate>
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="lnksafeguards" runat="server" Text='<%# Eval("Year") %>' CommandName="SafeguardsIndex"></asp:LinkButton>
+                                        <span style="text-align: center;">
+                                            <asp:LinkButton ID="lnksafeguards" runat="server" Text='<%# Eval("Year") %>' CommandName="SafeguardsIndex"></asp:LinkButton></span>
                                         <br />
                                         <br />
                                     </ItemTemplate>
                                 </asp:DataList>
                             </td>
-                            <td style="vertical-align:top">
+                            <td style="vertical-align: top">
                                 <asp:DataList ID="dlantidumpingduty" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dlantidumpingduty_ItemCommand">
                                     <HeaderTemplate>
-                                        <span style="font-weight: bold">Anti Dumping Duty</span></HeaderTemplate>
+                                        <span style="background: #D9D9D9; text-align: center;" class="nlsH">Anti Dumping Duty</span></HeaderTemplate>
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="lnkantidumpingduty" runat="server" Text='<%# Eval("Year") %>'
-                                            CommandName="AntiDumpingDutyIndex"></asp:LinkButton>
+                                        <span style="text-align: center;">
+                                            <asp:LinkButton ID="lnkantidumpingduty" runat="server" Text='<%# Eval("Year") %>'
+                                                CommandName="AntiDumpingDutyIndex"></asp:LinkButton></span>
                                         <br />
                                         <br />
                                     </ItemTemplate>
                                 </asp:DataList>
                             </td>
-                            <td style="vertical-align:top">
+                            <td style="vertical-align: top">
                                 <asp:DataList ID="dlCECothers" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                                     OnItemCommand="dlCECothers_ItemCommand">
                                     <HeaderTemplate>
-                                        <span style="font-weight: bold">Others</span></HeaderTemplate>
+                                        <span style="background: #D9D9D9; text-align: center;" class="nlsH">Others</span></HeaderTemplate>
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="lnkothers" runat="server" Text='<%# Eval("Year") %>' CommandName="others"></asp:LinkButton>
+                                        <span style="text-align: center;">
+                                            <asp:LinkButton ID="lnkothers" runat="server" Text='<%# Eval("Year") %>' CommandName="others"></asp:LinkButton></span>
                                         <br />
                                         <br />
                                     </ItemTemplate>
@@ -440,78 +577,81 @@
                     <asp:DataList ID="dlSTN" runat="server" RepeatDirection="Vertical" CaptionAlign="Top"
                         CssClass="mtable" OnItemCommand="dlSTN_ItemCommand">
                         <HeaderTemplate>
-                            <span style="font-weight: bold">Notifications</span>
+                            <span style="background: #D9D9D9; text-align: center;" class="nlsH">Notifications</span>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <asp:LinkButton ID="lnkSTN" runat="server" Text='<%# Eval("Year") %>' CommandName="STN"></asp:LinkButton>
+                            <span style="text-align: center;">
+                                <asp:LinkButton ID="lnkSTN" runat="server" Text='<%# Eval("Year") %>' CommandName="STN"></asp:LinkButton></span>
                         </ItemTemplate>
                     </asp:DataList>
                 </div>
-            <asp:Panel ID="pnlITActsGift" runat="server">
-                <a href="/GiftTaxAct.htm" target="_blank">
-                    <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;Gift Tax
-                    Act</a>
-            </asp:Panel>
-            <asp:Panel ID="pnlITActsInterest" runat="server">
-                <a href="/InterestTaxAct.htm" target="_blank">
-                    <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;Interest
-                    Tax Act</a>
-            </asp:Panel>
-            <asp:Panel ID="pnlSION" runat="server">
-                <asp:HyperLink ID="hlkSION1" runat="server" NavigateUrl="~/SION/notes-0910.zip">
+                <asp:Panel ID="pnlITActsGift" runat="server">
+                    <a href="/GiftTaxAct.htm" target="_blank">
+                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;Gift Tax
+                        Act</a>
+                </asp:Panel>
+                <asp:Panel ID="pnlITActsInterest" runat="server">
+                    <a href="/InterestTaxAct.htm" target="_blank">
+                        <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;Interest
+                        Tax Act</a>
+                </asp:Panel>
+                <asp:Panel ID="pnlSION" runat="server">
+                    <asp:HyperLink ID="hlkSION1" runat="server" NavigateUrl="~/SION/notes-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     	NOTES</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION2" runat="server" NavigateUrl="~/SION/chem-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION2" runat="server" NavigateUrl="~/SION/chem-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     	CHEMICALS AND ALLIED PRODUCTS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION3" runat="server" NavigateUrl="~/SION/ele-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION3" runat="server" NavigateUrl="~/SION/ele-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     ELECTRONICS PRODUCTS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION4" runat="server" NavigateUrl="~/SION/engg-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION4" runat="server" NavigateUrl="~/SION/engg-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     ENGINEERING PRODUCTS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION5" runat="server" NavigateUrl="~/SION/fish-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION5" runat="server" NavigateUrl="~/SION/fish-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     FISH AND MARINE PRODUCTS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION6" runat="server" NavigateUrl="~/SION/food-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION6" runat="server" NavigateUrl="~/SION/food-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     FOOD PRODUCTS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION7" runat="server" NavigateUrl="~/SION/hand-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION7" runat="server" NavigateUrl="~/SION/hand-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     HANDICRAFTS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION8" runat="server" NavigateUrl="~/SION/leath-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION8" runat="server" NavigateUrl="~/SION/leath-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     LEATHER PRODUCTS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION9" runat="server" NavigateUrl="~/SION/plast-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION9" runat="server" NavigateUrl="~/SION/plast-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     	PLASTIC PRODUCTS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION10" runat="server" NavigateUrl="~/SION/sport-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION10" runat="server" NavigateUrl="~/SION/sport-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     SPORT GOODS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION11" runat="server" NavigateUrl="~/SION/text-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION11" runat="server" NavigateUrl="~/SION/text-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     TEXTILES,READYMADE GARMENTS,HOSIERY AND KNITWEARS</asp:HyperLink><br />
-                <br />
-                <asp:HyperLink ID="hlkSION12" runat="server" NavigateUrl="~/SION/misc-0910.zip">
+                    <br />
+                    <asp:HyperLink ID="hlkSION12" runat="server" NavigateUrl="~/SION/misc-0910.zip">
                      <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;
                     MISCELLANEOUS PRODUCTS</asp:HyperLink><br />
-                <br />
-            </asp:Panel>
-            <table width="100%">
-            <tr>
-            <td width="100%" align="center">
-               <asp:Literal ID="ltlCaselwas" runat="server"></asp:Literal>
-            </td></tr></table>
+                    <br />
+                </asp:Panel>
+                <table width="100%">
+                    <tr>
+                        <td width="100%" align="center">
+                            <asp:Literal ID="ltlCaselwas" runat="server"></asp:Literal>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
