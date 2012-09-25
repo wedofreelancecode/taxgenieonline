@@ -7,6 +7,7 @@
     <title>TaxGenie</title>
     <link href="~/stylesheets/ddsmoothmenu.css" rel="Stylesheet" type="text/css" />
     <link href="~/stylesheets/global.css" rel="Stylesheet" type="text/css" />
+    <link href="stylesheets/LightStyle.css" rel="stylesheet" type="text/css" />
     <link href="~/stylesheets/reset.css" rel="Stylesheet" type="text/css" />
     <link href="~/stylesheets/stylesheet.css" rel="Stylesheet" type="text/css" />
     <script src="scripts/ddsmoothmenu.js" type="text/javascript"></script>

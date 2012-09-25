@@ -609,6 +609,56 @@ input.nlss
     color:Green;
     padding:5px;
 }
+.clres
+{
+    font-size: 12px;
+    text-align:justify;
+}
+.clres a,a:visited,a:active
+{
+    color: green;
+    font-weight:bold;
+    font-size:13px;
+}
+.clres a:hover
+{
+    text-decoration:underline;
+}
+.clres div
+{
+    font-weight:bold;
+    margin-bottom:3px;
+    margin-left:15px;
+}
+.clres b
+{
+    font-weight:bold;
+    margin-bottom:3px;
+    margin-left:15px;
+}
+.clres p
+{
+    margin:3px 15px 3px 15px;
+}
+.srchCL 
+{
+    text-indent:20;
+    margin-top:5px;
+    padding-left:20px;
+    font-family:Arial;
+    font-weight:bold;
+    background:url(../images/mg.jpg) no-repeat;
+}
+.srchL
+{
+    float:left;
+    color:#F49414;
+}
+.srchR
+{
+    float:right;
+    color:Green;
+}
 .citation
 {
     border:2px solid #dcdcdc;
@@ -625,10 +675,7 @@ input.nlss
 {
     text-decoration:underline;
 }
-.citation a:visited,a:active
-{
-    color: green;
-}
+
 .citCon
 {
     width:100% !important

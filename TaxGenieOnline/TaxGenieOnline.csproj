@@ -66,10 +66,13 @@
     <Content Include="admin\editnotifications.aspx" />
     <Content Include="admin\HomeContentEditor.aspx" />
     <Content Include="admin\WhatsNew.aspx" />
+    <Content Include="adResult.aspx" />
     <Content Include="adSearch.aspx" />
     <Content Include="editprofile.aspx" />
     <Content Include="images\add1.jpg" />
     <Content Include="images\add2.jpg" />
+    <EmbeddedResource Include="images\arr_left.gif" />
+    <EmbeddedResource Include="images\arr_right.gif" />
     <Content Include="images\bc_bg.png" />
     <Content Include="images\bc_separator.png" />
     <Content Include="images\blue.jpg" />
@@ -160,6 +163,7 @@
     <Content Include="ShowTaxUpdates.aspx" />
     <Content Include="SQL Sripts\Alter_data_search_select.sql" />
     <Content Include="SQL Sripts\library_Sep06.sql" />
+    <Content Include="stylesheets\LightStyle.css" />
     <Content Include="TaxGenieOnline.Publish.xml" />
     <Content Include="admin\TaxUpdateEditor.aspx" />
     <Content Include="underconstruction.aspx" />
@@ -235,6 +239,13 @@
     <Compile Include="admin\WhatsNew.aspx.designer.cs">
       <DependentUpon>WhatsNew.aspx</DependentUpon>
     </Compile>
+    <Compile Include="adResult.aspx.cs">
+      <DependentUpon>adResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adResult.aspx.designer.cs">
+      <DependentUpon>adResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="adSearch.aspx.cs">
       <DependentUpon>adSearch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -249,6 +260,7 @@
     <Compile Include="Contactus.aspx.designer.cs">
       <DependentUpon>Contactus.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PagerControl.cs" />
     <Compile Include="displayindex.aspx.cs">
       <DependentUpon>displayindex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

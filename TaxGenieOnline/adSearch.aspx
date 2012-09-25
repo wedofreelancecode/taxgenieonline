@@ -7,9 +7,12 @@
     <div class="cl2 fleft">
         <div class="contentbox">
             <div class="contentboxmiddle1 shdw" style="min-height: 300px;">
+            <asp:Panel runat="server" DefaultButton="btnSearch" Width="100%">
                   <br />
                   <div style="width:100%;text-align:center">
-                <img style="margin-top:5px"; src="images/slogo.png" />&nbsp;<asp:Label ID="lblHeading" runat="server" CssClass="nlsH" style="vertical-align:middle; padding:5px" Text="Case Laws Search"></asp:Label><hr style="width:50%" /><br /></div>
+                <img style="margin-top:5px"; src="images/slogo.png" />&nbsp;<asp:Label 
+                          ID="lblHeading" runat="server" CssClass="nlsHl" 
+                          style="vertical-align:middle; padding:5px" Text="Case Laws Search"></asp:Label><hr style="width:50%" /><br /></div>
                 
                 <table style="width: 100%; margin-top: 5px;" cellspacing="7px" border="10px"><tr>
                         <td style="width: 40%; text-align: right; padding-top: 10px" valign="top">
@@ -24,7 +27,8 @@
                                 <asp:ListItem Text="Headnotes" Value="Headnotes"></asp:ListItem>
                                 <asp:ListItem Text="Complete text" Selected="True" Value="Complete text"></asp:ListItem>
                             </asp:RadioButtonList>
-                            <asp:RadioButtonList runat="server" ID="srcType" RepeatDirection="Horizontal">
+                            <asp:RadioButtonList runat="server" Visible="false" ID="srcType" 
+                                RepeatDirection="Horizontal" Width="268px">
                                 <asp:ListItem Text="Phrase" Value="Phrase"></asp:ListItem>
                                 <asp:ListItem Text="Any Word" Value="Any Word"></asp:ListItem>
                                 <asp:ListItem Text="All words" Selected="True" Value="All words"></asp:ListItem>
@@ -52,7 +56,7 @@
                         <td style="padding: 6px;">
                             <asp:DropDownList ID="ddlCourts" runat="server" CssClass="nls" Width="280px" 
                                 AutoPostBack="True" onselectedindexchanged="ddlCourts_SelectedIndexChanged">
-                                <asp:ListItem>--Select One--</asp:ListItem>
+                                <asp:ListItem Value="">--Select One--</asp:ListItem>
                                 <asp:ListItem>Supreme Court of India </asp:ListItem>
                                 <asp:ListItem>High Court </asp:ListItem>
                                 <asp:ListItem>CESTAT</asp:ListItem>
@@ -72,7 +76,7 @@
                         <td style="padding: 6px;">
                             <asp:DropDownList ID="ddlOtherCourt" runat="server" CssClass="nls"
                                 Width="280px" Visible="False">
-                                <asp:ListItem>--Select One--</asp:ListItem>
+                                <asp:ListItem Value="">--Select One--</asp:ListItem>
                                 <asp:ListItem>CBEC</asp:ListItem>
                                 <asp:ListItem>Authority for Advance Rulings</asp:ListItem>
                                 <asp:ListItem>DGFT</asp:ListItem>
@@ -112,9 +116,11 @@
                     <tr><td>&nbsp;</td></tr>
                     <tr><td align="right"></td>
                     <td style="padding: 6px;"><asp:Button ID="btnReset" runat="server" Text="Reset" 
-                            onclick="btnReset_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnSearch" runat="server" Text="Search" /></td></tr>
+                            onclick="btnReset_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button 
+                            ID="btnSearch" runat="server" Text="Search" onclick="btnSearch_Click" /></td></tr>
                 </table>
                 <br /><br /><br />
+                </asp:Panel>
             </div>
         </div>
     </div>
