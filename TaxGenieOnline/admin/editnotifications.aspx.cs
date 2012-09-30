@@ -15,6 +15,7 @@ using TaxGenie_DAL.STNotificationsTableAdapters;
 using TaxGenie_DAL.IncomeTaxTableAdapters;
 using TaxGenie_DAL.DGFTTableAdapters;
 using System.Data;
+using TaxGenie_DAL.CaseLawsTableAdapters;
 
 namespace TaxGenieOnline.admin
 {
@@ -117,6 +118,16 @@ namespace TaxGenieOnline.admin
         }
         protected void ddlsubcategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            editGrid.Visible = true;
+            gvCaseLaws.Visible = false;
+            UPager.Visible = false;
+            if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
+            {
+                editGrid.Visible = false;
+                gvCaseLaws.Visible = true;
+                UPager.Visible = true;
+                LoadCaseLaws(gvCaseLaws);
+            }
             if (ddlsubcategory.SelectedValue.Equals("Acts") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
                 LoadCEActs(editGrid);
@@ -141,10 +152,10 @@ namespace TaxGenieOnline.admin
             {
                 LoadCENotification(editGrid);
             }
-            if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Central Excise"))
-            {
-                LoadCEActs(editGrid);
-            }
+            //if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Central Excise"))
+            //{
+            //    LoadCEActs(editGrid);
+            //}
             if (ddlsubcategory.SelectedValue.Equals("Circulars/Instructions") && ddlcatagory.SelectedValue.Equals("Central Excise"))
             {
                 LoadCECircularsInstructions(editGrid);
@@ -161,10 +172,10 @@ namespace TaxGenieOnline.admin
             {
                 LoadCustoms(editGrid);
             }
-            if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Customs"))
-            {
-                LoadCustoms(editGrid);
-            }
+            //if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Customs"))
+            //{
+            //    LoadCustoms(editGrid);
+            //}
             if (ddlsubcategory.SelectedValue.Equals("Regulations") && ddlcatagory.SelectedValue.Equals("Customs"))
             {
                 LoadCustoms(editGrid);
@@ -205,10 +216,10 @@ namespace TaxGenieOnline.admin
             {
                 LoadST(editGrid);
             }
-            if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Service Tax"))
-            {
-                LoadSTCaseLaws(editGrid);
-            }
+            //if (ddlsubcategory.SelectedValue.Equals("Case Laws") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            //{
+            //    LoadSTCaseLaws(editGrid);
+            //}
             if (ddlsubcategory.SelectedValue.Equals("Notifications") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
                 LoadSTNotification(editGrid);
@@ -404,6 +415,37 @@ namespace TaxGenieOnline.admin
                 }
 
                 // editGrid.Columns[1].Visible = false;
+            }
+        }
+        protected void UPager_Command(object sender, CommandEventArgs e)
+        {
+            int currnetPageIndx = Convert.ToInt32(e.CommandArgument);
+            UPager.CurrentIndex = currnetPageIndx;
+            LoadCaseLaws(gvCaseLaws);
+        }
+        private void LoadCaseLaws(GridView eGrid)
+        {
+            GET_CaseLaws_BY_CatTableAdapter index = new GET_CaseLaws_BY_CatTableAdapter();
+            DataTable dtActsIndexName = index.GetCaseLawsByCat(ddlcatagory.SelectedValue,UPager.CurrentIndex,UPager.PageSize);
+            if (dtActsIndexName.Rows.Count > 0)
+            {
+                eGrid.DataSource = dtActsIndexName;
+                eGrid.DataBind();
+                if (eGrid.Columns.Count > 0)
+                    eGrid.Columns[0].Visible = false;
+                else
+                {
+                    eGrid.HeaderRow.Cells[1].Visible = false;
+                    eGrid.HeaderRow.Cells[2].Visible = false;
+                    eGrid.HeaderRow.Cells[5].Visible = false;
+                    foreach (GridViewRow gvr in eGrid.Rows)
+                    {
+                        gvr.Cells[1].Visible = false;
+                        gvr.Cells[2].Visible = false;
+                        gvr.Cells[5].Visible = false;
+                    }
+                }
+                UPager.ItemCount = Double.Parse(dtActsIndexName.Rows[0]["TotalRows"].ToString());
             }
         }
         private void LoadCustomsTariff(GridView eGrid)
@@ -774,6 +816,28 @@ namespace TaxGenieOnline.admin
         {
             get;
             set;
+        }
+        protected void gvCaseLaws_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridView gv = sender as GridView;
+            GridViewRow row = gv.Rows[e.NewEditIndex];
+            this.Category = ddlcatagory.SelectedValue;
+            this.SubCategory = ddlsubcategory.SelectedValue;
+            this.Id = row.Cells[2].Text;
+            Server.Transfer("uploadnotifications.aspx");
+        }
+        
+        protected void gvCaseLaws_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            GridView gv = sender as GridView;
+            GridViewRow row = gv.Rows[e.RowIndex];
+            int? id = Int32.Parse(row.Cells[2].Text);
+            GET_CaseLaws_BY_CatTableAdapter index = new GET_CaseLaws_BY_CatTableAdapter();
+            if (id != null & id > 0)
+            {
+                index.Delete_CaseLaws_BY_ID(id);
+                LoadCaseLaws(gv);
+            }
         }
 
         protected void editGrid_RowDeleting(object sender, GridViewDeleteEventArgs e)

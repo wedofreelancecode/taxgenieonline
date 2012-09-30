@@ -103,6 +103,24 @@ namespace TaxGenieOnline {
         protected global::System.Web.UI.WebControls.DropDownList ddlOtherCourt;
         
         /// <summary>
+        /// lblBench control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBench;
+        
+        /// <summary>
+        /// ddlBench control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlBench;
+        
+        /// <summary>
         /// txtCaseNo control.
         /// </summary>
         /// <remarks>

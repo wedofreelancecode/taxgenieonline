@@ -49,6 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaseLaws.cs">
+      <DependentUpon>CaseLaws.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CaseLaws.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -125,6 +129,10 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="search.cs">
+      <DependentUpon>search.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="search.Designer.cs">
       <AutoGen>True</AutoGen>

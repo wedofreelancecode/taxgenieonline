@@ -55,6 +55,7 @@
                    
                 <asp:HiddenField ID="Keyword" runat="server" Value="0" />
                 <asp:HiddenField ID="Court" runat="server" Value="0" />
+                <asp:HiddenField ID="Bench" runat="server" Value="0" />
                 <asp:HiddenField ID="JudgeName" runat="server" Value="0" />
                 <asp:HiddenField ID="SearchType" runat="server" Value="0" />
                 <asp:HiddenField ID="SearchCat" runat="server" Value="0" />

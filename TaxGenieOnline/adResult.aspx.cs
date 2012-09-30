@@ -38,11 +38,11 @@ namespace TaxGenieOnline
             DataTable dt = null;
             if (SearchCat.Value == "Headnotes")
             {
-                dt = srcAdapter.GetCLSearch(Keyword.Value, PartyName.Value, Court.Value, CaseNo.Value, JudgeName.Value, Citation.Value, Year.Value, UPager.CurrentIndex, UPager.PageSize);
+                dt = srcAdapter.GetCLSearch(Keyword.Value, PartyName.Value, Court.Value,Bench.Value, CaseNo.Value, JudgeName.Value, Citation.Value, Year.Value, UPager.CurrentIndex, UPager.PageSize);
             }
             else
             {
-                dt = srcAdapter.GetCLKeySearch(Keyword.Value, PartyName.Value, Court.Value, CaseNo.Value, JudgeName.Value, Citation.Value, Year.Value, UPager.CurrentIndex, UPager.PageSize);
+                dt = srcAdapter.GetCLKeySearch(Keyword.Value, PartyName.Value, Court.Value,Bench.Value, CaseNo.Value, JudgeName.Value, Citation.Value, Year.Value, UPager.CurrentIndex, UPager.PageSize);
             }
             repSrcResult.DataSource = dt;
             repSrcResult.DataBind();

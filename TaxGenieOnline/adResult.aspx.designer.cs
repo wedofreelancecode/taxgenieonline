@@ -94,6 +94,15 @@ namespace TaxGenieOnline {
         public global::System.Web.UI.WebControls.HiddenField Court;
         
         /// <summary>
+        /// Bench control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        public global::System.Web.UI.WebControls.HiddenField Bench;
+        
+        /// <summary>
         /// JudgeName control.
         /// </summary>
         /// <remarks>

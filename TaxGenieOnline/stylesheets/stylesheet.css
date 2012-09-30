@@ -31,7 +31,7 @@ input, select, textarea
     position: fixed;
     display: block;
     right: 0px;
-    top: 250px;
+    top: 300px;
 }
 
 .title
@@ -589,8 +589,9 @@ input.nlss
     font-size: 14px;
 }
 .citCase
-{ font-family:Arial;
-    font-size: 13px;
+{ 
+    font-size: 14px;
+    line-height:18px;
     font-weight:bold;
     text-align:center;
     width:100% !important

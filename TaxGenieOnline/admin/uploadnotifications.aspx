@@ -341,14 +341,14 @@
                             </td>
                             <td  style="width: 90%">
                                 <asp:TextBox ID="txtCLcitationyear" runat="server" CssClass="nlss" Columns="5"></asp:TextBox>
-                            
                                 <asp:Label ID="lbltgol" runat="server" Text="-TGOL-" CssClass="nlsN"></asp:Label>
                            
                                 <asp:TextBox ID="txtClNumber" runat="server" CssClass="nlss" Columns="5"></asp:TextBox>
                             
                                 <asp:Label ID="lblhypen" runat="server" Text="-" CssClass="nlsN"></asp:Label>
                            
-                                <asp:TextBox ID="txtCL" runat="server" CssClass="nlss" Columns="6"></asp:TextBox>
+                                <asp:TextBox ID="txtCL" runat="server" CssClass="nlss" Columns="6"></asp:TextBox><asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Should be 4 digit year" ControlToValidate="txtCLcitationyear" ValidationExpression="\d{4}"></asp:RegularExpressionValidator>
+                                
                             </td>
                         </tr>
                         <tr>
@@ -356,19 +356,44 @@
                                 <asp:Label ID="lblCLcourt" runat="server" Text="Court" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:DropDownList ID="ddlCLlawscourt" runat="server" CssClass="nls">
-                                    <asp:ListItem>--Select One--</asp:ListItem>
-                                    <asp:ListItem>Supreme Court of India   </asp:ListItem>
-                                    <asp:ListItem>High Court </asp:ListItem>
+                                <asp:DropDownList ID="ddlCLlawscourt" runat="server" CssClass="nls"  AutoPostBack="True" onselectedindexchanged="ddlCLlawscourt_SelectedIndexChanged">
+                                    <asp:ListItem Value="">--Select One--</asp:ListItem>
+                                    <asp:ListItem Value="Supreme Court of India, New Delhi">Supreme Court of India</asp:ListItem>
+                                    <asp:ListItem>High Court</asp:ListItem>
                                     <asp:ListItem>CESTAT</asp:ListItem>
                                     <asp:ListItem>CEGAT</asp:ListItem>
                                     <asp:ListItem>ATFE</asp:ListItem>
                                     <asp:ListItem>TRIBUNAL</asp:ListItem>
                                     <asp:ListItem>Revisionary Authority</asp:ListItem>
                                     <asp:ListItem>Settlement Commossion</asp:ListItem>
+                                    <asp:ListItem>Other</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
                         </tr>
+                        <tr>
+                        <td style="text-align: right">
+                            <asp:Label Font-Size="14px" runat="server" ID="lblOther" Visible="False">Other Court</asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="ddlOtherCourt" runat="server" CssClass="nls" Visible="False">
+                                <asp:ListItem Value="">--Select One--</asp:ListItem>
+                                <asp:ListItem>CBEC</asp:ListItem>
+                                <asp:ListItem>Authority for Advance Rulings</asp:ListItem>
+                                <asp:ListItem>DGFT</asp:ListItem>
+                                <asp:ListItem>G.O.I</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <asp:Label Font-Size="14px" runat="server" ID="lblBench" Visible="False">Bench</asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="ddlBench" runat="server" CssClass="nls" Visible="False">
+                                <asp:ListItem Value="">--Select One--</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
                         <tr>
                             <td style="width: 20%; text-align: right">
                                 <asp:Label ID="lblCLcasenumber" runat="server" Text="Case Number" CssClass="nlsN"></asp:Label>
@@ -409,8 +434,8 @@
                                 <asp:TextBox ID="txtCLdateofdec" runat="server" CssClass="nls"></asp:TextBox>
                                 <asp:Image ID="imgCal" runat="server" ImageUrl="~/images/c.jpg" style="height:15px;width:15px;"/>
                                 <span
-                                    style="font-size: smaller; color: Gray;">(DD-MM-YYYY)</span>
-                                <asp:CalendarExtender ID="cldate" runat="server" TargetControlID="txtCLdateofdec" PopupButtonID="imgCal" Format="dd-MM-yyyy">
+                                    style="font-size: smaller; color: Gray;">(MM-DD-YYYY)</span>
+                                <asp:CalendarExtender ID="cldate" runat="server" TargetControlID="txtCLdateofdec" PopupButtonID="imgCal" Format="MM-dd-yyyy">
                                 </asp:CalendarExtender>
                             </td>
                         </tr>
@@ -419,7 +444,16 @@
                                 <asp:Label ID="lblCLJinFavour" runat="server" Text="Judgement in Favour Of" CssClass="nlsN"></asp:Label>
                             </td>
                             <td style="width: 90%; text-align: left">
-                                <asp:TextBox ID="txtCLJinFavour" runat="server" CssClass="nls"></asp:TextBox>
+                            <asp:DropDownList ID="txtCLJinFavour" runat="server" CssClass="nls">
+                                <asp:ListItem Value="">--Select One--</asp:ListItem>
+                                <asp:ListItem>Party</asp:ListItem>
+                                <asp:ListItem>Revenue</asp:ListItem>
+                                <asp:ListItem>Remand</asp:ListItem>
+                                <asp:ListItem>Partially Allowed</asp:ListItem>
+                                  <asp:ListItem>Stay Granted</asp:ListItem>
+                                <asp:ListItem>Stay Rejected</asp:ListItem>
+                                <asp:ListItem>Pre-Deposit Ordered</asp:ListItem>
+                            </asp:DropDownList>
                             </td>
                         </tr>
                         <tr>

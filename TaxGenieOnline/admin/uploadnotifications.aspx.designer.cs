@@ -688,6 +688,15 @@ namespace TaxGenieOnline.admin {
         protected global::System.Web.UI.WebControls.TextBox txtCLcitationyear;
         
         /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        
+        /// <summary>
         /// lbltgol control.
         /// </summary>
         /// <remarks>
@@ -740,6 +749,42 @@ namespace TaxGenieOnline.admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCLlawscourt;
+        
+        /// <summary>
+        /// lblOther control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOther;
+        
+        /// <summary>
+        /// ddlOtherCourt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlOtherCourt;
+        
+        /// <summary>
+        /// lblBench control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBench;
+        
+        /// <summary>
+        /// ddlBench control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlBench;
         
         /// <summary>
         /// lblCLcasenumber control.
@@ -865,7 +910,7 @@ namespace TaxGenieOnline.admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCLJinFavour;
+        protected global::System.Web.UI.WebControls.DropDownList txtCLJinFavour;
         
         /// <summary>
         /// lblheadnotes control.

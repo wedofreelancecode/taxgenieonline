@@ -76,6 +76,39 @@ namespace TaxGenieOnline.admin
                 if (btnUpload.Text != "Update")
                 {
                     btnUpload.Text = "Update";
+                    if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
+                    {
+                        GetAllCaseLawsTableAdapter index = new GetAllCaseLawsTableAdapter();
+                        TaxGenie_DAL.CaseLaws.GetAllCaseLawsDataTable dt = index.GetCaseLawsById(id);
+                        TaxGenie_DAL.CaseLaws.GetAllCaseLawsRow row = dt.Rows[0] as TaxGenie_DAL.CaseLaws.GetAllCaseLawsRow;
+                        txtCLcitationyear.Text = row.Year.ToString();
+                        txtCLcitationyear.Enabled = false;
+                        txtClNumber.Text = row.CLnumber;
+                        txtClNumber.Enabled = false;
+                        int ind = row.Year.ToString().Length + row.CLnumber.Length + 7;
+                        txtCL.Text = row.TGOLCitation.Substring(ind);
+                        txtCL.Enabled = false;
+                        txtCLcasenumber.Text = row.CaseNumber;
+
+                        txtCLAPPELLANTParty.Text = row.APPELLANTParty;
+                        txtCLrespondentparty.Text = row.RESPONDENTParty;
+                        txtCLjudgesname.Text = row.JudgesName;
+                        txtCLdateofdec.Text = row.DateofDecision.ToString("dd-MM-yyyy");
+                        txtCLJinFavour.SelectedValue = row.JudgementinFavourof;
+                        edtCLheadnotes.Content = row.HeadNotes;
+                        edtCLcontent.Content = row.JUDGEMENTContent;
+                        if (ddlCLlawscourt.Items.Contains(new ListItem(row.Court)))
+                        {
+                            ddlCLlawscourt.SelectedValue = row.Court;
+                        }
+                        else
+                        {
+                            ddlCLlawscourt.SelectedValue = "Other";
+                            ddlOtherCourt.SelectedValue = row.Court;
+                        }
+                        ddlCLlawscourt_SelectedIndexChanged(ddlCLlawscourt, EventArgs.Empty);
+                        lbshowDoc.Visible = false;
+                    }
                     if (ddlcatagory.SelectedValue.Equals("Central Excise"))
                     {
                         CEActsTableAdapter index = new CEActsTableAdapter();
@@ -124,15 +157,15 @@ namespace TaxGenieOnline.admin
                                 edtData.Content = dtActs.Rows[0]["Data"].ToString();
                                 lbshowDoc.Visible = !isdoc;
                             }
-                            if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
-                            {
-                                txtCDrawbackIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
-                                bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
-                                rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
-                                rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
-                                edtData.Content = dtActs.Rows[0]["Data"].ToString();
-                                lbshowDoc.Visible = !isdoc;
-                            }
+                            //if (ddlsubcategory.SelectedValue.Equals("Case Laws"))
+                            //{
+                            //    txtCDrawbackIndex.Text = dtActs.Rows[0]["IndexName"].ToString();
+                            //    bool isdoc = dtActs.Rows[0]["Data"] != null && dtActs.Rows[0]["Data"].ToString().Length > 0;
+                            //    rdbUploadType.SelectedValue = isdoc ? "Paste the Document" : "Upload the Document";
+                            //    rblUploadType_SelectedIndexChanged(rdbUploadType, EventArgs.Empty);
+                            //    edtData.Content = dtActs.Rows[0]["Data"].ToString();
+                            //    lbshowDoc.Visible = !isdoc;
+                            //}
 
                         }
 
@@ -557,6 +590,77 @@ namespace TaxGenieOnline.admin
 
                     }
                 }
+            }
+
+        }
+        protected void ddlCLlawscourt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlCLlawscourt.SelectedValue == "Other")
+            {
+                ddlOtherCourt.Visible = true;
+                lblOther.Visible = true;
+            }
+            else
+            {
+                ddlOtherCourt.Visible = false;
+                lblOther.Visible = false;
+            }
+            if (ddlCLlawscourt.SelectedValue == "High Court")
+            {
+                lblBench.Visible = true;
+                ddlBench.Visible = true;
+                ddlBench.Items.Clear();
+                ddlBench.Items.Add(new ListItem("--Select One--", ""));
+                ddlBench.Items.Add(new ListItem("Allahabad High Court", "Of Allahabad"));
+                ddlBench.Items.Add(new ListItem("Andhra Pradesh High Court", "Of Andhra Pradesh"));
+                ddlBench.Items.Add(new ListItem("Bombay High Court", "Of Bombay"));
+                ddlBench.Items.Add(new ListItem("Calcutta High Court", "Of Calcutta"));
+                ddlBench.Items.Add(new ListItem("Chattishgarh High Court", "Of Chattishgarh"));
+                ddlBench.Items.Add(new ListItem("Delhi High Court", "Of Delhi"));
+                ddlBench.Items.Add(new ListItem("Gujarat High Court", "Of Gujarat"));
+                ddlBench.Items.Add(new ListItem("Guwahati High Court", "Of Guwahati"));
+                ddlBench.Items.Add(new ListItem("Himachal Pradesh High Court", "Of Himachal Pradesh"));
+                ddlBench.Items.Add(new ListItem("Jammu & Kashmir High Court", "Of Jammu & Kashmir"));
+                ddlBench.Items.Add(new ListItem("Jharkhand High Court", "Of Jharkhand"));
+                ddlBench.Items.Add(new ListItem("Kerala High Court", "Of Kerala"));
+                ddlBench.Items.Add(new ListItem("Karnataka High Court", "Of Karnataka"));
+                ddlBench.Items.Add(new ListItem("Lahore High Court", "Of Lahore"));
+                ddlBench.Items.Add(new ListItem("Lucknow High Court", "Of Lucknow"));
+                ddlBench.Items.Add(new ListItem("Madhya Pradesh High Court", "Of Madhya Pradesh"));
+                ddlBench.Items.Add(new ListItem("Madras High Court", "Of Madras"));
+                ddlBench.Items.Add(new ListItem("Madurai High Court", "Of Madurai"));
+                ddlBench.Items.Add(new ListItem("Mysore High Court", "Of Mysore"));
+                ddlBench.Items.Add(new ListItem("Nagpur High Court", "Of Nagpur"));
+                ddlBench.Items.Add(new ListItem("Orissa High Court", "Of Orissa"));
+                ddlBench.Items.Add(new ListItem("Punjab & Haryana High Court", "Of Punjab & Haryana"));
+                ddlBench.Items.Add(new ListItem("Patna High Court", "Of Patna"));
+                ddlBench.Items.Add(new ListItem("Rajasthan High Court", "Of Rajasthan"));
+                ddlBench.Items.Add(new ListItem("Shillong High Court", "Of Shillong"));
+                ddlBench.Items.Add(new ListItem("Sikkim High Court", "Of Sikkim"));
+                ddlBench.Items.Add(new ListItem("Uttranchal High Court", "Of Uttranchal"));
+            }
+            else if (ddlCLlawscourt.SelectedValue == "CESTAT")
+            {
+                lblBench.Visible = true;
+                ddlBench.Visible = true;
+                ddlBench.Items.Clear();
+                ddlBench.Items.Add(new ListItem("--Select One--", ""));
+                ddlBench.Items.Add(new ListItem("South Zonal Bench, Bangalore", "South Zonal Bench, Bangalore"));
+                ddlBench.Items.Add(new ListItem("South Zonal Bench, Chennai", "South Zonal Bench, Chennai"));
+                ddlBench.Items.Add(new ListItem("West Zonal Bench, Mumbai", "West Zonal Bench, Mumbai"));
+                ddlBench.Items.Add(new ListItem("West Zonal Bench, Ahmedabad", "West Zonal Bench, Ahmedabad"));
+                ddlBench.Items.Add(new ListItem("East Zonal Bench, Kolkata", "East Zonal Bench, Kolkata"));
+                ddlBench.Items.Add(new ListItem("North Zonal Bench, New Delhi", "North Zonal Bench, New Delhi"));
+                ddlBench.Items.Add(new ListItem("Principle Bench, New Delhi", "Principle Bench, New Delhi"));
+                ddlBench.Items.Add(new ListItem("Larger Bench", "Larger Bench"));
+
+            }
+            else
+            {
+                lblBench.Visible = false;
+                ddlBench.Visible = false;
+                ddlBench.Items.Clear();
+                ddlBench.Items.Add(new ListItem("--Select One--", ""));
             }
 
         }
@@ -1943,6 +2047,10 @@ namespace TaxGenieOnline.admin
         protected void btnUpload_Click(object sender, EventArgs e)
         {
             #region Customs
+            if (ddlsubcategory.SelectedValue == "Case Laws")
+            {
+                CaseLaws();
+            }
             if (ddlcatagory.SelectedValue == "Customs" & ddlsubcategory.SelectedValue == "Acts")
             {
                 CustomActs();
@@ -1963,10 +2071,10 @@ namespace TaxGenieOnline.admin
             {
                 CustomForms();
             }
-            if (ddlcatagory.SelectedValue == "Customs" & ddlsubcategory.SelectedValue == "Case Laws")
-            {
-                CaseLaws();
-            }
+            //if (ddlcatagory.SelectedValue == "Customs" & ddlsubcategory.SelectedValue == "Case Laws")
+            //{
+            //    CaseLaws();
+            //}
             if (ddlcatagory.SelectedValue == "Customs" & ddlsubcategory.SelectedValue == "SEZ")
             {
                 CustomSez();
@@ -1998,10 +2106,10 @@ namespace TaxGenieOnline.admin
             {
                 CEForms();
             }
-            if (ddlcatagory.SelectedValue == "Central Excise" & ddlsubcategory.SelectedValue == "Case Laws")
-            {
-                CaseLaws();
-            }
+            //if (ddlcatagory.SelectedValue == "Central Excise" & ddlsubcategory.SelectedValue == "Case Laws")
+            //{
+            //    CaseLaws();
+            //}
             if (ddlcatagory.SelectedValue == "Central Excise" & ddlsubcategory.SelectedValue == "Section 37B Order")
             {
                 CESections();
@@ -2036,10 +2144,10 @@ namespace TaxGenieOnline.admin
             {
                 CESections();
             }
-            if (ddlcatagory.SelectedValue == "Service Tax" & ddlsubcategory.SelectedValue == "Case Laws")
-            {
-                CaseLaws();
-            }
+            //if (ddlcatagory.SelectedValue == "Service Tax" & ddlsubcategory.SelectedValue == "Case Laws")
+            //{
+            //    CaseLaws();
+            //}
             if (ddlcatagory.SelectedValue == "Service Tax" & ddlsubcategory.SelectedValue == "Notifications")
             {
                 STNotifications();
@@ -2700,32 +2808,23 @@ namespace TaxGenieOnline.admin
               //  UploadPDF();
             //}
             //STCaselaws_GetAllTableAdapter insertCaseLaws = new STCaselaws_GetAllTableAdapter();
-            
-            //if (hdnId.Value.Length > 0)
-            //{
-            //    int? id = Int32.Parse(hdnId.Value);
-            //    if (bytes != null && bytes.Length > 1)
-            //    {
-            //        insertCaseLaws.UpdateSTCaseLawsById(txtSTCaselaws.Text, edtData.Content, bytes, id);
-            //    }
-            //    else
-            //    {
-            //        insertCaseLaws.UpdateSTCaseLawsByIdNoDoc(txtSTCaselaws.Text, edtData.Content, id);
-            //    }
-            //    Server.Transfer("editnotifications.aspx");
-            //}
-            //else
-            //{
-            //    insertCaseLaws.STCaseLaws_Insert(txtSTCaselaws.Text, edtData.Content, bytes);
-            //}
-            #endregion
-
-            DateTime dt = Convert.ToDateTime(txtCLdateofdec.Text);
-            string TGOLC = txtCLcitationyear.Text + "-TGOL-" + txtClNumber.Text + "-" + txtCL.Text;
-            int TGOLyear=Convert.ToInt32(txtCLcitationyear.Text);
             GetAllCaseLawsTableAdapter insertCaseLaws = new GetAllCaseLawsTableAdapter();
-            insertCaseLaws.Insert(ddlcatagory.SelectedValue, TGOLC, ddlCLlawscourt.SelectedValue, txtCLcasenumber.Text, txtCLAPPELLANTParty.Text, txtCLrespondentparty.Text, txtCLjudgesname.Text, dt, txtCLJinFavour.Text, edtCLheadnotes.Content, edtCLcontent.Content,TGOLyear,txtClNumber.Text);
-
+            DateTime dt = Convert.ToDateTime(txtCLdateofdec.Text);
+            string CourtNa = ddlCLlawscourt.SelectedValue == "Other" ? ddlOtherCourt.SelectedValue : ddlCLlawscourt.SelectedValue;
+            if (hdnId.Value.Length > 0)
+            {
+                int? id = Int32.Parse(hdnId.Value);
+                insertCaseLaws.UpdateCaseLawsByID(CourtNa, txtCLcasenumber.Text, txtCLAPPELLANTParty.Text, txtCLrespondentparty.Text,ddlBench.SelectedValue??"", txtCLjudgesname.Text, dt, txtCLJinFavour.SelectedValue, edtCLheadnotes.Content, edtCLcontent.Content, id);
+                Server.Transfer("editnotifications.aspx");
+            }
+            else
+            {
+                string TGOLC = txtCLcitationyear.Text + "-TGOL-" + txtClNumber.Text + "-" + txtCL.Text;
+                int TGOLyear = Convert.ToInt32(txtCLcitationyear.Text);
+                insertCaseLaws.Insert(ddlcatagory.SelectedValue, TGOLC, CourtNa, txtCLcasenumber.Text, txtCLAPPELLANTParty.Text, txtCLrespondentparty.Text, txtCLjudgesname.Text, dt, txtCLJinFavour.SelectedValue, edtCLheadnotes.Content, edtCLcontent.Content, TGOLyear, txtClNumber.Text,ddlBench.SelectedValue??"");
+                Server.Transfer("uploadnotifications.aspx");
+            }
+            #endregion
         }
 
 

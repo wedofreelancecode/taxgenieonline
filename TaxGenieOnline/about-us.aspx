@@ -8,37 +8,25 @@
             <div class="contentboxmiddle">
                 <img src="images/au.jpg" width="491" height="38" />
                 <div class="ab">
-                    <p>
-                        Taxgenieonline.com is in the field of offering Tax Consultancy in the matters of
-                        Central Excise, Customs, Service Tax, DGFT, FEMA, PMLA, SEZs, with our expertise
-                        and experience. We strive to deliver outstanding quality of service with a dedicated
-                        team of professionals. We focus our endeavor to provide excellent and comprehensive
-                        tax consultancy. We always keep in mind, the trust on mutual respect required by
-                        our clients and ensure to listening, understanding and responding to the priorities
-                        of the clients.</p>
-                    <p>
-                        Our philosophy is not only to win clients but also to offer senior level personal
-                        attention and professionalism to contribute to the growth of the clients.</p>
-                    <p>
-                        The company has sound support of all kinds of resources, speed and agility, proactive
-                        client relationship to offer the best, credible and valuable Tax Consultancy.</p>
-                    <p>
-                        The company also provides all kinds of Information relating to taxation, Government
-                        policies, related news, views, expert analyses, tax updates on such taxation and
-                        policies of Government. Apart from the above, the company is also providing decisions
-                        of the Supreme Court, High Court, CESTAT, etc., with analysis on such decisions
-                        on tax and allied matters relating to business/trade.</p>
-                    <p>
-                        We wish to inform that our company as a whole committed to help the tax payers and
-                        business community by offering innovative tax solutions to their problems. Our core
-                        values include:</p>
-                    <ul>
-                        <li>Transparency</li>
-                        <li>Dynamism</li>
-                        <li>Dynamism</li>
-                        <li>Passion for Learning</li>
-                        <li>Strive for Excellence Teamwork</li>
-                    </ul>
+                 <p>	Taxgenieonline.com is a portal run by M/s MARK PROFESSIONAL SERVICES PRIVATE LIMITED, a body corporate, registered under the Companies Act, 1956.  Taxgenieonline.com is a complete Tax Portal commenced its operations from 1st September, 2012.  We started this website because people deserve professional assistance as lakhs of them find difficulty in paying their taxes. We believe in helping the taxpayers to find clear solutions to their tax problems which allow them to run their business/industry without worries. </p>
+
+<p>	We provide outstanding service to our customers with dedication.  With our expertise, experience and professionalism, our customers are assured of competent affordable, fast and accurate advices. </p>
+
+<p>	We strive hard for providing high quality reliable service with high standards, personal and responsive service of our expert team spell the difference between us and the rest.  We maintain a strong and loyal client base. </p>
+
+<p>Shri M.V.S. Prasad, IRS (Retd.), is our Mentor, Guide and Philosopher in our endeavor to bring this venture on to online tax solutions.  He has vast experience in the field of taxation right from the rank of Assistant Commissioner to Chief Commissioner and Chairman of Settlement Commission, Customs & Central Excise, New Delhi.  He also represented on behalf of India Government in various International fora in Taxation matters.  Now, he is the Chief Editor of taxgenieonline.com. </p>      
+ <p>
+	Shri Dr. G.K Sarkar, a Post Graduate in Physics and Law, worked in various formations of CBEC for 34 years. He held a Doctorate in Law from the University of Jamai, Delhi and regular contributor of several articles in Excise Law Times.  A practicing Advocate in CESTAT, High Court of Delhi and Supreme Court of India. </p>
+
+	<p>One of the founder members of Shri R. Nageswara Rao, a Post Graduate in Botany, worked in CBEC for 34 years as well as an Awardee of President’s Appreciation Letter for Distinguished Record of Service, on the occasion of Republic Day, 1994.  </p>
+
+<p>Shri M.V. Subba Rao, a Post Graduate in Mathematics from Andhra University, Visakhapatnam, worked in CBEC for more three decades in various capacities. He is leading the team of tax professionals in the capacity of Managing Director of Mark Professional Services Private Limited. </p>
+
+<p>Shri K.V.Varadaiah, a Graduate in Science, from Osmania University, Hyderabad.  He had conferred with a Certificate of Honour for his meritorious service while in CENSUS department from the President of India.  He worked in various capacities in CBEC for a span of three decades.  He is one of the founder Directors of the organization and richly contributed in building the taxgeniedonline.com portal.</p>
+
+
+
+
                 </div>
             </div>
             <img src="images/middle_box_bottom.png" width="501" height="6" />

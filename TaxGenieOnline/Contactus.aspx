@@ -22,7 +22,7 @@
                     <p>
                         <b>M.V. Subba Rao</b><br />
                         Mobile No: 9848489671<br />
-                        Email:<a href="mailto:mannam-subbarao@yahoo.co.in">mannam-subbarao@yahoo.co.in</a>
+                        Email:<a href="mailto:mannam_subbarao@yahoo.co.in">mannam-subbarao@yahoo.co.in</a>
                     </p>
                     <p>
                         <b>R.Nageswara Rao</b><br />
@@ -33,6 +33,11 @@
                         <b>K.V.Varadaiah</b><br />
                         Mobile No:9849118254<br />
                         Email:<a href="mailto:varadaiah@gmail.com">varadaiah@gmail.com</a>
+                    </p>
+                     <p>
+                        <b>MVS Prasad</b><br />
+                        Mobile No:9989142444<br />
+                        Email:<a href="mailto:mvsp44@gmail.com">mvsp44@gmail.com</a>
                     </p>
                 </div>
             </div>

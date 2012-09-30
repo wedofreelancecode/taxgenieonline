@@ -57,8 +57,8 @@
                             <asp:DropDownList ID="ddlCourts" runat="server" CssClass="nls" Width="280px" 
                                 AutoPostBack="True" onselectedindexchanged="ddlCourts_SelectedIndexChanged">
                                 <asp:ListItem Value="">--Select One--</asp:ListItem>
-                                <asp:ListItem>Supreme Court of India </asp:ListItem>
-                                <asp:ListItem>High Court </asp:ListItem>
+                                <asp:ListItem Value="Supreme Court of India, New Delhi">Supreme Court of India</asp:ListItem>
+                                <asp:ListItem>High Court</asp:ListItem>
                                 <asp:ListItem>CESTAT</asp:ListItem>
                                 <asp:ListItem>CEGAT</asp:ListItem>
                                 <asp:ListItem>ATFE</asp:ListItem>
@@ -81,6 +81,17 @@
                                 <asp:ListItem>Authority for Advance Rulings</asp:ListItem>
                                 <asp:ListItem>DGFT</asp:ListItem>
                                 <asp:ListItem>G.O.I</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td style="text-align: right">
+                            <asp:Label runat="server" ID="lblBench" Visible="False"> Bench :</asp:Label>
+                        </td>
+                        <td style="padding: 6px;">
+                            <asp:DropDownList ID="ddlBench" runat="server" CssClass="nls"
+                                Width="280px" Visible="False">
+                                <asp:ListItem Value="">--Select One--</asp:ListItem>
                             </asp:DropDownList>
                         </td>
                     </tr>
