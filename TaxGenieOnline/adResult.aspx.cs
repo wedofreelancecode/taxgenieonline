@@ -26,6 +26,7 @@ namespace TaxGenieOnline
                     PartyName.Value = epage.PartyName;
                     Keyword.Value = epage.KeyWord;
                     Volume.Value = epage.CLVol;
+                    Bench.Value = epage.Bench;
                     CPage.Value = epage.CLPage;
                 }
                 BindRepeater();

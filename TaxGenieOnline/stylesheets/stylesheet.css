@@ -615,7 +615,7 @@ input.nlss
     font-size: 12px;
     text-align:justify;
 }
-.clres a,a:visited,a:active
+.clres a
 {
     color: green;
     font-weight:bold;

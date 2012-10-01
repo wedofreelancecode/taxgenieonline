@@ -19,6 +19,11 @@
                         E-Mail: mpsplimited@gmail.com<br />
                         Phone No. 040-23734818, 23754428
                     </p>
+                     <p>
+                        <b>MVS Prasad</b><br />
+                        Mobile No:9989142444<br />
+                        Email:<a href="mailto:mvsp44@gmail.com">mvsp44@gmail.com</a>
+                    </p>
                     <p>
                         <b>M.V. Subba Rao</b><br />
                         Mobile No: 9848489671<br />
@@ -34,11 +39,7 @@
                         Mobile No:9849118254<br />
                         Email:<a href="mailto:varadaiah@gmail.com">varadaiah@gmail.com</a>
                     </p>
-                     <p>
-                        <b>MVS Prasad</b><br />
-                        Mobile No:9989142444<br />
-                        Email:<a href="mailto:mvsp44@gmail.com">mvsp44@gmail.com</a>
-                    </p>
+                    
                 </div>
             </div>
             <img src="images/middle_box_bottom.png" width="501" height="6" />

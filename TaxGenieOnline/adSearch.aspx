@@ -16,7 +16,7 @@
                 
                 <table style="width: 100%; margin-top: 5px;" cellspacing="7px" border="10px"><tr>
                         <td style="width: 40%; text-align: right; padding-top: 10px" valign="top">
-                            <asp:Label ID="lblKeyword" runat="server" Text="Subjet :" CssClass="nlsN"></asp:Label><br />
+                            <asp:Label ID="lblKeyword" runat="server" Text="Subject :" CssClass="nlsN"></asp:Label><br />
                             <span style="font-size:9px">(Keywords)</span>&nbsp
                         </td>
                         <td style="padding: 6px;">

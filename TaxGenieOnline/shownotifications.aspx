@@ -12,7 +12,7 @@
                 </div>
                 <div class="newshldr" style="padding-top: 15px; padding-bottom: 10px; margin-left: 40px;
                     margin-right: 40px; min-height: 200px; text-align: justify">
-                    <div class="doc2ss">
+                    <div class="doc1">
                         <asp:Literal ID="ltl" runat="server"></asp:Literal>
                         <asp:Label ID="lbldata" runat="server"></asp:Label>
 
@@ -22,6 +22,9 @@
                         </td></tr>
                         </table>
                         <br />
+                    </div>
+                    <div>
+                    <asp:Literal ID="LtlCaselaws" runat="server"></asp:Literal>
                     </div>
                 </div>
             </div>

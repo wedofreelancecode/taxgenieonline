@@ -26,7 +26,8 @@ namespace TaxGenie_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER10-PC;Initial Catalog=Dev_TaxGenie;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER10-PC;Initial Catalog=Dev_TaxGenie;User ID=sa;Password=pyramidinc" +
+            "")]
         public string TaxGenieConnectionString {
             get {
                 return ((string)(this["TaxGenieConnectionString"]));
@@ -36,7 +37,8 @@ namespace TaxGenie_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER10-PC;Initial Catalog=Dev_TaxGenie;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER10-PC;Initial Catalog=Dev_TaxGenie;User ID=sa;Password=pyramidinc" +
+            "")]
         public string Prod_TaxGenieConnectionString {
             get {
                 return ((string)(this["Prod_TaxGenieConnectionString"]));
@@ -46,7 +48,8 @@ namespace TaxGenie_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER10-PC;Initial Catalog=Dev_TaxGenie;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=USER10-PC;Initial Catalog=Dev_TaxGenie;User ID=sa;Password=pyramidinc" +
+            "")]
         public string Dev_TaxGenieConnectionString {
             get {
                 return ((string)(this["Dev_TaxGenieConnectionString"]));

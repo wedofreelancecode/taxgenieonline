@@ -73,6 +73,7 @@
     <Content Include="images\add2.jpg" />
     <EmbeddedResource Include="images\arr_left.gif" />
     <EmbeddedResource Include="images\arr_right.gif" />
+    <Content Include="images\adSearch_TG.png" />
     <Content Include="images\bc_bg.png" />
     <Content Include="images\bc_separator.png" />
     <Content Include="images\blue.jpg" />
