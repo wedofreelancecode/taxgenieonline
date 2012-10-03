@@ -154,7 +154,7 @@ namespace TaxGenieOnline
 
                         ltlCLheadnotes.Text += "<table class='citation citCon'>";
                         ltlCLheadnotes.Text += "<tr><td align='center'><a href=shownotifications.aspx?citation=" + TGOLcitationnum + "&cat=" + category + "&subcat=" + subcategory+">" + TGOLcitationnum + "</a></td></tr>";
-                        ltlCLheadnotes.Text += "<tr><td align='center'>" + APPELLANTParty + " <span>v/s</span> " + RESPONDENTParty + "<br/>(Dated:&nbsp;" + DateofDecision + ")</td></tr>";
+                        ltlCLheadnotes.Text += "<tr><td align='center'>" + APPELLANTParty + " <span>Vs.</span> " + RESPONDENTParty + "<br/>(Dated:&nbsp;" + DateofDecision + ")</td></tr>";
                         ltlCLheadnotes.Text += "<tr><td style='text-align:justify;font-weight:normal'>" + HeadNotes + "</td></tr></table><br/>";
                     }
                 }

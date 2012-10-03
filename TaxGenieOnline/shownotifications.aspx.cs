@@ -443,15 +443,15 @@ namespace TaxGenieOnline
 
                       LtlCaselaws.Text += "<table class='citCase' width='100%'  align='center'><tr><th width='100%' align='center'>" + citation.ToUpper() + "</th></tr><tr>";
                       LtlCaselaws.Text += "<td width='100%' align='center'>" + strCourt.ToUpper() + "</td></tr><tr>";
-                      LtlCaselaws.Text += "<td align='center'>Civil Appeal No. " + dtgetdatabycitation.Rows[0]["CaseNumber"] + "</td></tr><tr>";
+                      LtlCaselaws.Text += "<td align='center'>" + dtgetdatabycitation.Rows[0]["CaseNumber"] + "</td></tr><tr>";
                       LtlCaselaws.Text += "<td align='center' class='parties'>";
-                      LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["APPELLANTParty"].ToString().ToUpper() + "<br/>v/s<br/>";
+                      LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["APPELLANTParty"].ToString().ToUpper() + "<br/>Vs.<br/>";
                       LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["RESPONDENTParty"].ToString().ToUpper() + "</td></tr><tr><td  align='left'>";
                       LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["JudgesName"] + "</td></tr><tr><td  align='right'>";
                       LtlCaselaws.Text +="Dated:&nbsp;" +((DateTime)dtgetdatabycitation.Rows[0]["DateofDecision"]).ToString("MMMM dd, yyyy") + "</td></tr><tr><td  align='justify'>";
-                      LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["HeadNotes"] + "</td></tr><tr><td>&nbsp;</td></tr><tr><td  align='center'>JUDGEMENT</td></tr>";
+                      LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["HeadNotes"] + "</td></tr><tr><td>&nbsp;</td></tr><tr><td  align='center'></td></tr>";
 
-                      LtlCaselaws.Text += "<tr><td align='left'>Per:" + dtgetdatabycitation.Rows[0]["JudgementinFavourof"] + "</td></tr><tr><td style='font-weight:normal' align='justify'>";
+                      LtlCaselaws.Text += "<tr><td style='font-weight:normal' align='justify'>";
 
                       LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["JUDGEMENTContent"] + "</td></tr></table>";
 

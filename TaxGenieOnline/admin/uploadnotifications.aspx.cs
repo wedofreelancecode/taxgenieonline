@@ -93,7 +93,7 @@ namespace TaxGenieOnline.admin
                         txtCLAPPELLANTParty.Text = row.APPELLANTParty;
                         txtCLrespondentparty.Text = row.RESPONDENTParty;
                         txtCLjudgesname.Text = row.JudgesName;
-                        txtCLdateofdec.Text = row.DateofDecision.ToString("dd-MM-yyyy");
+                        txtCLdateofdec.Text = row.DateofDecision.ToString("MM-dd-yyyy");
                         txtCLJinFavour.SelectedValue = row.JudgementinFavourof;
                         edtCLheadnotes.Content = row.HeadNotes;
                         edtCLcontent.Content = row.JUDGEMENTContent;
