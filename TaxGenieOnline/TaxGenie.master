@@ -109,62 +109,6 @@
             </div>
             <div class="clmiddle">
                 <div class="rp">
-                    <img src="images/slogo.png" align="absmiddle" /> Tax Update</div>
-                <div class="brdhds">
-                </div>
-                <div class="src1">
-                    <asp:Repeater ID="dlTaxUpdate" runat="server">
-                        <ItemTemplate>
-                            <a class="rss-item" href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'>
-                            <img src='<%# Eval("ImgPath") %>' alt="" width="203" height="148" />
-                            </a>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                    <%--<img src="images/cartoon.jpg" width="203" height="160" />--%>
-                </div>
-                <span class="more"><a href="/ShowTaxUpdates.aspx">more...</a></span>
-            </div>
-            <div class="bxbottom">
-            </div>
-            <div class="brht1">
-            </div>
-            <div style="height: 80px;">
-                <img src="images/add1.jpg" height="80" width="232" />
-            </div>
-            <div class="brht1">
-            </div>
-            <div class="bxtop">
-            </div>
-            <div class="clmiddle">
-                <div class="rp">
-                    <img src="images/slogo.png" align="absmiddle" /> Guest Column</div>
-                <div class="brdhds">
-                </div>
-                <div class="src1">
-                    <img src="images/sbrao.gif" width="85" height="70" class="txtwrap" />
-                    <asp:Repeater ID="dlLGuest" runat="server">
-                        <ItemTemplate>
-                            <a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
-                            <%# Eval("Title") %>...</a>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </div>
-                <span class="more"><a href="/ShowContents.aspx?CType=Left Guest">more...</a></span>
-            </div>
-            <div class="bxbottom">
-            </div>
-            <div class="brht1">
-            </div>
-        </asp:ContentPlaceHolder>
-    </div>
-    <asp:ContentPlaceHolder ID="cph_main" runat="server">
-    </asp:ContentPlaceHolder>
-    <div class="cl3 fright">
-        <asp:ContentPlaceHolder ID="cph_right" runat="server">
-            <div class="bxtop">
-            </div>
-            <div class="clmiddle">
-                <div class="ne">
                     <img src="images/slogo.png" align="absmiddle" /> Department News</div>
                 <div class="brdhds">
                 </div>
@@ -185,6 +129,68 @@
             </div>
             <div class="brht1">
             </div>
+            <div style="height: 80px;">
+                <img src="images/add1.jpg" height="80" width="232" />
+            </div>
+            <div class="brht1">
+            </div>
+            <div class="bxtop">
+            </div>
+            <div class="clmiddle">
+                <div class="rp">
+                    <img src="images/slogo.png" align="absmiddle" /> Guest Column</div>
+                <div class="brdhds">
+                </div>
+                <div class="src1">
+                    <asp:Repeater ID="dlLGuest" runat="server">
+                        <ItemTemplate>
+                            <a style="font-size:12px;font-weight:bold;color:green" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                            <img src='<%# Eval("ImgPath") %>' alt=""  width="85" height="70" class="txtwrap" />
+                            <%# Eval("Title") %>...</a>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+                <span class="more"><a href="/ShowContents.aspx?CType=Left Guest">more...</a></span>
+            </div>
+            <div class="bxbottom">
+            </div>
+            <div class="brht1">
+            </div>
+        </asp:ContentPlaceHolder>
+    </div>
+    <asp:ContentPlaceHolder ID="cph_main" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="cl3 fright">
+        <asp:ContentPlaceHolder ID="cph_right" runat="server">
+            <div class="bxtop">
+            </div>
+            <div class="clmiddle">
+                <div class="ne">
+                    <img src="images/slogo.png" align="absmiddle" /> Search</div>
+                <div class="brdhds">
+                </div>
+                <div class="src1">
+                   <%-- <asp:Repeater ID="dlTaxUpdate" runat="server">
+                        <ItemTemplate>
+                            <a class="rss-item" href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'>
+                            <img src='<%# Eval("ImgPath") %>' alt="" width="203" height="148" />
+                            </a>
+                        </ItemTemplate>
+                    </asp:Repeater>--%>
+                     <asp:ImageButton ID="imgSrc" runat="server"
+                ImageUrl="~/images/adSearch_TG.png" PostBackUrl="~/adSearch.aspx" width="203" height="100" />
+                <script type="text/javascript" >
+                    $(function () {
+                        $("#ctl00_ctl00_imgADSrc").hide();
+                    });
+                    </script>
+                </div>
+               <%-- <span class="more"><a href="/ShowTaxUpdates.aspx">more...</a></span>--%>
+            </div>
+            <div class="bxbottom">
+            </div>
+            <div class="brht1">
+            </div>
             <div class="bxtop">
             </div>
             <div class="clmiddle">
@@ -193,15 +199,19 @@
                 <div class="brdhds">
                 </div>
                 <div class="src1" >
-                    <marquee direction="up" scrollamount="3" style="height: 151px; onmouseover='this.stop();' onmouseout='this.start();'> 
-                    <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.moneycontrol.com%2Frss%2Feconomy.xml&num=5&desc=90>1&targ=y&utf=y"  charset="UTF-8" type="text/javascript"></script>
+                    <marquee direction="up" scrollamount="3" style="height: 151px" onmouseover='this.stop();' onmouseout='this.start();'> 
+                    <%--<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.moneycontrol.com%2Frss%2Feconomy.xml&num=5&desc=90>1&targ=y&utf=y"  charset="UTF-8" type="text/javascript"></script>
                     <noscript>
                       <a href="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.moneycontrol.com%2Frss%2Feconomy.xml&num=5&desc=90>1&targ=y&utf=y&html=y">View RSS feed</a>
-                    </noscript>
-                    </marquee>
+                    </noscript>--%>
+                    <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Ftaxgenieonline.blogspot.in%2Fatom.xml&num=6&desc=90>1&targ=y&utf=y"  charset="UTF-8" type="text/javascript"></script>
+
+                    <noscript>
+                       <a href="http://feed2js.org//feed2js.php?src=http%3A%2F%2Ftaxgenieonline.blogspot.in%2Fatom.xml&num=6&desc=90>1&targ=y&utf=y&html=y">View RSS feed</a>
+                    </noscript></marquee>
                 </div>
                 <span class="more">
-                <a href="http://www.moneycontrol.com/rss/economy.xml" target="_blank">more...</a></span>
+                <a href="http://taxgenieonline.blogspot.com/feeds/posts/default" target="_blank">more...</a></span>
             </div>
             <div class="bxbottom">
             </div>
@@ -220,10 +230,10 @@
                 <div class="brdhds">
                 </div>
                 <div class="src1">
-                    <img src="images/sbrao.gif" width="85" height="70" class="txtwrap" />
                     <asp:Repeater ID="dlRGuest" runat="server">
                         <ItemTemplate>
-                            <a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                            <a style="font-size:12px;font-weight:bold;color:green" class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                            <img src='<%# Eval("ImgPath") %>' alt=""  width="85" height="70" class="txtwrap" />
                             <%# Eval("Title") %>...</a>
                         </ItemTemplate>
                     </asp:Repeater>

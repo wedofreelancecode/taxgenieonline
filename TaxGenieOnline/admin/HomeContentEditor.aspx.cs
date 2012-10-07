@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TaxGenie_DAL.HomeContentsTableAdapters;
+using System.IO;
 
 namespace TaxGenieOnline.admin
 {
@@ -18,7 +19,9 @@ namespace TaxGenieOnline.admin
         protected void btnUpload_Click(object sender, EventArgs e)
         {
             HomeContentsTableAdapter hContent = new HomeContentsTableAdapter();
-            hContent.Insert(ddlContentType.SelectedValue, txtTitle.Text, edtHomeContent.Content, DateTime.Now);
+            string filename ="/images/HomeContents/"+ Path.GetFileName(fuImage.PostedFile.FileName);
+            fuImage.SaveAs(Server.MapPath(filename));
+            hContent.Insert(ddlContentType.SelectedValue, txtTitle.Text, edtHomeContent.Content, DateTime.Now, filename);
             Server.Transfer("HomeContentEditor.aspx");
         }
 

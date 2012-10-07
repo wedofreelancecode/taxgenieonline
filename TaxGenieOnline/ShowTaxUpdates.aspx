@@ -10,9 +10,12 @@
     <div class="rss-box" style="min-height: 300px">
             <asp:Repeater ID="dlTaxUpdates" runat="server">
                 <ItemTemplate>
-                    <a class="rss-item" href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'>
-                            <img src='<%# Eval("ImgPath") %>' alt="" width="203" height="148" />
+                <dir>
+                    <a href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'><%# Eval("Title") %>
+                            <img src='<%# Eval("ImgPath") %>' alt="" width="50" height="40" class="txtwrap" />
                             </a><br />
+                            <label> Published:<%# Eval("DateTime") %></label>
+                            </dir><br />
                 </ItemTemplate>
             </asp:Repeater>
     </div>

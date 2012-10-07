@@ -33,10 +33,7 @@ namespace TaxGenieOnline
             }
             else
             {
-                TaxUpdateImgTableAdapter tuAdapter = new TaxUpdateImgTableAdapter();
-                dlTaxUpdate.DataSource = tuAdapter.GetFirst(1);
-                dlTaxUpdate.DataBind();
-
+                
                 HomeContentsTableAdapter hContentsadptr = new HomeContentsTableAdapter();
                 HomeContents.HomeContentsDataTable hContents = hContentsadptr.GetContentByType("Department News", 2);
                 foreach (HomeContents.HomeContentsRow row in hContents)
@@ -56,8 +53,8 @@ namespace TaxGenieOnline
                     //int len = 190 - row.Title.Length;
                     //if (row.Data.Length > len && len > 0)
                     //    row.Data = row.Data.Substring(0, len);
-                    if (row.Title.Length > 190)
-                        row.Title = row.Title.Substring(0, 190);
+                    if (row.Title.Length > 250)
+                        row.Title = row.Title.Substring(0, 250);
                 }
                 dlRGuest.DataSource = rGst;
                 dlRGuest.DataBind();
@@ -68,8 +65,8 @@ namespace TaxGenieOnline
                     //int len = 190 - row.Title.Length;
                     //if (row.Data.Length > len && len > 0)
                     //    row.Data = row.Data.Substring(0, len);
-                    if (row.Title.Length > 190)
-                        row.Title = row.Title.Substring(0, 190);
+                    if (row.Title.Length > 250)
+                        row.Title = row.Title.Substring(0, 250);
                 }
                 dlLGuest.DataSource = lGst;
                 dlLGuest.DataBind();

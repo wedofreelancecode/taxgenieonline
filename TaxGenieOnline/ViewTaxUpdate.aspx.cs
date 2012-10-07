@@ -14,6 +14,7 @@ namespace TaxGenieOnline
             TaxUpdate.TaxUpdateImgRow dr = data.Rows[0] as TaxUpdate.TaxUpdateImgRow;
             imgTU.ImageUrl = dr.ImgPath;
             lbldata.Text = dr.Data;
+            lblTitle.Text = dr.Title;
         }
     }
 }

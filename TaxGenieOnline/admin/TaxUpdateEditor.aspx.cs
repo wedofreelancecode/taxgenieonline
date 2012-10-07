@@ -16,7 +16,7 @@ namespace TaxGenieOnline.admin
             TaxUpdateImgTableAdapter TUContent = new TaxUpdateImgTableAdapter();
             string filename ="/images/TaxUpdate/"+ Path.GetFileName(fuImage.PostedFile.FileName);
             fuImage.SaveAs(Server.MapPath(filename));
-            TUContent.Insert(edtTaxUpdate.Content, filename, DateTime.Now);
+            TUContent.Insert(edtTaxUpdate.Content, txtTitle.Text, filename, DateTime.Now);
             Server.Transfer("TaxUpdateEditor.aspx");
         }
     }

@@ -5,21 +5,27 @@
     <script language="javascript" src="scripts/slides.min.jquery.js" type="text/javascript"></script>
     <script language="javascript" src="scripts/slides.jquery.js" type="text/javascript"></script>
     <div class="cl22 fleft">
-        <div class="slideshowbox">
-            <div class="midbxtop">
-            </div>
-            <div class="slidemiddle">
-                <div id="slides">
-                    <div class="slides_container">
-                        <img src="images/slide1.jpg" width="490" height="198" alt="" />
-                        <img src="images/slide3.jpg" width="490" height="198" alt="" />
-                        <img src="images/slide4.jpg" width="490" height="198" alt="" />
-                        <img src="images/slide5.jpg" width="490" height="198" alt="" />
-                    </div>
+        <div class="contentbox">
+            <img src="images/middle_box_top.png" width="501" height="4" alt="" />
+            <div class="contentboxmiddle2">
+                <div class="blue">
+                    Tax Update</div>
+                <div class="brdhdsblue">
                 </div>
+                <div class="ab1" style="font-size:12px;font-weight:bold;" >
+                    <asp:Repeater ID="dlTaxUpdate" runat="server">
+                        <ItemTemplate>
+                            <a style="font-size:12px;font-weight:bold;color:#08F" href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'><%# Eval("Title") %>
+                            <img src='<%# Eval("ImgPath") %>' alt=""  width="180" height="140" class="txtwrap" />
+                            </a>
+                            <br />
+                            Published:<%# Eval("DateTime") %>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+                <span class="more"><a href="/ShowTaxUpdates.aspx">Previous Tax Updates</a></span>
             </div>
-            <div class="midbxbottom">
-            </div>
+            <img src="images/middle_box_bottom.png" width="501" height="6" alt="" />
         </div>
         <div class="contentbox">
             <img src="images/middle_box_top.png" width="501" height="4" alt="" />
@@ -29,16 +35,14 @@
                 <div class="brdhdsblue">
                 </div>
                 <div class="ab1">
-                    <img src="images/finance.jpg" width="86" height="80" alt="" class="txtwrap" />
-                    <ol>
                         <asp:Repeater ID="dlEditorDesk" runat="server">
                             <ItemTemplate>
-                                <li><a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                                <a class="rss-item" style="font-size:12px;font-weight:bold;color:#08F" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                                <img src='<%# Eval("ImgPath") %>' alt=""  width="85" height="70" class="txtwrap" />
                                     <%# Eval("Title") %>
-                                    ...</a></li>
+                                    ...</a>
                             </ItemTemplate>
                         </asp:Repeater>
-                    </ol>
                 </div>
                 <span class="more"><a href="/ShowContents.aspx?CType=Editor Desk">more...</a></span>
             </div>
@@ -141,7 +145,7 @@
                     <ol>
                         <asp:Repeater ID="dlCaseAnalysis" runat="server">
                             <ItemTemplate>
-                                <li><a class="rss-item" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
+                                <li><a style="font-size:12px;font-weight:bold;color:#08F" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
                                     <%# Eval("Title") %>
                                     ...</a></li>
                             </ItemTemplate>

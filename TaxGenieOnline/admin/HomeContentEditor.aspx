@@ -27,6 +27,14 @@
                         </td>
                     </tr>
                     <tr>
+                        <td align="right">
+                            <asp:Label ID="lblImage" runat="server" Text="Image" CssClass="nlsN"></asp:Label>
+                        </td>
+                        <td align="left">
+                            <asp:FileUpload ID="fuImage" runat="server" CssClass="nls"></asp:FileUpload>
+                        </td>
+                    </tr>
+                    <tr>
                         <td colspan="2" align="center" style="padding:10px">
                             <asp:Label ID="lblTitle" runat="server" Text="Title" CssClass="nlsN"
                                 Font-Bold="True" Font-Size="12pt" Font-Underline="False" ></asp:Label>

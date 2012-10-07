@@ -10,6 +10,9 @@
             <div class="doc" align="center">
                 <asp:Image ID="imgTU" runat="server" ImageAlign="AbsMiddle" Height="150px" 
                     Width="150px"></asp:Image>
+                <asp:Label ID="lblTitle" runat="server" Width="100%"></asp:Label>
+                <br />
+                <br />
                 <asp:Label ID="lbldata" runat="server" Width="100%"></asp:Label>
             </div>
         </div>

@@ -20,6 +20,18 @@
                             <asp:FileUpload ID="fuImage" runat="server" CssClass="nls"></asp:FileUpload>
                         </td>
                     </tr>
+                     <tr>
+                        <td colspan="2" align="center" style="padding:10px">
+                            <asp:Label ID="lblTitle" runat="server" Text="Title" CssClass="nlsN"
+                                Font-Bold="True" Font-Size="12pt" Font-Underline="False" ></asp:Label>
+                        </td>
+                    </tr>
+                      <tr>
+                        <td colspan="2" align="center">
+                            <asp:TextBox ID="txtTitle" runat="server" CssClass="nls" Rows="4"
+                                TextMode="MultiLine" Width="95%"></asp:TextBox>
+                        </td>
+                    </tr>
                     <tr>
                         <td colspan="2">
                             <asp:Editor ID="edtTaxUpdate" runat="server" Width="100%" Height="400px" />

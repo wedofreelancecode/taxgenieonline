@@ -49,13 +49,13 @@ namespace TaxGenieOnline {
         protected global::System.Web.UI.WebControls.Repeater dlWhats;
         
         /// <summary>
-        /// dlTaxUpdate control.
+        /// dlDeptNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater dlTaxUpdate;
+        protected global::System.Web.UI.WebControls.Repeater dlDeptNews;
         
         /// <summary>
         /// dlLGuest control.
@@ -85,13 +85,13 @@ namespace TaxGenieOnline {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_right;
         
         /// <summary>
-        /// dlDeptNews control.
+        /// imgSrc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater dlDeptNews;
+        protected global::System.Web.UI.WebControls.ImageButton imgSrc;
         
         /// <summary>
         /// dlRGuest control.
