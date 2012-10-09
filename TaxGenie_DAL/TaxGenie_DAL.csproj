@@ -77,6 +77,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Circulars.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Clients.cs">
+      <DependentUpon>Clients.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Clients.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Clients.xsd</DependentUpon>
+    </Compile>
     <Compile Include="customs.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -227,6 +236,17 @@
     </None>
     <None Include="Circulars.xss">
       <DependentUpon>Circulars.xsd</DependentUpon>
+    </None>
+    <None Include="Clients.xsc">
+      <DependentUpon>Clients.xsd</DependentUpon>
+    </None>
+    <None Include="Clients.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Clients.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Clients.xss">
+      <DependentUpon>Clients.xsd</DependentUpon>
     </None>
     <None Include="customs.xsc">
       <DependentUpon>customs.xsd</DependentUpon>

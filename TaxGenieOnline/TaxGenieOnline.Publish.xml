@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="D:\TaxGenieOnline_Publish_30sep" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="TaxGenie" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+  <publishProfile publishUrl="D:\TaxGenieOnline_Publish_09Oct" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="TaxGenie" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="SION/leath-0910.zip" publishTime="09/05/2012 22:15:10" />
     <file relUrl="images/box_middle_right.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="stylesheets/LightStyle.css" publishTime="09/24/2012 23:56:44" />
     <file relUrl="SION/engg-0910.zip" publishTime="09/05/2012 22:15:10" />
     <file relUrl="images/supernavR.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="editprofile.aspx" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="about-us.aspx" publishTime="09/30/2012 15:29:56" />
-    <file relUrl="Home.aspx" publishTime="09/05/2012 22:46:00" />
+    <file relUrl="about-us.aspx" publishTime="10/01/2012 21:48:35" />
+    <file relUrl="Home.aspx" publishTime="10/07/2012 22:51:46" />
+    <file relUrl="admin/AddClients.aspx" publishTime="10/09/2012 18:03:18" />
     <file relUrl="admin/uploadnewsflash.aspx" publishTime="09/05/2012 22:15:10" />
     <file relUrl="searchdata.aspx" publishTime="09/05/2012 22:15:11" />
     <file relUrl="UnauthorizedAccess.aspx" publishTime="09/19/2012 04:20:58" />
     <file relUrl="scripts/webticker_lib.js" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="images/rtarw.png" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="ViewContent.aspx" publishTime="09/05/2012 23:19:17" />
     <file relUrl="memberreg.aspx" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/box_bottom_right.png" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="Default.Master" publishTime="09/24/2012 22:13:23" />
     <file relUrl="search.aspx" publishTime="09/18/2012 22:40:11" />
     <file relUrl="SION/food-0910.zip" publishTime="09/05/2012 22:15:10" />
     <file relUrl="images/supernav2.png" publishTime="09/05/2012 22:15:11" />
@@ -28,8 +28,9 @@
     <file relUrl="scripts/taxgenieblog.js" publishTime="09/05/2012 22:15:11" />
     <file relUrl="shownewsdocuments.aspx" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/tax2bg.jpg" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="TaxGenie.master" publishTime="10/07/2012 00:00:49" />
     <file relUrl="Page.htm" publishTime="09/05/2012 22:15:10" />
-    <file relUrl="WebConnectionStrings.config" publishTime="09/30/2012 15:25:20" />
+    <file relUrl="WebConnectionStrings.config" publishTime="10/09/2012 19:10:56" />
     <file relUrl="bin/AjaxControlToolkit.dll" publishTime="02/09/2012 12:25:38" />
     <file relUrl="stylesheets/reset.css" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/fotterborder.jpg" publishTime="09/05/2012 22:15:11" />
@@ -37,7 +38,7 @@
     <file relUrl="images/box_middle_left.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="SQL Sripts/Alter_data_search_select.sql" publishTime="09/05/2012 22:15:10" />
     <file relUrl="SION/ele-0910.zip" publishTime="09/05/2012 22:15:10" />
-    <file relUrl="stylesheets/stylesheet.css" publishTime="09/30/2012 15:24:45" />
+    <file relUrl="stylesheets/stylesheet.css" publishTime="10/09/2012 00:08:38" />
     <file relUrl="images/headerbg.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/BlueArrow.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/tax3.jpg" publishTime="09/05/2012 22:15:11" />
@@ -48,9 +49,11 @@
     <file relUrl="images/finance.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/tax1bg.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="admin/editflashnews.aspx" publishTime="09/05/2012 22:15:10" />
+    <file relUrl="Clients.aspx" publishTime="10/09/2012 17:50:21" />
     <file relUrl="admin/uploadnotifications.aspx" publishTime="09/30/2012 12:08:37" />
-    <file relUrl="TaxGenie.master" publishTime="09/30/2012 17:08:22" />
-    <file relUrl="bin/Interop.Acrobat.dll" publishTime="09/30/2012 18:14:07" />
+    <file relUrl="admin/EditHomeContents.aspx" publishTime="10/08/2012 00:15:00" />
+    <file relUrl="images/underconstruction.jpg" publishTime="09/18/2012 22:40:11" />
+    <file relUrl="bin/Interop.Acrobat.dll" publishTime="10/09/2012 19:11:15" />
     <file relUrl="SION/fish-0910.zip" publishTime="09/05/2012 22:15:10" />
     <file relUrl="images/middle_box_bottom.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/f.jpg" publishTime="09/05/2012 22:15:11" />
@@ -61,16 +64,18 @@
     <file relUrl="images/sbrao.gif" publishTime="09/05/2012 22:15:11" />
     <file relUrl="admin/Adminpage.aspx" publishTime="09/05/2012 22:15:10" />
     <file relUrl="admin/WhatsNew.aspx" publishTime="09/16/2012 16:17:22" />
-    <file relUrl="Web.config" publishTime="09/05/2012 22:15:10" />
+    <file relUrl="Web.config" publishTime="10/09/2012 19:14:26" />
     <file relUrl="images/mbg.jpg" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="admin/HomeContentEditor.aspx" publishTime="09/05/2012 23:05:33" />
+    <file relUrl="admin/HomeContentEditor.aspx" publishTime="10/08/2012 23:28:25" />
     <file relUrl="scripts/jquery.min.js" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="TaxGenieOnline.Publish.xml" publishTime="09/30/2012 15:34:15" />
-    <file relUrl="images/button.jpg" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="bin/TaxGenieOnline.pdb" publishTime="09/30/2012 18:14:08" />
+    <file relUrl="TaxGenieOnline.Publish.xml" publishTime="09/30/2012 18:16:17" />
+    <file relUrl="images/midbg.jpg" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="bin/TaxGenieOnline.pdb" publishTime="10/09/2012 19:15:13" />
     <file relUrl="stylesheets/global.css" publishTime="09/05/2012 22:15:11" />
     <file relUrl="scripts/jquery.easing.1.3.js" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="admin/EditTaxUpdate.aspx" publishTime="10/08/2012 00:15:00" />
     <file relUrl="adResult.aspx" publishTime="09/30/2012 10:07:30" />
+    <file relUrl="admin/EditClients.aspx" publishTime="10/09/2012 17:53:43" />
     <file relUrl="images/box_bottom_middle.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="display.htm" publishTime="09/05/2012 22:15:11" />
     <file relUrl="admin/editnotifications.aspx" publishTime="09/28/2012 20:52:13" />
@@ -78,28 +83,27 @@
     <file relUrl="images/psslogo.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="WHshow.aspx" publishTime="09/05/2012 22:15:10" />
     <file relUrl="images/Twitter_32x32.png" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="images/rtarw.png" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="images/small.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/logo.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/box_bottom.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/FaceBook_48x48.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/loginArea.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/menubg.png" publishTime="09/21/2012 21:15:41" />
-    <file relUrl="images/blue.jpg" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="pwdrecovery.aspx" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/Slide5.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/tax2.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="SION/hand-0910.zip" publishTime="09/05/2012 22:15:10" />
     <file relUrl="images/box_top_right.png" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="images/underconstruction.jpg" publishTime="09/18/2012 22:40:11" />
+    <file relUrl="images/mbg copy.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/TaxUpdate/Mark logo_web.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="SION/plast-0910.zip" publishTime="09/05/2012 22:15:10" />
     <file relUrl="images/mg.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/tax1.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/r.jpg" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="bin/TaxGenie_DAL.dll" publishTime="09/30/2012 18:14:05" />
+    <file relUrl="bin/TaxGenie_DAL.dll" publishTime="10/09/2012 19:14:41" />
     <file relUrl="images/box_top.png" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="Contactus.aspx" publishTime="09/30/2012 14:16:35" />
     <file relUrl="GiftTaxAct.htm" publishTime="09/05/2012 22:15:10" />
-    <file relUrl="images/midbg.jpg" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="admin/editnewsflash.aspx" publishTime="09/05/2012 22:15:10" />
     <file relUrl="images/login.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/middle_box_top.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="Web.sitemap" publishTime="09/18/2012 23:59:05" />
@@ -108,39 +112,42 @@
     <file relUrl="images/searchbg.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/Feed_32x32.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/slide2.jpg" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="images/bgs.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="Serviceprocedures.htm" publishTime="09/05/2012 22:15:10" />
     <file relUrl="displayindex.aspx" publishTime="09/21/2012 21:15:41" />
+    <file relUrl="admin/EditWhatsNew.aspx" publishTime="10/09/2012 00:26:28" />
     <file relUrl="images/FaceBook_32x32.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/bullet.gif" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="ViewContent.aspx" publishTime="09/05/2012 23:19:17" />
+    <file relUrl="pwdrecovery.aspx" publishTime="09/05/2012 22:15:11" />
     <file relUrl="changepwd.aspx" publishTime="09/05/2012 22:15:10" />
     <file relUrl="SION/chem-0910.zip" publishTime="09/05/2012 22:15:10" />
-    <file relUrl="images/t.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/linkedin.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="stylesheets/ddsmoothmenu.css" publishTime="09/18/2012 22:40:11" />
-    <file relUrl="images/news.png" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="bin/TaxGenieOnline.dll" publishTime="09/30/2012 18:14:08" />
-    <file relUrl="ShowTaxUpdates.aspx" publishTime="09/05/2012 22:15:10" />
+    <file relUrl="scripts/jquery-scroll.js" publishTime="10/09/2012 00:02:04" />
+    <file relUrl="bin/TaxGenieOnline.dll" publishTime="10/09/2012 19:15:13" />
+    <file relUrl="ShowTaxUpdates.aspx" publishTime="10/06/2012 16:22:51" />
     <file relUrl="scripts/ddsmoothmenu.js" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/nf.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="index.aspx" publishTime="09/21/2012 21:15:41" />
     <file relUrl="images/slide1.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/add1.jpg" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="images/mbg copy.jpg" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="images/Twitter_48x48.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/ne.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/bc_bg.png" publishTime="09/21/2012 21:15:41" />
     <file relUrl="images/fNews.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/au.jpg" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="images/blue.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/bullet2.gif" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/box_top_middle.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/slogo.png" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="images/button.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="SION/misc-0910.zip" publishTime="09/05/2012 22:15:10" />
     <file relUrl="ShowContents.aspx" publishTime="09/05/2012 23:42:08" />
     <file relUrl="scripts/scroll1.js" publishTime="09/05/2012 22:15:11" />
     <file relUrl="admin/editnews.aspx" publishTime="09/05/2012 22:15:10" />
     <file relUrl="scripts/slides.jquery.js" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="adSearch.aspx" publishTime="09/30/2012 11:51:43" />
-    <file relUrl="ViewTaxUpdate.aspx" publishTime="09/05/2012 22:15:10" />
+    <file relUrl="adSearch.aspx" publishTime="10/01/2012 21:50:21" />
+    <file relUrl="ViewTaxUpdate.aspx" publishTime="10/06/2012 19:18:34" />
     <file relUrl="images/supernav.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/box_bottom_left.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="admin/uploadnews.aspx" publishTime="09/05/2012 22:15:10" />
@@ -148,21 +155,22 @@
     <file relUrl="images/slide3.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="SION/notes-0910.zip" publishTime="09/05/2012 22:15:10" />
     <file relUrl="sitemap.aspx" publishTime="09/16/2012 16:17:22" />
-    <file relUrl="admin/TaxUpdateEditor.aspx" publishTime="09/19/2012 16:47:19" />
+    <file relUrl="admin/TaxUpdateEditor.aspx" publishTime="10/08/2012 23:29:20" />
     <file relUrl="scripts/slides.min.jquery.js" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/BackBtn.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/box_middle.png" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="images/Twitter_48x48.png" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="images/small.png" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="images/t.jpg" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="Default.Master" publishTime="10/09/2012 18:44:57" />
     <file relUrl="WHView.aspx" publishTime="09/05/2012 22:15:10" />
-    <file relUrl="images/blue.png" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="Contactus.aspx" publishTime="10/01/2012 21:49:18" />
     <file relUrl="images/c.jpg" publishTime="09/18/2012 22:40:11" />
-    <file relUrl="bin/TaxGenie_DAL.pdb" publishTime="09/30/2012 18:14:05" />
+    <file relUrl="admin/DocUploadToServer.aspx" publishTime="10/07/2012 01:25:19" />
+    <file relUrl="bin/TaxGenie_DAL.pdb" publishTime="10/09/2012 19:14:41" />
     <file relUrl="SION/text-0910.zip" publishTime="09/05/2012 22:15:10" />
     <file relUrl="images/blogger32x32.png" publishTime="09/05/2012 22:15:11" />
-    <file relUrl="admin/editnewsflash.aspx" publishTime="09/05/2012 22:15:10" />
+    <file relUrl="images/blue.jpg" publishTime="09/05/2012 22:15:11" />
     <file relUrl="images/middle_box_middle1.png" publishTime="09/05/2012 22:15:11" />
     <file relUrl="InterestTaxAct.htm" publishTime="09/05/2012 22:15:10" />
-    <file relUrl="images/bgs.png" publishTime="09/05/2012 22:15:11" />
+    <file relUrl="images/news.png" publishTime="09/05/2012 22:15:11" />
   </publishProfile>
 </publishData>

@@ -16,14 +16,14 @@ namespace TaxGenieOnline
         {
             if (!Request.IsAuthenticated && Request.CurrentExecutionFilePath != "/UnauthorizedAccess.aspx" &&
                  Request.CurrentExecutionFilePath != "/about-us.aspx" && Request.CurrentExecutionFilePath != "/memberreg.aspx" &&
-                 Request.CurrentExecutionFilePath != "/pwdrecovery.aspx" && Request.CurrentExecutionFilePath != "/Contactus.aspx" &&
+                 Request.CurrentExecutionFilePath != "/pwdrecovery.aspx" && Request.CurrentExecutionFilePath != "/Contactus.aspx" && Request.CurrentExecutionFilePath != "/Clients.aspx" &&
                  Request.CurrentExecutionFilePath != "/sitemap.aspx" && 
                 (Request.CurrentExecutionFilePath != "/Home.aspx" || Request.QueryString["ReturnUrl"] != null))
             {
                 Server.Transfer("~/UnauthorizedAccess.aspx");
             }
             else if (Page.AppRelativeVirtualPath != "~/Home.aspx" && Page.AppRelativeVirtualPath != "~/memberreg.aspx" && Page.AppRelativeVirtualPath != "~/pwdrecovery.aspx"
-                && Page.AppRelativeVirtualPath != "~/about-us.aspx" && Page.AppRelativeVirtualPath != "~/Contactus.aspx" 
+                && Page.AppRelativeVirtualPath != "~/about-us.aspx" && Page.AppRelativeVirtualPath != "~/Contactus.aspx" && Page.AppRelativeVirtualPath != "~/Clients.aspx"
                 && Page.AppRelativeVirtualPath != "~/changepwd.aspx" && Page.AppRelativeVirtualPath != "~/editprofile.aspx"
                 && Page.AppRelativeVirtualPath != "~/UnauthorizedAccess.aspx")// && Page.AppRelativeVirtualPath != "~/WHShow.aspx"
                 //&& Page.AppRelativeVirtualPath != "~/WHView.aspx" && Page.AppRelativeVirtualPath != "~/ViewTaxUpdate.aspx"

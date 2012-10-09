@@ -62,7 +62,9 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\AddClients.aspx" />
     <Content Include="admin\DocUploadToServer.aspx" />
+    <Content Include="admin\EditClients.aspx" />
     <Content Include="admin\EditHomeContents.aspx" />
     <Content Include="admin\editnewsflash.aspx" />
     <Content Include="admin\editnotifications.aspx" />
@@ -72,6 +74,7 @@
     <Content Include="admin\WhatsNew.aspx" />
     <Content Include="adResult.aspx" />
     <Content Include="adSearch.aspx" />
+    <Content Include="Clients.aspx" />
     <Content Include="editprofile.aspx" />
     <Content Include="images\add1.jpg" />
     <Content Include="images\add2.jpg" />
@@ -189,6 +192,13 @@
     <Compile Include="about-us.aspx.designer.cs">
       <DependentUpon>about-us.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\AddClients.aspx.cs">
+      <DependentUpon>AddClients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AddClients.aspx.designer.cs">
+      <DependentUpon>AddClients.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\Adminpage.aspx.cs">
       <DependentUpon>Adminpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -202,6 +212,13 @@
     </Compile>
     <Compile Include="admin\DocUploadToServer.aspx.designer.cs">
       <DependentUpon>DocUploadToServer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\EditClients.aspx.cs">
+      <DependentUpon>EditClients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\EditClients.aspx.designer.cs">
+      <DependentUpon>EditClients.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\editflashnews.aspx.cs">
       <DependentUpon>editflashnews.aspx</DependentUpon>
@@ -286,6 +303,13 @@
     </Compile>
     <Compile Include="adSearch.aspx.designer.cs">
       <DependentUpon>adSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients.aspx.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients.aspx.designer.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contactus.aspx.cs">
       <DependentUpon>Contactus.aspx</DependentUpon>

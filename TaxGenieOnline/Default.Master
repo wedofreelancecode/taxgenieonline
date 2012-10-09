@@ -235,7 +235,7 @@
                                 <li><a href="underconstruction.aspx">Forms & Registers</a></li>
                                 <li><a href="underconstruction.aspx">FAQ</a></li>
                             </ul>
-                        </li>
+                        </li>                        
                     </ul>
                 </div>
             </div>
@@ -295,6 +295,12 @@
                     <td>
                         Flash News:<a href="/admin/uploadnewsflash.aspx">Add\Upload</a><a href="/admin/editnewsflash.aspx">Edit\Delete</a>
                     </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        Clients:<a href="/admin/AddClients.aspx">Add\Upload</a><a href="/admin/EditClients.aspx">Edit\Delete</a>
+                    </td>
+                    
                 </tr>
             </table>
         </div>
@@ -424,6 +430,7 @@
                         </li>
                     </ul>
                 </div>
+                
                 <div style="float: left; width: 150px;">
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Library</b>
@@ -433,6 +440,15 @@
                                 <li><a href="/index.aspx?cat=Library&subcat=Service/Tax">Service Tax</a></li>
                                 <li><a href="/index.aspx?cat=Library&subcat=Income/Tax">Income Tax</a></li>
                                 <li><a href="/index.aspx?cat=Library&subcat=DGFT">DGFT</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                  <div style="float: left; width: 130px;">
+                    <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
+                        <li><b>Our Members</b>
+                            <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
+                                <li><a href="Clients.aspx">Clients</a></li>
                             </ul>
                         </li>
                     </ul>
