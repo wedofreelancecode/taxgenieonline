@@ -9,6 +9,7 @@
     <div class="cl2 fleft">
         <div class="contentbox">
             <div class="contentboxmiddle1 shdw" style="min-height: 300px;">
+            <asp:HiddenField ID="hdnId" runat="server" />
                 <table style="width: 100%; margin-top: 5px;">
                     <tr>
                         <td style="width: 40%; text-align: right">
@@ -32,6 +33,14 @@
                         </td>
                         <td align="left">
                             <asp:FileUpload ID="fuImage" runat="server" CssClass="nls"></asp:FileUpload>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td align="right">
+                            <asp:Label ID="lblimg" Visible="false" runat="server" Text="Actual Image" CssClass="nlsN"></asp:Label>
+                        </td>
+                        <td align="left" style="padding-left:5px;">
+                            <asp:Image ID="actImg" Width="200" Height="200" Visible="false" runat="server"></asp:Image>
                         </td>
                     </tr>
                     <tr>

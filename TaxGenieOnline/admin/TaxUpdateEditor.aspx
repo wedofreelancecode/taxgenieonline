@@ -6,6 +6,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_left" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_main" runat="server">
+<asp:HiddenField ID="hdnId" runat="server" />
     <div class="cl2 fleft">
         <div class="contentbox">
             <div class="contentboxmiddle1 shdw" style="min-height: 300px;">
@@ -18,6 +19,14 @@
                         </td>
                         <td align="left">
                             <asp:FileUpload ID="fuImage" runat="server" CssClass="nls"></asp:FileUpload>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="lblimg" Visible="false" runat="server" Text="Actual Image" CssClass="nlsN"></asp:Label>
+                        </td>
+                        <td align="left" style="padding-left:5px;">
+                            <asp:Image ID="actImg" Width="200" Height="200" Visible="false" runat="server"></asp:Image>
                         </td>
                     </tr>
                      <tr>

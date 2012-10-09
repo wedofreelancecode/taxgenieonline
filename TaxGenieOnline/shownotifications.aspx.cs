@@ -453,8 +453,9 @@ namespace TaxGenieOnline
 
                       LtlCaselaws.Text += "<tr><td style='font-weight:normal' align='justify'>";
 
-                      LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["JUDGEMENTContent"] + "</td></tr></table>";
-
+                      LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["JUDGEMENTContent"] + "</td></tr>";
+                      LtlCaselaws.Text += "<tr><td style='padding:45px;font-style:italic;font-weight:normal;text-align:justify' align='center'><font face='Verdana, Arial, Helvetica, sans-serif' color='#666666' size='1'>(<b style='font-weight:bold'>DISCLAIMER</b>: Though all efforts have been made to reproduce the order correctly but the access and circulation is subject to the condition that TaxgenieOnline are not responsible/liable for any loss or damage caused to anyone due to any mistake/error/omissions.)</font></td></tr>";
+                      LtlCaselaws.Text += "</table>";
                   }
 
                }

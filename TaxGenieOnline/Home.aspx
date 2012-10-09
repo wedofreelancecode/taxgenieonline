@@ -15,10 +15,11 @@
                 <div class="ab1" style="font-size:12px;font-weight:bold;" >
                     <asp:Repeater ID="dlTaxUpdate" runat="server">
                         <ItemTemplate>
-                            <a style="font-size:12px;font-weight:bold;color:#08F" href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'><%# Eval("Title") %>
-                            <img src='<%# Eval("ImgPath") %>' alt=""  width="180" height="140" class="txtwrap" />
+                        <br />
+                            <a style="font-size:12px;font-weight:bold;color:#08F" href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'>
+                            <img src='<%# Eval("ImgPath") %>' alt="" style="margin-top:-16px"  width="180" height="140" class="txtwrap" /><%# Eval("Title") %>
                             </a>
-                            <br />
+                            <br /><br />
                             Published:<%# Eval("DateTime") %>
                         </ItemTemplate>
                     </asp:Repeater>
