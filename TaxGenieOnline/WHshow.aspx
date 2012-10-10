@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true" CodeBehind="WHshow.aspx.cs" Inherits="TaxGenieOnline.WHshow" %>
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true" CodeBehind="WHshow.aspx.cs" Inherits="TaxGenieOnline.WHshow" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_left" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_main" runat="server">

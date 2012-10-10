@@ -1,4 +1,4 @@
-<%@ Page Title="Upload Notifications" Language="C#" MasterPageFile="~/TaxGenie.master"
+<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master"
     AutoEventWireup="true" CodeBehind="uploadnotifications.aspx.cs" Inherits="TaxGenieOnline.admin.uploadnotifications" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor"

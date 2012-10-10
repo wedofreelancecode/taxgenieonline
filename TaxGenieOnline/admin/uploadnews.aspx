@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Upload News" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true"
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true"
     CodeBehind="uploadnews.aspx.cs" Inherits="TaxGenieOnline.uploadnews" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor"

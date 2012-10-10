@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true" CodeBehind="WhatsNew.aspx.cs" Inherits="TaxGenieOnline.admin.WhatsNew" %>
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true" CodeBehind="WhatsNew.aspx.cs" Inherits="TaxGenieOnline.admin.WhatsNew" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor"
     TagPrefix="asp" %>
 

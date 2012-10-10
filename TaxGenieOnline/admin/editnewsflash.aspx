@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true" CodeBehind="editnewsflash.aspx.cs" Inherits="TaxGenieOnline.admin.editnewsflash" %>
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true" CodeBehind="editnewsflash.aspx.cs" Inherits="TaxGenieOnline.admin.editnewsflash" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor"
     TagPrefix="cc1" %>

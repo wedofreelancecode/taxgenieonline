@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Change Password" Language="C#" MasterPageFile="~/TaxGenie.Master" AutoEventWireup="true"
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.Master" AutoEventWireup="true"
     CodeBehind="changepwd.aspx.cs" Inherits="TaxGenieOnline.changepwd" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_main" runat="server">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Password Recovery" Language="C#" MasterPageFile="~/TaxGenie.Master"
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.Master"
     AutoEventWireup="true" CodeBehind="pwdrecovery.aspx.cs" Inherits="TaxGenieOnline.pwdrecovery" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_main" runat="server">

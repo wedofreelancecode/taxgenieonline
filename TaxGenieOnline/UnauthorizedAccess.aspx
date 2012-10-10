@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Unauthorized Access" Language="C#" MasterPageFile="~/TaxGenie.Master"
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.Master"
     AutoEventWireup="true" CodeBehind="UnauthorizedAccess.aspx.cs" Inherits="TaxGenieOnline.UnauthorizedAccess" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_main" runat="server">

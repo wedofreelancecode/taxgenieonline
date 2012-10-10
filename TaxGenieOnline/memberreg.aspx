@@ -1,4 +1,4 @@
-﻿<%@ Page Title="MemberRegistration" Language="C#" MasterPageFile="~/TaxGenie.Master"
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.Master"
     AutoEventWireup="true" CodeBehind="memberreg.aspx.cs" Inherits="TaxGenieOnline.UserRegistration.memberreg" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_main" runat="server">

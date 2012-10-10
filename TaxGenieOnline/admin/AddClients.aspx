@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true"
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true"
     CodeBehind="AddClients.aspx.cs" Inherits="TaxGenieOnline.AddClients" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_left" runat="server">

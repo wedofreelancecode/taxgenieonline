@@ -1,4 +1,4 @@
-﻿<%@ Page Title="EditProfile" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true"
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true"
     CodeBehind="editprofile.aspx.cs" Inherits="TaxGenieOnline.editprofile" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_main" runat="server">

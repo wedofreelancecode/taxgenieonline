@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Edit Flash News" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true" CodeBehind="editflashnews.aspx.cs" Inherits="TaxGenieOnline.admin.editflashnews" %>
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true" CodeBehind="editflashnews.aspx.cs" Inherits="TaxGenieOnline.admin.editflashnews" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor"
     TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_left" runat="server">
