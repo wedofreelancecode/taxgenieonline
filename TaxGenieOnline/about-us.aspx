@@ -21,7 +21,7 @@
 
 <p>&nbsp;&nbsp;&nbsp; Shri M.V. Subba Rao, a Post Graduate in Mathematics from Andhra University, Visakhapatnam, worked in CBEC for more three decades in various capacities. He is leading the team of tax professionals in the capacity of Managing Director of Mark Professional Services Private Limited. </p>
 
-<p>&nbsp;&nbsp;&nbsp; Shri K.V.Varadaiah, a Graduate in Science, from Osmania University, Hyderabad.  He had conferred with a Certificate of Honour for his meritorious service while in CENSUS department from the President of India.  He worked in various capacities in CBEC for a span of three decades.  He is one of the founder Directors of the organization and richly contributed in building the taxgeniedonline.com portal.</p>
+<p>&nbsp;&nbsp;&nbsp; Shri K.V.Varadaiah, a Graduate in Science, from Osmania University, Hyderabad.  He had conferred with a Certificate of Honour for his meritorious service while in CENSUS department from the President of India.  He worked in various capacities in CBEC for a span of three decades. </p>
 
 
 
