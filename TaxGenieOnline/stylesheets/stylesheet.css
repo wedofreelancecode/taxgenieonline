@@ -1003,6 +1003,16 @@ li.rss-item
     color: #0088FF;
     font: bold 13px Arial;
 }
+.ab2
+{
+    padding-bottom: 10px;
+    color: #555;
+    font: normal 11px Arial;
+    line-height:18px;
+    text-align: justify;
+    padding: 5px;
+    height: 153px;
+}
 .ab1
 {
     padding-bottom: 10px;

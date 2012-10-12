@@ -453,7 +453,7 @@
                         Tax Libraries</a>
                 </asp:Panel>
                 <asp:Panel ID="pnlSTTaxation" runat="server">
-                    <a href="/shownotifications.aspx?cat=Service Tax&subcat=Taxation of Services: An Educational Guide">
+                    <a href="/shownotifications.aspx?cat=Service Tax&subcat=Taxation of Services: An Educational Guide" target="_blank">
                         <img src="images/BlueArrow.jpg" alt=">>" width="9px" height="9px" />&nbsp;Service
                         Tax Taxation </a>
                 </asp:Panel>

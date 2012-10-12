@@ -43,14 +43,21 @@ namespace TaxGenieOnline
                 {
                     int? id = Int32.Parse(hdnId.Value);
                     clients_insert.UpdateClientById(txtcmpname.Text, taNews.Value,id);
-                    Response.Write("<script>alert('Clients Updated Successfully')</script>");
-                    Server.Transfer("EditClients.aspx");
+                   // successlbl.Text = "Clients Updated Successfully";
+
+                    Response.Write("<script>alert('Clients Updated Successfully') ; location.href='EditClients.aspx'</script>");
+
+                   //Response.Write("<script>alert('Clients Updated Successfully');</script>");
+                   // Response.Redirect("EditClients.aspx");
                 }
                 else
                 {
                     clients_insert.Insert(txtcmpname.Text, taNews.Value);
-                    Response.Write("<script>alert('News Uploded Successfully')</script>");
-                    Server.Transfer("AddClients.aspx");
+                   // Response.Write("<script>alert('News Uploaded Successfully');</script>");
+                    successlbl.Text = "Clients Uploaded Successfully";
+                    txtcmpname.Text = string.Empty;
+                    taNews.Value = string.Empty;
+                    //Server.Transfer("AddClients.aspx");
                 } 
                 
                

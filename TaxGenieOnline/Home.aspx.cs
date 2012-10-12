@@ -2,6 +2,9 @@
 using TaxGenie_DAL;
 using TaxGenie_DAL.HomeContentsTableAdapters;
 using TaxGenie_DAL.TaxUpdateTableAdapters;
+using System.Data;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 
 namespace TaxGenieOnline
 {
@@ -9,6 +12,7 @@ namespace TaxGenieOnline
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             HomeContentsTableAdapter hContentsadptr = new HomeContentsTableAdapter();
             HomeContents.HomeContentsDataTable hContents = hContentsadptr.GetContentByType("Editor Desk", 1);
             foreach (HomeContents.HomeContentsRow row in hContents)
@@ -20,9 +24,12 @@ namespace TaxGenieOnline
                 if (row.Title.Length > 390)
                     row.Title = row.Title.Substring(0, 390);
             }
+            // if (hContents.Columns[5].Equals(" "))
+            // {
+
+            // }
             dlEditorDesk.DataSource = hContents;
             dlEditorDesk.DataBind();
-
 
             HomeContents.HomeContentsDataTable caseContents = hContentsadptr.GetContentByType("Case Analysis", 2);
             foreach (HomeContents.HomeContentsRow row in caseContents)
@@ -33,12 +40,83 @@ namespace TaxGenieOnline
                 if (row.Title.Length > 250)
                     row.Title = row.Title.Substring(0, 250);
             }
-             dlCaseAnalysis.DataSource = caseContents;
-             dlCaseAnalysis.DataBind();
+            dlCaseAnalysis.DataSource = caseContents;
+            dlCaseAnalysis.DataBind();
 
-             TaxUpdateImgTableAdapter tuAdapter = new TaxUpdateImgTableAdapter();
-             dlTaxUpdate.DataSource = tuAdapter.GetFirst(1);
-             dlTaxUpdate.DataBind();
+
+            TaxUpdateImgTableAdapter tuAdapter = new TaxUpdateImgTableAdapter();
+            dlTaxUpdate.DataSource = tuAdapter.GetFirst(1);
+            dlTaxUpdate.DataBind();
+            
+           // HtmlImage delete = (HtmlImage)dlTaxUpdate.Items[0].FindControl("nonimg");
+           // delete.Visible = false;
         }
+
+        protected void dlTaxUpdate_ItemDataBound(object sender, System.Web.UI.WebControls.RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.AlternatingItem || e.Item.ItemType == ListItemType.Item)
+            {
+
+
+                HtmlImage img = (HtmlImage)e.Item.FindControl("nonimg");
+
+
+
+                if (img.Src == null || img.Src.ToString() == "")
+                {
+
+
+                    img.Attributes.Add("style", "visibility:hidden");
+
+
+
+                }
+                else
+                {
+                    //do nothing
+
+                }
+
+
+
+            }
+        }
+
+        protected void dlEditorDesk_ItemDataBound(object sender, System.Web.UI.WebControls.RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.AlternatingItem || e.Item.ItemType == ListItemType.Item)
+            {
+
+
+                HtmlImage img = (HtmlImage)e.Item.FindControl("nonimg2");
+
+
+
+                if (img.Src == null || img.Src.ToString() == "")
+                {
+
+
+                    img.Attributes.Add("style", "visibility:hidden");
+
+
+
+                }
+                else
+                {
+                    //do nothing
+
+                }
+
+
+
+            }
+        }
+
+       
+
+
+      
+
+
     }
 }

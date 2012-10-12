@@ -1,5 +1,5 @@
-﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master" AutoEventWireup="true"
-    CodeBehind="sitemap.aspx.cs" Inherits="TaxGenieOnline.sitemap" %>
+﻿<%@ Page Title="TaxGenieOnline" Language="C#" MasterPageFile="~/TaxGenie.master"
+    AutoEventWireup="true" CodeBehind="sitemap.aspx.cs" Inherits="TaxGenieOnline.sitemap" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_left" runat="server">
 </asp:Content>
@@ -11,7 +11,7 @@
                 <br />
                 <div style="padding: 0 0 10px 0;">
                     <div style="font: bold 12px arial; color: #000000; padding-left: 18px;">
-                        <span style="text-decoration: none;font-weight:bold;font-size:small"><a href="/Home.aspx"
+                        <span style="text-decoration: none; font-weight: bold; font-size: small"><a href="/Home.aspx"
                             target="_self">Home</a> &nbsp;<span class="frontraquo">></span>&nbsp; Sitemap</span></div>
                     <br />
                     <br />
@@ -259,8 +259,20 @@
                             </div>
                         </div>
                     </div>
+                    <div style="height:15px; border-bottom: dashed 1px #999999;"></div>
+
+                    <div align="left" style="width:720px; overflow: auto">
+                        <div>
+                            <div class="sitemap">
+                                <ul>
+                                    <li>Our Members
+                                        <ul>
+                                            <li><a href="/Clients.aspx">Clients</a></li></ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 </asp:Content>

@@ -65,5 +65,18 @@ namespace TaxGenieOnline.admin
                 UPager.ItemCount = Double.Parse(whats.Rows[0]["TotalRows"].ToString());
             }
         }
+
+        protected void gvWhatsNew_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if (e.Row.RowState == DataControlRowState.Normal || e.Row.RowState ==
+                                                       DataControlRowState.Alternate)
+                {
+                    ((LinkButton)e.Row.Cells[0].Controls[0]).Attributes["onclick"] =
+                          "if(!confirm('Are you sure to delete this item?'))return   false;";
+                }
+            }
+        }
     }
 }

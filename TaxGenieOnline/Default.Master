@@ -1,8 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="TaxGenieOnline.Default" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head id="Head1" runat="server">
     <title>TaxGenie</title>
     <link href="~/stylesheets/ddsmoothmenu.css" rel="Stylesheet" type="text/css" />
@@ -163,8 +164,7 @@
                                 <li><a href="/Serviceprocedures.htm" target="_blank">Service Tax Procedures</a></li>
                                 <li><a href="/index.aspx?cat=Service/Tax&subcat=Accounting/Codes/for/new/services">Accounting
                                     Codes for new services</a></li>
-                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Taxation/of/Services/An/Educational/Guide"
-                                    target="_blank">Taxation of Services: An Educational Guide</a></li>
+                                <li><a href="/index.aspx?cat=Service/Tax&subcat=Taxation/of/Services/An/Educational/Guide">Taxation of Services: An Educational Guide</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Income Tax</a> <span class="small2">
@@ -448,7 +448,7 @@
                     <ul style="margin: 0px; padding: 5px 0px 0px 18px; font: normal 11px arial;">
                         <li><b>Our Members</b>
                             <ul style="list-style-type: square; padding-left: 16px; font: normal 11px arial;">
-                                <li><a href="Clients.aspx">Clients</a></li>
+                                <li><a href="/Clients.aspx">Clients</a></li>
                             </ul>
                         </li>
                     </ul>

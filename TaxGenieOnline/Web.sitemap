@@ -66,8 +66,8 @@
 
 
       <siteMapNode url="" title="Rules">
-        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Income/Tax/Rules" title="Income Tax Acts"  description="Acts"/>
-        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Other/Direct/Tax/Rules" title="Wealth Tax Acts"  description="Acts"/>
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Income/Tax/Rules" title="Income Tax Rules"  description="Rules"/>
+        <siteMapNode url="index.aspx?cat=Income/Tax&amp;subcat=Other/Direct/Tax/Rules" title="Other Direct Tax Rules"  description="Rules"/>
       </siteMapNode>
 
 

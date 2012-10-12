@@ -37,10 +37,15 @@ namespace TaxGenieOnline.admin
         {
             TaxUpdateImgTableAdapter hContent = new TaxUpdateImgTableAdapter();
             string filename = actImg.ImageUrl;
+
+          
+
+
             if (fuImage.PostedFile != null && fuImage.PostedFile.ContentLength > 0)
             {
-                filename = "/images/TaxUpdate/" + Path.GetFileName(fuImage.PostedFile.FileName);
-                fuImage.SaveAs(Server.MapPath(filename));
+              filename = "/images/TaxUpdate/" + Path.GetFileName(fuImage.PostedFile.FileName);
+               fuImage.SaveAs(Server.MapPath(filename));
+          
             }
 
             if (hdnId.Value.Length > 0)

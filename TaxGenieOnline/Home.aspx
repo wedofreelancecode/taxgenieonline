@@ -9,15 +9,20 @@
             <img src="images/middle_box_top.png" width="501" height="4" alt="" />
             <div class="contentboxmiddle2">
                 <div class="blue">
+                <img align="absmiddle" src="images/slogo.png">
                     Tax Update</div>
                 <div class="brdhdsblue">
                 </div>
                 <div class="ab1" style="font-size:12px;font-weight:bold;" >
-                    <asp:Repeater ID="dlTaxUpdate" runat="server">
+                    <asp:Repeater ID="dlTaxUpdate" runat="server" onitemdatabound="dlTaxUpdate_ItemDataBound"  >   
+                     
                         <ItemTemplate>
                         <br />
                             <a style="font-size:12px;font-weight:bold;color:#08F" href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'>
-                            <img src='<%# Eval("ImgPath") %>' alt="" style="margin-top:-16px"  width="180" height="140" class="txtwrap" /><%# Eval("Title") %>
+                            
+
+                           
+                                  <img id="nonimg" runat="server"  src='<%# Eval("ImgPath") %>'  alt=" " style="margin-top:-16px;border:none;"  width="180" height="140" class="txtwrap" /><%# Eval("Title") %>
                             </a>
                             <br /><br />
                             Published:<%# Eval("DateTime") %>
@@ -31,15 +36,16 @@
         <div class="contentbox">
             <img src="images/middle_box_top.png" width="501" height="4" alt="" />
             <div class="contentboxmiddle2">
-                <div class="blue">
+                <div class="blue"><img align="absmiddle" src="images/slogo.png">
                     Editor's Desk</div>
                 <div class="brdhdsblue">
                 </div>
                 <div class="ab1">
-                        <asp:Repeater ID="dlEditorDesk" runat="server">
+                        <asp:Repeater ID="dlEditorDesk" runat="server" 
+                            onitemdatabound="dlEditorDesk_ItemDataBound">
                             <ItemTemplate>
                                 <a class="rss-item" style="font-size:12px;font-weight:bold;color:#08F" href='/ViewContent.aspx?Id=<%# Eval("Id") %>'>
-                                <img src='<%# Eval("ImgPath") %>' alt=""  width="85" height="70" class="txtwrap" />
+                                <img  id="nonimg2" runat="server" src='<%# Eval("ImgPath") %>' alt=""  width="85" height="70" class="txtwrap" />
                                     <%# Eval("Title") %>
                                     ...</a>
                             </ItemTemplate>
@@ -138,7 +144,7 @@
         <div class="contentbox">
             <img src="images/middle_box_top.png" width="501" height="4" alt="" />
             <div class="contentboxmiddle2">
-                <div class="blue">
+                <div class="blue"><img align="absmiddle" src="images/slogo.png">
                     Case Analysis</div>
                 <div class="brdhdsblue">
                 </div>

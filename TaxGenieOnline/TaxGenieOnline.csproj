@@ -76,11 +76,13 @@
     <Content Include="adSearch.aspx" />
     <Content Include="Clients.aspx" />
     <Content Include="editprofile.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="images\add1.jpg" />
     <Content Include="images\add2.jpg" />
     <EmbeddedResource Include="images\arr_left.gif" />
     <EmbeddedResource Include="images\arr_right.gif" />
     <Content Include="images\adSearch_TG.png" />
+    <Content Include="images\arrow_up.png" />
     <Content Include="images\bc_bg.png" />
     <Content Include="images\bc_separator.png" />
     <Content Include="images\blue.jpg" />
@@ -332,6 +334,9 @@
     </Compile>
     <Compile Include="editprofile.aspx.designer.cs">
       <DependentUpon>editprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ResponseHelper.cs" />
     <Compile Include="index.aspx.cs">

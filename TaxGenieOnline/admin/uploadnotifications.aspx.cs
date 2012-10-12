@@ -898,7 +898,6 @@ namespace TaxGenieOnline.admin
                 ddlsubcategory.Items.Add(new ListItem("select one", "0"));
                 ddlsubcategory.Items.Add("Act 1994");
                 ddlsubcategory.Items.Add("ST Rules");
-                ddlsubcategory.Items.Add("Services");
                 ddlsubcategory.Items.Add("Notifications");
                 ddlsubcategory.Items.Add("Circulars/Instructions");
                 ddlsubcategory.Items.Add("Case Laws");
@@ -1490,7 +1489,7 @@ namespace TaxGenieOnline.admin
                 edtData.Visible = false;
                 btnUpload.Visible = false;
             }
-            if (ddlsubcategory.SelectedValue.Equals("Forms & Registers") && ddlcatagory.SelectedValue.Equals("Service Tax"))
+            if (ddlsubcategory.SelectedValue.Equals("Forms and Registers") && ddlcatagory.SelectedValue.Equals("Service Tax"))
             {
 
                 pnlCForms.Visible = true;

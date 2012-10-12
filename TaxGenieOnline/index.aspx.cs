@@ -504,7 +504,7 @@ namespace TaxGenieOnline
 
 
                     }
-                    else if (category == "Customs" & subcategory == "Acts" || subcategory == "Regulations")
+                    else if (category == "Customs" & subcategory == "Acts" || subcategory == "Regulations" || subcategory == "Drawback Schedule")
                     {
 
 
@@ -558,6 +558,7 @@ namespace TaxGenieOnline
                             dlIndex.DataBind();
                         }
                     }
+                   
 
                     else
                     {

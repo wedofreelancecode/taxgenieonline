@@ -15,6 +15,7 @@ namespace TaxGenieOnline
         protected void Page_Load(object sender, EventArgs e)
         {
             _keyword = Request.QueryString["keyword"].ToString().Trim();
+
             Session["keyword"] = _keyword;
             if (!IsPostBack)
             {
