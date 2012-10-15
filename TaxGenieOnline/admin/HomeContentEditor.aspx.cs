@@ -66,16 +66,18 @@ namespace TaxGenieOnline.admin
 
         protected void ddlContentType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (ddlContentType.SelectedValue == "Department News")
-            //{
-            //    lblTitle.Visible = true;
-            //    txtTitle.Visible = true;
-            //}
-            //else
-            //{
-            //    lblTitle.Visible = false;
-            //    txtTitle.Visible = false;
-            //}
+            if (ddlContentType.SelectedValue == "Department News" || ddlContentType.SelectedValue == "Case Analysis")
+            {
+                pnlimg.Visible = false;
+
+
+            }
+
+            else
+            {
+                pnlimg.Visible = true;
+            }
+          
         }
     }
 }

@@ -12,7 +12,16 @@ namespace TaxGenieOnline
             int id = int.Parse(Request.QueryString["Id"]);
             TaxUpdate.TaxUpdateImgDataTable data = contAdptr.GetDataByID(id);
             TaxUpdate.TaxUpdateImgRow dr = data.Rows[0] as TaxUpdate.TaxUpdateImgRow;
-            imgTU.ImageUrl = dr.ImgPath;
+            if (dr.ImgPath == null || dr.ImgPath=="")
+            {
+                imgTU.Visible = false;
+            }
+            else
+            {
+                imgTU.Visible = true;
+                imgTU.ImageUrl = dr.ImgPath;
+            }
+            
             lbldata.Text = dr.Data;
             lblTitle.Text = dr.Title;
         }

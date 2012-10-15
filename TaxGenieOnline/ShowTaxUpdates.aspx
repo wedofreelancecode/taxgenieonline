@@ -8,14 +8,14 @@
     <asp:Label ID="lblHeading" runat="server" Width="100%" CssClass="nlsH" BackColor="#D9D9D9"></asp:Label>
     <br />
     <div class="rss-box" style="min-height: 300px">
-            <asp:Repeater ID="dlTaxUpdates" runat="server">
+            <asp:Repeater ID="dlTaxUpdates" runat="server" 
+                onitemdatabound="dlTaxUpdates_ItemDataBound">
                 <ItemTemplate>
                 <dir>
                     <a href='/ViewTaxUpdate.aspx?Id=<%# Eval("Id") %>'><%# Eval("Title") %>
-                            <img src='<%# Eval("ImgPath") %>' alt="" width="50" height="40" class="txtwrap" />
+                            <img id="shownoimg" runat="server" src='<%# Eval("ImgPath") %>' alt="" width="50" height="40" class="txtwrap" />
                             </a><br />
-                            <label> Published:<%# Eval("DateTime") %></label>
-                            </dir><br />
+                            <label> Published:<%# Eval("DateTime") %></label></dir><br />
                 </ItemTemplate>
             </asp:Repeater>
     </div>

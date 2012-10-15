@@ -16,7 +16,7 @@
                             <asp:Label ID="lblContentType" runat="server" Text="Content Type" CssClass="nlsN"></asp:Label>
                         </td>
                         <td align="left">
-                            <asp:DropDownList ID="ddlContentType" CssClass="nls" AutoPostBack="false" 
+                            <asp:DropDownList ID="ddlContentType" CssClass="nls" AutoPostBack="true" 
                                 runat="server" onselectedindexchanged="ddlContentType_SelectedIndexChanged">
                                 <asp:ListItem>select one</asp:ListItem>
                                 <asp:ListItem>Department News</asp:ListItem>
@@ -27,15 +27,18 @@
                             </asp:DropDownList>
                         </td>
                     </tr>
-                    <tr>
+                    <tr><asp:panel ID="pnlimg" runat="server">
                         <td align="right">
                             <asp:Label ID="lblImage" runat="server" Text="Image" CssClass="nlsN"></asp:Label>
                         </td>
                         <td align="left">
                             <asp:FileUpload ID="fuImage" runat="server" CssClass="nls"></asp:FileUpload>
-                        </td>
+                        </td></asp:panel>
                     </tr>
                      <tr>
+                  
+                    
+                    
                         <td align="right">
                             <asp:Label ID="lblimg" Visible="false" runat="server" Text="Actual Image" CssClass="nlsN"></asp:Label>
                         </td>
