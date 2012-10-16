@@ -448,18 +448,17 @@ namespace TaxGenieOnline
                       LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["APPELLANTParty"].ToString().ToUpper() + "<br/>Vs.<br/>";
                       LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["RESPONDENTParty"].ToString().ToUpper() + "</td></tr><tr><td  align='left'>";
                       LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["JudgesName"] + "</td></tr><tr><td  align='right'>";
-                      LtlCaselaws.Text +="Dated:&nbsp;" +((DateTime)dtgetdatabycitation.Rows[0]["DateofDecision"]).ToString("MMMM dd, yyyy") + "</td></tr><tr><td  align='justify'>";
-                      LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["HeadNotes"] + "</td></tr><tr><td>&nbsp;</td></tr><tr><td  align='center'></td></tr>";
+                      LtlCaselaws.Text +="Dated:&nbsp;" +((DateTime)dtgetdatabycitation.Rows[0]["DateofDecision"]).ToString("MMMM dd, yyyy") + "</td></tr><tr><td style='text-align:left' align='justify'>";
+                      LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["HeadNotes"] + "</td></tr><tr><td>&nbsp;</td></tr><tr><td></td></tr>";
 
                       LtlCaselaws.Text += "<tr><td style='font-weight:normal' align='justify'>";
 
                       LtlCaselaws.Text += dtgetdatabycitation.Rows[0]["JUDGEMENTContent"] + "</td></tr>";
-                      LtlCaselaws.Text += "<tr><td style='padding:45px;font-style:italic;font-weight:normal;text-align:justify' align='center'><font face='Verdana, Arial, Helvetica, sans-serif' color='#666666' size='1'>(<b style='font-weight:bold'>DISCLAIMER</b>: Though all efforts have been made to reproduce the order correctly but the access and circulation is subject to the condition that TaxgenieOnline are not responsible/liable for any loss or damage caused to anyone due to any mistake/error/omissions.)</font></td></tr>";
+                      LtlCaselaws.Text += "<tr><td style='padding:45px;font-style:italic;font-weight:normal;text-align:left' align='justify'><font face='Verdana, Arial, Helvetica, sans-serif' color='#666666' size='1'>(<b style='font-weight:bold'>DISCLAIMER</b>: Though all efforts have been made to reproduce the order correctly but the access and circulation is subject to the condition that TaxgenieOnline are not responsible/liable for any loss or damage caused to anyone due to any mistake/error/omissions.)</font></td></tr>";
                       LtlCaselaws.Text += "</table>";
                   }
-
                }
-
+                
             #endregion
 
 
